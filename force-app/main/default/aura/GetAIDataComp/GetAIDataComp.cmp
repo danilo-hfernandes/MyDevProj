@@ -1,0 +1,114 @@
+<aura:component controller="CallDataComponentController"
+                implements="force:hasRecordId,flexipage:availableForRecordHome"
+                access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="callEvents" type="List"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true"/>
+    <aura:attribute name="activeRowId" type="String" />
+    <aura:attribute name="transcriptVisibleRowId" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner alternativeText="Loading AI Call Events..." size="medium"/>
+    </aura:if>
+    <aura:if isTrue="{!not(empty(v.callEvents))}">
+        <div class="slds-grid slds-border_bottom slds-p-around_x-small slds-theme_shade slds-text-title_caps">
+            <div class="slds-col slds-size_1-of-6"></div>
+            <div class="slds-col slds-size_1-of-6">Date</div>
+            <div class="slds-col slds-size_1-of-6">Media</div>
+            <div class="slds-col slds-size_1-of-6">Campaign</div>
+            <div class="slds-col slds-size_1-of-6">Disposition</div>
+            <div class="slds-col slds-size_1-of-6">Duration</div>    
+        </div>
+        <aura:iteration items="{!v.callEvents}" var="call">            
+            <!-- VVA-162
+            <aura:iteration items="{!call.events}" var="objEvents">
+-->
+            <div class="slds-grid slds-border_bottom slds-p-around_x-small slds-align_absolute-center">
+                <!-- Chevron icon -->
+                <div class="slds-col slds-size_1-of-6">
+                    <lightning:buttonIcon 
+                                          iconName="{! v.activeRowId == call.twilioId ? 'utility:down' : 'utility:right' }"
+                                          variant="bare"
+                                          class="slds-button_icon"
+                                          onclick="{!c.toggleRow}"
+                                          value="{!call.twilioId}" />
+
+
+                </div>
+                <div class="slds-col slds-size_1-of-6">{!call.createdOn}</div>
+                <div class="slds-col slds-size_1-of-6">{!call.media}</div>
+                <div class="slds-col slds-size_1-of-6">{!call.campaign}</div>
+                <div class="slds-col slds-size_1-of-6">{!call.disposition}</div>
+                <div class="slds-col slds-size_1-of-6">{!call.totalCallDuration}</div>
+                
+            </div>
+            <!-- Expandable details -->
+            <aura:if isTrue="{!v.activeRowId == call.twilioId}">
+                <div class="slds-p-around_medium slds-m-around_x-small slds-theme_default">
+                    <aura:iteration items="{!call.events}" var="objEvents">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <!-- Type -->
+                            <div class="slds-col slds-size_1-of-1 slds-p-vertical_x-small">
+                                <p><strong>Type:</strong>&nbsp;&nbsp;{!objEvents.eventName}</p>
+                            </div>
+                            
+                            <!-- Duration -->
+                            <div class="slds-col slds-size_1-of-1 slds-p-vertical_x-small">
+                                <p><strong>Duration:</strong>&nbsp;&nbsp;{!objEvents.duration}</p>
+                            </div>
+             
+                            
+                            <aura:if isTrue="{!objEvents.eventName == 'Agent Call'}">
+                                <div class="slds-col slds-size_1-of-1 slds-p-vertical_x-small">
+                                    <p><strong>Agent:</strong>&nbsp;&nbsp;{!objEvents.agent}</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-p-vertical_x-small">
+                                    <p><strong>Call Result:</strong>&nbsp;&nbsp;{!objEvents.rcCallResult}</p>
+                                </div>
+                            </aura:if>
+                            
+                            <!-- Transcript 
+                        <div class="slds-col slds-size_1-of-1 slds-p-vertical_small">
+                            <p><strong>Transcript:</strong></p>
+                            <p class="slds-m-left_medium">{!objEvents.transcript}</p>
+                        </div> -->
+                            
+                            <aura:if isTrue="{!objEvents.url}">
+                                <div class="slds-col slds-size_1-of-1 slds-p-vertical_small">
+                                    <p><strong>Recording:</strong></p>
+                                    <!--<lightning:button label="Play Audio" variant="brand" onclick="{!c.handlePlay}" value="{!call.url}" /> -->
+                                    
+                                    <!-- <aura:unescapedHtml value="{!'&lt;audio controls style=&quot;width:100%;&quot;&gt;&lt;source src=&quot;' + call.url + '&quot; type=&quot;audio/mpeg&quot;/&gt;Your browser does not support the audio element.&lt;/audio&gt;'}"/> -->
+                                    <c:AudioPlayerComp audioUrl="{!objEvents.url}"/>
+                                    
+                                    <!-- For testing replace the "{!call.url}" for below link
+                       "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"/>-->
+                                    <lightning:button label="Download" variant="neutral" onclick="{!c.handleDownload}" value="{!objEvents.url}" class="slds-m-top_medium"/>
+                                    <lightning:button label="{!v.transcriptVisibleRowId == objEvents.conversationId ? 'Hide Transcript' : 'Show Transcript'}"  onclick="{!c.toggleTranscript}" variant="neutral" class="slds-m-top_medium"  value="{!objEvents.conversationId}"/>
+                                    <aura:if isTrue="{!v.transcriptVisibleRowId == objEvents.conversationId}">
+                                        <div class="slds-m-top_small">
+                                            <p><strong>Transcript:</strong></p>
+                                            <p class="slds-m-left_medium">{!objEvents.transcript}</p>
+                                        </div>
+                                    </aura:if>
+                                </div>
+                            </aura:if>
+                            <!-- Summary -->
+                            <div class="slds-col slds-size_1-of-1 slds-p-vertical_small">
+                                <p><strong>Summary:</strong></p>
+                                <p class="slds-m-left_medium">{!objEvents.summary}</p>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </div>
+            </aura:if>
+        </aura:iteration>
+        <!-- <lightning:card title="{!call.disposition}" iconName="utility:call">
+                <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+                  </div>
+            </lightning:card> -->
+<!--    </aura:iteration>-->
+	</aura:if>
+</aura:component>

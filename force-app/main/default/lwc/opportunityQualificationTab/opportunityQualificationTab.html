@@ -1,0 +1,109 @@
+<template>
+    <lightning-card  icon-name="standard:table">
+       <div class="slds-grid slds-grid_align-spread slds-p-horizontal_small">
+        <!-- Apply standard Salesforce bold styling to header -->
+        <h4 class="slds-text-heading_medium">Opportunity Qualification Table</h4>
+        <lightning-button
+            variant="brand"
+            label="Add Record"
+            title="Begins the task"
+            disabled={isDisable}
+            onclick={openCreateSupplierModal}
+        >
+        </lightning-button>
+    </div>
+        <!-- Wrapper div with a border   hide-checkbox-column="false" -->
+        <div class="datatable-wrapper">
+            <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                 onsave={handleSave} 
+               hide-checkbox-column={isDisable} 
+                onrowaction={handleRowAction}> <!-- Handle row action for supplier click -->
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <!-- Modal Window -->
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">Supplier Information</h2>
+                </header>
+
+                <!-- Modal/Popup Body -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p><strong>Supplier Name:</strong> {selectedSupplier.Supplier}</p>
+                    <lightning-textarea label="Additional Info" value={additionalData} onchange={handleAdditionalInfoChange}></lightning-textarea> <!-- Editable Additional Info -->
+                </div>
+
+                <!-- Modal/Popup Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="brand" label="Save" onclick={handleSave} disabled={isDisable}></lightning-button> <!-- Save Button for modal changes -->
+                    <lightning-button variant="neutral" label="Close" onclick={closeModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+
+        <div class="slds-backdrop slds-backdrop_open"></div> <!-- Backdrop -->
+    </template>
+
+
+     <!-- Modal to create new Supplier record -->
+    <template if:true={isCreateSupplierModalOpen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header">
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        onclick={closeCreateSupplierModal}
+                        alternative-text="Close"
+                        class="slds-modal__close"
+                    ></lightning-button-icon>
+                    <h2 class="slds-text-heading_medium">Create Supplier</h2>
+                </header>
+
+                <!-- Modal Body with record form -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-record-edit-form
+                        object-api-name="General_Data__c"
+                        onsuccess={handleSuccess}
+                        onerror={handleError}
+                    >
+                        <!-- Add fields to capture supplier details -->
+                        <lightning-input-field field-name="Name"></lightning-input-field>
+                        <lightning-input-field field-name="Age__c"></lightning-input-field>
+                        <lightning-input-field field-name="Income__c"></lightning-input-field>
+                        <lightning-input-field field-name="Employment_Status__c"></lightning-input-field>
+                        <lightning-input-field field-name="Marital_Status__c"></lightning-input-field>
+                        <lightning-input-field field-name="Credit_Card__c"></lightning-input-field>
+                        <lightning-input-field field-name="Additional_Info__c"></lightning-input-field>
+                        
+
+                        <lightning-button
+                            class="slds-m-top_small"
+                            variant="brand"
+                            type="submit"
+                            label="Create Supplier"
+                        >
+                        </lightning-button>
+                    </lightning-record-edit-form>
+                </div>
+
+                <!-- Modal Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Cancel" onclick={closeCreateSupplierModal}></lightning-button>
+                </footer>
+
+            </div>
+        </section>
+
+        <!-- Background overlay when modal is open -->
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

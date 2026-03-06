@@ -1,0 +1,49 @@
+<aura:component controller="GetDuplicatedLeadListController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <!-- Attributes -->
+    <aura:attribute name="lstLead" type="Lead[]" />
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="errorMsg" type="String"/>
+    <aura:attribute name="ShowComponent" type="Boolean" default="false"/>
+    <aura:attribute name="ShowComponent2" type="Boolean" default="false"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <!-- Spinner -->
+    <div class="exampleHolder">
+        <aura:if isTrue="{! v.ShowSpinner }">
+            <lightning:spinner alternativeText="Checking duplicates..." />
+        </aura:if>
+    </div>
+
+    <!-- Card -->
+    <aura:if isTrue="{!v.ShowComponent2}">
+        <div style="overflow: hidden; margin-bottom: 2px;">
+            <lightning:card variant="Narrow"
+                            title="Potential Duplicated Leads"
+                            iconName="standard:lead">
+
+                <aura:if isTrue="{!v.ShowComponent}">
+                    <div style="overflow-y: scroll; max-height:112px !important">
+                        <lightning:datatable
+                                data="{! v.lstLead }"
+                                columns="{! v.mycolumns }"
+                                keyField="Id"
+                                hideCheckboxColumn="true"/>
+                    </div>
+
+                    <aura:set attribute="else">
+                        <div style="margin-left:5%">
+                            <b>{! v.errorMsg }</b>
+                        </div>
+                    </aura:set>
+                </aura:if>
+
+            </lightning:card>
+        </div>
+    </aura:if>
+    
+</aura:component>

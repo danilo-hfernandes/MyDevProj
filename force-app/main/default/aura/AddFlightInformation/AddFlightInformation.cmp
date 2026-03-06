@@ -1,0 +1,123 @@
+<aura:component controller="AddFlightInformationController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+	<aura:attribute name="recordId" type="String" />
+    <aura:attribute name="userHasAccess" type="boolean" default="false"/>
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    
+    <div class="slds-card__header slds-grid">
+        <lightning:card title="Flight and Transportation Confirmation" class="slds-text-heading_small slds-card_boundary ">
+        <lightning:recordEditForm aura:id="myform" 
+                                  recordId="{!v.recordId}" 
+                                  objectApiName="Opportunity" 
+                                  onsubmit="{!c.onRecordSubmit}"
+                                  onsuccess="{!c.handleOnSuccess}"
+                                  onerror="{!c.handleOnError}">
+            
+            <lightning:card title="Flight Info" class="slds-text-heading_small slds-card_boundary ">
+  
+                <p class="slds-p-horizontal_small">
+                    <div class="slds-col slds-size_5-of-7">
+                        <span>
+                            <lightning:inputField aura:id="TransportationId" fieldName="Transportation__c" />
+                            
+                        </span>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_5-of-7">
+                            <span>
+                                <lightning:inputField aura:id="ArrivalId" fieldName="Arrival_Airport__c" />
+                                
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_5-of-7">
+                            <span>
+                                <lightning:inputField aura:id="Arrival Date" fieldName="Arrival_Date__c" />
+                                
+                            </span>
+                        </div>
+                       
+                       
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                          <div class="slds-col slds-size_5-of-7">
+                            <span>
+                                <lightning:inputField aura:id="FlightNumberId" fieldName="Flight_Number__c" />
+                                
+                            </span>
+                            
+                        </div>
+                    </div>
+                </p>
+                
+            </lightning:card>
+            <br/>
+            <!--
+            <lightning:card title="Transportation Info" class="slds-text-heading_small slds-card_boundary">
+                <p class="slds-p-horizontal_small">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_5-of-12">
+                            <span>
+                                <lightning:inputField aura:id="Transportation Company" fieldName="Transportation_Company__c" />
+                                
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_5-of-12">
+                            <span>
+                                <lightning:inputField aura:id="Folio Number" fieldName="Folio_Number__c" />
+                                
+                            </span>
+                        </div>
+                    </div>
+                </p>
+                
+            </lightning:card>
+            <br/>
+            -->
+            <lightning:card title="Arrival Info" class="slds-text-heading_small slds-card_boundary">
+   				 <p class="slds-p-horizontal_small">
+      			  	<div class="slds-grid slds-wrap">
+           				 <div class="slds-col slds-size_5-of-7">
+
+               				 <span>
+                    			<lightning:inputField disabled="{!!v.userHasAccess}" aura:id="Transportation Check-in" fieldName="Arrived__c" />
+               			     
+                             </span>
+                             <span>
+                   				 <lightning:inputField aura:id="Check-in Date Time" fieldName="Check_in_Date_Time__c" />
+               			 	
+                             </span>          
+                             <span>
+                   				 <lightning:inputField disabled="{!!v.userHasAccess}" aura:id="Transportation Pickup" fieldName="Transportation_Pickup__c" />
+                
+                             </span>
+                         	 <span>
+                   				 <lightning:inputField aura:id="Pickup Date Time" fieldName="Pickup_Date_Time__c" />
+               			 	
+                             </span>              				
+                        	 <span>
+                   				 <lightning:inputField aura:id="Driver's Name" fieldName="Driver_Name__c" />
+               			 	
+                             </span>
+               
+
+                        </div>
+
+            			<div class="slds-col slds-size_5-of-7">
+               			 <span>
+                   			 <lightning:inputField disabled="{!!v.userHasAccess}" aura:id="No Show" fieldName="No_Show__c" />
+                		
+                        </span>
+           
+                        </div>
+       				 </div>
+    			</p>
+
+            
+          </lightning:card> 
+            
+            <div class="slds-form-element buttons slds-text-align_center" style="padding-top: 8px;">
+                                    <lightning:button variant="brand" label="Save" type="submit" />
+                                </div>
+        </lightning:recordEditForm>
+             </lightning:card>
+    </div>
+</aura:component>

@@ -1,0 +1,6 @@
+<apex:page controller="InventoryBatchController">
+    <apex:form >
+        <apex:commandButton value="Run Inventory Batch" action="{!runBatch}" />
+        <apex:messages />
+    </apex:form>
+</apex:page>

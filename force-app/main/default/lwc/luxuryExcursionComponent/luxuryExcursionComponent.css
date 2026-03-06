@@ -1,0 +1,63 @@
+.container {
+    background-color: white;
+    border: 1px solid #d8d8d8;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    font-weight: 300;
+}
+
+.header-row, .data-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.2fr 1fr 1fr 1fr 0.8fr ;
+    align-items: center;
+    text-align: center;
+}
+
+.header-row {
+    background-color: #f3f3f3;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #514f4d;
+}
+
+.data-row {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+    transition: background-color 0.2s ease;
+}
+
+.data-row:hover {
+    background-color: #faffbd;
+}
+
+/* Align Name to the left for better visual balance */
+.name-cell {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Specific spacing for action buttons */
+.action-col {
+    padding: 0 4px; 
+}
+
+.blue-btn {
+    --slds-c-button-brand-color-background: #0070d2;
+    width: 100%;
+    font-size: 11px;
+}
+
+.record-link {
+    color: #0070d2;
+    text-decoration: none;
+    font-weight: 500;
+}

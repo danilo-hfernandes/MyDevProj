@@ -1,0 +1,139 @@
+<aura:component implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global"
+                controller="BookReservationMarivalController">
+    <aura:attribute name="opportunityRecord" type="Object" />
+    <aura:attribute name="recordLoadError" type="String"/>
+    
+    <force:recordData aura:id="recordLoader"
+    recordId="{!v.recordId}"
+    fields="Supplier__c"
+    targetFields="{!v.opportunityRecord}"
+    targetError="{!v.recordLoadError}"/>
+    <aura:attribute name="isOpenMarival" type="Boolean" default="false"/>
+    <aura:attribute name="plazaMarival" type="String"/>
+    <aura:attribute name="siteNameMarival" type="String"/>
+    <aura:attribute name="roomTypeMarival" type="String"/>
+    <aura:attribute name="capacityMarival" type="String"/>
+    <aura:attribute name="supplierMarival" type="String" default="Marival"/>
+    <aura:attribute name="checkInMarival" type="Date"/>
+    <aura:attribute name="checkOutMarival" type="Date"/>
+    <aura:attribute name="adultsMarival" type="Integer"/>
+    <aura:attribute name="childrenMarival" type="Integer"/>
+    <aura:attribute name="showSpinMarival" type="Boolean" default="false"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="inventoryRecords" type="Inventory_Management__c[]"/>
+    <aura:attribute name="resortOptions" type="List"/>
+    <aura:attribute name="plazaOptions" type="List"/>
+    
+    <aura:attribute name="numberOfNights" type="Integer"/> <!-- TGR-312 -->
+    <aura:attribute name="extraNights" type="Integer" default="0"/>
+    <aura:attribute name="extraNightsOptions" type="List" default="[0]" />
+    <aura:attribute name="dateOptions" type="List" default="[]" />    
+    <aura:attribute name="minCheckInDate" type="String" />
+    <aura:attribute name="extraNightsTotalPrice" type="String" />
+
+    
+    <lightning:button label="Book Reservation" variant="brand" onclick="{!c.openModel}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  <!-- TGR-312 -->
+
+    
+    <aura:if isTrue="{!v.isOpenMarival}">
+       <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box Header -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{!c.closeModel}"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 class="slds-text-heading_medium">Book Reservation</h2>
+                </header>
+                <!-- Modal/Popup Box Body -->
+                <div class="slds-modal__content slds-p-around_medium" style="overflow: auto;">
+                    
+                    <aura:if isTrue="{!v.showSpinMarival}">
+                        <div class="demo-only" style="height:8rem;position:relative">
+                            <div class="slds-spinner_container">
+                                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                                    <span class="slds-assistive-text">Loading...</span>
+                                    <div class="slds-spinner__dot-a"></div>
+                                    <div class="slds-spinner__dot-b"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:if>
+                    <lightning:select name="Supplier" label="Supplier" value="{!v.opportunityRecord.Supplier__c}" disabled="true">
+                        <option value="{!v.opportunityRecord.Supplier__c}">{!v.opportunityRecord.Supplier__c}</option>
+                    </lightning:select>
+                   <!-- <lightning:input name="plaza" label="Plaza" value="{!v.plazaMarival}"  disabled="{!v.showSpinMarival}" readonly="true" onchange="{!c.handlePlazaChange}"/> -->
+                    
+                     <lightning:select name="plaza" label="Plaza" value="{!v.plazaMarival}" disabled="{!v.showSpinMarival}" onchange="{!c.handlePlazaChange}">
+                        <option value="">--None--</option>
+                        <aura:iteration items="{!v.plazaOptions}" var="option">
+                            <option value="{!option.value}">{!option.label}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <lightning:select name="siteName" label="Site Name" value="{!v.siteNameMarival}" disabled="{!v.showSpinMarival}" onchange="{!c.handleSiteChange}">
+                        <option value="">--None--</option>
+                        <aura:iteration items="{!v.resortOptions}" var="option">
+                            <option value="{!option.value}">{!option.label}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <lightning:input disabled="{!v.showSpinMarival}" name="roomType" label="Room Type" value="{!v.roomTypeMarival}" readonly="true"/>
+                    <lightning:input disabled="{!v.showSpinMarival}" name="capacity" label="Capacity" value="{!v.capacityMarival}" readonly="true"/>
+                    <lightning:input disabled="{!v.showSpinMarival}" type="date" name="checkIn" label="Check-In" value="{!v.checkInMarival}" onchange="{!c.handleCheckInChange}" min="{!v.minCheckInDate}"/> <!-- TGR-312 -->
+
+					<lightning:input disabled="true" aura:id="checkOutDateInput" value="{!v.checkOutMarival}" type="date" label="Check-Out Date" />
+
+
+                    <lightning:select required="true" 
+                                      value="{!v.numberOfNights}" 
+                                      label="Number of Nights:"
+                                      disabled="{!v.showSpinMarival}"
+                                      onchange="{!c.handleNightsChange}">
+                        <aura:iteration items="[1, 2, 3, 4, 5, 6, 7]" var="number">
+                            <option value="{!number}">{!number}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                                                    
+                    <lightning:select disabled="{!v.showSpinMarival}" name="extraNights" label="Additional Nights:" value="{!v.extraNights}" onchange="{!c.handleCheckInChange}">   <!-- TGR-312 extraNights-->
+                        <aura:iteration items="{!v.extraNightsOptions}" var="num">
+                            <option value="{!num}">{!num}</option>
+                        </aura:iteration>
+                    </lightning:select>                    
+
+					<lightning:input disabled="true" aura:id="extraNightsTotalPrice" value="{!v.extraNightsTotalPrice}" type="text" label="Extra Nights Total Price" />
+					                    
+                    <lightning:select disabled="{!v.showSpinMarival}" name="adults" label="Adults(+13)" value="{!v.adultsMarival}">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </lightning:select>
+                    <lightning:select disabled="{!v.showSpinMarival}" name="children" label="Children (0-12)" value="{!v.childrenMarival}">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </lightning:select>
+
+                </div>
+                <!-- Modal/Popup Box Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" disabled="{!v.showSpinMarival}" label="Cancel" onclick="{!c.closeModel}"/>
+                    <lightning:button variant="brand" disabled="{!v.showSpinMarival}" label="Save" onclick="{!c.saveReservation}"/>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    
+    
+</aura:component>

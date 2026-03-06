@@ -1,0 +1,28 @@
+.THIS .slds-modal__container{
+       max-width: 50rem !important;
+       width:100% !important;
+
+}
+.THIS .slds-truncate {
+    white-space: normal;
+}
+.THIS .post-short-footer {
+  display: table;
+  width: 100%;
+}
+
+.THIS .post-short-meta-container {
+  display: table-cell;
+  padding-left: 1em;
+  width: 80%;
+  line-height: 100%;
+  vertical-align: middle;
+  height: 100%;
+    
+}
+.THIS .post-short-meta-container span {
+  display: inline-block;
+  padding: 0.3em;
+  margin: 0.3em;
+  border: 1px dotted red;
+}

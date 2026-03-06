@@ -1,0 +1,29 @@
+<template>
+    <div class="spinner">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+    </div>
+    <lightning-card title="MFP Reinstatement">
+        <div class="slds-p-around_medium">
+            <div>
+                <lightning-button label="Create Annual Dues Opportunity" onclick={createOpportunity} variant="brand"></lightning-button>
+                <p style="color: red;">{displayMessage}</p>
+            </div>
+            <div class="slds-p-around_medium">
+                <template if:true={recordData}>
+                    <template if:true={recordData.MFP_Type__c}>
+                        <p><strong>MFP Type: </strong> {recordData.MFP_Type__c.value}</p>
+                    </template>
+                    <template if:true={recordData.MFP_Type_tracking__c}>
+                        <p><strong>MFP Type Tracking: </strong> {sanitizedMFPTypeTracking}</p>
+                    </template>
+                    <template if:true={recordData.MFP_Opportunity__c}>
+                        <p><strong>Opportunity: </strong> <a href={opportunityUrl}>{opportunityUrl}</a></p>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

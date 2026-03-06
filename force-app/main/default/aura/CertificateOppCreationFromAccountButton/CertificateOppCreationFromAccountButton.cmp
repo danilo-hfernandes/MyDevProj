@@ -1,0 +1,5 @@
+<aura:component controller="VoucherOppCreation" 
+                implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+</aura:component>

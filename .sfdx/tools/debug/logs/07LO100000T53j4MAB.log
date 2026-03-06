@@ -1,0 +1,588 @@
+66.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+19:51:33.0 (507731)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.0 (2621355)|ENTERING_MANAGED_PKG|mercury
+19:51:33.0 (3325314)|ENTERING_MANAGED_PKG|mercury
+19:51:33.0 (7985051)|DML_BEGIN|[15]|Op:Insert|Type:mercury__config__c|Rows:1
+19:51:33.0 (52358753)|DML_END|[15]
+19:51:33.0 (66232666)|DML_BEGIN|[26]|Op:Insert|Type:mercury__configprivate__c|Rows:1
+19:51:33.0 (101613539)|DML_END|[26]
+19:51:33.0 (103794563)|SOQL_EXECUTE_BEGIN|[28]|Aggregations:0|SELECT Id FROM User WHERE Id = :tmpVar1
+19:51:33.0 (125269953)|SOQL_EXECUTE_END|[28]|Rows:1
+19:51:33.0 (125795187)|DML_BEGIN|[31]|Op:Update|Type:User|Rows:1
+19:51:33.278 (278990072)|SOQL_EXECUTE_BEGIN|[8]|Aggregations:0|SELECT id FROM permissionset WHERE name = 'et4ae5__ExactTarget_Integration_Admin'
+19:51:33.278 (327513950)|SOQL_EXECUTE_END|[8]|Rows:0
+19:51:33.278 (328461634)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT id FROM permissionset WHERE name = 'ExactTarget_Integration_Admin'
+19:51:33.278 (353850629)|SOQL_EXECUTE_END|[13]|Rows:1
+19:51:33.278 (354392776)|SOQL_EXECUTE_BEGIN|[14]|Aggregations:0|SELECT id FROM permissionset WHERE name = 'ExactTarget_Integration'
+19:51:33.278 (382305922)|SOQL_EXECUTE_END|[14]|Rows:1
+19:51:33.278 (383275537)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT assigneeId FROM permissionsetassignment WHERE (permissionSetId = :tmpVar1 AND assigneeId IN :tmpVar2)
+19:51:33.278 (394096546)|SOQL_EXECUTE_END|[16]|Rows:0
+19:51:33.278 (394810207)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|SELECT assigneeId FROM permissionsetassignment WHERE (permissionSetId = :tmpVar1 AND assigneeId IN :tmpVar2)
+19:51:33.278 (398005428)|SOQL_EXECUTE_END|[17]|Rows:0
+19:51:33.399 (399026253)|CUMULATIVE_LIMIT_USAGE
+19:51:33.399 (399026253)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.399 (399026253)|LIMIT_USAGE_FOR_NS|et4ae5|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.399 (399026253)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.399 (399026253)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:33.405 (405781736)|CODE_UNIT_STARTED|[EXTERNAL]|01q4z000000XseM|UserTrigger on User trigger event AfterUpdate|__sfdc_trigger/UserTrigger
+19:51:33.405 (405848246)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:33.405 (405857624)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:33.405 (405958405)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+19:51:33.405 (406043299)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:33.405 (406054832)|VARIABLE_SCOPE_BEGIN|[1]|this|UserTrigger|true|false
+19:51:33.405 (406113350)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x73bcaac8
+19:51:33.405 (406148827)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:33.405 (406153090)|VARIABLE_SCOPE_BEGIN|[1]|this|UserTrigger|true|false
+19:51:33.405 (406159557)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x73bcaac8
+19:51:33.405 (406166404)|STATEMENT_EXECUTE|[1]
+19:51:33.405 (406167517)|STATEMENT_EXECUTE|[3]
+19:51:33.405 (406170770)|HEAP_ALLOCATE|[3]|Bytes:11
+19:51:33.405 (408254148)|VARIABLE_ASSIGNMENT|[3]|this.cs|null|0x73bcaac8
+19:51:33.405 (408268435)|STATEMENT_EXECUTE|[4]
+19:51:33.405 (408274013)|HEAP_ALLOCATE|[4]|Bytes:15
+19:51:33.405 (408361019)|HEAP_ALLOCATE|[4]|Bytes:19
+19:51:33.405 (408385202)|USER_DEBUG|[4]|DEBUG|--UserTrigger--null
+19:51:33.405 (408395745)|STATEMENT_EXECUTE|[5]
+19:51:33.408 (408402474)|CUMULATIVE_LIMIT_USAGE
+19:51:33.408 (408402474)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.408 (408402474)|LIMIT_USAGE_FOR_NS|et4ae5|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.408 (408402474)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.408 (408402474)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:33.405 (408521279)|CODE_UNIT_FINISHED|UserTrigger on User trigger event AfterUpdate|__sfdc_trigger/UserTrigger
+19:51:33.413 (413700362)|ENTERING_MANAGED_PKG|leadassist
+19:51:33.414 (414305984)|CUMULATIVE_LIMIT_USAGE
+19:51:33.414 (414305984)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.414 (414305984)|LIMIT_USAGE_FOR_NS|et4ae5|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.414 (414305984)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:33.414 (414305984)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:33.0 (430584059)|DML_END|[31]
+19:51:33.449 (449293485)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.449 (449325411)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (449567257)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (453647155)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (455353559)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (461336872)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (461842841)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (461873670)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (470296009)|SOQL_EXECUTE_BEGIN|[4952]|Aggregations:0|SELECT Id, InstanceName, IsSandbox, OrganizationType, NamespacePrefix, Country FROM Organization LIMIT 1
+19:51:33.449 (478094496)|SOQL_EXECUTE_END|[4952]|Rows:1
+19:51:33.449 (478577036)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (478931016)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (478953266)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (479009620)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (479022213)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (482007776)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.449 (490079106)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.449 (491149175)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491564064)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491582280)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491671651)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491932477)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491944686)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491984662)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (491992947)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (492288608)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.449 (494271796)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.449 (494463193)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (502641050)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (502702880)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (502745231)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (502762492)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (503214378)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (503252400)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (503264872)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (503312494)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (503323271)|ENTERING_MANAGED_PKG|mercury
+19:51:33.449 (503675030)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.449 (505760983)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.564 (564221971)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.564 (564251217)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (564752229)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (568484739)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (568753787)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (568785557)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (569197993)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (573391912)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (573869516)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (573892647)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (574233117)|SOQL_EXECUTE_BEGIN|[4952]|Aggregations:0|SELECT Id, InstanceName, IsSandbox, OrganizationType, NamespacePrefix, Country FROM Organization LIMIT 1
+19:51:33.564 (578969442)|SOQL_EXECUTE_END|[4952]|Rows:1
+19:51:33.564 (579328706)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (579742831)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (579777020)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (579840197)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (579851352)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (580311541)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.564 (583339347)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.564 (584216147)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (584730028)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (584751587)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (584849538)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (585120560)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (585133829)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (585174898)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (585183412)|ENTERING_MANAGED_PKG|mercury
+19:51:33.564 (585540012)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.564 (587709857)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.647 (647019512)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.647 (647077876)|ENTERING_MANAGED_PKG|mercury
+19:51:33.647 (647667585)|ENTERING_MANAGED_PKG|mercury
+19:51:33.647 (648938857)|ENTERING_MANAGED_PKG|mercury
+19:51:33.647 (648978170)|ENTERING_MANAGED_PKG|mercury
+19:51:33.667 (667304760)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.667 (667336359)|ENTERING_MANAGED_PKG|mercury
+19:51:33.667 (667899082)|ENTERING_MANAGED_PKG|mercury
+19:51:33.667 (669214458)|ENTERING_MANAGED_PKG|mercury
+19:51:33.667 (669545924)|DML_BEGIN|[195]|Op:Insert|Type:mercury__config__c|Rows:1
+19:51:33.667 (696464359)|DML_END|[195]
+19:51:33.667 (697206886)|DML_BEGIN|[208]|Op:Insert|Type:mercury__configprivate__c|Rows:1
+19:51:33.667 (718611135)|DML_END|[208]
+19:51:33.667 (719542260)|DML_BEGIN|[229]|Op:Update|Type:mercury__configprivate__c|Rows:1
+19:51:33.667 (739198869)|DML_END|[229]
+19:51:33.667 (741795682)|ENTERING_MANAGED_PKG|mercury
+19:51:33.667 (741873116)|ENTERING_MANAGED_PKG|mercury
+19:51:33.800 (800990224)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.800 (801022842)|ENTERING_MANAGED_PKG|mercury
+19:51:33.800 (801566922)|ENTERING_MANAGED_PKG|mercury
+19:51:33.800 (802834693)|ENTERING_MANAGED_PKG|mercury
+19:51:33.800 (803164257)|DML_BEGIN|[195]|Op:Insert|Type:mercury__config__c|Rows:1
+19:51:33.800 (828982913)|DML_END|[195]
+19:51:33.800 (829683155)|DML_BEGIN|[208]|Op:Insert|Type:mercury__configprivate__c|Rows:1
+19:51:33.800 (847570126)|DML_END|[208]
+19:51:33.800 (850232539)|ENTERING_MANAGED_PKG|mercury
+19:51:33.800 (850291910)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (905874815)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.905 (905905787)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (906479634)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (910237369)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (910631524)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (910686053)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (910722034)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (910916575)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (915155714)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (915676320)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (915699632)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (916034958)|SOQL_EXECUTE_BEGIN|[4952]|Aggregations:0|SELECT Id, InstanceName, IsSandbox, OrganizationType, NamespacePrefix, Country FROM Organization LIMIT 1
+19:51:33.905 (920216547)|SOQL_EXECUTE_END|[4952]|Rows:1
+19:51:33.905 (920582927)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (920886349)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (920903018)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (920953268)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (920962993)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (921447305)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.905 (924918629)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.905 (925745197)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926150611)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926167486)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926280572)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926532827)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926549153)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926603057)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926619937)|ENTERING_MANAGED_PKG|mercury
+19:51:33.905 (926910038)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.905 (928875071)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.988 (988294040)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:33.988 (988333855)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (988950463)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (993013631)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (993289978)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (993335519)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (993367899)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (993618043)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (998171861)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (998654406)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (998675480)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (999017780)|SOQL_EXECUTE_BEGIN|[4952]|Aggregations:0|SELECT Id, InstanceName, IsSandbox, OrganizationType, NamespacePrefix, Country FROM Organization LIMIT 1
+19:51:33.988 (1003204794)|SOQL_EXECUTE_END|[4952]|Rows:1
+19:51:33.988 (1003533438)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1003831056)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1003848090)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1003898576)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1003908053)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1004316596)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.988 (1007010403)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.988 (1007808926)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008202862)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008219582)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008303961)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008545557)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008557136)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008597059)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008605105)|ENTERING_MANAGED_PKG|mercury
+19:51:33.988 (1008875426)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:33.988 (1010626649)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:33.988 (1011448099)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1072000197)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:34.72 (1072033103)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1072632332)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1073837614)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1074139892)|DML_BEGIN|[15]|Op:Insert|Type:mercury__config__c|Rows:1
+19:51:34.72 (1099357374)|DML_END|[15]
+19:51:34.72 (1100101822)|DML_BEGIN|[26]|Op:Insert|Type:mercury__configprivate__c|Rows:1
+19:51:34.72 (1118875283)|DML_END|[26]
+19:51:34.72 (1119712190)|SOQL_EXECUTE_BEGIN|[28]|Aggregations:0|SELECT Id FROM User WHERE Id = :tmpVar1
+19:51:34.72 (1125489102)|SOQL_EXECUTE_END|[28]|Rows:1
+19:51:34.72 (1125846736)|DML_BEGIN|[31]|Op:Update|Type:User|Rows:1
+19:51:34.232 (1232486938)|SOQL_EXECUTE_BEGIN|[8]|Aggregations:0|SELECT id FROM permissionset WHERE name = 'et4ae5__ExactTarget_Integration_Admin'
+19:51:34.232 (1263140972)|SOQL_EXECUTE_END|[8]|Rows:0
+19:51:34.232 (1264298834)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT id FROM permissionset WHERE name = 'ExactTarget_Integration_Admin'
+19:51:34.232 (1293827329)|SOQL_EXECUTE_END|[13]|Rows:1
+19:51:34.232 (1294396101)|SOQL_EXECUTE_BEGIN|[14]|Aggregations:0|SELECT id FROM permissionset WHERE name = 'ExactTarget_Integration'
+19:51:34.232 (1314319300)|SOQL_EXECUTE_END|[14]|Rows:1
+19:51:34.232 (1314931847)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT assigneeId FROM permissionsetassignment WHERE (permissionSetId = :tmpVar1 AND assigneeId IN :tmpVar2)
+19:51:34.232 (1317967351)|SOQL_EXECUTE_END|[16]|Rows:0
+19:51:34.232 (1318446947)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|SELECT assigneeId FROM permissionsetassignment WHERE (permissionSetId = :tmpVar1 AND assigneeId IN :tmpVar2)
+19:51:34.232 (1321186994)|SOQL_EXECUTE_END|[17]|Rows:0
+19:51:34.321 (1321691354)|CUMULATIVE_LIMIT_USAGE
+19:51:34.321 (1321691354)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.321 (1321691354)|LIMIT_USAGE_FOR_NS|et4ae5|
+  Number of SOQL queries: 10 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.321 (1321691354)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.321 (1321691354)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:34.324 (1324012314)|CODE_UNIT_STARTED|[EXTERNAL]|01q4z000000XseM|UserTrigger on User trigger event AfterUpdate|__sfdc_trigger/UserTrigger
+19:51:34.324 (1324064253)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:34.324 (1324071607)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:34.324 (1324127013)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+19:51:34.324 (1324138913)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:34.324 (1324145436)|VARIABLE_SCOPE_BEGIN|[1]|this|UserTrigger|true|false
+19:51:34.324 (1324201534)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x730823ff
+19:51:34.324 (1324225536)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:34.324 (1324229532)|VARIABLE_SCOPE_BEGIN|[1]|this|UserTrigger|true|false
+19:51:34.324 (1324235220)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x730823ff
+19:51:34.324 (1324242602)|STATEMENT_EXECUTE|[1]
+19:51:34.324 (1324243955)|STATEMENT_EXECUTE|[3]
+19:51:34.324 (1324247443)|HEAP_ALLOCATE|[3]|Bytes:11
+19:51:34.324 (1324369530)|VARIABLE_ASSIGNMENT|[3]|this.cs|null|0x730823ff
+19:51:34.324 (1324373086)|STATEMENT_EXECUTE|[4]
+19:51:34.324 (1324374581)|HEAP_ALLOCATE|[4]|Bytes:15
+19:51:34.324 (1324413775)|HEAP_ALLOCATE|[4]|Bytes:19
+19:51:34.324 (1324428747)|USER_DEBUG|[4]|DEBUG|--UserTrigger--null
+19:51:34.324 (1324438345)|STATEMENT_EXECUTE|[5]
+19:51:34.324 (1324441371)|CUMULATIVE_LIMIT_USAGE
+19:51:34.324 (1324441371)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.324 (1324441371)|LIMIT_USAGE_FOR_NS|et4ae5|
+  Number of SOQL queries: 10 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.324 (1324441371)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.324 (1324441371)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:34.324 (1324531056)|CODE_UNIT_FINISHED|UserTrigger on User trigger event AfterUpdate|__sfdc_trigger/UserTrigger
+19:51:34.325 (1325666160)|ENTERING_MANAGED_PKG|leadassist
+19:51:34.327 (1327562728)|CUMULATIVE_LIMIT_USAGE
+19:51:34.327 (1327562728)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.327 (1327562728)|LIMIT_USAGE_FOR_NS|et4ae5|
+  Number of SOQL queries: 10 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.327 (1327562728)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:34.327 (1327562728)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:34.72 (1335920712)|DML_END|[31]
+19:51:34.72 (1338531608)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1339580355)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1339653812)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1340369617)|SOQL_EXECUTE_BEGIN|[367]|Aggregations:0|SELECT Id, Name, Rest_Username__c, Rest_Password__c, User_Feature_Set_Id__c, Vendor_Id__c FROM Configprivate__c WHERE Account_Id__c = :tmpVar1
+19:51:34.72 (1355883316)|SOQL_EXECUTE_END|[367]|Rows:2
+19:51:34.72 (1356320418)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1360337646)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1361010515)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1361045154)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1361469233)|SOQL_EXECUTE_BEGIN|[4952]|Aggregations:0|SELECT Id, InstanceName, IsSandbox, OrganizationType, NamespacePrefix, Country FROM Organization LIMIT 1
+19:51:34.72 (1365938833)|SOQL_EXECUTE_END|[4952]|Rows:1
+19:51:34.72 (1366277722)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1366658121)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1366687535)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1366758891)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1366773360)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1367217679)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:34.72 (1369851392)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:34.72 (1370767476)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371272230)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371294606)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371390078)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371669210)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371686372)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371745805)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1371759545)|ENTERING_MANAGED_PKG|mercury
+19:51:34.72 (1372162846)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:34.72 (1374322165)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:34.474 (1474564393)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:34.474 (1474617506)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1475395472)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1479613568)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1479830155)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1479874324)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1479903860)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1480092283)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1484377631)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1484967083)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1484996871)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1485332761)|SOQL_EXECUTE_BEGIN|[4952]|Aggregations:0|SELECT Id, InstanceName, IsSandbox, OrganizationType, NamespacePrefix, Country FROM Organization LIMIT 1
+19:51:34.474 (1489454389)|SOQL_EXECUTE_END|[4952]|Rows:1
+19:51:34.474 (1489793213)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1490099113)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1490116204)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1490165219)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1490175057)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1490618291)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:34.474 (1493752736)|SOQL_EXECUTE_END|[4988]|Rows:0
+19:51:34.474 (1494914122)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1495580798)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1495615813)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1495750267)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1496102341)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1496126900)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1496190760)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1496204453)|ENTERING_MANAGED_PKG|mercury
+19:51:34.474 (1496629154)|SOQL_EXECUTE_BEGIN|[4988]|Aggregations:0|SELECT Id FROM mercury__SMS_Message__c WHERE mercury__Id__c != NULL LIMIT 1
+19:51:34.474 (1498690496)|SOQL_EXECUTE_END|[4988]|Rows:0

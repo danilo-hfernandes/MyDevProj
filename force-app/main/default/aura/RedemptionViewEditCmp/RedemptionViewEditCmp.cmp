@@ -1,0 +1,217 @@
+<aura:component controller="RedemptionController" 
+                implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute type="Redemption__c[]" name="rdmList"/>
+    <aura:attribute name="redemptionWrpobj" type="object"/>
+    <aura:attribute name="redemptionWrpobjwrp" type="object"/>
+    <aura:attribute name="isLoaded" type="Boolean" description="used to show loader" default="true"/>
+    <aura:attribute name="seletedTimeshareId" type="String" default="null"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="showMessage" type="boolean" default ="false"/>
+    <aura:attribute name="statusMessage" type="boolean" default ="false"/>
+    <aura:attribute name="addButtonIsVisible" type="boolean" default ="false"/>
+     <aura:attribute name="noShow" type="boolean" default ="false"/>
+    <aura:attribute name="disableButton" type="boolean" default ="false"/>
+    <aura:attribute name="showProdColumn" type="boolean" default ="false"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:attribute name="CurrentUser" type="Object"/>
+    
+    <force:recordData recordId="{!$SObjectType.CurrentUser.Id}" fields="Profile.Name"
+                      targetFields="{!v.CurrentUser}"/>
+    
+    <aura:if isTrue="{!!v.isLoaded}">
+        <c:Loader/>
+    </aura:if>
+    
+    <div  class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <h3 align="center" class="slds-text-heading_medium slds-hyphenate">Flight Certificate Redemption History</h3>
+        <br/>
+        <div  style="background-color:white;">
+            <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" style="text-align : left">
+                <thead>
+                    <tr class="slds-text-title--caps slds-text-align_center">
+                        <th scope="col"  >
+                            <div class="slds-truncate" title="Redemption Name">Redemption Name</div>
+                        </th>
+                        <!-- <th scope="col" width="10%">
+                            <div  class="slds-truncate" title="REQUEST DATE">Request Date</div>
+                        </th> -->
+                        <th scope="col" >
+                            <div  class="slds-truncate" title="CHECK IN DATE">Check In Date</div>
+                        </th>
+                        <th scope="col" >
+                            <div class="slds-truncate" title="Redemption Type">Redemption Type</div>
+                        </th>
+                        <th scope="col" >
+                            <div  class="slds-truncate" title="RESERVATION">Reservation</div>
+                        </th>
+                         
+                        <!-- <th scope="col" width="10%">
+                            <div  class="slds-truncate" title="Redemption Amount">Redemption Amount</div>
+                        </th>
+                        <th scope="col" width="7%">
+                            <div  class="slds-truncate" title="Usage Fee">Usage Fee</div>
+                        </th> -->
+                        
+                        <aura:if isTrue="{!!showProdColumn}">
+                            <th scope="col" width="10%">
+                                <div  class="slds-truncate" title="Opportunity">Opportunity Product</div>
+                            </th>
+                        </aura:if>
+                        <th scope="col" >
+                            <div  class="slds-truncate" title="STATUS">Status</div>
+                        </th>
+                        <th scope="col" >
+                            <div  class="slds-truncate" title="Edit">Edit</div>
+                        </th>
+                         <aura:if isTrue="{!!addButtonIsVisible}">
+                             <th scope="col" >
+                                 <div  class="slds-truncate" title="ADD">ADD</div>
+                             </th>
+                        </aura:if>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.rdmList}" var="redp">
+                        <tr >
+                            <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Name__c}">
+                                    <a target="_blank" href="{!'/'+redp.Id}">{!redp.Name__c}</a>  
+                                </div>
+                            </td> 
+                            <!--<td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Request_Date__c}" >{!redp.Request_Date__c}</div>
+                            </td> -->
+                            <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Check_In_Date__c}" >
+                                    {!redp.Check_In_Date__c}
+                                </div>
+                            </td>
+                            <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Redemption_Type__c}" >
+                                     {!redp.Redemption_Type__c}
+                                    <!-- commented by Sifra
+                                    <a target="_blank" href="{!'/'+redp.Property__r.Id}">{!redp.Property__r.Name}</a>  -->
+                                </div>
+                            </td>
+                            
+                            <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Reservation__c}" >
+                                    {!redp.Reservation__c}
+                                </div>
+                            </td>
+                            
+                            <!-- <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Redemption_Amount__c}" >
+                                    {!redp.Redemption_Amount__c}
+                                </div>
+                            </td>
+                            <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Usage_Fee__c}" >
+                                    {!redp.Usage_Fee__c}
+                                </div>
+                            </td> -->
+                            <aura:if isTrue="{!!showProdColumn}">
+                                <td scope="row" >
+                                    <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Opportunity_Product__r.Product2.Name}" >
+                                        {!redp.Opportunity_Product__r.Product2.Name}
+                                    </div>
+                                </td> 
+                             </aura:if> 
+                            <td scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="{!redp.Status__c}" >
+                                    {!redp.Status__c}
+                                </div>
+                            </td>
+                            <td width="5%" scope="row" data-label="Opportunity">
+                                <aura:if isTrue="{!redp.Hide_Edit_Button__c}">
+                                    <button class="slds-button slds-button_brand" disabled="true" type="button" onclick="{!c.editRecord}" id="{!redp.Id}" value="{!redp.id}">Edit</button>
+                                    <lightning:helptext iconName="utility:info" content="When 'No Show' is true then edit button will be disabled" />
+                                    <aura:set attribute="else">
+                                        <button class="slds-button slds-button_brand" type="button" onclick="{!c.editRecord}" id="{!redp.Id}" value="{!redp.id}">Edit</button> 
+                                    </aura:set>
+                                </aura:if>
+                            </td>
+                            <aura:if isTrue="{!redp.Add_New_Button_Access__c}">
+                              <aura:if isTrue="{!empty(redp.Parent_Redemption__c)}">
+                        	 <td width="5%" scope="row" data-label="Opportunity">
+                                <button class="slds-button slds-button_brand" type="button" onclick="{!c.addRecord}" id="{!redp.Id}" value="{!redp.id}">ADD</button> 
+                             </td> 
+                             </aura:if> 
+                          </aura:if> 
+                            
+                            
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+    
+    <aura:if isTrue="{!v.isModalOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box Header Starts here-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Redemption Details</h2>
+                </header>
+                
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning:recordEditForm aura:id="recordViewForm"
+                                              recordId="{!v.redemptionWrpobj}"
+                                              objectApiName="Redemption__c"
+                                              onsubmit="{!c.handleRedemption}" >
+                        <lightning:inputField fieldName="Name" />
+                        <lightning:inputField fieldName="Request_Date__c" />
+                        <lightning:inputField fieldName="Check_In_Date__c" />
+                        
+                        <div style="margin-bottom: 10px;"   class="slds-truncate"   title="{!v.redemptionWrpobjwrp.Id}">
+                            <lightning:select label="Property"  value="{!v.redemptionWrpobjwrp.selectedTimeShareId}" >
+                                <option value="" text="--None--" />
+                                <aura:iteration items="{!v.redemptionWrpobjwrp.timeshareDetails}" var="item1">
+                                    <option text="{!item1.label}" value="{!item1.value}" selected="{!if(v.redemptionWrpobjwrp.timeshareDetails == item1.value,true,false)}" />
+                                </aura:iteration>
+                            </lightning:select>
+                        </div>
+                        
+                        <lightning:inputField fieldName="Reservation__c" />
+                        <lightning:inputField aura:id="OpportunityProduct" fieldName="Opportunity_Product__c" />
+                        
+                        <lightning:inputField fieldName="Redemption_Amount__c" onchange="{!c.handleChange}"/>
+                        <aura:if isTrue="{!v.showMessage}">
+                            <p style="color: red;">Redemption Amount can't exceed $1000</p>
+                        </aura:if>
+                        <lightning:inputField fieldName="Usage_Fee__c" />
+                        <lightning:inputField fieldName="Redemption_Type__c" />
+                        <lightning:inputField fieldName="Plaza__c" />
+                        <lightning:inputField fieldName="SiteName__c" />
+                        <lightning:inputField fieldName="RoomType__c" />
+                        <!-- <td scope="row" > RC-260
+                        <lightning:inputField fieldName="Redemption_Type__c" />
+                        </td> -->    
+                        <lightning:inputField fieldName="Status__c" onchange="{!c.handleStatusChange}"/>
+                        <aura:if isTrue="{!v.statusMessage}">
+                            <p style="color: red;">You don't have access to mark the Status as Reservation Confirmed </p>
+                        </aura:if> 
+                         <aura:if isTrue="{!v.noShow}">
+                        	 <lightning:inputField fieldName="No_Show__c" />
+                          </aura:if> 
+                        <br/>                    
+                        <div align="center" >
+                            <lightning:button type="submit" label="Update" variant="brand" disabled="{!v.disableButton}"/>
+                            <lightning:button variant="neutral" label="Cancel"  title="Cancel" onclick="{! c.closeModel }"/>
+                        </div>
+                    </lightning:recordEditForm> 
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    
+</aura:component>

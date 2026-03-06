@@ -1,0 +1,21 @@
+.THIS.slds-modal__container{    
+    height:500px !important;
+}
+
+.cApplyCreditsBtn.slds-modal__container{    
+    height:500px !important;
+}
+
+.THIS .slds-modal__container {
+    height:500px !important;
+}
+
+.cApplyCreditsBtn .inputNumber {
+    /*labelPlacement:center-left;*/
+    display: none !important;
+}
+
+.THIS .alerted{
+    border: 1px solid rgba(207, 0, 15, 1) !important;
+	/*border-width: 5px;*/
+}

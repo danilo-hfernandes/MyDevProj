@@ -1,0 +1,155 @@
+64.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+17:00:01.40 (40140442)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (41663580)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (48753897)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (48866248)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (49475096)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (55016727)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (75908897)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (75970292)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (76053289)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (76087152)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (76125184)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (76194997)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (76262248)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (76455717)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (81719300)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (116867296)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (117309294)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (117548794)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (117754830)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (117965658)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (118234442)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (118497790)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (118813972)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (119023403)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (119237529)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (119430173)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (119608553)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (119789680)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (119994839)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (120214765)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (120413792)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (120607432)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (120781612)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (121329575)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (121689355)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (121980897)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (122267255)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (122582666)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (122806142)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (123002975)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (123143176)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (123250236)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (123510261)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (123733017)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (123957699)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (124350179)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (146659019)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (147114762)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (147320828)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (147449018)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (147568239)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (147681992)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (147875492)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (148060339)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (148180798)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (148422235)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (148661153)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (148786509)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (148884777)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149013520)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149049343)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149069515)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149097759)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149130426)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149162674)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149231113)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149399466)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149471447)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149522605)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149581934)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149645632)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149695417)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149749562)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149814601)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149863728)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149911511)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (149997064)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150050560)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150099400)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150146338)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150192878)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150239125)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150285505)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150332316)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150378221)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150460033)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150508073)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150584074)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (150604902)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (156199951)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (156288316)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (162295574)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (162533158)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (167513159)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (167571681)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (178537053)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (186974325)|SOQL_EXECUTE_BEGIN|[425]|Aggregations:0|SELECT Id, Name, InstanceName, IsSandbox, OrganizationType, FiscalYearStartMonth, ComplianceBccEmail FROM Organization LIMIT 1
+17:00:01.40 (194627975)|SOQL_EXECUTE_END|[425]|Rows:1
+17:00:01.40 (195478153)|SOQL_EXECUTE_BEGIN|[542]|Aggregations:0|SELECT Id, Status, NamespacePrefix, ExpirationDate, CreatedDate FROM PackageLicense WHERE NamespacePrefix IN ('analyticsengine', 'powerpack')
+17:00:01.40 (203750543)|SOQL_EXECUTE_END|[542]|Rows:1
+17:00:01.40 (204641540)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (204675292)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (217063667)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (225319765)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (229722871)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (237602385)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (253969775)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (254065317)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (254179856)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (277028894)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (288283596)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (288529078)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (288657082)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (288714627)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (288761023)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (329889325)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|select Id, OwnerId, Name, LastModifiedDate, analyticsengine__Active__c, analyticsengine__Day_of_Week__c, analyticsengine__Email_Body__c, analyticsengine__Email_Subject__c, analyticsengine__End_Date__c, analyticsengine__Filter_Value__c, analyticsengine__Folder_Name__c, analyticsengine__Frequency_Type__c, analyticsengine__Frequency__c, analyticsengine__From_Address__c, analyticsengine__Is_Preview__c, analyticsengine__Last_Failure__c, analyticsengine__Last_Run__c, analyticsengine__Parent_Object__c, analyticsengine__Preferred_Time__c, analyticsengine__Report_Id__c, analyticsengine__Retry_If_Failed__c, analyticsengine__Settings__c, analyticsengine__Start_Date__c, analyticsengine__Template__c, analyticsengine__Template__r.Id, analyticsengine__Template__r.OwnerId, analyticsengine__Template__r.IsDeleted, analyticsengine__Template__r.Name, analyticsengine__Template__r.CreatedDate, analyticsengine__Template__r.CreatedById, analyticsengine__Template__r.LastModifiedDate, analyticsengine__Template__r.LastModifiedById, analyticsengine__Template__r.SystemModstamp, analyticsengine__Template__r.analyticsengine__Active__c, analyticsengine__Template__r.analyticsengine__Day_of_Week__c, analyticsengine__Template__r.analyticsengine__Email_Body__c, analyticsengine__Template__r.analyticsengine__Email_Subject__c, analyticsengine__Template__r.analyticsengine__End_Date__c, analyticsengine__Template__r.analyticsengine__Filter_Value__c, analyticsengine__Template__r.analyticsengine__Folder_Name__c, analyticsengine__Template__r.analyticsengine__Frequency_Type__c, analyticsengine__Template__r.analyticsengine__Frequency__c, analyticsengine__Template__r.analyticsengine__From_Address__c, analyticsengine__Template__r.analyticsengine__Is_Preview__c, analyticsengine__Template__r.analyticsengine__Last_Failure__c, analyticsengine__Template__r.analyticsengine__Last_Run__c, analyticsengine__Template__r.analyticsengine__Parent_Object__c, analyticsengine__Template__r.analyticsengine__Preferred_Time__c, analyticsengine__Template__r.analyticsengine__Report_Id__c, analyticsengine__Template__r.analyticsengine__Retry_If_Failed__c, analyticsengine__Template__r.analyticsengine__Settings__c, analyticsengine__Template__r.analyticsengine__Start_Date__c, analyticsengine__Template__r.analyticsengine__Template__c, analyticsengine__Template__r.analyticsengine__To_Address_1__c, analyticsengine__Template__r.analyticsengine__To_Address__c, analyticsengine__Template__r.analyticsengine__Type__c, analyticsengine__Template__r.analyticsengine__File_Encoding__c, analyticsengine__Template__r.analyticsengine__File_Name__c, analyticsengine__Template__r.analyticsengine__Email_Template_Id__c, analyticsengine__Template__r.analyticsengine__Email_Template_What_Id__c, analyticsengine__Template__r.analyticsengine__Email_Template_Who_Id__c, analyticsengine__Template__r.analyticsengine__Send_File_Securely__c, analyticsengine__Template__r.CreatedBy.Name, analyticsengine__To_Address_1__c, analyticsengine__To_Address__c, analyticsengine__Type__c, analyticsengine__File_Encoding__c, analyticsengine__File_Name__c, analyticsengine__Email_Template_Id__c, analyticsengine__Email_Template_What_Id__c, analyticsengine__Email_Template_Who_Id__c, analyticsengine__Send_File_Securely__c, CreatedBy.Name,  TYPEOF Owner WHEN User THEN Name, Email, TimeZoneSidKey, LocaleSidKey END  from Setting__c where Active__c = true and Type__c NOT IN ( 'FilteredReportExport' ) and is_Preview__c = false 
+17:00:01.40 (412537297)|SOQL_EXECUTE_END|[17]|Rows:1
+17:00:01.40 (412791532)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.40 (414157625)|SOQL_EXECUTE_BEGIN|[971]|Aggregations:0|SELECT Id, ApexClass.Name FROM AsyncApexJob WHERE (JobType = 'BatchApex' AND Status NOT IN ('Aborted', 'Completed', 'Failed') AND ApexClass.Name IN ('ReportExport')) WITH SECURITY_ENFORCED
+17:00:01.40 (455788746)|SOQL_EXECUTE_END|[971]|Rows:0
+17:00:01.40 (456142533)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:01.573 (573873721)|CUMULATIVE_LIMIT_USAGE
+17:00:01.573 (573873721)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 93 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:00:01.573 (573873721)|LIMIT_USAGE_FOR_NS|analyticsengine|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:00:01.573 (573873721)|CUMULATIVE_LIMIT_USAGE_END
+

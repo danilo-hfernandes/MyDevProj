@@ -1,0 +1,33 @@
+<aura:component controller="AnnualDuesSalesEngagementTable" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:attribute name="columns" type="List" default="[
+                                                        {label: 'ID', fieldName: 'Id', type: 'text'},
+														{label: 'Assign_to_Sales_Cadence_Name__c', fieldName: 'Assign_to_Sales_Cadence_Name__c', type: 'text'},
+                                                        {label: 'Match Group Name', fieldName: 'Match_Group_Name__c', type: 'text'},
+                                                        {label: 'Account Name', fieldName: 'Account.Name', type: 'text'},
+                                                        {label: 'Contact Name', fieldName: 'Name', type: 'text'},
+                                                        {label: 'Use Round Robin', fieldName: 'leadassist__Use_Round_Robin__c', type: 'text'},
+                                                        {label: 'Assign to Sales Cadence', fieldName: 'Assign_to_Sales_Cadence__c', type: 'text'},
+                                                        {label: 'Cadence Flag', fieldName: 'Cadence_Flag__c', type: 'text'},
+                                                        {label: 'Dues Last Paid Until', fieldName: 'Account.Dues_Last_Paid_Until__c', type: 'text'},
+                                                        {label: 'Affiliated ID', fieldName: 'Account.Affiliated_Id__c', type: 'text'},
+                                                        {label: 'Preferred Language', fieldName: 'Account.Preferred_Language__c', type: 'text'},
+                                                        {label: 'Membership SubType', fieldName: 'Account.Membership_SubType__c', type: 'text'}
+                                                        ]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+  <!-- lightning:button label="Export to CSV" onclick="{!c.exportToCSV}" /> -->
+    <button class="slds-button slds-button--brand" onclick="{!c.convertintocsvfile}">Convert In To CSV Format</button>
+
+    <!--<lightning:card title="Contact List">
+        <lightning:datatable
+                             keyField="Id"
+                             data="{!v.contacts}"
+                             columns="{!v.columns}"
+                             hideCheckboxColumn="true"
+                             />
+    </lightning:card> -->
+    
+</aura:component>

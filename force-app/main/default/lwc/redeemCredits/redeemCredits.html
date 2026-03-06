@@ -1,0 +1,23 @@
+<template>
+    <div class="spinner">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+    </div>
+    <lightning-quick-action-panel header="Apply Credits">
+        <div class="slds-p-around_medium">
+            <div>
+                <strong><p style="color: red;">{displayError}</p></strong>
+            </div>  
+            <!--<p><strong>Apply Credits cannot be greater than the balance to pay</strong></p> -->
+            <lightning-input label="Total Amount Due" value={totalAmountDue} readonly="true"></lightning-input>
+            <lightning-input label="Credit Balance" value={creditBalance}  readonly="true"></lightning-input>
+            <lightning-input label="No. of Credits" value={numberOfCredits} onchange={handleNoOfCredits}></lightning-input>
+        </div>
+        <div slot="footer">
+            <lightning-button class="slds-p-around_small" label="Cancel" onclick={closeQuickAction}></lightning-button>
+            <lightning-button label="Save" variant="brand" onclick={createPayment}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

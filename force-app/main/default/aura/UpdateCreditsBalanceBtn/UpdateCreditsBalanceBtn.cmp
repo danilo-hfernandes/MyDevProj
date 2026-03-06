@@ -1,0 +1,35 @@
+<aura:component controller="UpdateCreditsBalanceBtnController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="creditsBalance" type="Decimal" />
+    <aura:attribute name="isUpdating" type="Boolean" default="false" />
+    
+    <lightning:card title="Credits Balance">
+
+        <div aura:id="container" style="font-size:minimum">
+            
+            <div class="slds-form" role="list">
+                <div class="slds-form__row">
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                            <label class="slds-form-element__label" for="single-form-element-id-02"> </label>
+                            <div class="slds-form-element__control">
+                                <lightning:input type="number" name="creditsBalanceInput" value="{!v.creditsBalance}" disabled="true" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">                            
+                            <div class="slds-form-element__control">                                
+                                <lightning:button name="Member Number Required!" variant="brand" label="Check Credits Balance" onclick="{!c.updateCreditsBalance}" disabled="{!v.isUpdating}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning:card>
+    
+</aura:component>

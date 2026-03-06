@@ -1,0 +1,115 @@
+<apex:page standardController="Opportunity" extensions="RebookTourController" lightningStyleSheets="true" sidebar="false" docType="html-5.0">
+    <head>
+        <apex:slds />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function openModal() {
+                document.getElementById("rebookModal").style.display = "block";
+            }
+            function closeModal() {
+                document.getElementById("rebookModal").style.display = "none";
+            }
+            
+            function fetchAvailableTours() {
+                let selectedDate = document.getElementById("datePicker").value;
+                let selectedTime = document.getElementById("timePicker").value;
+
+                if (selectedDate && selectedTime) {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.RebookTourController.getAvailableTours}',
+                        selectedDate, selectedTime,
+                        function(result, event) {
+                            if (event.status) {
+                                let tableBody = document.getElementById("availableToursBody");
+                                tableBody.innerHTML = ""; // Clear previous results
+                                
+                                result.forEach(function(tour) {
+                                    let row = <tr>
+                                        <td><input type="radio" name="selectedTour" value="${tour.Id}"/></td>
+                                        <td>${tour.Name}</td>
+                                        <td>${tour.Location__c}</td>
+                                        <td>${tour.Day__c}</td>
+                                        <td>${tour.Date__c}</td>
+                                        <td>${tour.Tour_Time__c}</td>
+                                        <td>${tour.Tour_Allowance__c}</td>
+                                        <td>${tour.Booked_Tours__c}</td>
+                                        <td>${tour.Available_Tours__c}</td>
+                                        <td>${tour.Wave__c}</td>
+                                    </tr>;
+                                    tableBody.innerHTML += row;
+                                });
+                            }
+                        }, {escape: true}
+                    );
+                }
+            }
+        </script>
+    </head>
+
+    <apex:form >
+        <apex:pageBlock title="Tour Appointment">
+            <apex:pageBlockSection title="Appointment Info" columns="1">
+                <apex:inputField value="{!appointment.Appointment_Date__c}" label="Appointment Date"/>
+                <apex:inputField value="{!appointment.Appointment_Time__c}" label="Appointment Time"/>
+                <apex:inputField value="{!appointment.Appt_Agent__c}" label="Appointment Agent"/>
+                <apex:inputField value="{!appointment.Appt_Type__c}" label="Appointment Type"/>
+                <apex:inputField value="{!appointment.Closing_Agent__c}" label="Closing Agent"/>
+                <apex:inputField value="{!appointment.Opp_Status__c}" label="Opportunity Status"/>
+                <apex:inputField value="{!appointment.Showed__c}" label="Showed"/>
+            </apex:pageBlockSection>
+
+           
+            <div style="text-align:center;">
+                <apex:commandButton value="Save" action="{!saveAppointment}" styleClass="slds-button slds-button_brand"/>
+                <button type="button" onclick="openModal();" class="slds-button slds-button_neutral">Rebook</button>
+            </div>
+        </apex:pageBlock>
+
+       
+        <div id="rebookModal" style="display:none; position:fixed; top:20%; left:20%; width:60%; background:#fff; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+            <h2>Rebook Tour</h2>
+            <label for="datePicker">Select Date</label>
+            <input type="date" id="datePicker" onchange="fetchAvailableTours()"/>
+
+            <label for="timePicker">Select Time</label>
+            <select id="timePicker" onchange="fetchAvailableTours()">
+                <option value="">-- Select Time --</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+            </select>
+
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Tour #</th>
+                        <th>Location</th>
+                        <th>Day</th>
+                        <th>Tour Date</th>
+                        <th>Tour Time</th>
+                        <th>Tour Allowance</th>
+                        <th>Booked Tours</th>
+                        <th>Available Tours</th>
+                        <th>Wave</th>
+                    </tr>
+                </thead>
+                <tbody id="availableToursBody">
+                    
+                </tbody>
+            </table>
+
+            <div style="text-align:center; margin-top:20px;">
+                <button onclick="closeModal();" class="slds-button slds-button_neutral">Cancel</button>
+                <apex:commandButton value="Save Rebooking" action="{!saveRebooking}" styleClass="slds-button slds-button_brand"/>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

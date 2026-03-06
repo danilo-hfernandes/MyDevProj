@@ -1,0 +1,10 @@
+.THIS.exampleHolder{
+    position: relative;
+    display: inline-block;
+    /*background-color:#16325c;*/
+    margin-left: 50%;
+    width: 55px;
+    vertical-align: middle;
+    /*white-space: nowrap;*/
+    background-color: rgba(0, 0, 0, 0.10);
+}

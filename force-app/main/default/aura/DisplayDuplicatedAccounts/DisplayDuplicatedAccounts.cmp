@@ -1,0 +1,45 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:appHostable,force:lightningQuickAction" controller ="GetDuplicatedAccountListController" access="global" >
+    <aura:attribute name="lstAccount" type="Account[]" />
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="errorMsg" type="String"/>
+    <aura:attribute name="ShowComponent" type="Boolean" default="false"/>
+    <aura:attribute name="ShowComponent2" type="Boolean" default="false"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="record" type="Account" />    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="exampleHolder">
+        <aura:if isTrue="{! v.ShowSpinner }">            
+                <lightning:spinner alternativeText="Checking duplicates..." />            
+        </aura:if>
+    </div>
+    
+    <aura:if isTrue="{!v.ShowComponent2}">
+        <div style="overflow: hidden; margin-bottom: 2px;">
+            <lightning:card variant="Narrow" title="Potential Duplicated Accounts" iconName="standard:merge">
+                <aura:if isTrue="{!v.ShowComponent}">
+                    <div style="overflow-y: scroll ; max-height:112px !important">
+                        <lightning:datatable data="{! v.lstAccount }" 
+                                             columns="{! v.mycolumns }" 
+                                             keyField="Id"
+                                             hideCheckboxColumn="true"/>
+                        
+                    </div>
+                    <aura:set attribute="else">
+                        <div style = "margin-left:5%"> <b>    {! v.errorMsg }</b> </div>
+                    </aura:set>
+                </aura:if>
+            </lightning:card>
+        </div>
+    </aura:if>
+    <!-- <aura:if isTrue="{!v.ShowComponent2}">
+        
+        <lightning:card variant="Narrow" title="Lead Source is not associated with any Affiliate" iconName="standard:first_non_empty">            
+                <div class="slds">
+                    <div style = "margin-left:5%"> <b>Please ask an admin to create the Lead Source Settings and associate it with an Affiliate Id before converting the Lead.</b> </div>
+                </div>                
+        </lightning:card>        
+    </aura:if> -->
+    
+</aura:component>

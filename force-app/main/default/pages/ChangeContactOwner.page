@@ -1,0 +1,28 @@
+<apex:page standardController="Contact" extensions="ChangeContactOwnerController" recordSetVar="contacts" lightningStylesheets="true"> 
+    <apex:slds />
+    <apex:pageMessages id="showmsg"></apex:pageMessages>
+    <apex:outputPanel rendered="{!!errorMessage}">
+        <apex:includeLightning />
+        <div id="lightningvf" />
+    </apex:outputPanel>
+
+    <apex:outputPanel id="pb" rendered="{!errorMessage}">
+        <button class="slds-button slds-button_brand" id="Back" type="submit" onclick="backToListView(); return false;">Back</button>
+    </apex:outputPanel>
+    <script> 
+        var selectedIdsJson = '{!contactString}';
+        console.log('>>>>selectedIdsJson>>>>>>>',selectedIdsJson);
+        $Lightning.use("c:ChangeContactOwnerApp", function() {
+            $Lightning.createComponent(
+            "c:changeContactOwnerLWCComponent",
+            { contactIds: selectedIdsJson, message :  'You\'ve selected {!noOfRecords} record.'}, "lightningvf",
+            function(cmp) {
+                console.log('component created');
+                console.log(cmp);
+            });
+        });
+        function backToListView(){
+            window.open('/lightning/o/Contact/list', '_parent');
+        }
+    </script>
+</apex:page>

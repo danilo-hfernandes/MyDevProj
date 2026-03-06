@@ -1,0 +1,96 @@
+<aura:component 
+    implements="force:lightningQuickActionWithoutHeader,force:hasRecordId"
+    access="global">
+
+    <aura:attribute name="recordId" type="Id"/>
+
+    <section role="dialog" class="slds-modal slds-fade-in-open slds-modal_large">
+        <div class="slds-modal__container">
+
+            <!-- Header -->
+            <header class="slds-modal__header">
+                <lightning:buttonIcon 
+                    iconName="utility:close"
+                    alternativeText="close"
+                    onclick="{!c.close}"
+                    class="slds-modal__close"/>
+                <h2 class="slds-text-heading_medium">
+                    Add Timeshare
+                </h2>
+            </header>
+
+            <!-- Body -->
+            <div class="slds-modal__content slds-p-around_medium">
+
+                <lightning:recordEditForm
+                                          aura:id="timeshareForm"
+                                          objectApiName="Timeshare__c"
+                                          onsuccess="{!c.handleSuccess}">
+
+                    <lightning:messages />
+
+                    <lightning:inputField 
+                        fieldName="Lead__c"
+                        value="{!v.recordId}" />
+
+        <lightning:inputField fieldName="Resort__c" required="true"/>
+        <lightning:inputField fieldName="Points_Anniversary_Effective_Date__c"/>
+        <lightning:inputField fieldName="Unit_Size__c" required="true"/>
+        <lightning:inputField fieldName="Annual_Allocation__c"/>
+        <lightning:inputField fieldName="Ownership__c" required="true"/>
+        <lightning:inputField fieldName="Fees_Billing_Period__c" required="true"/>
+        <lightning:inputField fieldName="Bathrooms__c"/>
+        <lightning:inputField fieldName="Renewal_Month__c"/>
+        <lightning:inputField fieldName="Usage__c" required="true"/>
+        <lightning:inputField fieldName="MF_Paid_Until_Month__c" required="true"/>
+        <lightning:inputField fieldName="Occupancy__c"/>
+        <lightning:inputField fieldName="MF_Paid_Until_Year__c" required="true"/>
+        <lightning:inputField fieldName="Week_Type__c" required="true"/>
+        <lightning:inputField fieldName="MF_Amount__c" required="true"/>
+        <lightning:inputField fieldName="Unit_Number__c"/>
+        <lightning:inputField fieldName="Past_Due_MF__c"/>
+        <lightning:inputField fieldName="Week__c" required="true"/>
+        <lightning:inputField fieldName="Special_Assessment__c"/>
+        <lightning:inputField fieldName="View__c"/>
+        <lightning:inputField fieldName="Mortgage__c"/>
+        <lightning:inputField fieldName="Season__c"/>
+        <lightning:inputField fieldName="Mortgage_Balance__c"/>
+        <lightning:inputField fieldName="Points_Program__c"/>
+        <lightning:inputField fieldName="Mortgage_Monthly_Payment__c"/>
+        <lightning:inputField fieldName="Contract__c"/>
+        <lightning:inputField fieldName="Number_of_past_due_mortgage_payments__c"/>
+        <lightning:inputField fieldName="Year_Purchased__c"/>
+        <lightning:inputField fieldName="Mortgage_Interest_Rate__c"/>
+        <lightning:inputField fieldName="RTU_Year__c"/>
+        <lightning:inputField fieldName="First_Year_Use__c" required="true"/>
+        <lightning:inputField fieldName="SMTN_OwnerId__c"/>
+        <lightning:inputField fieldName="Listing_type__c"/>
+        <lightning:inputField fieldName="Amount_of_Points__c"/>
+        <lightning:inputField fieldName="Listing_Price__c"/>
+        <lightning:inputField fieldName="Trade_In_Value__c"/>
+
+                </lightning:recordEditForm>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="slds-modal__footer">
+                <lightning:button 
+                    variant="neutral"
+                    label="Cancel"
+                    onclick="{!c.close}" />
+
+                <lightning:button 
+                                  variant="brand"
+                                  label="Save"
+                                  onclick="{!c.save}"
+                                  class="slds-m-left_small"/>
+
+                
+            </footer>
+
+        </div>
+    </section>
+
+
+</aura:component>

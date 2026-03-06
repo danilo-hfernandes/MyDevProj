@@ -1,0 +1,39 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="GetEmailData" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="emailMessages" type="List" />
+    <aura:attribute name="selectedEmail" type="Object" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+    
+    <!-- Handles the init event -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner alternativeText="Loading emails..." />
+    </aura:if>
+    
+    <aura:if isTrue="{!not(empty(v.selectedEmail))}">
+        <lightning:card title="Email Details" iconName="standard:email">
+            <div class="slds-box slds-theme_default">
+                <p><strong>Message Date: </strong>
+                    <lightning:formattedDateTime 
+                                                 value="{!v.selectedEmail.MessageDate}" 
+                                                 year="numeric" 
+                                                 month="short" 
+                                                 day="2-digit" 
+                                                 hour="2-digit" 
+                                                 minute="2-digit" 
+                                                 timeZoneName="short" />
+                </p>
+                <p><strong>From: </strong> {!v.selectedEmail.FromAddress}</p>
+                <p><strong>To: </strong> {!v.selectedEmail.ToAddress}</p>
+                <p><strong>Bcc: </strong> {!v.selectedEmail.BccAddress}</p>
+                <p><strong>Subject: </strong> {!v.selectedEmail.Subject}</p>
+                
+            </div>
+            <div aura:id="emailBody" class="slds-box slds-theme_default slds-m-top_medium">
+                <aura:unescapedHtml value="{!v.selectedEmail.HtmlBody}" />
+            </div>
+        </lightning:card>
+    </aura:if>
+    
+</aura:component>

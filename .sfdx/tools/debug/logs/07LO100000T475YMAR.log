@@ -1,0 +1,63 @@
+57.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+15:20:00.14 (14779561)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (16357444)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (25197555)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (34264565)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (36345581)|SOQL_EXECUTE_BEGIN|[3564]|Aggregations:0|SELECT Master_Object__c FROM SMS_Schedule__c WHERE (Status__c = 'Pending' AND Date_Time__c <= :tmpVar1 AND Master_Object__c != 'Campaign' AND Master_Object__c != NULL) ORDER BY Date_Time__c ASC NULLS FIRST LIMIT 1
+15:20:00.14 (44614058)|SOQL_EXECUTE_END|[3564]|Rows:0
+15:20:00.14 (44939341)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (45730513)|SOQL_EXECUTE_BEGIN|[3491]|Aggregations:0|SELECT Id, Campaign__c, Status__c, Message__c, Member_Status_Update__c, Member_Status_Send__c, Status_Reason__c, Scope_Number_Field__c, Scope_Number_Field_Alt__c, SMS_Account__c, Tag__c, Media__c, Cloak_Number__c FROM SMS_Schedule__c WHERE (Master_Object__c = 'Campaign' AND Status__c = 'Pending' AND Campaign__c != NULL AND Date_Time__c <= :tmpVar1) LIMIT 1
+15:20:00.14 (52381120)|SOQL_EXECUTE_END|[3491]|Rows:0
+15:20:00.14 (52709758)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (54714797)|SOQL_EXECUTE_BEGIN|[5620]|Aggregations:0|SELECT Id, Name FROM Template_Folder__c
+15:20:00.14 (59505873)|SOQL_EXECUTE_END|[5620]|Rows:0
+15:20:00.14 (59725731)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (60441409)|SOQL_EXECUTE_BEGIN|[5626]|Aggregations:0|SELECT NamespacePrefix, DeveloperName, InternalSharingModel FROM EntityDefinition WHERE (NamespacePrefix = 'mercury' AND DeveloperName = 'SMS_Template')
+15:20:00.14 (277851642)|SOQL_EXECUTE_END|[5626]|Rows:1
+15:20:00.14 (279392052)|SOQL_EXECUTE_BEGIN|[5630]|Aggregations:0|SELECT Id, ParentId, UserOrGroupId, AccessLevel, RowCause FROM Template_Folder__Share WHERE ParentId = :tmpVar1
+15:20:00.14 (285028912)|SOQL_EXECUTE_END|[5630]|Rows:0
+15:20:00.14 (287464495)|SOQL_EXECUTE_BEGIN|[5646]|Aggregations:0|SELECT Id, mercury__Folder__c, Folder__r.Name FROM SMS_Template__c WHERE Folder__c = :tmpVar1
+15:20:00.14 (292352895)|SOQL_EXECUTE_END|[5646]|Rows:0
+15:20:00.14 (293429374)|SOQL_EXECUTE_BEGIN|[5649]|Aggregations:0|SELECT Id, ParentId, UserOrGroupId, AccessLevel, RowCause FROM SMS_Template__Share WHERE ParentId = :tmpVar1
+15:20:00.14 (298186637)|SOQL_EXECUTE_END|[5649]|Rows:0
+15:20:00.14 (299431263)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (300169515)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT Id FROM CronTrigger WHERE CronJobDetail.Name = 'Mercury at 00'
+15:20:00.14 (307751444)|SOQL_EXECUTE_END|[20]|Rows:0
+15:20:00.14 (372553177)|DML_BEGIN|[29]|Op:Update|Type:mercury__config__c|Rows:1
+15:20:00.14 (393980327)|DML_END|[29]
+15:20:00.14 (394655544)|ENTERING_MANAGED_PKG|mercury
+15:20:00.14 (396963410)|SOQL_EXECUTE_BEGIN|[3466]|Aggregations:0|SELECT Id, CronTrigger.CronJobDetail.Name, CronTriggerId FROM AsyncApexJob WHERE (JobType = 'ScheduledApex' AND CronTrigger.CronJobDetail.Name LIKE :tmpVar1)
+15:20:00.14 (421715747)|SOQL_EXECUTE_END|[3466]|Rows:2
+15:20:00.496 (496923470)|CUMULATIVE_LIMIT_USAGE
+15:20:00.496 (496923470)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 150 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:20:00.496 (496923470)|LIMIT_USAGE_FOR_NS|mercury|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:20:00.496 (496923470)|CUMULATIVE_LIMIT_USAGE_END
+

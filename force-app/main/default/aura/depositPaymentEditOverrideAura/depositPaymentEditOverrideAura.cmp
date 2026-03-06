@@ -1,0 +1,70 @@
+<aura:component implements="flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" controller="DepositPaymentController">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="depositId" type="String" />
+    <aura:attribute name="depositPayment" type="Object" />
+    <aura:attribute name="isOpen" type="Boolean" default="true" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+    <lightning:overlayLibrary aura:id="overlayLib" />
+
+    <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading" class="slds-text-heading_medium">Edit Deposit Payment</h2>
+                    <lightning:buttonIcon iconName="utility:close" alternativeText="Close" class="slds-modal__close" onclick="{!c.closeModal}" />
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <aura:if isTrue="{!v.depositPayment}">
+                        
+                        <aura:if isTrue="{!v.depositPayment.Payment_Status__c == 'Paid'}">
+                            
+                            <!-- Editable Fields -->
+                            <lightning:input required = "true" label="Amount Paid Out" value="{!v.depositPayment.Amount_Paid_Out__c}" onchange="{!c.handleFieldChange}" name="Amount_Paid_Out__c" />                        
+                            <lightning:input required = "true" label="Paid On" value="{!v.depositPayment.Paid_On__c}" type="date" onchange="{!c.handleFieldChange}" name="Paid_On__c" />
+                            <lightning:input required = "true" label="Payment Status" value="{!v.depositPayment.Payment_Status__c}" onchange="{!c.handleFieldChange}" name="Payment_Status__c" />                    
+                            <lightning:input required = "true" label="Check/Confirmation Number" value="{!v.depositPayment.Check_Confirmation_Number__c}" onchange="{!c.handleFieldChange}" name="Check_Confirmation_Number__c" />
+                            
+                            
+                            <!-- Read-Only Fields -->
+                            <lightning:input label="Paid By" value="{!v.depositPayment.Paid_By__c}" onchange="{!c.handleFieldChange}" name="Paid_By__c" disabled="true"/>
+                            <lightning:input label="Payment Due" value="{!v.depositPayment.Cost__c}" disabled="true" />
+                            <lightning:input label="Due Date" value="{!v.depositPayment.Due_Date__c}" disabled="true" />
+                            <lightning:input label="Payment Type" value="{!v.depositPayment.Payment_Type__c}" disabled="true" />                        
+                            <!-- <lightning:input label="Deposit Id" value="{!v.depositPayment.Deposit__c}" disabled="true" />  -->               
+                            <lightning:input label="Payment Id" value="{!v.depositPayment.Name}" disabled="true" />
+                            
+                            <aura:set attribute="else">
+                                <!-- Editable Fields -->
+                                <lightning:input required = "true" label="Payment Status" value="{!v.depositPayment.Payment_Status__c}" onchange="{!c.handleFieldChange}" name="Payment_Status__c" />       
+                                
+                                <!-- Read-Only Fields -->
+                                <lightning:input required = "true" label="Amount Paid Out" value="{!v.depositPayment.Amount_Paid_Out__c}" onchange="{!c.handleFieldChange}" name="Amount_Paid_Out__c" disabled="true"/>                        
+                                <lightning:input required = "true" label="Paid On" value="{!v.depositPayment.Paid_On__c}" type="date" onchange="{!c.handleFieldChange}" name="Paid_On__c" disabled="true"/>
+                                
+                                <lightning:input required = "true" label="Check/Confirmation Number" value="{!v.depositPayment.Check_Confirmation_Number__c}" onchange="{!c.handleFieldChange}" name="Check_Confirmation_Number__c" disabled="true"/>
+                                
+                                
+                                
+                                <lightning:input label="Paid By" value="{!v.depositPayment.Paid_By__c}" onchange="{!c.handleFieldChange}" name="Paid_By__c" disabled="true"/>
+                                <lightning:input label="Payment Due" value="{!v.depositPayment.Cost__c}" disabled="true" />
+                                <lightning:input label="Due Date" value="{!v.depositPayment.Due_Date__c}" disabled="true" />
+                                <lightning:input label="Payment Type" value="{!v.depositPayment.Payment_Type__c}" disabled="true" />                        
+                                <!-- <lightning:input label="Deposit Id" value="{!v.depositPayment.Deposit__c}" disabled="true" />  -->               
+                                <lightning:input label="Payment Id" value="{!v.depositPayment.Name}" disabled="true" />
+                                
+                            </aura:set>
+                        </aura:if>
+
+                    </aura:if>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button label="Cancel" onclick="{!c.closeModal}" />
+                    <lightning:button label="Save" variant="brand" onclick="{!c.saveRecord}" />
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

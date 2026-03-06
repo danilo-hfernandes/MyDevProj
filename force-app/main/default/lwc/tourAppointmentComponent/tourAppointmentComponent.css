@@ -1,0 +1,84 @@
+.custom-container{
+	color : black;
+}
+.custom-modal-size {
+    max-width: 62vw; /* 95% of the viewport width */
+    max-height: 90vh; /* 90% of the viewport height */
+}
+
+
+
+/* Ensure inputs are properly aligned */
+.input-container {
+    display: flex;
+    gap: 4px; /* Reduced spacing between inputs */
+    align-items: Left; /* Aligns inputs vertically */
+}
+
+/* Reduce input field width */
+.small-input {
+    width: 100%; /* Full width within grid */
+    max-width: 100%;
+     font-weight: bold;
+}
+
+/* Reduce button size and space */
+.small-button {
+    
+    font-size: 12px;
+    margin-right: 5px; /* Reduced spacing */
+}
+.custom-spacing lightning-input-field {
+    margin-bottom: 2px !important; /* Adjust spacing */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns button towards left */
+    margin-left: 20%; /* Moves it a bit towards the center */
+}
+
+.datatable-wrapper {
+    max-height: 700px;
+    overflow-y: auto;
+    overflow-x: auto;
+    min-width: 800px; 
+}
+
+.responsive-table {
+    width: 100%; /* Makes the table scale */
+    min-width: 800px; /* Prevents it from shrinking too much */
+}
+
+.agent-modal-border {
+    border: 2px solid #1e4a7b; /* Navy blue */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Optional shadow */
+    overflow: hidden;            /* Make sure content stays inside border */
+}
+
+
+.slds-modal__header {
+    position: relative;
+}
+
+.schedule-modal-border {
+    border: 2px solid #1e4a7b;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    overflow: visible; /* important so close button isn't clipped */
+    position: relative;
+}
+
+.slds-modal__header .slds-modal__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 10; /* ensures it's on top */
+}
+
+
+:host ::slotted(lightning-combobox label),
+:host lightning-combobox label {
+    display: none;
+}

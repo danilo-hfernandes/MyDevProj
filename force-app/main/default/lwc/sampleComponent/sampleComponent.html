@@ -1,0 +1,60 @@
+<template>
+    <!-- Lightning card to wrap the entire form -->
+    <lightning-card title="Scheduler Configuration" icon-name="standard:scheduler">
+        <div class="slds-p-around_medium">
+            <!-- Object selection dropdown -->
+            <template if:true={objects}>
+                <div class="slds-m-bottom_medium">
+                    <lightning-combobox label="Select Object"
+                                        options={objects}
+                                        onchange={handleObjectChange}
+                                        placeholder="Select an object">
+                    </lightning-combobox>
+                </div>
+            </template>
+
+            <!-- Field selection using dual-listbox for multi-select -->
+            <template if:true={fields}>
+                <div class="slds-m-bottom_medium">
+                    <lightning-dual-listbox label="Select Fields"
+                                            source-label="Available Fields"
+                                            selected-label="Selected Fields"
+                                            options={fields}
+                                            onchange={handleFieldChange}
+                                            selected={selectedFields}
+                                            name="fieldList">
+                    </lightning-dual-listbox>
+                </div>
+            </template>
+
+            <!-- Schedule Frequency (Daily or Monthly) -->
+            <div class="slds-m-bottom_medium">
+                <lightning-radio-group label="Schedule Frequency"
+                                       options={frequencyOptions}
+                                       value={selectedFrequency}
+                                       onchange={handleFrequencyChange}>
+                </lightning-radio-group>
+            </div>
+
+            <!-- Time selection based on frequency -->
+            <template if:true={isDaily}>
+                <div class="slds-m-bottom_medium">
+                    <lightning-input type="time" label="Run Time (Daily)" onchange={handleRunTimeChange}></lightning-input>
+                </div>
+            </template>
+            <template if:true={isMonthly}>
+                <div class="slds-m-bottom_small">
+                    <lightning-input type="date" label="Run Date (Monthly)" onchange={handleRunDateChange}></lightning-input>
+                </div>
+                <div class="slds-m-bottom_medium">
+                    <lightning-input type="time" label="Run Time" onchange={handleRunTimeChange}></lightning-input>
+                </div>
+            </template>
+
+            <!-- Button to generate scheduler -->
+            <div class="slds-m-top_medium">
+                <lightning-button label="Generate Scheduler" onclick={handleGenerateScheduler} class="generate-button"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

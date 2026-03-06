@@ -1,0 +1,5 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Custom loader.">
+	
+    <lightning:spinner alternativeText="Loading" size="large" class="VV-Loader"/>
+    
+</aura:component>

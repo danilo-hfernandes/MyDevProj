@@ -1,0 +1,388 @@
+<aura:component implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global"
+                controller="InventoryAvailabilityCtrl">
+    
+    <aura:attribute name="hasVidaInfluencerProd" type="Boolean" default="false"/>
+    <aura:attribute name="isReadOnly" type="Boolean" default="false"/>
+    <aura:attribute name="buttonClick" type="Boolean" default="true"/>
+    <aura:attribute name="dateOptions" type="List" default="[]" />    
+    <aura:attribute name="oppRecord" type="Object"/>
+    <aura:attribute name="selectPlaza" type="String"/>
+    <aura:attribute name="selectProgram" type="String"/>
+    <aura:attribute name="PlazaOption" type="Object[]"/>
+    <aura:attribute name="ProgramOption" type="Object[]"/>
+    <aura:attribute name="supplierInv" type="String" default="Vidanta"/>
+    <aura:attribute name="showsupplierInv" type="Boolean" default="false"/>
+    <aura:attribute name="selectResort" type="String"/>
+    <aura:attribute name="resortOption" type="Set"/>
+    <aura:attribute name="selectRoomType" type="String"/>
+    <aura:attribute name="roomTypeOption" type="Set"/>
+    <aura:attribute name="InventoryAvailabilityList" type="object" />
+    <aura:attribute name="fromDate" type="Date"/>
+    <aura:attribute name="numberOfNights" type="Integer"/>
+    <aura:attribute name="defaultnumberOfNights" type="Integer"/>
+    <aura:attribute name="extraNights" type="Integer" default="0"/>
+    <aura:attribute name="extraNightsOptions" type="List" default="[0]" />
+    <aura:attribute name="toDate" type="Date"/>
+    <aura:attribute name="showSpin" type="Boolean" default="false"/>
+    <aura:attribute name="MessageNote" type="String"/>
+    <aura:attribute name="selectedInvId" type="String" default="null"/>
+    <aura:attribute name="opportunityObj" type="Object" /> 
+    <aura:attribute name="recordLoadError" type="String"/>
+    <aura:attribute name="mapMinimumNights" type="Map" />
+    <aura:attribute name="disableBookReservation" type="Boolean" default="false"/>
+    <force:recordData aura:id="record"
+        recordId="{!v.recordId}"
+        fields="Record_Type_Name__c,No_Show__c"
+        targetFields="{!v.opportunityObj}"
+        targetError="{!v.recordLoadError}"
+        recordUpdated="{!c.getData}"                  
+   />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+         
+        .slds-modal__container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 90rem;
+        min-width: 20rem;  
+        
+        }
+        .slds-form–stacked{
+        width: 96%;
+        }
+        .slds-box{
+        border : none;
+        }
+        .slds-form-element__label{
+        Text-align       
+        }
+        .slds-form-element__label{
+        width: 100%;
+        text-align: left;
+        }
+        .slds-form-element__control{
+        text-align: left;
+        }
+    </aura:html>  
+    
+    <aura:attribute name="isLoaded" type="Boolean" description="used to show loader" default="true"/>
+    <aura:handler event="force:refreshView" action="{!c.isRefreshed}" />
+    <aura:if isTrue="{!!v.isLoaded}">
+        <c:Loader/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.buttonClick}">
+        <lightning:button class="slds-button slds-button_brand" disabled="{!v.disableBookReservation}" iconPosition="left" type="submit" label="Book Reservation"  onclick="{!c.buttonClickCall}"/>        
+        <lightning:helptext iconName="utility:info" content="When 'No Show' is true then book reservation button will be disabled" />
+        <aura:set attribute="else">
+             
+            <!--Header-->
+             
+          
+                    <!--Body-->
+                    <section style="padding-top: 150px;" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                         <div style="width: 90%;margin: 0 auto;" class="modal-header slds-modal__header slds-size_1-of-1">
+                <h4 class="title slds-text-heading–medium">Inventory Availability</h4>
+            </div>
+                    <div class="slds-modal__content2 slds-p-around–x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative">
+                        <form class="slds-form–stacked">
+                            
+                            <div class=" slds-grid slds-wrap">
+                                
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <lightning:input required="true" placeholder="MM/DD/YYYY" disabled="{!v.isReadOnly}" type="date" value="{!v.fromDate}" label="Check In Availability From:" onchange="{! c.advancedSearchFilter }" messageWhenBadInput="Your entry does not match the allowed format MM/DD/YYYY"/>
+                                    </div>
+                                </div>
+
+                                <div class="slds-size_1-of-4">
+                                    <!-- <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <lightning:input placeholder="MM/DD/YYYY" disabled="{!v.isReadOnly}" type="date" value="{!v.toDate}" label="Check In Availability To:" onchange="{! c.advancedSearchFilter }" messageWhenBadInput="Your entry does not match the allowed format MM/DD/YYYY"/>
+                                    </div> -->
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                    <aura:if isTrue="{!or(v.isReadOnly,empty(v.fromDate))}">
+                                        <lightning:input placeholder="MM/DD/YYYY" 
+                                                         disabled="true" 
+                                                         type="date" 
+                                                         value="{!v.toDate}" 
+                                                         label="Check In Availability To:" 
+                                                         messageWhenBadInput="Your entry does not match the allowed format MM/DD/YYYY"/>
+                                        <aura:set attribute="else">
+                                            <!-- <lightning:input placeholder="MM/DD/YYYY" 
+                                                             disabled="false" 
+                                                             type="date" 
+                                                             value="{!v.toDate}" 
+                                                             label="Check In Availability To:" 
+                                                             onchange="{! c.advancedSearchFilter }" 
+                                                             messageWhenBadInput="Your entry does not match the allowed format MM/DD/YYYY"/> -->
+                                            <lightning:select required="true" 
+                                                              value="{!v.toDate}" 
+                                                              label="Check In Availability To:" 
+                                                              onchange="{! c.advancedSearchFilterToDate }">
+                                                <aura:iteration items="{!v.dateOptions}" var="dateOption">
+                                                    <option value="{!dateOption.value}">{!dateOption.label}</option>
+                                                </aura:iteration>
+                                            </lightning:select>
+                                        </aura:set>
+                                    </aura:if>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <aura:if isTrue = "{!v.hasVidaInfluencerProd}">
+                                            <lightning:input required="true" disabled="false" type="Integer" value="{!v.numberOfNights}" label="Number of Nights:" onchange="{! c.advancedSearchFilter }" messageWhenBadInput="Your entry does not match the allowed format: Number - Integer"/>
+                                             <aura:set attribute="else">
+                                        <aura:if isTrue="{!or(v.isReadOnly, empty(v.fromDate))}">
+                                            <lightning:input required="true" disabled="true" type="Integer" value="{!v.numberOfNights}" label="Number of Nights:" onchange="{! c.advancedSearchFilter }" messageWhenBadInput="Your entry does not match the allowed format: Number - Integer"/>
+                                            
+                                            <aura:set attribute="else">
+                                                <lightning:select required="true" 
+                                                                  value="{!v.numberOfNights}" 
+                                                                  label="Number of Nights:" 
+                                                                  disabled="true"
+                                                                  onchange="{! c.advancedSearchFilter }">
+                                                    <aura:iteration items="[1, 2, 3, 4, 5, 6, 7]" var="number">
+                                                        <option value="{!number}">{!number}</option>
+                                                    </aura:iteration>
+                                                </lightning:select>
+                                            </aura:set>
+                                        </aura:if>
+                                                 </aura:set>
+                                            </aura:if>
+                                    </div>
+                                </div>
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <aura:if isTrue="{!or(v.isReadOnly, empty(v.numberOfNights))}">
+                                            <lightning:input required="true" disabled="true" type="Integer" value="0" label="Additional Nights:" onchange="{! c.advancedSearchFilterToDate }"/>
+                                            
+                                            <aura:set attribute="else">
+                                                <lightning:select required="true" 
+                                                                  value="{!v.extraNights}" 
+                                                                  label="Additional Nights:" 
+                                                                  disabled="false"
+                                                                  onchange="{! c.advancedSearchFilterToDate }">
+                                                    <aura:iteration items="{!v.extraNightsOptions}" var="num">
+                                                        <option value="{!num}">{!num}</option>
+                                                    </aura:iteration>
+                                                </lightning:select>
+                                            </aura:set>
+                                        </aura:if>
+                                    </div>
+                                </div>
+
+
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <lightning:combobox disabled="{!v.isReadOnly}" name="progress" label="Plaza" value="{!v.selectPlaza}" options="{! v.PlazaOption }" onchange="{! c.allRoomList }"/>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <lightning:combobox name="progress" label="Site Name" value="{!v.selectResort}" options="{! v.resortOption}" disabled="{!v.showSelect}" onchange="{! c.allRoomType }"/>
+                                    </div>
+                                </div>
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <lightning:combobox disabled="{!v.isReadOnly}" name="progress" label="Room Type" value="{!v.selectRoomType}" options="{! v.roomTypeOption}" onchange="{!c.InventoryAvailability}"/>
+                                    </div>
+                                </div>
+<!-- 263
+                                <div class="slds-size_1-of-4">
+                                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                        <lightning:combobox disabled="{!v.isReadOnly}" name="progress" label="Program" value="{!v.selectProgram}" options="{! v.ProgramOption }" onchange="{! c.allProgramType }"/>
+                                    </div>
+                                </div>
+
+                                <aura:if isTrue="{!v.showsupplierInv}">
+                                    <div class="slds-size_1-of-4">
+                                        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                            <lightning:select name="Supplier" label="Supplier" value="{!v.supplierInv}" disabled="false" onchange="{!c.setSupplier}">
+                                                <option value="Vidanta">Vidanta</option>
+                                                <option value="Marival">Marival</option>
+                                            </lightning:select>
+                                        </div>
+                                    </div>                                   
+                                </aura:if>
+-->
+                            </div>
+                            <aura:if isTrue="{!v.oppRecord.Reservation_Status__c == 'Pending' || v.oppRecord.Reservation_Status__c == 'Confirmed'}">
+                                        <h2 class="title slds-text-heading–medium"><center style="    margin: 25px;font-size: 12px;font-weight: bold;">Reservation booking exists, you can search the availability only</center></h2>
+                                    </aura:if>
+                            
+                            <aura:if isTrue="{!not(empty(v.InventoryAvailabilityList))}">
+                                
+                                <div style="overflow-y:scroll; height:200px;" class="slds-grid slds-wrap slds-m-bottom_small transactions-select-form">
+                                                                       
+                                    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                        <thead>
+                                            <tr class="slds-line-height_reset">
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Select">Select?</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Plaza">Plaza</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Resort Name">Resort Name</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Program">Program</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Site Name">Site Name</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Room Type">Room Type</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Unit Type">Unit Type</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Check In Date">Check In Date</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Current Availability">Daily Availability</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Min No. of Nights">Min No. of Nights</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Capacity">Capacity</div>
+                                                </th>
+                                                
+                                                <!-- 263 -->
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Extra Nights Total Price">Extra Nights Total Price</div>
+                                                </th>
+                                                <!-- 263 
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Size Upgrade">Size Upgrade</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Property Upgrade">Property Upgrade</div>
+                                                </th>-->
+                                                <th class="" scope="col">
+                                                    <div class="slds-truncate" title="Total Upgrade">Total Upgrade</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <aura:iteration items="{!v.InventoryAvailabilityList}" var="invAv" indexVar="indx"> 
+                                                <tr class="slds-hint-parent">
+                                                    <td data-label="Select" class="slds-truncate">
+                                                        
+                                                        <aura:if isTrue="{!v.oppRecord.Reservation_Status__c == null || v.oppRecord.Reservation_Status__c == 'Cancel'}">
+                                                            <div onclick="{!c.selectedInvAvailability}" class="slds-truncate" data-value="{!invAv.Id}" title="{!invAv.Selected__c}">
+                                                                <ui:inputRadio  name="others" value="{!invAv.Selected__c}"/>
+                                                            </div>
+                                                            <aura:set attribute="else">
+                                                                <div onclick="{!c.selectedInvAvailability}" class="slds-truncate" data-value="{!invAv.Id}" title="{!invAv.Selected__c}">
+                                                                    <ui:inputRadio  name="others" value="{!invAv.Selected__c}" disabled="true"/>
+                                                                </div>
+                                                            </aura:set>
+                                                        </aura:if>
+                                                    </td>
+                                                    <td data-label="Plaza" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Plaza">{!invAv.Plaza__c}</div>
+                                                    </td>
+                                                    <td data-label="Resort Name" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Resort Name">{!invAv.Resort_Name__c}</div>
+                                                    </td>
+                                                    <td data-label="Program" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Program">{!invAv.Program__c}</div>
+                                                    </td>
+                                                    <td data-label="Site Name" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Site Name">{!invAv.Site_Name__c}</div>
+                                                    </td>
+                                                    <td data-label="Room Type" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Room Type">{!invAv.Inventory_Management__r.Room_Type__c}</div>
+                                                    </td>
+                                                    <td data-label="Unit Type" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Unit Type">{!invAv.Unit_Type__c}</div>
+                                                    </td>
+                                                    <td data-label="Amount" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Check In Date">{!invAv.Check_In_Date__c}</div>
+                                                    </td>
+                                                    <td data-label="Daily Availability" class="slds-truncate">
+                                                        <div class="slds-truncate" title="New Availability">{!invAv.New_Availability__c}</div>
+                                                    </td>
+                                                    <td data-label="Min No. of Nights" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Min No. of Nights">{!invAv.minimumNights}</div>
+                                                    </td>
+                                                    <td data-label="Capacity" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Capacity">{!invAv.Inventory_Management__r.Capacity__c}</div>
+                                                    </td>
+    
+	                                                <!-- 263 -->
+                                                    <td data-label="Extra Nights Total Price" class="slds-truncate">
+
+                                                        <div class="slds-truncate" title="Extra Nights Total Price">
+                                                            <aura:if isTrue="{!invAv.Inventory_Management__r.Extra_Night__c != null}">
+                                                                ${!v.extraNights * invAv.Inventory_Management__r.Extra_Night__c}
+                                                            </aura:if>
+                                                            <aura:set attribute="else">
+                                                                &nbsp;
+                                                            </aura:set>
+                                                        </div>
+
+                                                    </td>
+                                                    <!-- 263
+                                                    <td data-label="Size Upgrade" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Size Upgrade">${!invAv.Inventory_Management__r.Size_Upgrade__c}</div>
+                                                    </td>
+                                                    <td data-label="Property Upgrade" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Property Upgrade">${!invAv.Inventory_Management__r.Property_Upgrade__c}</div>
+                                                    </td>-->
+                                                    <td data-label="Total Upgrade" class="slds-truncate">
+                                                        <div class="slds-truncate" title="Total Upgrade">${!invAv.Inventory_Management__r.Total_Upgrade__c}</div>
+                                                    </td>
+                                                </tr>
+                                            </aura:iteration>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <aura:set attribute="else">  
+                                    <aura:if isTrue="{!v.showSpin}">
+                                        <div class="demo-only" style="height:8rem;position:relative">
+                                            <div class="slds-spinner_container">
+                                                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                                                    <span class="slds-assistive-text">Loading...</span>
+                                                    <div class="slds-spinner__dot-a"></div>
+                                                    <div class="slds-spinner__dot-b"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </aura:if>
+                                    <span><center style="    font-size: 18px;font-weight: bold;color: #0862b0;">{!v.MessageNote}</center></span>
+                                </aura:set>
+                            </aura:if>
+                        </form>
+                    </div>
+                    <!--Body-->
+                    
+                    <!--Footer-->
+                    <footer style="width: 90%;margin: 0 auto;" class="slds-modal__footer">
+                        <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.ClosebookedInventory}"/> 
+                        <aura:if isTrue="{!v.oppRecord.Reservation_Status__c == null || v.oppRecord.Reservation_Status__c == 'Cancel'}">
+                        	<lightning:button disabled="{!v.isReadOnly}" class="slds-button slds-button_brand" type="submit" label="Save"  onclick="{!c.bookedInventory}"/>
+                        </aura:if>
+                    </footer>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </aura:set>
+            </aura:if>
+     
+</aura:component>

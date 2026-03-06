@@ -1,0 +1,192 @@
+<aura:component controller="NotesListViewCtrl" 
+                implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global">
+    <!-- call doInit method on component load -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- aura attributes to store data/values --> 
+    <aura:attribute name="listOfAllAccounts" type="list"/> 
+    <aura:attribute name="PaginationList" type="list"/> 
+    <aura:attribute name="selectedCount" type="integer" default="0"
+                    description="selected Records Count"/>
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="totalRecordsCount" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="10"
+                    description="number of records to be display on per page"/>
+    <aura:attribute name="currentPage" type="integer" default="1"/>
+    <aura:attribute name="totalPagesCount" type="integer"/>
+    <aura:attribute name="bNoRecordsFound" type="boolean"/>
+    
+    <!-- Define Attribute-->
+    <aura:attribute name="note" type="ContentNote" default="{'sobjectType': 'ContentNote','Title': '','Content': ''}"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    
+    <aura:attribute name="selectedEmailId" type="String"/>
+    <aura:attribute name="showEmailModal" type="Boolean" default="false" />
+    
+    <div class="slds-m-around_xx-large">
+        <!--Use aura:if tag to display/hide popup based on isModalOpen value  -->  
+        <aura:if isTrue="{!v.isModalOpen}">
+             
+            <!-- Modal/Popup Box starts here-->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box Header Starts here-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.hide }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Note</h2>
+                    </header>
+                    <!--Modal/Popup Box Body Starts here-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <br/>
+                        <b>Title:</b>
+                        <br/>
+                        <ui:inputText class="form-control" value="{!v.note.Title}"/>
+                        <br/><br/>
+                        <b>Content:</b>
+                        <br/>
+                        <lightning:inputRichText value="{!v.note.Content}" placeholder="Type something interesting"/>
+                        <br/>
+                    </div>
+                    <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                       
+                        <lightning:button variant="brand"
+                                          label="Create"
+                                          title="Create"
+                                          onclick="{!c.create}"/>
+                         <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.hide }"/>
+                    </footer>
+                </div>
+            </section>
+            
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+
+
+        <aura:if isTrue="{!v.showEmailModal}">
+            
+            <!-- Modal/Popup Box starts here-->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <h2 class="slds-text-heading_medium">Email Details</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                        
+                        <c:GetSingleEmailComp recordId="{!v.selectedEmailId}"/>
+                        
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModal }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+
+    </div>
+    
+    <aura:if isTrue="{!v.bNoRecordsFound}">
+        <!--display error message if there is no records available -->
+        
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <h2>No record found.</h2>
+        </div>
+        <aura:set attribute="else">
+            <p class="slds-m-around_small" >
+                <span class="slds-badge slds-badge_lightest" style="display:inline-block">
+                    Total Records : {!v.selectedCount > 0 ? v.selectedCount + '/' : ''} {!v.totalRecordsCount} 
+                </span>
+                <lightning:button class="slds-float--right" iconPosition="right" aura:id="New Note" label="New Note" onclick="{!c.show}" />
+            </p>
+            
+            
+            <!-- data table start-->  
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="table-layout: fixed">
+                <tbody>
+                    <aura:iteration items="{!v.PaginationList}" var="obj">
+                        <tr>
+                            <td width="10%" style="text-align:center;">
+                                <button style="border:none; padding:8px;  border-radius:3px; background:#B2DC45;" class="slds-button_brand  buttonPadding" title="{!obj.title}">
+                                    <a style="color:white; text-decoration:none;" target="_blank" href="{!'/'+obj.recordId}"> Details </a>  
+                                </button>
+                            </td> 
+                            
+                            <td width="10%" style="text-align:center;">
+                                <aura:if isTrue="{!obj.SynchedFromSQL}">
+                                    <button 
+                                            style="border:none; padding:8px; border-radius:3px; background:#B2DC45; color:white;" 
+                                            class="slds-button_brand buttonPadding" 
+                                            title="{!obj.SynchedFromSQL}"
+                                            onclick="{!c.showEmail}"
+                                            data-id="{!obj.recordId}">
+                                        View Email
+                                    </button>
+
+                                </aura:if>
+                            </td>
+
+                            <td width="80%">
+                                <div class="slds-truncate" title="{!obj.CreatedDate}">
+                                    <lightning:formattedDateTime style="font-weight:bold; color:#2580BE;" value="{!obj.CreatedDate}" year="numeric" month="numeric" day="numeric"  hour="2-digit" minute="2-digit"  />
+                               &nbsp;<span style="font-weight:700; text-decoration: underline;"><a style="color:black;text-decoration:none;" target="_blank" href="{!'/'+obj.recordId}">{!obj.wrappedTitle}</a>  </span> [{!obj.createdBy}]
+                                </div>
+                               
+                                <div class="slds-truncate" title="{!obj.details}">
+                                    <p class="slds-truncate" > {!obj.details}</p>
+                                </div>
+                            </td>
+                             
+                        </tr> 
+                    </aura:iteration>
+                </tbody>
+            </table>
+            <!-- DataTable End -->
+
+            <br/>
+            <!--  Pagination Buttons Start -->
+            
+            <div class="slds-align_absolute-center">         
+                <lightning:button label="Previous"
+                                  disabled="{!v.startPage == 0}"  
+                                  onclick="{!c.navigation}"
+                                  variant="brand"
+                                  iconName="utility:back"
+                                  name="previous"/>
+                
+                <span class="slds-badge slds-badge_lightest"
+                      style="margin-right: 10px;margin-left: 10px;">
+                    Page {!v.currentPage} out of {!v.totalPagesCount}
+                </span>
+                
+                <lightning:button label="Next"
+                                  disabled="{!(v.endPage + 1) >= v.totalRecordsCount}" 
+                                  onclick="{!c.navigation}"
+                                  variant="brand"
+                                  iconName="utility:forward"
+                                  iconPosition="right"
+                                  name="next"/>
+            </div>  
+            <!--  Pagination Buttons End -->
+        </aura:set> 
+    </aura:if>
+    
+    
+    
+    
+    
+    
+</aura:component>

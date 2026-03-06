@@ -1,0 +1,166 @@
+<aura:component controller="ApplyCreditsController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="showSpin" type="Boolean" default="true"/>
+    <aura:attribute name="showApplyCreditsComp" type="Boolean" default="false"/>
+    <aura:attribute name="Credits_Balance" type="Currency" />
+    <!-- <aura:attribute name="Membership_Annual_Due" type="Currency" /> -->
+    <aura:attribute name="Opportunity_Total_Amount" type="Currency" />
+    <aura:attribute name="Number_Of_Years_To_Pay" type="Integer"/>
+    <aura:attribute name="Total_Due" type="Currency" />
+    <aura:attribute name="Apply_Credits" type="Currency" default="0.00"/>
+    <aura:attribute name="Balance_To_Pay" type="Currency" default="0.00"/>
+    <aura:attribute name="subimitBtnDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="showConfirmButton" type="Boolean" default="false"/>
+    <aura:attribute name="editableFieldsDisabled" type="Boolean" default="false"/>
+    
+    <aura:if isTrue="{!v.showSpin}">
+        <div class="demo-only" style="height:8rem;position:relative">
+            <div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                    <span class="slds-assistive-text">Loading...</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showApplyCreditsComp}">
+        
+        <div aura:id="container" style="font-size:minimum">
+            
+            <div class="slds-form" role="list">
+                <div class="slds-form__row">
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                            <label class="slds-form-element__label" for="single-form-element-id-02">Avaliable Credits</label>
+                            <div class="slds-form-element__control">
+                                <ui:inputNumber class="slds-input" aura:id="CreditsBalance" value="{!v.Credits_Balance}" label="Avaliable Credits" labelClass="inputNumber" format="0.00" disabled="true"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                            <label class="slds-form-element__label" for="single-form-element-id-03">Total Amount</label>
+                            <div class="slds-form-element__control">
+                                <!-- <ui:inputNumber class="slds-input" aura:id="MembershipAnnualDue" value="{!v.Membership_Annual_Due}" label="Annual Due" labelClass="inputNumber" format="0.00" disabled="true"/> -->
+                                <ui:inputNumber class="slds-input" aura:id="OpportunityTotalAmount" value="{!v.Opportunity_Total_Amount}" label="Total Amount" labelClass="inputNumber" format="0.00" disabled="true"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                            <label class="slds-form-element__label" for="single-form-element-id-03">Quantity</label>
+                            <div class="slds-form-element__control">
+                                <!-- <ui:inputNumber class="slds-input" aura:id="NumberOfYearsToPay" value="{!v.Number_Of_Years_To_Pay}" labelClass="inputNumber" format="00" label="Number of Years" disabled="{!v.editableFieldsDisabled}" change="{!c.Calculate}"/> -->
+                            	<ui:inputNumber class="slds-input" aura:id="NumberOfYearsToPay" value="{!v.Number_Of_Years_To_Pay}" labelClass="inputNumber" format="00" label="Quantity" disabled="true"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                            <!-- <label class="slds-form-element__label" for="single-form-element-id-04">Total Due</label>
+                            <div class="slds-form-element__control">
+                                <ui:inputNumber class="slds-input" aura:id="TotalDue" value="{!v.Total_Due}" label="Total Due" labelClass="inputNumber" format="0.00" disabled="true"/>
+                            </div> -->
+                            <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                                <label class="slds-form-element__label" for="single-form-element-id-05">Apply Credits</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputNumber class="slds-input" aura:id="ApplyCredits" value="{!v.Apply_Credits}" label="Apply Credits" labelClass="inputNumber" format="0.00" disabled="{!v.editableFieldsDisabled}" change="{!c.Calculate}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item" role="listitem">
+                        
+                    </div>
+                    <div class="slds-form__item" role="listitem">
+                        <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                            <label class="slds-form-element__label" for="single-form-element-id-06">Balance To Pay</label>
+                            <div class="slds-form-element__control">
+                                <div aura:id="BalanceToPayDiv">
+                                    <ui:inputNumber class="slds-input" aura:id="BalanceToPay" value="{!v.Balance_To_Pay}" label="Balance To Pay" labelClass="inputNumber" format="0.00" disabled="true"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                        <label class="slds-form-element__label" for="single-form-element-id-07"></label>
+                        <div class="slds-form-element__control">
+                            
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                        <label class="slds-form-element__label" for="single-form-element-id-08"></label>
+                        <div class="slds-form-element__control">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-align_absolute-center" id="BtnSaveComp_wrapper">                        
+                        <aura:if isTrue="{!v.showConfirmButton}">
+                            Are you sure you want to use this credit amount?
+                            <lightning:button aura:id="SubmitBtn" class="slds-button--brand" label="Confirm" onclick="{!c.Confirm}"/>
+                            <aura:set attribute="else">
+                                <lightning:button aura:id="SubmitBtn" class="slds-button--brand" label="Submit" onclick="{!c.Submit}" disabled="{!v.subimitBtnDisabled}"/>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </div>
+            </div>    
+            
+            <!--<div class="slds-form">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Avaliable Credits</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputNumber class="slds-input" aura:id="CreditsBalance" value="{!v.Credits_Balance}" label="Avaliable Credits" labelClass="inputNumber" format="0.00" disabled="true"/>                
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-02">Membership Annual Due</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputNumber class="slds-input" aura:id="MembershipAnnualDue" value="{!v.Membership_Annual_Due}" label="Annual Due" labelClass="inputNumber" format="0.00" disabled="true"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-03">Number of Years</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputNumber class="slds-input" aura:id="NumberOfYearsToPay" value="{!v.Number_Of_Years_To_Pay}" labelClass="inputNumber" label="Number of Years" disabled="false"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-04">Total Due</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputNumber class="slds-input" aura:id="TotalDue" value="{!v.Total_Due}" label="Total Due" labelClass="inputNumber" format="0.00" disabled="true"/>
+                        </div>
+                    </div>
+                </div> -->
+            
+            <!-- <div class="slds-form_horizontal slds-form slds-grid slds-wrap">
+                    
+                <ui:inputNumber class="slds-size_1-of-1" aura:id="CreditsBalance" value="{!v.Credits_Balance}" label="Avaliable Credits" labelClass="inputNumber" format="0.00" disabled="true"/>
+                <ui:inputNumber class="slds-size_1-of-1" aura:id="MembershipAnnualDue" value="{!v.Membership_Annual_Due}" label="Annual Due" labelClass="inputNumber" format="0.00" disabled="true"/>
+                <ui:inputNumber class="slds-size_1-of-1" aura:id="NumberOfYearsToPay" value="{!v.Number_Of_Years_To_Pay}" labelClass="inputNumber" label="Number of Years" disabled="false"/>
+                <ui:inputNumber class="slds-size_1-of-1" aura:id="TotalDue" value="{!v.Total_Due}" label="Total Due" labelClass="inputNumber" format="0.00" disabled="true"/>
+                <ui:inputNumber class="slds-size_1-of-1" aura:id="ApplyCredits" value="{!v.Apply_Credits}" label="Apply Credits" labelClass="inputNumber" format="0.00" disabled="false"/>
+                <ui:inputNumber class="slds-size_1-of-1" aura:id="BalanceToPay" value="{!v.Balance_To_Pay}" label="Balance To Pay" labelClass="inputNumber" format="0.00" disabled="true"/>
+                </div> -->
+            
+            
+            
+        </div>
+        
+    </aura:if>
+    
+</aura:component>

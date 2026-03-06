@@ -1,0 +1,50 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="selectedSource" type="String" default="" />   <!-- default="Email" -->
+    <aura:attribute name="sourceOptions" type="List" />  <!-- ✅ New attribute for picklist options -->
+    <aura:attribute name="aiCallEvents" type="List" /> <!-- AI Dialer -->
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!-- Picklist Selection -->
+    <aura:if isTrue="{!not(empty(v.sourceOptions))}">
+        <lightning:combobox 
+            name="sourceSelector"
+            label="Select Data Source"
+            value="{!v.selectedSource}"
+            options="{!v.sourceOptions}"
+            onchange="{!c.handleSourceChange}" />
+    </aura:if>
+
+    <!-- Dynamic Component Rendering -->
+    <aura:if isTrue="{!v.selectedSource == 'Email'}">
+	     <c:GetEmailDataComp recordId="{!v.recordId}"/>
+    </aura:if>
+
+    <aura:if isTrue="{!v.selectedSource == 'Acoustic'}">
+        <c:GetAcousticDataComp recordId="{!v.recordId}"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.selectedSource == 'Invoice'}">
+        <c:GetInvoiceEmailComp recordId="{!v.recordId}"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.selectedSource == 'SMS Text Message'}">
+        <c:GetSMSDataComp recordId="{!v.recordId}"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.selectedSource == 'AI'}">
+		<div class="slds-m-top_medium">
+             <c:GetAIDataComp recordId="{!v.recordId}"/>
+        </div>
+    </aura:if>
+    
+        <!-- 
+    <aura:if isTrue="{!v.selectedSource == 'Invoice Email'}">
+        <c:GetAcousticDataComp recordId="{!v.recordId}"/>
+    </aura:if>
+    -->
+    
+    
+    
+</aura:component>

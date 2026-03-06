@@ -1,0 +1,79 @@
+<template>
+  <lightning-card>
+    <div class="slds-grid">
+      <div class="slds-col slds-size_1-of-5">
+        <span class="slds-p-left_medium"> Client Properties
+        </span>
+      </div>
+      <div class="slds-col slds-size_3-of-5">
+        <span>
+          <lightning-combobox name="Ownership_Resort_Timeshare__c"
+                                              value={selectedResortId}
+                                              options={timeShare}
+                                              onchange={handleChange} variant="label-hidden">
+                                              
+          </lightning-combobox> 
+          <template if:true={showMFP}>
+           <table>
+            <tr>
+              <td><strong>MFP:</strong></td>
+              <td>{mfpValue}</td>
+            </tr>
+            <tr>
+              <td><strong>Timeshare Id:</strong></td>
+              <td>{sFtimeshareId}</td>
+            </tr>
+          </table>
+          </template>
+        </span>
+      </div>
+      <div class="slds-col slds-size_1-of-5">
+        <span class="slds-p-left_medium"><lightning-button label="Attach to Case" variant="brand" onclick={saveDateFromModalBox}></lightning-button></span>
+      </div>
+    </div>
+  </lightning-card>
+  <lightning-card>
+    <div class="">
+        <span class="slds-p-left_medium"><lightning-button label="Link Case" variant="brand" onclick={openModal}></lightning-button></span>
+      </div>
+  </lightning-card>
+      <!-- Modal -->
+        <template if:true={isModalOpen}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <h2 class="slds-text-heading_medium">Select a Case</h2>
+                        <!--<button
+                            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                            title="Close"
+                            onclick={closeModal}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close"></lightning-icon>
+                        </button> -->
+                    </header>
+
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <template if:true={isLoading}>
+                            <lightning-spinner alternative-text="Loading Cases"></lightning-spinner>
+                        </template>
+                        <template if:true={cases}>
+                            <lightning-datatable
+                                key-field="Id"
+                                data={cases}
+                                columns={columns}
+                                onrowselection={handleRowSelection}>
+                            </lightning-datatable>
+                        </template>
+                        <template if:false={cases}>
+                            <p>No cases available.</p>
+                        </template>
+                    </div>
+
+                    <footer class="slds-modal__footer slds-p-around_small">
+                        <lightning-button class="slds-p-left_medium" label="Cancel" onclick={closeModal}></lightning-button>
+                        <lightning-button class="slds-p-left_medium" label="Link Case" variant="brand" onclick={linkSelectedCase}></lightning-button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+</template>

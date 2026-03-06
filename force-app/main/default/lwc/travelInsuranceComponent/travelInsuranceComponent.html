@@ -1,0 +1,114 @@
+<template>
+    <div class="spinner">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+    </div>
+    <lightning-quick-action-panel header="Travel Insurance" >
+        
+        <template if:true={firstScreen}>
+            <div>
+                <strong><p class ="slds-p-around_xx-small" style="color: red;">{displayError}</p></strong>
+            </div>
+            <lightning-card title="Personal Information">
+                <div class="slds-p-bottom_small">
+                    <div class="slds-p-horizontal_small">
+                        <lightning-input label="First Name" value={firstName} onchange={handleInputChange} data-id="firstName"></lightning-input>
+                        <lightning-input label="Last Name" value={lastName} onchange={handleInputChange} data-id="lastName"></lightning-input>
+                        <lightning-input label="Street" value={street} onchange={handleInputChange} data-id="street"></lightning-input>
+                        <lightning-input label="City" value={city} onchange={handleInputChange} data-id="city"></lightning-input>
+                        <lightning-helptext content="Please input the state in its abbreviated form, using a 2-letter code"></lightning-helptext>
+                        <lightning-input label="State or Province" value={state} onchange={handleInputChange} data-id="state" max-length ="2"></lightning-input>
+                        <!--<lightning-helptext content="Please input the state in its abbreviated form, using a 2-letter code"></lightning-helptext> --> 
+                        <lightning-input label="Country" value={country} onchange={handleInputChange} data-id="country" placeholder="US" max-length ="2" readonly></lightning-input>
+                        
+                        <lightning-input label="Email" value={email} onchange={handleInputChange} data-id="email" type="email"></lightning-input>
+                        <!--<lightning-input label="Primary Insured" value={primaryInsured} onchange={handleInputChange} data-id="primaryInsured" type="checkbox" checked></lightning-input> -->
+                        <lightning-input label="Start Date" value={startDate} onchange={handleInputChange} data-id="startDate" type = "date"></lightning-input>
+                        <lightning-input label="End Date" value={endDate} onchange={handleInputChange} data-id="endDate" type = "date"></lightning-input>
+                        <lightning-input label="Country Destination" value={destination} onchange={handleInputChange} data-id="destination" readonly></lightning-input>
+                    </div>
+                    <template if:true={addRowScreen}>
+                        <strong><p class ="slds-p-around_xx-small" style="color: red;">{displayError}</p></strong>
+                        <div class="slds-p-horizontal_small">
+                            <lightning-datatable
+                                key-field="id"
+                                data={rows}
+                                columns={columns} 
+                                hide-checkbox-column
+                                onrowaction={handleRowAction}
+                                draft-values={draftValues}
+                                onsave={handleSave} >
+                            </lightning-datatable>
+                        </div>
+                    </template>
+                    <div class="slds-float_right slds-m-around_medium">
+                        <lightning-button class="slds-m-around_xx-small" label="Next" variant="brand" onclick={handleProceed}></lightning-button>
+                        <lightning-button class="slds-m-around_xx-small" label="Add Traveler" variant="neutral" onclick={addRow}></lightning-button>
+                        <lightning-button class="slds-m-around_xx-small" label="Cancel" variant="neutral" onclick={handleCancel}></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+        <template if:true={secondScreen}>
+            <div>
+                <strong><p class ="slds-p-around_xx-small" style="color: red;">{displayError}</p></strong>
+            </div>
+            <lightning-card title="Quote Information">
+                <div class="slds-p-horizontal_small">
+                    Net Price - <lightning-formatted-number value={net_price} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                </div>
+                <div class="slds-m-around_medium slds-float_right">
+                    <lightning-button class="slds-m-around_small" label="Next" variant="brand" onclick={handleProductCreation}></lightning-button>
+                    <lightning-button class="slds-m-around_small" label="Cancel" variant="neutral" onclick={handleCancel}></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+         <template if:true={thirdScreen}>
+            <div>
+                <strong><p class ="slds-p-around_xx-small" style="color: red;">{displayError}</p></strong>
+            </div>
+            <lightning-card title="Payment Information">
+                <template if:false={paymentFlag}>
+                    <div class="slds-p-horizontal_small">
+                        <div>
+                            <strong><p class ="slds-p-around_xx-small">Before proceeding, please ensure that you complete the payment.</p></strong>
+                            <p class ="slds-p-around_xx-small"><lightning-formatted-url value={paymentUrl} tooltip="Make Payment" label="Payment Link" target="_blank" ></lightning-formatted-url></p>
+                        </div> 
+                    </div>
+                </template>
+                <template if:true={paymentFlag}>
+                    <div class="slds-p-horizontal_small"><div>
+                            <strong><p class ="slds-p-around_xx-small">We have successfully received your payment. Please click on the "Next" button to complete the insurance process.</p></strong>
+                        </div> 
+                    </div>
+                </template>
+                <div class="slds-m-around_medium slds-float_right">
+                    <lightning-button class="slds-m-around_small" label="Next" variant="brand" onclick={handlePurchaseAPI}></lightning-button>
+                    <lightning-button class="slds-m-around_small" label="Cancel" variant="neutral" onclick={handleCancelAndDeleteProduct}></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+         <template if:true={fourthScreen}>
+            <lightning-card title="">
+                    <div class="slds-p-horizontal_small">
+                        <strong><p class ="slds-p-around_xx-small" style="color: red;">{displayError}</p></strong> 
+                    </div>
+            </lightning-card>
+        </template>
+        <template if:true={fiveScreen}> 
+            <lightning-card>
+                <div class="slds-p-around_medium">
+                    <strong><p class ="slds-p-around_xx-small" style="color: red;">There was a communication issue with the Travel Insurance API.</p></strong>
+                </div>
+                <div class="slds-p-horizontal_small">
+                    <strong><p class ="slds-p-around_xx-small">A product has been created but the Policy Number has not been generated, please contact support for assistance and send this screen.</p></strong>
+                    <div class="slds-m-top_medium slds-align_absolute-center">
+                        <lightning-button label="OK" variant="brand" onclick={closeQuickAction}></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+    </lightning-quick-action-panel>
+</template>

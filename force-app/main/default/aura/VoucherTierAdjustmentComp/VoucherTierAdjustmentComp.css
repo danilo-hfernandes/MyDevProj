@@ -1,0 +1,18 @@
+.THIS .header-row {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+.THIS .data-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.THIS .slds-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.THIS .slds-table_bordered tr td {
+    padding: 8px;
+    border-bottom: 1px solid #e3e3e3;
+}

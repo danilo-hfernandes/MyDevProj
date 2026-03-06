@@ -1,0 +1,30 @@
+<aura:component controller="AddClubVentureChildOppController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<aura:attribute name="showSpin" type="Boolean" default="true"/>
+    <aura:attribute name="showCreatedRecords" type="Boolean" default="false"/>
+    <aura:attribute name="opportunityLink" type="String" default=""/>
+    
+        <aura:if isTrue="{!v.showSpin}">
+        <div class="demo-only" style="height:6rem;position:relative">
+            <div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                    <span class="slds-assistive-text">Creating Child Opportunity...</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+        <aura:if isTrue="{!v.showCreatedRecords}">
+        <lightning:card title="">
+            <div aura:id="container" style="font-size:large; text-align:center !important">
+                <p><b>Child Opportunity Successfully Created</b></p>
+                <br>___________________________</br>
+                <br> </br>
+                <p><lightning:formattedUrl value="{!v.opportunityLink}" label="Opportunity" tooltip="Go to Opportunity's record" /></p>
+            </div>
+        </lightning:card>
+    </aura:if>
+    
+</aura:component>

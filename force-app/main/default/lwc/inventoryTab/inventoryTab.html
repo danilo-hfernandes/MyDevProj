@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : Shivani Chauhan
+  @group             : 
+  @last modified on  : 10-30-2024
+  @last modified by  : Shivani Chauhan
+-->
+<template>
+    <lightning-card>
+        <div style="float:right">
+            <lightning-button variant="brand" class="slds-m-right_x-small" label="New" onclick={navigateToNewInventoryPage}  disabled={isButtonDisabled}></lightning-button>
+       </div>
+       <br/><br/>
+        <div>
+            <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    columns={columns}
+                    onrowaction={navigateToRecordEditPage}
+                    draft-values={saveDraftValue}
+                    hide-checkbox-column="true">
+            </lightning-datatable>
+             <!--<div class="slds-p-right_xx-large slds-p-top_x-large"><b>MFP Allotment</b></div> <lightning-formatted-number value={totalMFPAmount} format-style="currency" currency-code="USD"></lightning-formatted-number>-->
+        </div>
+    </lightning-card>
+    <lightning-spinner alternative-text="Loading" size="small" if:true={isLoading}></lightning-spinner>
+</template>

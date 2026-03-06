@@ -1,0 +1,51 @@
+<aura:component controller="InvoiceCreation" implements="flexipage:availableForAllPageTypes" access="global">          
+   
+    <aura:attribute name="spinner" type="boolean" default="false"/>
+    <aura:attribute name="showInfo" type="boolean" default="false"/>
+    
+    
+    <aura:if isTrue="{!v.showInfo}">
+        <div style="width:100%;text-align:center;">
+            <ui:message title="Processing" severity="warning" >
+                Please wait record insert might take few seconds...
+            </ui:message>
+        </div>
+    </aura:if>
+    <div>
+        <lightning:card>
+            
+            <aura:if isTrue="{!v.spinner}">
+                <div aura:id="spinnerId" class="slds-spinner_container">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading...</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>  
+            <div class="slds-text-longform slds-m-around_medium">
+                <div class="slds-box slds-m-around_medium">
+                    <h2 style="color:red;Font-size:17px;"><strong>Important Points:</strong></h2>
+                    <ul>
+                        <li>Upload CSV file only.</li>
+                        <ul>
+                            <li>CSV file must have the following headers.</li>
+                            <li><strong>DateCreated, CancelDate, ReservationNumber, ReservationStatus, FirstNight, LastNight, SiteName,	RoomType, ExternalConfirmationNumber, BillingItem and Invoiceamount</strong></li>
+                        </ul>
+                        <li>The date format must be <strong>MM/DD/YYYY.</strong></li>
+                        <li>The Amount should be in formate of <strong>000.00</strong>(Excluding all currency symbols).</li>
+                        <li>Maximum number of records can be inserted are <strong>6000</strong> in single csv file.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="slds-align_absolute-center">
+                <input type="file" class="file" aura:id="file"/>
+                <br/>
+            </div>
+            <div class="slds-align_absolute-center slds-p-top_medium">
+                <lightning:button label="Create Invoices" onclick="{!c.CreateRecord}" class="slds-button slds-button--brand"/>
+            </div>
+        </lightning:card>
+    </div>
+</aura:component>

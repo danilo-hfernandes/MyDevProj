@@ -1,0 +1,29 @@
+<template>
+    <div class="spinner">
+        <template if:true={isLoading}>
+             <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+             </lightning-spinner>
+        </template>
+    </div>
+    <lightning-card title="Certificate Redemption">
+        <div class="slds-p-around_medium">
+            <div class="slds-m-bottom_small">
+                <lightning-input type="text" value={certificateId}  onchange={handleCertificateId} label="CertificateID"></lightning-input>
+                <p style="color: red;">{dispayMessage}</p>
+            </div>
+            <template if:true={certificatelist} >
+                <div class="slds-p-around_medium">
+                <lightning-datatable hide-checkbox-column="true" data={certificatelist} columns={columns} key-field="Id">
+                </lightning-datatable>
+                </div>
+            </template>
+            <div>
+                <lightning-button class="slds-m-right_medium" label="Validate CertificateID" onclick={validateCertificate} variant="brand"></lightning-button>
+            
+            <template if:true={hideButton}>
+                <lightning-button label="Redeem CertificateID" onclick={createOpportunity} variant="brand"></lightning-button>
+            </template>
+        </div>
+        </div>
+    </lightning-card>
+</template>

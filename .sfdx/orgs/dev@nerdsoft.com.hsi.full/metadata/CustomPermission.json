@@ -1,0 +1,73 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2022-08-11T21:04:35.000Z",
+      "fileName": "customPermissions/IsSystemAdmin.customPermission",
+      "fullName": "IsSystemAdmin",
+      "id": "0CP4z000000k9koGAA",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2022-08-11T21:04:35.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomPermission"
+    },
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2024-10-01T15:23:40.000Z",
+      "fileName": "customPermissions/Edit_LWC_Qualification_Tab.customPermission",
+      "fullName": "Edit_LWC_Qualification_Tab",
+      "id": "0CPO1000000LQxBOAW",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2024-10-01T15:23:40.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomPermission"
+    },
+    {
+      "createdById": "0054z00000AYL8TAAX",
+      "createdByName": "Sophia Cantrell",
+      "createdDate": "2023-03-29T19:24:38.000Z",
+      "fileName": "customPermissions/heymarket__Is_Heymarket_User.customPermission",
+      "fullName": "heymarket__Is_Heymarket_User",
+      "id": "0CP4z000000fydtGAA",
+      "lastModifiedById": "0054z00000AYL8TAAX",
+      "lastModifiedByName": "Sophia Cantrell",
+      "lastModifiedDate": "2023-03-29T19:24:38.000Z",
+      "manageableState": "installed",
+      "namespacePrefix": "heymarket",
+      "type": "CustomPermission"
+    },
+    {
+      "createdById": "005O1000009VrqsIAC",
+      "createdByName": "Brian Borbely",
+      "createdDate": "2024-10-25T19:14:32.000Z",
+      "fileName": "customPermissions/NVMConnect__ViewDialListPreview.customPermission",
+      "fullName": "NVMConnect__ViewDialListPreview",
+      "id": "0CPO1000000NneLOAS",
+      "lastModifiedById": "005O1000009VrqsIAC",
+      "lastModifiedByName": "Brian Borbely",
+      "lastModifiedDate": "2024-10-25T19:14:32.000Z",
+      "manageableState": "installed",
+      "namespacePrefix": "NVMConnect",
+      "type": "CustomPermission"
+    },
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2024-06-11T18:25:33.000Z",
+      "fileName": "customPermissions/analyticsengine__Reassign_Scheduled_As_User.customPermission",
+      "fullName": "analyticsengine__Reassign_Scheduled_As_User",
+      "id": "0CPO1000000AgPNOA0",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2024-06-11T18:25:33.000Z",
+      "manageableState": "installed",
+      "namespacePrefix": "analyticsengine",
+      "type": "CustomPermission"
+    }
+  ]
+}

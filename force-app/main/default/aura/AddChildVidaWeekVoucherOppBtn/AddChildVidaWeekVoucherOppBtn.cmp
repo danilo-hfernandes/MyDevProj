@@ -1,0 +1,27 @@
+<aura:component controller="AddChildVidaWeekVoucherOppController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="showSpin" type="Boolean" default="true"/>
+    <aura:attribute name="showResult" type="Boolean" default="true"/>
+    
+        <aura:if isTrue="{!v.showSpin}">
+        <div class="demo-only" style="height:6rem;position:relative">
+            <div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                    <span class="slds-assistive-text">Creating</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showResult}">
+        <lightning:card title="">
+            <div aura:id="container" style="font-size:large; text-align:center !important">
+            </div>
+        </lightning:card>
+    </aura:if>
+    
+</aura:component>

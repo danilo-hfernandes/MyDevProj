@@ -1,0 +1,93 @@
+<apex:page standardController="OpportunityLineItem" lightningStylesheets="true" id="page">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <apex:form id="form">
+        <style type="text/css">
+            .displayblock {
+                display: block;
+            }
+    .displaynone {
+        display: none;
+    }
+    </style>
+    <script>
+        var initialValue = '{!JSENCODE(TEXT(OpportunityLineItem.Sale_Date__c))}';
+    function hideView(){
+        document.getElementById("page:form:view").className = 'displaynone';
+        document.getElementById("page:form:edit").className = 'displayblock';
+    }
+    function getFormattedDate(dateString) {
+        var dateParts = dateString.split('-');
+        var year = dateParts[0];
+        var month = dateParts[1];
+        var day = dateParts[2];
+        
+        return month + '/' + day + '/' + year;
+    }
+    function doValidation(){
+        // Accessing the input element using jQuery
+        
+        var inputValue = jQuery('.Sale_Date__c').val();
+        // Parse the initial date
+        
+        var initialDate = getFormattedDate(initialValue).replace(/(^|-)0+/g, "$1");
+        var updatedDate = inputValue;
+        console.log('>>>>'+initialDate);
+        console.log('>>>>'+updatedDate);
+        // Check if the dates are different
+        if (initialDate != updatedDate) {
+            var confirmation = confirm("You have made changes to the Sale Date, Are you sure you wanted to update the date?");
+            if (confirmation) {
+                // If user confirms, proceed with save
+                doSave();
+            }
+            else{
+            	setTimeout(function() {
+                    window.location.reload();
+                }, 100); 
+            }
+        }
+        else{
+            doSave();
+        }
+    }
+    </script>
+    <apex:outputPanel id="view" styleClass="displayblock">
+        <apex:pageBlock mode="view" >
+            <apex:pageMessages />
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Edit" reRender="null" onclick="hideView();"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Details" columns="2" collapsible="true">
+                <apex:repeat value="{!$ObjectType.OpportunityLineItem.fieldsets.CruiseDetails}" var="fieldValue">
+                    <apex:Outputfield value="{!OpportunityLineItem[fieldValue]}"/>
+                </apex:repeat>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Reservation" columns="2" collapsible="true">
+                <apex:repeat value="{!$ObjectType.OpportunityLineItem.fieldsets.CruiseReservation}" var="fieldVal">
+                    <apex:Outputfield value="{!OpportunityLineItem[fieldVal]}" />
+                </apex:repeat>           
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:outputPanel>
+    <apex:outputPanel id="edit" styleClass="displaynone">
+        <apex:pageBlock mode="edit" >
+            <apex:pageMessages />
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" onclick="doValidation();"/>
+                <apex:actionFunction action="{!save}" name="doSave" rerender="form"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Details" columns="2" collapsible="true">
+                <apex:repeat value="{!$ObjectType.OpportunityLineItem.fieldsets.CruiseDetails}" var="fieldValue">
+                    <apex:Inputfield value="{!OpportunityLineItem[fieldValue]}"/>
+                </apex:repeat> 
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Reservation" columns="2" collapsible="true">
+                <apex:repeat value="{!$ObjectType.OpportunityLineItem.fieldsets.CruiseReservation}" var="fieldVal">
+                    <apex:Inputfield value="{!OpportunityLineItem[fieldVal]}" styleClass="{!fieldVal}" />
+                </apex:repeat>           
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:outputPanel>
+</apex:form>
+</apex:page>

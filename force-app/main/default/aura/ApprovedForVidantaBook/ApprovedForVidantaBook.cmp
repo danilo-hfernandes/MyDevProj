@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:attribute name="text" type="String" default="Approved for Vidanta Booking"/>
+    <p style="color: red; font-weight: bold; font-size: large; text-align: center;">
+        {!v.text}
+    </p>
+</aura:component>

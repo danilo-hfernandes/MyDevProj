@@ -1,0 +1,386 @@
+<template>
+   <lightning-card>
+      <lightning-button class="slds-align_absolute-center slds-m-bottom_medium" label="History Overview" onclick={handleButtonClick} variant="brand" disabled={isButtonDisabled}></lightning-button>
+      <template if:true={showHistory}>
+         <div class="slds-m-around_medium">
+            <div class="slds-grid slds-wrap">
+               <div class="slds-col slds-size_4-of-12 slds-m-bottom_x-small slds-align_absolute-center slds-box">
+                  <table class="slds-table">
+                     <thead>
+                        <tr class="slds-line-height_reset">
+                           <th class="" scope="col">
+                              <div style="background-color:#EBF3F6;color:#404040;" class="slds-truncate slds-float_left" title="Credit Summary">Credit Summary</div>
+                           </th>
+                           <th class="" scope="col">
+                              <div style="background-color:#EBF3F6;color:#404040;padding:4px" class="slds-truncate slds-float_right" >(1 Credit = $1 USD)</div>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="slds-hint-parent" key={credTrans.totalEarnedCredits}>
+                           <td data-label="Total Earned Credits">
+                              <div class="slds-truncate slds-float_left" >Total Earned Credits</div>
+                           </td>
+                           <td data-label="Total Earned Credits">
+                              <div class="slds-truncate slds-float_right">
+                                 <p><lightning-formatted-number value={totalEarnedCredits} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="slds-hint-parent" key={credTrans.totalRedeemableCredits}>
+                           <td data-label="Total Redeemable Credits">
+                              <div class="slds-truncate slds-float_left" >Total Redeemable Credits</div>
+                           </td>
+                           <td data-label="Total Redeemable Credits">
+                              <div class="slds-truncate slds-float_right">
+                                 <p><lightning-formatted-number value={totalRedeemableCredits} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr key={credTrans.totalRedeemedCredits}>
+                           <td data-label="Total Redeemed Credits">
+                              <div class="slds-truncate slds-float_left">Total Redeemed Credits</div>
+                           </td>
+                           <td data-label="Date">
+                              <div class="slds-truncate slds-float_right" >
+                                 <p><lightning-formatted-number value={totalRedeemedCredits} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr key = {credTrans.totalPendingCredits}>
+                           <td data-label="Total Pending Credits">
+                              <div class="slds-truncate slds-float_left">Total Pending Credits</div>
+                           </td>
+                           <td data-label="Total Pending Credits">
+                              <div class="slds-truncate slds-float_right" >
+                                 <p><lightning-formatted-number value={totalPendingCredits} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr key= {credTrans.totalRetractedCredits}>
+                           <td data-label="Total Retracted Credits">
+                              <div class="slds-truncate slds-float_left">Total Retracted Credits</div>
+                           </td>
+                           <td data-label="Total Retracted Credits">
+                              <div class="slds-truncate slds-float_right" >
+                                 <p><lightning-formatted-number value={totalRetractedCredits} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <template if:true={creditTransactionList}>
+               <template for:each={creditTransactionList} for:item="credTrans">
+                  <div key={credTrans.CreditTransactionStatusType} class= "slds-m-around_small slds-m-bottom_large">
+                     <template if:true = {credTrans.CreditTransactionsPending}>
+                        <h6 key={credTrans.CreditTransactionStatusType} class="slds-m-bottom_x-small slds-align_absolute-center"><strong>Pending</strong></h6>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered" key={credTrans.CreditTransactionStatusType}>
+                           <thead>
+                              <tr class="slds-line-height_reset">
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Date">Date</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Type">Type</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Description">Description</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reservation">Reservation #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reference">Reference #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Credits">Credits ($)</div>
+                                 </th>
+                                 <th class="" scope="col" if:true={credTrans.IsDonationInfoAvailable}>
+                                    <div class="slds-truncate" title="Contact">Contact</div>
+                                </th> 
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <template for:each={credTrans.CreditTransactionsPending} for:item="credTransdetails">
+                                 <tr class="slds-hint-parent" key={credTransdetails.ReservationNumber}>
+                                    <td data-label="TransactionDate">
+                                       <div class="slds-truncate" title="TransactionDate">{credTransdetails.TransactionDate}</div>
+                                    </td>
+                                    <td data-label="TransactionType">
+                                       <div class="slds-truncate" title="TransactionType">{credTransdetails.TransactionType}</div>
+                                    </td>
+                                    <td class="slds-cell-wrap" data-label="TransactionDescription">
+                                       <div class="slds-line-clamp" title="TransactionDescription">{credTransdetails.TransactionDescription}</div>
+                                    </td>
+                                    <td data-label="ReservationNumber" >
+                                       <div class="slds-truncate" title="ReservationNumber">{credTransdetails.ReservationNumber}</div>
+                                    </td>
+                                    <td data-label="CreditReferenceNumber" >
+                                       <div class="slds-truncate" title="CreditReferenceNumber">{credTransdetails.CreditReferenceNumber}</div>
+                                    </td>
+                                    <td data-label="CreditValue" >
+                                       <div class="slds-truncate" title="CreditValue">
+                                          <p><lightning-formatted-number value={credTransdetails.CreditValue} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                                       </div>
+                                    </td>
+                                    <td data-label="CreditValue" if:true={credTrans.IsDonationInfoAvailable}>
+                                       <div class="slds-truncate" title="DonationValue">{credTransdetails.DonationValue}</div>
+                                    </td>
+                                 </tr>
+                              </template>
+                           </tbody>
+                        </table>
+                     </template>
+                  </div>
+                  <div key={credTrans.CreditTransactionStatusType} class= "slds-m-around_small slds-m-bottom_large">
+                     <template if:true = {credTrans.CreditTransactionsEarned}>
+                        <h6 key={credTrans.CreditTransactionStatusType} class="slds-m-bottom_x-small slds-align_absolute-center"><strong>Earned Credits</strong></h6>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered" key={credTrans.CreditTransactionStatusType}>
+                           <thead>
+                              <tr class="slds-line-height_reset">
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Date">Date</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Type">Type</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Description">Description</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reservation">Reservation #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reference">Reference #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Credits">Credits ($)</div>
+                                 </th>
+                                 <th class="" scope="col" if:true={credTrans.IsDonationInfoAvailable}>
+                                    <div class="slds-truncate" title="Contact">Contact</div>
+                                </th> 
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <template for:each={credTrans.CreditTransactionsEarned} for:item="credTransdetails">
+                                 <tr class="slds-hint-parent" key={credTransdetails.ReservationNumber}>
+                                    <td data-label="TransactionDate">
+                                       <div class="slds-truncate" title="TransactionDate">{credTransdetails.TransactionDate}</div>
+                                    </td>
+                                    <td data-label="TransactionType">
+                                       <div class="slds-truncate" title="TransactionType">{credTransdetails.TransactionType}</div>
+                                    </td>
+                                    <td class="slds-cell-wrap" data-label="TransactionDescription">
+                                       <div class="slds-line-clamp" title="TransactionDescription">{credTransdetails.TransactionDescription}</div>
+                                    </td>
+                                    <td data-label="ReservationNumber" >
+                                       <div class="slds-truncate" title="ReservationNumber">{credTransdetails.ReservationNumber}</div>
+                                    </td>
+                                    <td data-label="CreditReferenceNumber" >
+                                       <div class="slds-truncate" title="CreditReferenceNumber">{credTransdetails.CreditReferenceNumber}</div>
+                                    </td>
+                                    <td data-label="CreditValue" >
+                                       <div class="slds-truncate" title="CreditValue">
+                                           <p><lightning-formatted-number value={credTransdetails.CreditValue} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                                       </div>
+                                    </td>
+                                    <td data-label="CreditValue" if:true={credTrans.IsDonationInfoAvailable}>
+                                       <div class="slds-truncate" title="DonationValue">{credTransdetails.DonationValue}</div>
+                                    </td>
+                                 </tr>
+                              </template>
+                           </tbody>
+                        </table>
+                     </template>
+                  </div>
+                  <div key={credTrans.CreditTransactionStatusType} class= "slds-m-around_small slds-m-bottom_large">
+                     <template if:true = {credTrans.CreditTransactionsRedeemable}>
+                        <h6 key={credTrans.CreditTransactionStatusType} class="slds-m-bottom_x-small slds-align_absolute-center"><strong>Redeemable Credits</strong></h6>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered" key={credTrans.CreditTransactionStatusType}>
+                           <thead>
+                              <tr class="slds-line-height_reset">
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Date">Date</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Type">Type</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Description">Description</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reservation">Reservation #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reference">Reference #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Credits">Credits ($)</div>
+                                 </th>
+                                 <th class="" scope="col" if:true={credTrans.IsDonationInfoAvailable}>
+                                    <div class="slds-truncate" title="Contact">Contact</div>
+                                </th> 
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <template for:each={credTrans.CreditTransactionsRedeemable} for:item="credTransdetails">
+                                 <tr class="slds-hint-parent" key={credTransdetails.ReservationNumber}>
+                                    <td data-label="TransactionDate">
+                                       <div class="slds-truncate" title="TransactionDate">{credTransdetails.TransactionDate}</div>
+                                    </td>
+                                    <td data-label="TransactionType">
+                                       <div class="slds-truncate" title="TransactionType">{credTransdetails.TransactionType}</div>
+                                    </td>
+                                    <td class="slds-cell-wrap" data-label="TransactionDescription">
+                                       <div class="slds-line-clamp" title="TransactionDescription">{credTransdetails.TransactionDescription}</div>
+                                    </td>
+                                    <td data-label="ReservationNumber" >
+                                       <div class="slds-truncate" title="ReservationNumber">{credTransdetails.ReservationNumber}</div>
+                                    </td>
+                                    <td data-label="CreditReferenceNumber" >
+                                       <div class="slds-truncate" title="CreditReferenceNumber">{credTransdetails.CreditReferenceNumber}</div>
+                                    </td>
+                                    <td data-label="CreditValue" >
+                                       <div class="slds-truncate" title="CreditValue">
+                                           <p><lightning-formatted-number value={credTransdetails.CreditValue} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                                       </div>
+                                    </td>
+                                    <td data-label="CreditValue" if:true={credTrans.IsDonationInfoAvailable}>
+                                       <div class="slds-truncate" title="DonationValue">{credTransdetails.DonationValue}</div>
+                                    </td>
+                                 </tr>
+                              </template>
+                           </tbody>
+                        </table>
+                     </template>
+                  </div>
+                  <div key={credTrans.CreditTransactionStatusType} class= "slds-m-around_small slds-m-bottom_large">
+                     <template if:true = {credTrans.CreditTransactionsRedeemed}>
+                        <h6 key={credTrans.CreditTransactionStatusType} class="slds-m-bottom_x-small slds-align_absolute-center"><strong> Redeemed Credits</strong></h6>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered" key={credTrans.CreditTransactionStatusType}>
+                           <thead>
+                              <tr class="slds-line-height_reset">
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Date">Date</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Type">Type</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Description">Description</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reservation">Reservation #</div>
+                                 </th>
+                                 <th class="" scope="col" >
+                                    <div class="slds-truncate" title="Reference">Reference #</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Credits">Credits ($)</div>
+                                 </th>
+                                 <th class="" scope="col" if:true={credTrans.IsDonationInfoAvailable}>
+                                    <div class="slds-truncate" title="Contact">Contact</div>
+                                </th> 
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <template for:each={credTrans.CreditTransactionsRedeemed} for:item="credTransdetails">
+                                 <tr class="slds-hint-parent" key={credTransdetails.ReservationNumber}>
+                                    <td data-label="TransactionDate">
+                                       <div class="slds-truncate" title="TransactionDate">{credTransdetails.TransactionDate}</div>
+                                    </td>
+                                    <td data-label="TransactionType">
+                                       <div class="slds-truncate" title="TransactionType">{credTransdetails.TransactionType}</div>
+                                    </td>
+                                    <td class="slds-cell-wrap" data-label="TransactionDescription">
+                                       <div class="slds-line-clamp" title="TransactionDescription">{credTransdetails.TransactionDescription}</div>
+                                    </td>
+                                    <td data-label="ReservationNumber" >
+                                       <div class="slds-truncate" title="ReservationNumber">{credTransdetails.ReservationNumber}</div>
+                                    </td>
+                                    <td data-label="CreditReferenceNumber" >
+                                       <div class="slds-truncate" title="CreditReferenceNumber">{credTransdetails.CreditReferenceNumber}</div>
+                                    </td>
+                                    <td data-label="CreditValue" >
+                                       <div class="slds-truncate" title="CreditValue">
+                                          <p><lightning-formatted-number value={credTransdetails.CreditValue} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                                       </div>
+                                    </td>
+                                    <td data-label="CreditValue" if:true={credTrans.IsDonationInfoAvailable}>
+                                       <div class="slds-truncate" title="DonationValue">{credTransdetails.DonationValue}</div>
+                                    </td>
+                                 </tr>
+                              </template>
+                           </tbody>
+                        </table>
+                     </template>
+                  </div>
+                  <div key={credTrans.CreditTransactionStatusType} class= "slds-m-around_small slds-m-bottom_large">
+                     <template if:true = {credTrans.CreditTransactionsRetracted}>
+                        <h6 key={credTrans.CreditTransactionStatusType} class="slds-m-bottom_x-small slds-align_absolute-center"><strong>Retracted Credits</strong></h6>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered" key={credTrans.CreditTransactionStatusType}>
+                           <thead>
+                              <tr class="slds-line-height_reset">
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Date">Date</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Type">Type</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Description">Description</div>
+                                 </th>
+                                 <th class="" scope="col">
+                                    <div class="slds-truncate" title="Reservation">Reservation #</div>
+                                 </th>
+                                 <th class="" scope="col" >
+                                    <div class="slds-truncate" title="Reference">Reference #</div>
+                                 </th>
+                                 <th class="" scope="col" >
+                                    <div class="slds-truncate" title="Credits">Credits ($)</div>
+                                 </th>
+                                 <th class="" scope="col" if:true={credTrans.IsDonationInfoAvailable}>
+                                    <div class="slds-truncate" title="Contact">Contact</div>
+                                </th> 
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <template for:each={credTrans.CreditTransactionsRetracted} for:item="credTransdetails">
+                                 <tr class="slds-hint-parent" key={credTransdetails.ReservationNumber}>
+                                    <td data-label="TransactionDate">
+                                       <div class="slds-truncate" title="TransactionDate">{credTransdetails.TransactionDate}</div>
+                                    </td>
+                                    <td data-label="TransactionType">
+                                       <div class="slds-truncate" title="TransactionType">{credTransdetails.TransactionType}</div>
+                                    </td>
+                                    <td class="slds-cell-wrap" data-label="TransactionDescription">
+                                       <div class="slds-line-clamp" title="TransactionDescription">{credTransdetails.TransactionDescription}</div>
+                                    </td>
+                                    <td data-label="ReservationNumber" >
+                                       <div class="slds-truncate" title="ReservationNumber">{credTransdetails.ReservationNumber}</div>
+                                    </td>
+                                    <td data-label="CreditReferenceNumber" >
+                                       <div class="slds-truncate" title="CreditReferenceNumber">{credTransdetails.CreditReferenceNumber}</div>
+                                    </td>
+                                    <td data-label="CreditValue" >
+                                       <div class="slds-truncate" title="CreditValue">
+                                          <p><lightning-formatted-number value={credTransdetails.CreditValue} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                                       </div>
+                                    </td>
+                                    <td data-label="CreditValue" if:true={credTrans.IsDonationInfoAvailable}>
+                                       <div class="slds-truncate" title="DonationValue">{credTransdetails.DonationValue}</div>
+                                    </td>
+                                 </tr>
+                              </template>
+                           </tbody>
+                        </table>
+                     </template>
+                  </div>
+               </template>
+            </template>
+         </div>
+      </template>
+   </lightning-card>
+</template>

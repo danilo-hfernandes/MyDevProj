@@ -1,0 +1,18 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2024-12-05T16:43:01.000Z",
+      "fileName": "permissionsetgroups/Vonage_Agent_Permission.permissionsetgroup",
+      "fullName": "Vonage_Agent_Permission",
+      "id": "0PGO1000000AePBOA0",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2024-12-05T16:44:40.000Z",
+      "manageableState": "unmanaged",
+      "type": "PermissionSetGroup"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Tee-Up">
+        <div class="slds-p-around_medium">
+            <p class="slds-p-bottom_medium">Click the button below to call the Tee-Up API for this Lead record.</p>
+
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-bottom_small">
+                <!-- Get Agent List Button -->
+                <lightning-button
+                    label="Get Agent List"
+                    variant="neutral"
+                    class="slds-m-right_small"
+                    onclick={handleGetAgents}
+                    disabled={isLoading}>
+                </lightning-button>
+            </div>
+
+            <!-- Agent Picklist -->
+            <template if:true={agents.length}>
+                <lightning-combobox
+                    name="agentPicklist"
+                    label="Select an Agent"
+                    options={agents}
+                    onchange={handleAgentChange}
+                    class="slds-m-bottom_small">
+                </lightning-combobox>
+                 <!-- Tee-Up Button -->
+                <lightning-button
+                    label="Tee-Up"
+                    variant="brand"
+                    onclick={handleApiCall}
+                    disabled={isLoading}>
+                </lightning-button>
+            </template>
+
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+            </template>
+        </div>
+    </lightning-card>
+</template>

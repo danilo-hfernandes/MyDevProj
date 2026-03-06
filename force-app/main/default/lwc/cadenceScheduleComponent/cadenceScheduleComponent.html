@@ -1,0 +1,176 @@
+<template>
+    <lightning-card title="Cadence Schedule Configurator" icon-name="custom:custom14">
+        <div class="slds-p-around_medium">
+            
+            <!-- Object Selection Section -->
+            <lightning-card title="Object & Fields Selection" class="slds-m-bottom_medium">
+                <div class="slds-p-around_medium">
+                    <lightning-combobox 
+                        label="Select Object" 
+                        value={selectedObject} 
+                        options={objectOptions} 
+                        onchange={handleObjectChange}>
+                    </lightning-combobox>
+
+                    <!--<lightning-dual-listbox 
+                        label="Select Fields" 
+                        options={fieldOptions} 
+                        value={selectedFields} 
+                        onchange={handleFieldChange}>
+                    </lightning-dual-listbox> -->
+                </div>
+            </lightning-card>
+
+            <!-- Filters Section -->
+            <lightning-card title="Filters" class="slds-m-bottom_medium">
+                <div class="slds-p-around_medium">
+                    
+                    <!-- Filter Logic Input -->
+                    <div class="slds-m-bottom_small">
+                        <lightning-input 
+                            type="text" 
+                            label="Filter Logic (e.g., 1 AND (2 OR 3))" 
+                            value={filterLogic} 
+                            onchange={handleFilterLogicChange}>
+                        </lightning-input>
+                    </div>
+
+                    <template if:true={filters.length}>
+                        <template for:each={filters} for:item="filter" for:index="index">
+                            <div key={filter.id} class="slds-grid slds-gutters slds-m-top_small slds-align-end">
+                                
+                                <!-- Filter Number -->
+                                <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                                    <span class="slds-badge">{filter.number}</span>
+                                </div>
+
+                                <!-- Field Selection -->
+                                <div class="slds-col slds-size_3-of-12">
+                                    <lightning-combobox 
+                                        label="Field" 
+                                        data-index={index} 
+                                        name="field" 
+                                        value={filter.field} 
+                                        options={fieldOptions} 
+                                        onchange={handleFilterChange}>
+                                    </lightning-combobox>
+                                </div>
+
+                                <!-- Operator Selection -->
+                                <div class="slds-col slds-size_2-of-12">
+                                    <lightning-combobox 
+                                        label="Operator" 
+                                        data-index={index} 
+                                        name="operator" 
+                                        value={filter.operator} 
+                                        options={operatorOptions} 
+                                        onchange={handleFilterChange}>
+                                    </lightning-combobox>
+                                </div>
+
+                                <!-- Value Selection -->
+                                <div class="slds-col slds-size_3-of-12">
+                                    <template if:true={filter.isPicklist}>
+                                        <lightning-combobox 
+                                            label="Value" 
+                                            data-index={index} 
+                                            name="value" 
+                                            value={filter.value} 
+                                            options={filter.picklistValues} 
+                                            onchange={handleFilterChange}>
+                                        </lightning-combobox>
+                                    </template>
+                                    <template if:true={filter.isDate}>
+                                        <lightning-input 
+                                            type="date" 
+                                            label="Value" 
+                                            data-index={index} 
+                                            name="value" 
+                                            value={filter.value} 
+                                            onchange={handleFilterChange}>
+                                        </lightning-input>
+                                    </template>
+                                    <template if:true={filter.isDateTime}>
+                                        <lightning-input 
+                                            type="datetime" 
+                                            label="Value" 
+                                            data-index={index} 
+                                            name="value" 
+                                            value={filter.value} 
+                                            onchange={handleFilterChange}>
+                                        </lightning-input>
+                                    </template>
+                                    <template if:false={filter.isPicklist}>
+                                        <template if:false={filter.isDate}>
+                                            <template if:false={filter.isDateTime}>
+                                                <lightning-input 
+                                                    label="Value" 
+                                                    data-index={index} 
+                                                    name="value" 
+                                                    value={filter.value} 
+                                                    onchange={handleFilterChange}>
+                                                </lightning-input>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </div>
+
+                                <!-- Action Buttons (Add/Delete) -->
+                                <div class="slds-col slds-size_2-of-12 slds-grid slds-align-content-center">
+                                    <lightning-button-icon 
+                                        icon-name="utility:delete" 
+                                        alternative-text="Remove" 
+                                        data-index={index} 
+                                        onclick={removeFilter} 
+                                        class="slds-m-right_x-small">
+                                    </lightning-button-icon>
+                                    <lightning-button-icon 
+                                        icon-name="utility:add" 
+                                        alternative-text="Add" 
+                                        onclick={addFilter}>
+                                    </lightning-button-icon>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+
+                    <!-- Show Add Filter button if no filters exist -->
+                    <template if:false={filters.length}>
+                        <div class="slds-m-top_small">
+                            <lightning-button label="Add Filter" onclick={addFilter} variant="neutral"></lightning-button>
+                        </div>
+                    </template>
+                </div>
+            </lightning-card>
+
+            <!-- Match Group & Cadence Selection -->
+            <lightning-card title="Match Group & Cadence Selection" class="slds-m-bottom_medium">
+                <div class="slds-p-around_medium">
+                    <lightning-combobox 
+                        label="Select Match Group" 
+                        value={selectedMatchGroup} 
+                        options={matchGroupOptions} 
+                        onchange={handleMatchGroupChange}>
+                    </lightning-combobox>
+
+                    <lightning-combobox 
+                        label="Select Cadence" 
+                        value={selectedCadence} 
+                        options={cadenceOptions} 
+                        onchange={handleCadenceChange}>
+                    </lightning-combobox>
+                </div>
+            </lightning-card>
+
+            <!-- Save Button Section -->
+            <div class="slds-m-top_medium slds-align_absolute-center">
+                <lightning-button 
+                    label="Save Configuration" 
+                    variant="brand" 
+                    onclick={saveConfiguration}>
+                </lightning-button>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+.THIS .buttonPadding{
+  
+}.THIS.slds-spinner_container {  
+  z-index: 10000;
+  position: fixed;   
+}
+.THIS .slds-table th, .THIS.slds-table td {
+     padding: 0; 
+    
+}
+.THIS .slds-text-title_caps{
+    padding :10px;
+}

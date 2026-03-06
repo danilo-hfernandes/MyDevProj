@@ -1,0 +1,73 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome" 
+                 controller="GetSMSData" access="global">
+
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="sessions" type="List"/>
+    <aura:attribute name="selectedSession" type="Object"/>
+    <aura:attribute name="conversationEntries" type="List"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="pageSize" type="Integer" default="10"/>
+    <aura:attribute name="pageNumber" type="Integer" default="0"/>
+    <aura:attribute name="hasMore" type="Boolean" default="true"/>
+    <aura:attribute name="selectedSessionId" type="Id"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card title="SMS Conversations" iconName="standard:messaging_session">
+
+        <aura:if isTrue="{!v.isLoading}">
+            <lightning:spinner alternativeText="Loading SMS data..."/>
+        <aura:set attribute="else">
+
+            <aura:if isTrue="{!empty(v.sessions)}">
+                <p>No SMS conversations found.</p>
+            <aura:set attribute="else">
+                <lightning:datatable
+                    data="{!v.sessions}"
+                    columns="{!v.columns}"
+                    keyField="Id"
+                    onrowaction="{!c.handleRowAction}"/>
+            </aura:set>
+            </aura:if>
+
+        </aura:set>
+        </aura:if>
+	
+        <div style="height: 20px;"></div>
+        
+        <aura:if isTrue="{!not(empty(v.selectedSession))}">
+            <lightning:card title="Conversation Details" iconName="standard:message">
+                <aura:iteration items="{!v.conversationEntries}" var="msg">
+                    
+                    <div class="slds-box slds-m-bottom_small">
+                        <strong>Date: </strong> 
+                        <lightning:formattedDateTime value="{!msg.CreatedDate}"/>
+                        
+                        <strong> Direction: </strong>
+                        <aura:if isTrue="{!msg.ActorType == 'EndUser'}">
+                            Inbound
+                            <aura:set attribute="else">
+                                Outbound
+                            </aura:set>
+                        </aura:if>
+                        
+                        <strong> Message: </strong> {!msg.Message}
+                    </div>                   
+                    
+                </aura:iteration>
+                
+                <aura:if isTrue="{!v.hasMore}">
+                    <div class="slds-m-top_small">
+                        <lightning:button label="Load More"
+                                          onclick="{!c.loadMore}"
+                                          variant="brand"
+                                          class="slds-m-left_x-small"/>
+                    </div>
+                </aura:if>                
+                
+            </lightning:card>
+        </aura:if>
+
+    </lightning:card>
+</aura:component>

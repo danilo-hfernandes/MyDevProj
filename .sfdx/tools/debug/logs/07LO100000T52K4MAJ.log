@@ -1,0 +1,1989 @@
+59.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+19:51:38.1 (1327413)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:38.1 (1358876)|EXECUTION_STARTED
+19:51:38.1 (1368948)|CODE_UNIT_STARTED|[EXTERNAL]|01p4z000000YmVH|TourGenVacationVIPDBTranTest.testBatchJob()
+19:51:38.1 (1610885)|HEAP_ALLOCATE|[95]|Bytes:3
+19:51:38.1 (1706980)|HEAP_ALLOCATE|[100]|Bytes:152
+19:51:38.1 (1724600)|HEAP_ALLOCATE|[417]|Bytes:408
+19:51:38.1 (1740610)|HEAP_ALLOCATE|[430]|Bytes:408
+19:51:38.1 (1769625)|HEAP_ALLOCATE|[317]|Bytes:6
+19:51:38.1 (1785595)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:45
+19:51:38.1 (1797403)|METHOD_ENTRY|[2]|01p4z000000YmVH|TourGenVacationVIPDBTranTest.TourGenVacationVIPDBTranTest()
+19:51:38.1 (1804130)|STATEMENT_EXECUTE|[2]
+19:51:38.1 (1810092)|STATEMENT_EXECUTE|[2]
+19:51:38.1 (1813430)|METHOD_EXIT|[2]|TourGenVacationVIPDBTranTest
+19:51:38.1 (1838702)|HEAP_ALLOCATE|[68]|Bytes:5
+19:51:38.1 (1864678)|HEAP_ALLOCATE|[74]|Bytes:5
+19:51:38.1 (1869120)|HEAP_ALLOCATE|[82]|Bytes:7
+19:51:38.1 (1903225)|STATEMENT_EXECUTE|[3]
+19:51:38.1 (1904223)|STATEMENT_EXECUTE|[5]
+19:51:38.1 (2013660)|HEAP_ALLOCATE|[5]|Bytes:4
+19:51:38.1 (2138466)|VARIABLE_SCOPE_BEGIN|[5]|testLeads|List<Lead>|true|false
+19:51:38.1 (2150133)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:38.1 (2191346)|VARIABLE_ASSIGNMENT|[5]|testLeads|[]|0x4b827a5a
+19:51:38.1 (2197012)|STATEMENT_EXECUTE|[6]
+19:51:38.1 (2224205)|HEAP_ALLOCATE|[6]|Bytes:4
+19:51:38.1 (2332120)|HEAP_ALLOCATE|[7]|Bytes:9
+19:51:38.1 (6154491)|VARIABLE_ASSIGNMENT|[6]|this.LastName|"Test Lead"|0x668eff12
+19:51:38.1 (6176066)|HEAP_ALLOCATE|[8]|Bytes:26
+19:51:38.1 (6207909)|VARIABLE_ASSIGNMENT|[6]|this.LeadSource|"Vacation VIP DB Tran (6 more) ..."|0x668eff12
+19:51:38.1 (6211449)|HEAP_ALLOCATE|[9]|Bytes:3
+19:51:38.1 (6223910)|VARIABLE_ASSIGNMENT|[6]|this.Status|"New"|0x668eff12
+19:51:38.1 (6226724)|HEAP_ALLOCATE|[10]|Bytes:14
+19:51:38.1 (6237109)|VARIABLE_ASSIGNMENT|[6]|this.Email|"test@gmail.com"|0x668eff12
+19:51:38.1 (6239661)|HEAP_ALLOCATE|[11]|Bytes:7
+19:51:38.1 (6248904)|VARIABLE_ASSIGNMENT|[6]|this.Phone|"9874563"|0x668eff12
+19:51:38.1 (6251729)|HEAP_ALLOCATE|[12]|Bytes:12
+19:51:38.1 (6261549)|VARIABLE_ASSIGNMENT|[6]|this.Company|"Test Company"|0x668eff12
+19:51:38.1 (6354374)|HEAP_ALLOCATE|[13]|Bytes:4
+19:51:38.1 (6395995)|VARIABLE_ASSIGNMENT|[6]|this.VIP_Offer_Date__c|"2026-03-05T00:00:00.000Z"|0x668eff12
+19:51:38.1 (6412696)|VARIABLE_ASSIGNMENT|[6]|this.Marketing_Email_opt_out__c|false|0x668eff12
+19:51:38.1 (6452376)|VARIABLE_SCOPE_BEGIN|[6]|testLead|Lead|true|false
+19:51:38.1 (6478935)|VARIABLE_ASSIGNMENT|[6]|testLead|{"LastName":"Test Lead","LeadSource":"Vacation VIP DB Tran (6 more) ...","Status":"New","Email":"test@gmail.com","Phone":"9874563","Company":"Test Company","VIP_Offer_Date__c":"2026-03-05T00:00:00.000Z","Marketing_Email_opt_out__c":false}|0x668eff12
+19:51:38.1 (6484536)|STATEMENT_EXECUTE|[16]
+19:51:38.1 (6532987)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:38.1 (6538063)|STATEMENT_EXECUTE|[17]
+19:51:38.1 (6605645)|DML_BEGIN|[17]|Op:Insert|Type:Lead|Rows:1
+19:51:38.1 (6640516)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (72012874)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:Lead
+19:51:38.77 (77921704)|FLOW_CREATE_INTERVIEW_BEGIN|00D7d000009anXe|3004z000000kEYj|3014z000000kPau
+19:51:38.77 (77989064)|FLOW_CREATE_INTERVIEW_END|876437151a0b0eb428f53d0891ed19cc092f934-36fb|Map Lead Standard Name Fields to Custom Name Fields
+19:51:38.78 (78785186)|FLOW_START_INTERVIEWS_BEGIN|1
+19:51:38.78 (78817974)|FLOW_START_INTERVIEW_BEGIN|876437151a0b0eb428f53d0891ed19cc092f934-36fb|Map Lead Standard Name Fields to Custom Name Fields
+19:51:38.78 (78877728)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL queries: 0 out of 100
+19:51:38.78 (78884462)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:38.78 (78889094)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:38.78 (78893922)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:38.78 (78897924)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:38.78 (78902204)|FLOW_START_INTERVIEW_LIMIT_USAGE|CPU time in ms: 14 out of 15000
+19:51:38.78 (78931339)|FLOW_START_INTERVIEW_LIMIT_USAGE|Heap size in bytes: 1035 out of 6000000
+19:51:38.78 (78935400)|FLOW_START_INTERVIEW_LIMIT_USAGE|Callouts: 0 out of 100
+19:51:38.78 (78939792)|FLOW_START_INTERVIEW_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:38.78 (78944059)|FLOW_START_INTERVIEW_LIMIT_USAGE|Future calls: 0 out of 50
+19:51:38.78 (78948189)|FLOW_START_INTERVIEW_LIMIT_USAGE|Jobs in queue: 0 out of 50
+19:51:38.78 (78952239)|FLOW_START_INTERVIEW_LIMIT_USAGE|Push notifications: 0 out of 10
+19:51:38.78 (113795848)|FLOW_VALUE_ASSIGNMENT|876437151a0b0eb428f53d0891ed19cc092f934-36fb|$Record|{Id=null, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=0053t000006rP8lAAE, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=false, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, DoNotCall=false, CreatedByID=null, LastModifiedByID=null, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=null, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=null, First_Name_Mapping__c=null, Last_Name_Mapping__c=null, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=false, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=null, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=false, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=null, Form_CreatedById__c=null, Form_CreatedDate__c=null, Form_IsConverted__c=false, Form_LastModifiedDate__c=null, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=0053t000006rP8lAAE, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=null, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:38.78 (113962421)|FLOW_ELEMENT_BEGIN|876437151a0b0eb428f53d0891ed19cc092f934-36fb|FlowRecordUpdate|Update_Lead_Custom_First_and_Last_Name
+19:51:38.78 (114006283)|FLOW_ELEMENT_DEFERRED|FlowRecordUpdate|Update_Lead_Custom_First_and_Last_Name
+19:51:38.78 (114058661)|FLOW_ELEMENT_LIMIT_USAGE|17 ms CPU time, total 31 out of 15000
+19:51:38.78 (114066692)|FLOW_ELEMENT_END|876437151a0b0eb428f53d0891ed19cc092f934-36fb|FlowRecordUpdate|Update_Lead_Custom_First_and_Last_Name
+19:51:38.78 (114086196)|FLOW_START_INTERVIEW_END|876437151a0b0eb428f53d0891ed19cc092f934-36fb|Map Lead Standard Name Fields to Custom Name Fields
+19:51:38.78 (114129600)|FLOW_BULK_ELEMENT_BEGIN|FlowRecordUpdate|Update_Lead_Custom_First_and_Last_Name
+19:51:38.78 (114390504)|FLOW_VALUE_ASSIGNMENT|876437151a0b0eb428f53d0891ed19cc092f934-36fb|Update_Lead_Custom_First_and_Last_Name|true
+19:51:38.78 (116861429)|FLOW_VALUE_ASSIGNMENT|876437151a0b0eb428f53d0891ed19cc092f934-36fb|$Record|{Id=null, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=0053t000006rP8lAAE, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=false, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, DoNotCall=false, CreatedByID=null, LastModifiedByID=null, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=null, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=null, First_Name_Mapping__c=null, Last_Name_Mapping__c=Test Lead, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=false, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=null, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=false, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=null, Form_CreatedById__c=null, Form_CreatedDate__c=null, Form_IsConverted__c=false, Form_LastModifiedDate__c=null, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=0053t000006rP8lAAE, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=null, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:38.78 (116911929)|FLOW_VALUE_ASSIGNMENT|876437151a0b0eb428f53d0891ed19cc092f934-36fb|Update_Lead_Custom_First_and_Last_Name__CONDITIONS_RESULT|true
+19:51:38.78 (117030603)|FLOW_BULK_ELEMENT_LIMIT_USAGE|3 ms CPU time, total 34 out of 15000
+19:51:38.78 (117057796)|FLOW_BULK_ELEMENT_END|FlowRecordUpdate|Update_Lead_Custom_First_and_Last_Name|0|2
+19:51:38.78 (117268073)|FLOW_START_INTERVIEWS_END|1
+19:51:38.78 (117405043)|FLOW_INTERVIEW_FINISHED|876437151a0b0eb428f53d0891ed19cc092f934-36fb|Map Lead Standard Name Fields to Custom Name Fields
+19:51:38.78 (117429290)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL queries: 0 out of 100
+19:51:38.78 (117434265)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:38.78 (117437789)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:38.78 (117441173)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:38.78 (117444487)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:38.78 (117447733)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|CPU time in ms: 34 out of 15000
+19:51:38.78 (117457867)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Heap size in bytes: 1035 out of 6000000
+19:51:38.78 (117460745)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Callouts: 0 out of 100
+19:51:38.78 (117463658)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:38.78 (117466411)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Future calls: 0 out of 50
+19:51:38.78 (117469200)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Jobs in queue: 0 out of 50
+19:51:38.121 (121646139)|FLOW_CREATE_INTERVIEW_BEGIN|00D7d000009anXe|3007d000000AdWs|3017d000000q5v2
+19:51:38.121 (121709235)|FLOW_CREATE_INTERVIEW_END|876537151a0b0eb428f53d0891ed19cc092f934-36fc|Lead_Sync_Acoustic
+19:51:38.122 (122376746)|FLOW_START_INTERVIEWS_BEGIN|1
+19:51:38.122 (122407202)|FLOW_START_INTERVIEW_BEGIN|876537151a0b0eb428f53d0891ed19cc092f934-36fc|Lead_Sync_Acoustic
+19:51:38.122 (122447431)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL queries: 0 out of 100
+19:51:38.122 (122454242)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:38.122 (122458962)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:38.122 (122510082)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:38.122 (122514716)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:38.122 (122519239)|FLOW_START_INTERVIEW_LIMIT_USAGE|CPU time in ms: 36 out of 15000
+19:51:38.122 (122538892)|FLOW_START_INTERVIEW_LIMIT_USAGE|Heap size in bytes: 1035 out of 6000000
+19:51:38.122 (122543081)|FLOW_START_INTERVIEW_LIMIT_USAGE|Callouts: 0 out of 100
+19:51:38.122 (122546968)|FLOW_START_INTERVIEW_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:38.122 (122551150)|FLOW_START_INTERVIEW_LIMIT_USAGE|Future calls: 0 out of 50
+19:51:38.122 (122555024)|FLOW_START_INTERVIEW_LIMIT_USAGE|Jobs in queue: 0 out of 50
+19:51:38.122 (122558716)|FLOW_START_INTERVIEW_LIMIT_USAGE|Push notifications: 0 out of 10
+19:51:38.122 (125468381)|FLOW_VALUE_ASSIGNMENT|876537151a0b0eb428f53d0891ed19cc092f934-36fc|$Record|{Id=null, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=0053t000006rP8lAAE, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=false, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, DoNotCall=false, CreatedByID=null, LastModifiedByID=null, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=null, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=null, First_Name_Mapping__c=null, Last_Name_Mapping__c=Test Lead, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=false, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=null, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=false, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=null, Form_CreatedById__c=null, Form_CreatedDate__c=null, Form_IsConverted__c=false, Form_LastModifiedDate__c=null, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=0053t000006rP8lAAE, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=null, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:38.122 (125719284)|FLOW_ELEMENT_BEGIN|876537151a0b0eb428f53d0891ed19cc092f934-36fc|FlowRecordUpdate|Update_Record_Sync_Acoustic
+19:51:38.122 (125753228)|FLOW_ELEMENT_DEFERRED|FlowRecordUpdate|Update_Record_Sync_Acoustic
+19:51:38.122 (125793231)|FLOW_ELEMENT_LIMIT_USAGE|3 ms CPU time, total 39 out of 15000
+19:51:38.122 (125800497)|FLOW_ELEMENT_END|876537151a0b0eb428f53d0891ed19cc092f934-36fc|FlowRecordUpdate|Update_Record_Sync_Acoustic
+19:51:38.122 (125817048)|FLOW_START_INTERVIEW_END|876537151a0b0eb428f53d0891ed19cc092f934-36fc|Lead_Sync_Acoustic
+19:51:38.122 (125850798)|FLOW_BULK_ELEMENT_BEGIN|FlowRecordUpdate|Update_Record_Sync_Acoustic
+19:51:38.122 (125978158)|FLOW_VALUE_ASSIGNMENT|876537151a0b0eb428f53d0891ed19cc092f934-36fc|Update_Record_Sync_Acoustic__CONDITIONS_RESULT|true
+19:51:38.122 (125981436)|FLOW_VALUE_ASSIGNMENT|876537151a0b0eb428f53d0891ed19cc092f934-36fc|Update_Record_Sync_Acoustic|true
+19:51:38.122 (128748834)|FLOW_VALUE_ASSIGNMENT|876537151a0b0eb428f53d0891ed19cc092f934-36fc|$Record|{Id=null, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=0053t000006rP8lAAE, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=false, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, DoNotCall=false, CreatedByID=null, LastModifiedByID=null, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=null, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=null, First_Name_Mapping__c=null, Last_Name_Mapping__c=Test Lead, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=false, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=null, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=true, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=null, Form_CreatedById__c=null, Form_CreatedDate__c=null, Form_IsConverted__c=false, Form_LastModifiedDate__c=null, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=0053t000006rP8lAAE, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=null, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:38.122 (128925598)|FLOW_BULK_ELEMENT_LIMIT_USAGE|3 ms CPU time, total 42 out of 15000
+19:51:38.122 (128950947)|FLOW_BULK_ELEMENT_END|FlowRecordUpdate|Update_Record_Sync_Acoustic|0|2
+19:51:38.122 (129108302)|FLOW_START_INTERVIEWS_END|1
+19:51:38.122 (129242740)|FLOW_INTERVIEW_FINISHED|876537151a0b0eb428f53d0891ed19cc092f934-36fc|Lead_Sync_Acoustic
+19:51:38.122 (129264300)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL queries: 0 out of 100
+19:51:38.122 (129269196)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:38.122 (129273333)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:38.122 (129276925)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:38.122 (129280148)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:38.122 (129283382)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|CPU time in ms: 42 out of 15000
+19:51:38.122 (129292840)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Heap size in bytes: 1035 out of 6000000
+19:51:38.122 (129296450)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Callouts: 0 out of 100
+19:51:38.122 (129299595)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:38.122 (129302803)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Future calls: 0 out of 50
+19:51:38.122 (129305704)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Jobs in queue: 0 out of 50
+19:51:38.1 (130680982)|CODE_UNIT_FINISHED|Flow:Lead
+19:51:38.1 (154734135)|CODE_UNIT_STARTED|[EXTERNAL]|01q3t000000iJmO|leadTriggerOM on Lead trigger event BeforeInsert|__sfdc_trigger/leadTriggerOM
+19:51:38.1 (154803503)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (154941594)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:114
+19:51:38.1 (155019031)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (155028853)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (155071458)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x58a348b7
+19:51:38.1 (155116980)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (155122061)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (155128477)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x58a348b7
+19:51:38.1 (155135428)|STATEMENT_EXECUTE|[1]
+19:51:38.1 (155137649)|STATEMENT_EXECUTE|[2]
+19:51:38.1 (155142480)|HEAP_ALLOCATE|[2]|Bytes:12
+19:51:38.1 (157562950)|VARIABLE_ASSIGNMENT|[2]|this.leadTrigger|null|0x58a348b7
+19:51:38.1 (157589610)|STATEMENT_EXECUTE|[4]
+19:51:38.157 (157598945)|CUMULATIVE_LIMIT_USAGE
+19:51:38.157 (157598945)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 42 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.157 (157598945)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (157721223)|CODE_UNIT_FINISHED|leadTriggerOM on Lead trigger event BeforeInsert|__sfdc_trigger/leadTriggerOM
+19:51:38.160 (160336616)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.160 (162472924)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Trigger_Active__c FROM leadassist__SRR_Object__mdt WHERE MasterLabel = 'Lead'
+19:51:38.160 (169772217)|SOQL_EXECUTE_END|[3]|Rows:1
+19:51:38.160 (172603563)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.160 (177620228)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.160 (177668096)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.160 (180210610)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.160 (180247356)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.195 (195274558)|CUMULATIVE_LIMIT_USAGE
+19:51:38.195 (195274558)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 56 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.195 (195274558)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.195 (195274558)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (200431693)|CODE_UNIT_STARTED|[EXTERNAL]|01q4z000000bs98|LeadLookupAccountMXVoucher on Lead trigger event BeforeInsert|__sfdc_trigger/LeadLookupAccountMXVoucher
+19:51:38.1 (200484091)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (200589573)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (200599795)|VARIABLE_SCOPE_BEGIN|[1]|this|LeadLookupAccountMXVoucher|true|false
+19:51:38.1 (200649392)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x182428e7
+19:51:38.1 (200682713)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (200686630)|VARIABLE_SCOPE_BEGIN|[1]|this|LeadLookupAccountMXVoucher|true|false
+19:51:38.1 (200693066)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x182428e7
+19:51:38.1 (200699036)|STATEMENT_EXECUTE|[1]
+19:51:38.1 (200700183)|STATEMENT_EXECUTE|[3]
+19:51:38.1 (201061652)|VARIABLE_ASSIGNMENT|[3]|this.leadTrigger|null|0x182428e7
+19:51:38.1 (201073785)|STATEMENT_EXECUTE|[6]
+19:51:38.1 (201074974)|STATEMENT_EXECUTE|[7]
+19:51:38.201 (201078986)|CUMULATIVE_LIMIT_USAGE
+19:51:38.201 (201078986)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 56 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.201 (201078986)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.201 (201078986)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (201180653)|CODE_UNIT_FINISHED|LeadLookupAccountMXVoucher on Lead trigger event BeforeInsert|__sfdc_trigger/LeadLookupAccountMXVoucher
+19:51:38.1 (246950212)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Lead:new
+19:51:38.1 (246978519)|VALIDATION_RULE|03d4z000000bxCs|Block_Lead_Changes_Before_Cadence_Assign
+19:51:38.1 (252800769)|VALIDATION_FORMULA|NOT(Is_Duplicate__c) &&
+(CreatedBy.Email = 'zappier@nerdsoft.com' &#124;&#124; CreatedBy.Email = 'zappier@nerdsoft.com.invalid' &#124;&#124; CreatedBy.Email = 'dev@nerdsoft.com' &#124;&#124; CreatedBy.Email = 'dev@nerdsoft.com.hsi.full') && 
+RecordType.DeveloperName = 'Carefree_Destinations' &&
+CONTAINS(TEXT(LeadSource),'CFD')
+&&
+ISCHANGED(Status) 
+&&
+ISPICKVAL(PRIORVALUE(Status),'New') 
+&&
+(
+				ISNULL(First_Action_Cadence_Id__c) &#124;&#124;
+				ISBLANK(First_Action_Cadence_Id__c) &#124;&#124;
+				First_Action_Cadence_Id__c = ''
+) 
+&&
+(ISPICKVAL(leadassist__Use_Round_Robin__c,'ASSIGNED') &#124;&#124; 
+	ISPICKVAL(leadassist__Use_Round_Robin__c,'QUEUED')
+)
+&&
+$Profile.Name <> 'System Administrator'|Status=New , First_Action_Cadence_Id__c=null , leadassist__Use_Round_Robin__c=FALSE , $Profile.Name=System Administrator , RecordType.DeveloperName=Public_Reservation_Inquiry , LeadSource=Vacation VIP DB Transition , CreatedBy.Email=null , Is_Duplicate__c=0
+19:51:38.1 (252822768)|VALIDATION_PASS
+19:51:38.1 (252824387)|VALIDATION_RULE|03d3t000000AU3q|Cant_Select_Qualified_for_Now
+19:51:38.1 (252947232)|VALIDATION_FORMULA|IF(ISPICKVAL(Status, 'Qualified'), true, false)|Status=New
+19:51:38.1 (252951147)|VALIDATION_PASS
+19:51:38.1 (252952338)|VALIDATION_RULE|03d4z000000bwpB|First_Name_Validation_for_Lead_convert
+19:51:38.1 (253139628)|VALIDATION_FORMULA|AND(OR(FirstName = Null, FirstName = ''), 
+				IsConverted = true, 
+				ISCHANGED(IsConverted),
+			 !CONTAINS($User.Username,'dev@nerdsoft.com.hsi.1'),
+				!CONTAINS($User.Username,'zappier@nerdsoft.com')
+			)|FirstName=null , IsConverted=0 , $User.Username=dev@nerdsoft.com.hsi.full
+19:51:38.1 (253144368)|VALIDATION_PASS
+19:51:38.1 (253145518)|VALIDATION_RULE|03d4z000000sYxE|Validate_Email
+19:51:38.1 (253184703)|VALIDATION_FORMULA|ISBLANK(Email)|Email=test@gmail.com
+19:51:38.1 (253187382)|VALIDATION_PASS
+19:51:38.1 (253188468)|VALIDATION_RULE|03d4z000000sYxF|Validate_Phone
+19:51:38.1 (253219357)|VALIDATION_FORMULA|ISBLANK(Phone)|Phone=9874563
+19:51:38.1 (253221674)|VALIDATION_PASS
+19:51:38.1 (253222981)|VALIDATION_RULE|03d3t000000cMgl|Address_Validation_for_Lead_convert
+19:51:38.1 (253399794)|VALIDATION_FORMULA|AND(NOT(ISPICKVAL(LeadSource,'SMTN Open Lead - 1 year')),RecordType.DeveloperName != 'Public_Reservation_Inquiry',OR(Street = Null, City = Null,State = Null, PostalCode = Null, Country = Null ), IsConverted = true)|LeadSource=Vacation VIP DB Transition , RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , Country=null , City=null
+19:51:38.1 (253404087)|VALIDATION_PASS
+19:51:38.1 (253405332)|VALIDATION_RULE|03d3t000000cKhX|CFD_Address_Data_Required
+19:51:38.1 (253531378)|VALIDATION_FORMULA|AND(RecordType.DeveloperName = 'Carefree_Destinations',OR(Street = Null, City = Null,State = Null,  PostalCode = Null, Country = Null ),  IsConverted = true)|RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , Country=null , City=null
+19:51:38.1 (253534903)|VALIDATION_PASS
+19:51:38.1 (253536001)|VALIDATION_RULE|03d3t000000h6UP|CFD_Think_Direct_Address_Data_Required
+19:51:38.1 (253667853)|VALIDATION_FORMULA|AND(
+OR(RecordType.DeveloperName = 'Carefree_Destinations',RecordType.DeveloperName = 'Think_Direct'),OR(Street = Null, City = Null,State = Null,  PostalCode = Null, Country = Null ),  IsConverted = true)|RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , Country=null , City=null
+19:51:38.1 (253671418)|VALIDATION_PASS
+19:51:38.1 (253672546)|VALIDATION_RULE|03d7d000000cXBN|Disable_Changing_Enable_Sync
+19:51:38.1 (253765457)|VALIDATION_FORMULA|AND(
+ISCHANGED(silverpop__Sync_to_Silverpop_Chk__c ), silverpop__Sync_to_Silverpop_Chk__c=false)|silverpop__Sync_to_Silverpop_Chk__c=1
+19:51:38.1 (253768715)|VALIDATION_PASS
+19:51:38.1 (253769892)|VALIDATION_RULE|03dO1000002MEw1|My_Park_Tickets_Manual_Enforce
+19:51:38.1 (253835993)|VALIDATION_FORMULA|ISPICKVAL(LeadSource,'My Park Tickets')
+&&
+(
+Company != 'Club Venture - Guest' 
+&#124;&#124;
+Lead_Original_Source__c != 'Day Drive'
+)|Company=Test Company , Lead_Original_Source__c=null , LeadSource=Vacation VIP DB Transition
+19:51:38.1 (253839975)|VALIDATION_PASS
+19:51:38.1 (253841270)|VALIDATION_RULE|03d4z000000bx4E|Restrict_Change_Lead_Owner
+19:51:38.1 (253982232)|VALIDATION_FORMULA|AND(
+  ISCHANGED(OwnerId),
+  NOT(ISPICKVAL(Status, "New")),
+  $Profile.Name <> 'System Administrator',
+  NOT(CONTAINS($Profile.Name, 'Manager')),
+		CONTAINS($Profile.Name,"Tour Generation")
+)|Status=New , OwnerId=0053t000006rP8l , $Profile.Name=System Administrator
+19:51:38.1 (253986302)|VALIDATION_PASS
+19:51:38.1 (253987516)|VALIDATION_RULE|03dO1000002i7EL|Restrict_Change_Lead_Owner_Ad_Sales
+19:51:38.1 (254036411)|VALIDATION_FORMULA|AND(
+  ISCHANGED(OwnerId),
+  $Profile.Name = 'Social Ad Sales'
+)|OwnerId=0053t000006rP8l , $Profile.Name=System Administrator
+19:51:38.1 (254039846)|VALIDATION_PASS
+19:51:38.1 (254041149)|VALIDATION_RULE|03d3t000000szHg|SMTN_Mexico_Data_Required
+19:51:38.1 (254172587)|VALIDATION_FORMULA|AND(RecordType.DeveloperName = 'SMTN_Mexico',OR(Street = Null, City = Null,State = Null,  PostalCode = Null ),TEXT(Status) <> 'Sold Voucher',IsConverted == True)|Status=New , RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , City=null
+19:51:38.1 (254175830)|VALIDATION_PASS
+19:51:38.1 (254176766)|VALIDATION_RULE|03d4z000000kBTN|Validation_name
+19:51:38.1 (254269237)|VALIDATION_FORMULA|((FirstName  = 'Tony' && LastName = 'Avitia') && (Email = 'tonyavitia63@gmail.com' &#124;&#124; Phone = '7025818035'))|Email=test@gmail.com , FirstName=null , Phone=9874563 , LastName=Test Lead
+19:51:38.1 (254277751)|VALIDATION_PASS
+19:51:38.1 (254284081)|CODE_UNIT_FINISHED|Validation:Lead:new
+19:51:38.1 (256462990)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+19:51:38.1 (256475850)|DUPLICATE_DETECTION_BEGIN
+19:51:38.1 (257831122)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002jsMs|DuplicateRuleName:SRR_Check_Existing_Records|DmlType:INSERT
+19:51:38.1 (261196590)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002dGUT|DuplicateRuleName:Duplicated Leads By Phone And Email|DmlType:INSERT
+19:51:38.1 (261249853)|DUPLICATE_DETECTION_END
+19:51:38.1 (261256467)|CODE_UNIT_FINISHED|DuplicateDetector
+19:51:38.1 (406310259)|CODE_UNIT_STARTED|[EXTERNAL]|01q3t000000iJmO|leadTriggerOM on Lead trigger event AfterInsert|__sfdc_trigger/leadTriggerOM
+19:51:38.1 (406382239)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (406512481)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (406524925)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (406568318)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x190730fe
+19:51:38.1 (406601692)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (406606645)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (406612134)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x190730fe
+19:51:38.1 (406618835)|STATEMENT_EXECUTE|[1]
+19:51:38.1 (406621695)|STATEMENT_EXECUTE|[2]
+19:51:38.1 (406737044)|VARIABLE_ASSIGNMENT|[2]|this.leadTrigger|null|0x190730fe
+19:51:38.1 (406748465)|STATEMENT_EXECUTE|[4]
+19:51:38.406 (406752239)|CUMULATIVE_LIMIT_USAGE
+19:51:38.406 (406752239)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 56 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.406 (406752239)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.406 (406752239)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (406858594)|CODE_UNIT_FINISHED|leadTriggerOM on Lead trigger event AfterInsert|__sfdc_trigger/leadTriggerOM
+19:51:38.408 (408270884)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.408 (408746253)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Trigger_Active__c FROM leadassist__SRR_Object__mdt WHERE MasterLabel = 'Lead'
+19:51:38.408 (411384824)|SOQL_EXECUTE_END|[3]|Rows:1
+19:51:38.408 (411889708)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.408 (411956778)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.408 (414475200)|SOQL_EXECUTE_BEGIN|[1728]|Aggregations:0|SELECT Value__c FROM leadassist__SRR_Options__mdt WHERE DeveloperName = 'Turn_Off_Async_Processes'
+19:51:38.408 (419962813)|SOQL_EXECUTE_END|[1728]|Rows:1
+19:51:38.408 (648829861)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.408 (648880159)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.668 (668911202)|CUMULATIVE_LIMIT_USAGE
+19:51:38.668 (668911202)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 101 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.668 (668911202)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.668 (668911202)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.672 (672187755)|ENTERING_MANAGED_PKG|mercury
+19:51:38.672 (672362348)|CUMULATIVE_LIMIT_USAGE
+19:51:38.672 (672362348)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 101 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.672 (672362348)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.672 (672362348)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (672970715)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Lead
+19:51:38.1 (680551673)|WF_RULE_EVAL_BEGIN|Assignment
+19:51:38.1 (680569648)|WF_SPOOL_ACTION_BEGIN|Assignment
+19:51:38.1 (680581333)|WF_ACTION|.
+19:51:38.1 (680585208)|WF_RULE_EVAL_END
+19:51:38.1 (680590177)|WF_RULE_EVAL_BEGIN|Workflow
+19:51:38.1 (680668756)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Lead_Create_and_Update3014z000000kTFv|01Q4z000000lke9|ON_ALL_CHANGES|0
+19:51:38.1 (680845293)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+19:51:38.1 (680852277)|WF_CRITERIA_END|true
+19:51:38.1 (685370823)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Send New CFD FB Lead|01Q3t000000hgyd|ON_CREATE_ONLY|0
+19:51:38.1 (696334000)|WF_RULE_FILTER|[Lead : Lead Record Type equals Carefree Destinations]
+19:51:38.1 (696374997)|WF_RULE_EVAL_VALUE|0123t000000GBAT
+19:51:38.1 (696383029)|WF_CRITERIA_END|false
+19:51:38.1 (696408799)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Set Lead Use Round Robin|01Q3t000000m8X5|ON_CREATE_OR_TRIGGERING_UPDATE|0
+19:51:38.1 (698845552)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISPICKVAL({!ID:Status}, 'New') && 
+ISPICKVAL({!ID:00N3t00000GDjK9}, 'FALSE') && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vacation VIP Retraveler')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'CFD Google Mexico')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'CFD MX Checkout')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vidanta Affiliate Marketing')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Marival Affiliate Marketing')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vidanta MX Affiliate Marketing')) && 
+(ISNULL({!ID:00N4z000003Wex0}) &#124;&#124; ISBLANK({!ID:00N4z000003Wex0})) && 
+( 
+({!ID:RecordType.DeveloperName} = 'Carefree_Destinations' && ({!ID:CreatedBy.Email} = 'zappier@nerdsoft.com' &#124;&#124; {!ID:CreatedBy.Email} = 'zappier@nerdsoft.com.invalid')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'Public_Reservation_Inquiry' && ISPICKVAL({!ID:LeadSource}, 'SMTN Rental Offer')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'TS_Nation' && ISPICKVAL({!ID:LeadSource}, 'Timeshare Nation TCS')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'VI Referral')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'VIN Open Survey')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'SMTN Open Survey')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'SMTN Open Lead - 1 year')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'Vacation VIP - Web')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'GBT - FBLA - RMKT')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'CV - GBT')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'Carefree_Destinations' && (ISPICKVAL({!ID:LeadSource}, 'VVIP Westgate Las Vegas') &#124;&#124; ISPICKVAL({!ID:LeadSource}, 'VVIP Westgate Orlando')))
+)|Values:Status=New, leadassist__Use_Round_Robin__c=FALSE, LeadSource=Vacation VIP DB Transition, RecordType.DeveloperName=Public_Reservation_Inquiry, CreatedBy.Email=dev@nerdsoft.com, Lead_Form_External_Id__c=null
+19:51:38.1 (698879695)|WF_CRITERIA_END|false
+19:51:38.1 (698918245)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Populate Email|01Q3t000000hgg8|ON_CREATE_OR_TRIGGERING_UPDATE|0
+19:51:38.1 (698963038)|WF_RULE_FILTER|[Lead : Email not equal to ]
+19:51:38.1 (698976537)|WF_RULE_EVAL_VALUE|test@gmail.com
+19:51:38.1 (698981225)|WF_CRITERIA_END|true
+19:51:38.1 (699004381)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Assign to SMTN Hawaii Get Away Queue|01Q3t000000ZtzG|ON_CREATE_ONLY|0
+19:51:38.1 (699037235)|WF_RULE_FILTER|[Lead : Lead Record Type equals Public Reservation Inquiry]
+19:51:38.1 (699050822)|WF_RULE_EVAL_VALUE|0123t000000GBAT
+19:51:38.1 (699054060)|WF_CRITERIA_END|true
+19:51:38.1 (699066220)|WF_SPOOL_ACTION_BEGIN|Workflow
+19:51:38.1 (700028950)|WF_FIELD_UPDATE|[Lead: Test Lead 00QO100000SHrEH]|Field:Lead: Email 2|Value:test@gmail.com|Id=04Y3t000000g3xE|CurrentRule:Populate Email (Id=01Q3t000000hgg8)
+19:51:38.1 (700924249)|WF_FIELD_UPDATE|[Lead: Test Lead 00QO100000SHrEH]|Field:Lead: Lead Owner|Value:Public Reservation Inquiry|Id=04Y3t000000E8Z6|CurrentRule:Assign to SMTN Hawaii Get Away Queue (Id=01Q3t000000ZtzG)
+19:51:38.1 (700973570)|WF_ACTION| Field Update: 4; Flow Trigger: 1;
+19:51:38.1 (700978197)|WF_RULE_EVAL_END
+19:51:38.1 (702881062)|CODE_UNIT_STARTED|[EXTERNAL]|01q3t000000iJmO|leadTriggerOM on Lead trigger event BeforeUpdate|__sfdc_trigger/leadTriggerOM
+19:51:38.1 (702962687)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (703047193)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (703134272)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (703148955)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (703196932)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1ec74317
+19:51:38.1 (703234885)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (703266416)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (703278361)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1ec74317
+19:51:38.1 (703288018)|STATEMENT_EXECUTE|[1]
+19:51:38.1 (703291022)|STATEMENT_EXECUTE|[2]
+19:51:38.1 (703442072)|VARIABLE_ASSIGNMENT|[2]|this.leadTrigger|null|0x1ec74317
+19:51:38.1 (703457200)|STATEMENT_EXECUTE|[4]
+19:51:38.703 (703463402)|CUMULATIVE_LIMIT_USAGE
+19:51:38.703 (703463402)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 101 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.703 (703463402)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.703 (703463402)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (703595390)|CODE_UNIT_FINISHED|leadTriggerOM on Lead trigger event BeforeUpdate|__sfdc_trigger/leadTriggerOM
+19:51:38.705 (705103362)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.705 (705706014)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Trigger_Active__c FROM leadassist__SRR_Object__mdt WHERE MasterLabel = 'Lead'
+19:51:38.705 (708568379)|SOQL_EXECUTE_END|[3]|Rows:1
+19:51:38.705 (708938007)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.705 (709173571)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.710 (710833210)|CUMULATIVE_LIMIT_USAGE
+19:51:38.710 (710833210)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 133 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.710 (710833210)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.710 (710833210)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (844707598)|CODE_UNIT_STARTED|[EXTERNAL]|01q3t000000iJmO|leadTriggerOM on Lead trigger event AfterUpdate|__sfdc_trigger/leadTriggerOM
+19:51:38.1 (844780121)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (844918428)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (844998724)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (845010780)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (845051987)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x22bc0225
+19:51:38.1 (845085084)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:38.1 (845090399)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:38.1 (845096192)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x22bc0225
+19:51:38.1 (845103096)|STATEMENT_EXECUTE|[1]
+19:51:38.1 (845105289)|STATEMENT_EXECUTE|[2]
+19:51:38.1 (845229980)|VARIABLE_ASSIGNMENT|[2]|this.leadTrigger|null|0x22bc0225
+19:51:38.1 (845241723)|STATEMENT_EXECUTE|[4]
+19:51:38.845 (845245354)|CUMULATIVE_LIMIT_USAGE
+19:51:38.845 (845245354)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 133 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.845 (845245354)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.845 (845245354)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.1 (845355554)|CODE_UNIT_FINISHED|leadTriggerOM on Lead trigger event AfterUpdate|__sfdc_trigger/leadTriggerOM
+19:51:38.846 (846863295)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.846 (847441251)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Trigger_Active__c FROM leadassist__SRR_Object__mdt WHERE MasterLabel = 'Lead'
+19:51:38.846 (850325685)|SOQL_EXECUTE_END|[3]|Rows:1
+19:51:38.846 (850788348)|ENTERING_MANAGED_PKG|leadassist
+19:51:38.851 (851190708)|CUMULATIVE_LIMIT_USAGE
+19:51:38.851 (851190708)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 133 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.851 (851190708)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.851 (851190708)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.854 (854108941)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (859830652)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (861442003)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (861585795)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (872224055)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (872339954)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (872376815)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (883540931)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (883568519)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:38.854 (888804000)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT Who__c, What__c FROM InteractionEvent__c WHERE (Who__c = :tmpVar1 AND CreatedDate > :tmpVar2) ORDER BY CreatedDate DESC NULLS FIRST
+19:51:38.854 (893935853)|SOQL_EXECUTE_END|[16]|Rows:0
+19:51:38.894 (894351200)|CUMULATIVE_LIMIT_USAGE
+19:51:38.894 (894351200)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 133 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.894 (894351200)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.894 (894351200)|LIMIT_USAGE_FOR_NS|NVMContactWorld|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.894 (894351200)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.895 (895940414)|ENTERING_MANAGED_PKG|mercury
+19:51:38.896 (896018234)|CUMULATIVE_LIMIT_USAGE
+19:51:38.896 (896018234)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 133 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.896 (896018234)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.896 (896018234)|LIMIT_USAGE_FOR_NS|NVMContactWorld|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:38.896 (896018234)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:38.913 (913571430)|FLOW_CREATE_INTERVIEW_BEGIN|00D7d000009anXe|3003t000000chbr|3014z000000kTFv
+19:51:38.913 (914818535)|FLOW_CREATE_INTERVIEW_END|880737151a0b0eb428f53d0891ed19cc092f934-3726|Lead Create and Update
+19:51:38.1 (914852636)|WF_FLOW_ACTION_BEGIN|09L4z000000kD2g
+19:51:38.1 (914901308)|WF_FLOW_ACTION_DETAIL|09L4z000000kD2g|[Lead: Test Lead 00QO100000SHrEH]|Id=09L4z000000kD2g|CurrentRule:Lead_Create_and_Update3014z000000kTFv (Id=01Q4z000000lke9)
+19:51:38.1 (915393613)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Lead, id: 00QO100000SHrEHMA1}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: null
+19:51:38.916 (916079754)|FLOW_START_INTERVIEWS_BEGIN|1
+19:51:38.916 (916112423)|FLOW_START_INTERVIEW_BEGIN|880737151a0b0eb428f53d0891ed19cc092f934-3726|Lead Create and Update
+19:51:38.916 (916242174)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL queries: 0 out of 100
+19:51:38.916 (916247951)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:38.916 (916252190)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:38.916 (916256719)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:38.916 (916260652)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:38.916 (916264448)|FLOW_START_INTERVIEW_LIMIT_USAGE|CPU time in ms: 164 out of 15000
+19:51:38.916 (916346987)|FLOW_START_INTERVIEW_LIMIT_USAGE|Heap size in bytes: 2977 out of 6000000
+19:51:38.916 (916352889)|FLOW_START_INTERVIEW_LIMIT_USAGE|Callouts: 0 out of 100
+19:51:38.916 (916358603)|FLOW_START_INTERVIEW_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:38.916 (916362353)|FLOW_START_INTERVIEW_LIMIT_USAGE|Future calls: 0 out of 50
+19:51:38.916 (916365813)|FLOW_START_INTERVIEW_LIMIT_USAGE|Jobs in queue: 0 out of 50
+19:51:38.916 (916369417)|FLOW_START_INTERVIEW_LIMIT_USAGE|Push notifications: 0 out of 10
+19:51:38.916 (917099448)|FLOW_VALUE_ASSIGNMENT|880737151a0b0eb428f53d0891ed19cc092f934-3726|myVariable_old|
+19:51:38.916 (928861592)|FLOW_VALUE_ASSIGNMENT|880737151a0b0eb428f53d0891ed19cc092f934-3726|myVariable_current|{Id=00QO100000SHrEHMA1, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=00G3t000003oSJ1EAM, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=true, CreatedDate=2026-03-06 00:51:39, CreatedById=0053t000006rP8lAAE, LastModifiedDate=2026-03-06 00:51:39, LastModifiedById=0053t000006rP8lAAE, SystemModstamp=2026-03-06 00:51:39, LastActivityDate=null, DoNotCall=false, CreatedByID=0053t000006rP8lAAE, LastModifiedByID=0053t000006rP8lAAE, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=2026-03-06 00:51:39, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=test@gmail.com, First_Name_Mapping__c=null, Last_Name_Mapping__c=Test Lead, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=false, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=0.0142, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=true, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=00QO100000SHrEHMA1, Form_CreatedById__c=0053t000006rP8lAAE, Form_CreatedDate__c=2026-03-06 00:51:39, Form_IsConverted__c=false, Form_LastModifiedDate__c=2026-03-06 00:51:39, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=00G3t000003oSJ1EAM, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=0.00, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:38.916 (929530806)|FLOW_ELEMENT_BEGIN|880737151a0b0eb428f53d0891ed19cc092f934-3726|FlowDecision|isChangedDecision2_myRule_1_IsConverted
+19:51:38.916 (929648580)|FLOW_RULE_DETAIL|880737151a0b0eb428f53d0891ed19cc092f934-3726|isChangedRule_2_myRule_1_IsConverted|false|false
+19:51:38.916 (929672321)|FLOW_VALUE_ASSIGNMENT|880737151a0b0eb428f53d0891ed19cc092f934-3726|isChangedRule_2_myRule_1_IsConverted|false
+19:51:38.916 (929760943)|FLOW_ELEMENT_LIMIT_USAGE|5 ms CPU time, total 169 out of 15000
+19:51:38.916 (929777836)|FLOW_ELEMENT_END|880737151a0b0eb428f53d0891ed19cc092f934-3726|FlowDecision|isChangedDecision2_myRule_1_IsConverted
+19:51:38.916 (929786665)|FLOW_ELEMENT_BEGIN|880737151a0b0eb428f53d0891ed19cc092f934-3726|FlowDecision|myDecision
+19:51:38.916 (930065511)|FLOW_RULE_DETAIL|880737151a0b0eb428f53d0891ed19cc092f934-3726|myRule_1|false|false
+19:51:38.916 (930081237)|FLOW_VALUE_ASSIGNMENT|880737151a0b0eb428f53d0891ed19cc092f934-3726|myRule_1|false
+19:51:38.916 (930123325)|FLOW_ELEMENT_END|880737151a0b0eb428f53d0891ed19cc092f934-3726|FlowDecision|myDecision
+19:51:38.916 (930230751)|FLOW_START_INTERVIEW_END|880737151a0b0eb428f53d0891ed19cc092f934-3726|Lead Create and Update
+19:51:38.916 (930240751)|FLOW_START_INTERVIEWS_END|1
+19:51:38.916 (930264217)|FLOW_INTERVIEW_FINISHED|880737151a0b0eb428f53d0891ed19cc092f934-3726|Lead Create and Update
+19:51:38.916 (930287826)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL queries: 0 out of 100
+19:51:38.916 (930292573)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:38.916 (930296066)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:38.916 (930299352)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:38.916 (930302606)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:38.916 (930305842)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|CPU time in ms: 169 out of 15000
+19:51:38.916 (930316267)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Heap size in bytes: 2977 out of 6000000
+19:51:38.916 (930319700)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Callouts: 0 out of 100
+19:51:38.916 (930322870)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:38.916 (930325676)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Future calls: 0 out of 50
+19:51:38.916 (930328512)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Jobs in queue: 0 out of 50
+19:51:38.1 (932823863)|WF_FLOW_ACTION_END|09L4z000000kD2g
+19:51:38.1 (932870352)|WF_RULE_EVAL_BEGIN|Workflow
+19:51:38.1 (932917727)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Send New CFD FB Lead|01Q3t000000hgyd|ON_CREATE_ONLY|1
+19:51:38.1 (932952942)|WF_RULE_FILTER|[Lead : Lead Record Type equals Carefree Destinations]
+19:51:38.1 (932979737)|WF_RULE_EVAL_VALUE|0123t000000GBAT
+19:51:38.1 (932985748)|WF_CRITERIA_END|false
+19:51:38.1 (932995217)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Set Lead Use Round Robin|01Q3t000000m8X5|ON_CREATE_OR_TRIGGERING_UPDATE|1
+19:51:38.1 (933244721)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISPICKVAL({!ID:Status}, 'New') && 
+ISPICKVAL({!ID:00N3t00000GDjK9}, 'FALSE') && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vacation VIP Retraveler')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'CFD Google Mexico')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'CFD MX Checkout')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vidanta Affiliate Marketing')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Marival Affiliate Marketing')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vidanta MX Affiliate Marketing')) && 
+(ISNULL({!ID:00N4z000003Wex0}) &#124;&#124; ISBLANK({!ID:00N4z000003Wex0})) && 
+( 
+({!ID:RecordType.DeveloperName} = 'Carefree_Destinations' && ({!ID:CreatedBy.Email} = 'zappier@nerdsoft.com' &#124;&#124; {!ID:CreatedBy.Email} = 'zappier@nerdsoft.com.invalid')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'Public_Reservation_Inquiry' && ISPICKVAL({!ID:LeadSource}, 'SMTN Rental Offer')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'TS_Nation' && ISPICKVAL({!ID:LeadSource}, 'Timeshare Nation TCS')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'VI Referral')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'VIN Open Survey')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'SMTN Open Survey')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'SMTN Open Lead - 1 year')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'Vacation VIP - Web')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'GBT - FBLA - RMKT')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'CV - GBT')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'Carefree_Destinations' && (ISPICKVAL({!ID:LeadSource}, 'VVIP Westgate Las Vegas') &#124;&#124; ISPICKVAL({!ID:LeadSource}, 'VVIP Westgate Orlando')))
+)|Values:Status=New, leadassist__Use_Round_Robin__c=FALSE, LeadSource=Vacation VIP DB Transition, RecordType.DeveloperName=Public_Reservation_Inquiry, CreatedBy.Email=dev@nerdsoft.com, Lead_Form_External_Id__c=null
+19:51:38.1 (933259872)|WF_CRITERIA_END|false
+19:51:38.1 (933265832)|WF_SPOOL_ACTION_BEGIN|Workflow
+19:51:38.1 (933276442)|WF_ACTION| None
+19:51:38.1 (933279093)|WF_RULE_EVAL_END
+19:51:38.1 (933358078)|WF_ACTIONS_END| Field Update: 4; Flow Trigger: 1;
+19:51:38.1 (933363552)|CODE_UNIT_FINISHED|Workflow:Lead
+19:51:38.1 (933441619)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:Lead
+19:51:38.1 (933819962)|CODE_UNIT_FINISHED|Flow:Lead
+19:51:39.40 (1040112556)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:Lead
+19:51:39.40 (1042914995)|CODE_UNIT_FINISHED|Flow:Lead
+19:51:39.40 (1048842291)|DML_END|[17]
+19:51:39.40 (1049395357)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1049439585)|STATEMENT_EXECUTE|[20]
+19:51:39.40 (1054800608)|HEAP_ALLOCATE|[20]|Bytes:94
+19:51:39.40 (1054839380)|HEAP_ALLOCATE|[20]|Bytes:9
+19:51:39.40 (1054842602)|HEAP_ALLOCATE|[20]|Bytes:2
+19:51:39.40 (1054878608)|METHOD_ENTRY|[1]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController.TourGenVacationVIPDBTranBatchController()
+19:51:39.40 (1054885208)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1054894367)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1054903537)|METHOD_EXIT|[1]|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1054929499)|HEAP_ALLOCATE|[20]|Bytes:4
+19:51:39.40 (1055067152)|CONSTRUCTOR_ENTRY|[20]|01p4z000000YmVG|<init>()|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1055139333)|VARIABLE_SCOPE_BEGIN|[1]|this|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1055228561)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x313ca983
+19:51:39.40 (1055315282)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1055349969)|CONSTRUCTOR_EXIT|[20]|01p4z000000YmVG|<init>()|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1055357541)|VARIABLE_SCOPE_BEGIN|[20]|schedulableJob|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1055373976)|VARIABLE_ASSIGNMENT|[20]|schedulableJob|{}|0x313ca983
+19:51:39.40 (1055377183)|STATEMENT_EXECUTE|[23]
+19:51:39.40 (1055384366)|HEAP_ALLOCATE|[23]|Bytes:22
+19:51:39.40 (1055531385)|HEAP_ALLOCATE|[23]|Bytes:8
+19:51:39.40 (1055556312)|HEAP_ALLOCATE|[23]|Bytes:8
+19:51:39.40 (1055560227)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+19:51:39.40 (1055606949)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x40a1df75
+19:51:39.40 (1055610727)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+19:51:39.40 (1055794614)|VARIABLE_ASSIGNMENT|[4]|apextype|"System.HttpCalloutMock"|0x5c890e14
+19:51:39.40 (1055826068)|HEAP_ALLOCATE|[23]|Bytes:8
+19:51:39.40 (1059572204)|HEAP_ALLOCATE|[23]|Bytes:1
+19:51:39.40 (1059641069)|METHOD_ENTRY|[2]|01p3t00000BOA7G|AssignContactInOverflowCadenceTestMock.AssignContactInOverflowCadenceTestMock()
+19:51:39.40 (1059648989)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1059663361)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1059677034)|METHOD_EXIT|[2]|AssignContactInOverflowCadenceTestMock
+19:51:39.40 (1059722319)|HEAP_ALLOCATE|[23]|Bytes:4
+19:51:39.40 (1059768854)|CONSTRUCTOR_ENTRY|[23]|01p3t00000BOA7G|<init>()|AssignContactInOverflowCadenceTestMock
+19:51:39.40 (1059879092)|VARIABLE_SCOPE_BEGIN|[2]|this|AssignContactInOverflowCadenceTestMock|true|false
+19:51:39.40 (1059934413)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x25e13e46
+19:51:39.40 (1059972948)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1059985935)|CONSTRUCTOR_EXIT|[23]|01p3t00000BOA7G|<init>()|AssignContactInOverflowCadenceTestMock
+19:51:39.40 (1060069617)|HEAP_ALLOCATE|[23]|Bytes:118
+19:51:39.40 (1060080564)|SYSTEM_METHOD_ENTRY|[1]|Test.Test()
+19:51:39.40 (1060083887)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1060087699)|SYSTEM_METHOD_EXIT|[1]|Test
+19:51:39.40 (1060153710)|METHOD_ENTRY|[23]||System.Test.setMock(System.Type, Object)
+19:51:39.40 (1062567677)|METHOD_EXIT|[23]||System.Test.setMock(System.Type, Object)
+19:51:39.40 (1062607704)|STATEMENT_EXECUTE|[24]
+19:51:39.40 (1062632265)|METHOD_ENTRY|[24]||System.Test.startTest()
+19:51:39.40 (1065465537)|METHOD_EXIT|[24]||System.Test.startTest()
+19:51:39.40 (1065487135)|STATEMENT_EXECUTE|[25]
+19:51:39.40 (1065634889)|METHOD_ENTRY|[25]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController.execute(System.SchedulableContext)
+19:51:39.40 (1065688787)|VARIABLE_SCOPE_BEGIN|[2]|this|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1065730152)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x313ca983
+19:51:39.40 (1065734097)|VARIABLE_SCOPE_BEGIN|[2]|SC|System.SchedulableContext|true|false
+19:51:39.40 (1065740357)|VARIABLE_ASSIGNMENT|[2]|SC|null|
+19:51:39.40 (1065753438)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1065754680)|STATEMENT_EXECUTE|[3]
+19:51:39.40 (1065767869)|HEAP_ALLOCATE|[3]|Bytes:4
+19:51:39.40 (1065787545)|CONSTRUCTOR_ENTRY|[3]|01p4z000000YmVG|<init>()|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1065835976)|VARIABLE_SCOPE_BEGIN|[1]|this|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1065843036)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x190e131
+19:51:39.40 (1065862743)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1065869229)|CONSTRUCTOR_EXIT|[3]|01p4z000000YmVG|<init>()|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1065872771)|VARIABLE_SCOPE_BEGIN|[3]|objBatch|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1065879907)|VARIABLE_ASSIGNMENT|[3]|objBatch|{}|0x190e131
+19:51:39.40 (1065884840)|STATEMENT_EXECUTE|[4]
+19:51:39.40 (1105275170)|METHOD_EXIT|[25]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController.execute(System.SchedulableContext)
+19:51:39.40 (1105334818)|STATEMENT_EXECUTE|[26]
+19:51:39.40 (1105382096)|METHOD_ENTRY|[26]||System.Test.stopTest()
+19:51:39.132 (1132335824)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1132550987)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1132688552)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1132770514)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1132895636)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1132943160)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1132961331)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1133792665)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0|SELECT Value__c, DeveloperName FROM leadassist__SRR_Options__mdt WHERE DeveloperName = :tmpVar1
+19:51:39.132 (1138193870)|SOQL_EXECUTE_END|[40]|Rows:1
+19:51:39.132 (1138931743)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1139552561)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|"common.apex.runtime.impl.ExecutionException"|0x1d2f13e8
+19:51:39.132 (1139582726)|VARIABLE_ASSIGNMENT|[EXTERNAL]|message|"No value set for: De (23 more) ..."
+19:51:39.132 (1139597270)|HEAP_ALLOCATE|[67]|Bytes:11
+19:51:39.132 (1139615157)|HEAP_ALLOCATE|[67]|Bytes:33
+19:51:39.132 (1139620365)|HEAP_ALLOCATE|[67]|Bytes:30
+19:51:39.132 (1139623176)|HEAP_ALLOCATE|[67]|Bytes:12
+19:51:39.132 (1139748962)|SYSTEM_METHOD_ENTRY|[EXTERNAL]|Collections.Collections()
+19:51:39.132 (1139757502)|STATEMENT_EXECUTE|[EXTERNAL]
+19:51:39.132 (1139763109)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139783593)|HEAP_ALLOCATE|[4623]|Bytes:4
+19:51:39.132 (1139814178)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139841579)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139850891)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139931607)|HEAP_ALLOCATE|[4749]|Bytes:8
+19:51:39.132 (1139937784)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139945275)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139950898)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139970739)|HEAP_ALLOCATE|[4853]|Bytes:12
+19:51:39.132 (1139976254)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139982734)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1139995174)|SYSTEM_METHOD_EXIT|[EXTERNAL]|Collections
+19:51:39.132 (1140008835)|ENTERING_MANAGED_PKG|java__util
+19:51:39.132 (1140067427)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140075155)|HEAP_ALLOCATE|[820]|Bytes:16
+19:51:39.132 (1140077949)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140090006)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140092179)|HEAP_ALLOCATE|[820]|Bytes:16
+19:51:39.132 (1140094244)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140097229)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140100283)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1140102032)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140107028)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140110061)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1140111589)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1140114780)|HEAP_ALLOCATE|[820]|Bytes:24
+19:51:39.132 (1140116551)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1140118840)|HEAP_ALLOCATE|[820]|Bytes:24
+19:51:39.132 (1140122954)|HEAP_ALLOCATE|[820]|Bytes:65
+19:51:39.132 (1140124395)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1140125795)|HEAP_ALLOCATE|[820]|Bytes:65
+19:51:39.132 (1140129241)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1140131462)|HEAP_ALLOCATE|[820]|Bytes:27
+19:51:39.132 (1140133823)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1140137576)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1140139333)|HEAP_ALLOCATE|[820]|Bytes:11
+19:51:39.132 (1140141820)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1140145088)|HEAP_ALLOCATE|[820]|Bytes:22
+19:51:39.132 (1140147559)|HEAP_ALLOCATE|[820]|Bytes:45
+19:51:39.132 (1140150193)|HEAP_ALLOCATE|[820]|Bytes:22
+19:51:39.132 (1140153304)|HEAP_ALLOCATE|[820]|Bytes:28
+19:51:39.132 (1140156175)|HEAP_ALLOCATE|[820]|Bytes:7
+19:51:39.132 (1140158064)|HEAP_ALLOCATE|[820]|Bytes:28
+19:51:39.132 (1140414892)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1140446029)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1141210946)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0|SELECT Value__c, DeveloperName FROM leadassist__SRR_Options__mdt WHERE DeveloperName = :tmpVar1
+19:51:39.132 (1145709760)|SOQL_EXECUTE_END|[40]|Rows:1
+19:51:39.132 (1145948104)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.132 (1146067525)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|"common.apex.runtime.impl.ExecutionException"|0xe076969
+19:51:39.132 (1146077160)|VARIABLE_ASSIGNMENT|[EXTERNAL]|message|"No value set for: Mo (22 more) ..."
+19:51:39.132 (1146114799)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146119577)|HEAP_ALLOCATE|[820]|Bytes:16
+19:51:39.132 (1146122753)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146130859)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146132445)|HEAP_ALLOCATE|[820]|Bytes:16
+19:51:39.132 (1146133948)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146136512)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146138574)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1146140886)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146143038)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146144509)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1146146192)|HEAP_ALLOCATE|[820]|Bytes:19
+19:51:39.132 (1146148115)|HEAP_ALLOCATE|[820]|Bytes:24
+19:51:39.132 (1146149509)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1146151019)|HEAP_ALLOCATE|[820]|Bytes:24
+19:51:39.132 (1146152978)|HEAP_ALLOCATE|[820]|Bytes:65
+19:51:39.132 (1146155574)|HEAP_ALLOCATE|[820]|Bytes:6
+19:51:39.132 (1146157051)|HEAP_ALLOCATE|[820]|Bytes:65
+19:51:39.132 (1146159775)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1146161475)|HEAP_ALLOCATE|[820]|Bytes:27
+19:51:39.132 (1146163582)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1146165478)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1146167568)|HEAP_ALLOCATE|[820]|Bytes:11
+19:51:39.132 (1146170878)|HEAP_ALLOCATE|[820]|Bytes:33
+19:51:39.132 (1146173293)|HEAP_ALLOCATE|[820]|Bytes:22
+19:51:39.132 (1146176345)|HEAP_ALLOCATE|[820]|Bytes:45
+19:51:39.132 (1146177673)|HEAP_ALLOCATE|[820]|Bytes:22
+19:51:39.132 (1146180577)|HEAP_ALLOCATE|[820]|Bytes:28
+19:51:39.132 (1146182981)|HEAP_ALLOCATE|[820]|Bytes:7
+19:51:39.132 (1146184903)|HEAP_ALLOCATE|[820]|Bytes:28
+19:51:39.40 (1161459662)|CODE_UNIT_STARTED|[EXTERNAL]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1163090118)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1172532775)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+19:51:39.40 (1172635141)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+19:51:39.40 (1172645734)|STATEMENT_EXECUTE|[15]
+19:51:39.40 (1172668279)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+19:51:39.40 (1172685040)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1172693840)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1172707988)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+19:51:39.40 (1172799684)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x570378b
+19:51:39.40 (1172804752)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+19:51:39.40 (1172904102)|VARIABLE_ASSIGNMENT|[31]|jobId|"707O1000024WGLoIAO"
+19:51:39.40 (1172910922)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+19:51:39.40 (1172927742)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+19:51:39.40 (1173319751)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1173326794)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1173336192)|VARIABLE_SCOPE_BEGIN|[6]|this|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1173353303)|VARIABLE_ASSIGNMENT|[6]|this|{}|0x2edd640d
+19:51:39.40 (1173360084)|VARIABLE_SCOPE_BEGIN|[6]|BC|Database.BatchableContext|true|false
+19:51:39.40 (1173444932)|VARIABLE_ASSIGNMENT|[6]|BC|{"jobId":"707O1000024WGLoIAO"}|0x570378b
+19:51:39.40 (1173466214)|STATEMENT_EXECUTE|[6]
+19:51:39.40 (1173468693)|STATEMENT_EXECUTE|[7]
+19:51:39.40 (1173475169)|HEAP_ALLOCATE|[7]|Bytes:34
+19:51:39.40 (1179386371)|HEAP_ALLOCATE|[7]|Bytes:10
+19:51:39.40 (1179423899)|HEAP_ALLOCATE|[7]|Bytes:5
+19:51:39.40 (1179493220)|METHOD_ENTRY|[1]|01pO1000004WprV|GetAssignedTargetDetails.GetAssignedTargetDetails()
+19:51:39.40 (1179507347)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1179520621)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1179530785)|METHOD_EXIT|[1]|GetAssignedTargetDetails
+19:51:39.40 (1179584420)|METHOD_ENTRY|[7]|01pO1000004WprV|GetAssignedTargetDetails.getSingleCadenceNamewithTargetList(String)
+19:51:39.40 (1179613394)|VARIABLE_SCOPE_BEGIN|[19]|salesCadenceNames|String|false|false
+19:51:39.40 (1179630765)|VARIABLE_ASSIGNMENT|[19]|salesCadenceNames|"TourGen-Vacation VIP (14 more) ..."
+19:51:39.40 (1179667666)|STATEMENT_EXECUTE|[19]
+19:51:39.40 (1179671706)|STATEMENT_EXECUTE|[20]
+19:51:39.40 (1179678025)|HEAP_ALLOCATE|[20]|Bytes:121
+19:51:39.40 (1179718926)|HEAP_ALLOCATE|[20]|Bytes:4
+19:51:39.40 (1183020844)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT TargetId, ActionCadence.Name FROM ActionCadenceTracker WHERE (State = 'running' AND ActionCadence.Name = :tmpVar1)
+19:51:39.40 (1196503890)|SOQL_EXECUTE_END|[20]|Rows:0
+19:51:39.40 (1196554583)|HEAP_ALLOCATE|[20]|Bytes:4
+19:51:39.40 (1196584291)|HEAP_ALLOCATE|[20]|Bytes:0
+19:51:39.40 (1196700826)|HEAP_ALLOCATE|[20]|Bytes:4
+19:51:39.40 (1196731382)|VARIABLE_SCOPE_BEGIN|[20]|cadenceTrackersList|List<ActionCadenceTracker>|true|false
+19:51:39.40 (1196760297)|VARIABLE_ASSIGNMENT|[20]|cadenceTrackersList|[]|0x6a425c
+19:51:39.40 (1196768055)|STATEMENT_EXECUTE|[21]
+19:51:39.40 (1196778181)|HEAP_ALLOCATE|[21]|Bytes:4
+19:51:39.40 (1196890899)|VARIABLE_SCOPE_BEGIN|[21]|listTargetIds|List<Id>|true|false
+19:51:39.40 (1196926467)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1196935187)|VARIABLE_ASSIGNMENT|[21]|listTargetIds|[]|0x3c693ab5
+19:51:39.40 (1197144786)|HEAP_ALLOCATE|[22]|Bytes:5
+19:51:39.40 (1197176901)|VARIABLE_ASSIGNMENT|[22]|objTracker|null|
+19:51:39.40 (1197182261)|STATEMENT_EXECUTE|[22]
+19:51:39.40 (1197183376)|STATEMENT_EXECUTE|[25]
+19:51:39.40 (1197192709)|METHOD_EXIT|[7]|01pO1000004WprV|GetAssignedTargetDetails.getSingleCadenceNamewithTargetList(String)
+19:51:39.40 (1197198136)|VARIABLE_SCOPE_BEGIN|[7]|targetIds|List<Id>|true|false
+19:51:39.40 (1197204659)|VARIABLE_ASSIGNMENT|[7]|targetIds|[]|0x3c693ab5
+19:51:39.40 (1197208161)|STATEMENT_EXECUTE|[8]
+19:51:39.40 (1197211335)|HEAP_ALLOCATE|[8]|Bytes:76
+19:51:39.40 (1197224194)|HEAP_ALLOCATE|[8]|Bytes:4
+19:51:39.40 (1197836833)|SOQL_EXECUTE_BEGIN|[8]|Aggregations:0|SELECT id FROM User WHERE (Name = 'Dev Account' AND isActive = TRUE) LIMIT 1
+19:51:39.40 (1226474284)|SOQL_EXECUTE_END|[8]|Rows:1
+19:51:39.40 (1226548920)|HEAP_ALLOCATE|[8]|Bytes:8
+19:51:39.40 (1226576018)|HEAP_ALLOCATE|[8]|Bytes:29
+19:51:39.40 (1226705344)|HEAP_ALLOCATE|[8]|Bytes:8
+19:51:39.40 (1226725499)|HEAP_ALLOCATE|[8]|Bytes:30
+19:51:39.40 (1226809855)|HEAP_ALLOCATE|[8]|Bytes:8
+19:51:39.40 (1226864110)|VARIABLE_SCOPE_BEGIN|[8]|devAccountId|Id|false|false
+19:51:39.40 (1226930379)|VARIABLE_ASSIGNMENT|[8]|devAccountId|"0053t000006rP8lAAE"
+19:51:39.40 (1226934401)|STATEMENT_EXECUTE|[9]
+19:51:39.40 (1226937729)|VARIABLE_SCOPE_BEGIN|[9]|query|String|false|false
+19:51:39.40 (1226944764)|VARIABLE_ASSIGNMENT|[9]|query|""
+19:51:39.40 (1226969255)|METHOD_ENTRY|[10]||System.Test.isRunningTest()
+19:51:39.40 (1227019629)|METHOD_EXIT|[10]||System.Test.isRunningTest()
+19:51:39.40 (1227026056)|STATEMENT_EXECUTE|[10]
+19:51:39.40 (1227027064)|STATEMENT_EXECUTE|[11]
+19:51:39.40 (1227028993)|HEAP_ALLOCATE|[11]|Bytes:281
+19:51:39.40 (1227034944)|VARIABLE_ASSIGNMENT|[11]|query|"select id,Match_Grou (261 more) ..."
+19:51:39.40 (1227037997)|STATEMENT_EXECUTE|[16]
+19:51:39.40 (1227063033)|USER_DEBUG|[16]|DEBUG|select id,Match_Group_Name__c,leadassist__Use_Round_Robin__c,Assign_to_Sales_Cadence__c,VIP_Offer_Date__c from Lead where Status = 'New' and LeadSource= 'Vacation VIP DB Transition' and VIP_Offer_Date__c != null and ActionCadenceId = null Order by VIP_Offer_Date__c DESC limit 1500
+19:51:39.40 (1227069579)|STATEMENT_EXECUTE|[17]
+19:51:39.40 (1228149107)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|select id,Match_Group_Name__c,leadassist__Use_Round_Robin__c,Assign_to_Sales_Cadence__c,VIP_Offer_Date__c from Lead where Status = 'New' and LeadSource= 'Vacation VIP DB Transition' and VIP_Offer_Date__c != null and ActionCadenceId = null Order by VIP_Offer_Date__c DESC limit 1500
+19:51:39.40 (1298864976)|SOQL_EXECUTE_END|[17]|Rows:1
+19:51:39.40 (1298946935)|HEAP_ALLOCATE|[17]|Bytes:20
+19:51:39.314 (1314733202)|CUMULATIVE_LIMIT_USAGE
+19:51:39.314 (1314733202)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.314 (1314733202)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1314770240)|CODE_UNIT_FINISHED|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1316734247)|CODE_UNIT_STARTED|[EXTERNAL]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1321054687)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1324910130)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1324925496)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1324927651)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1324935736)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+19:51:39.40 (1324984824)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x2721e2fe
+19:51:39.40 (1324988344)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+19:51:39.40 (1325031810)|VARIABLE_ASSIGNMENT|[31]|jobId|"707O1000024WGLoIAO"
+19:51:39.40 (1325034915)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+19:51:39.40 (1325043398)|VARIABLE_ASSIGNMENT|[31]|childJobId|"707O1000024WGLpIAO"
+19:51:39.40 (1339187757)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1339217453)|CODE_UNIT_STARTED|[EXTERNAL]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1339805501)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1339811121)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1339829540)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1339837445)|VARIABLE_SCOPE_BEGIN|[19]|this|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1339860759)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x501a95b
+19:51:39.40 (1339864186)|VARIABLE_SCOPE_BEGIN|[19]|BC|Database.BatchableContext|true|false
+19:51:39.40 (1339928243)|VARIABLE_ASSIGNMENT|[19]|BC|{"childJobId":"707O1000024WGLpIAO","jobId":"707O1000024WGLoIAO"}|0x2721e2fe
+19:51:39.40 (1339932283)|VARIABLE_SCOPE_BEGIN|[19]|scope|List<Lead>|true|false
+19:51:39.40 (1340046990)|VARIABLE_ASSIGNMENT|[19]|scope|[{"VIP_Offer_Date__c":"2026-03-05T00:00:00.000Z","Id":"00QO100000SHrEHMA1","leadassist__Use_Round_Robin__c":"FALSE","Assign_to_Sales_Cadence__c":false}]|0x200b0dc7
+19:51:39.40 (1340067262)|STATEMENT_EXECUTE|[19]
+19:51:39.40 (1340068542)|STATEMENT_EXECUTE|[20]
+19:51:39.40 (1340078651)|HEAP_ALLOCATE|[20]|Bytes:4
+19:51:39.40 (1340121670)|VARIABLE_SCOPE_BEGIN|[20]|updateLead|List<Lead>|true|false
+19:51:39.40 (1340130052)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1340133577)|VARIABLE_ASSIGNMENT|[20]|updateLead|[]|0x7408caa3
+19:51:39.40 (1340136672)|STATEMENT_EXECUTE|[21]
+19:51:39.40 (1340147231)|HEAP_ALLOCATE|[21]|Bytes:4
+19:51:39.40 (1340164739)|VARIABLE_SCOPE_BEGIN|[21]|cadenceLeadIds|Set<Id>|true|false
+19:51:39.40 (1340184843)|VARIABLE_ASSIGNMENT|[21]|cadenceLeadIds|[]|0x749cdd03
+19:51:39.40 (1340228997)|HEAP_ALLOCATE|[22]|Bytes:5
+19:51:39.40 (1340247644)|HEAP_ALLOCATE|[22]|Bytes:20
+19:51:39.40 (1340257747)|VARIABLE_SCOPE_BEGIN|[22]|objLead|Lead|true|false
+19:51:39.40 (1340289637)|VARIABLE_ASSIGNMENT|[22]|objLead|{"VIP_Offer_Date__c":"2026-03-05T00:00:00.000Z","Id":"00QO100000SHrEHMA1","leadassist__Use_Round_Robin__c":"FALSE","Assign_to_Sales_Cadence__c":false}|0x7cdfe9ba
+19:51:39.40 (1340294252)|STATEMENT_EXECUTE|[22]
+19:51:39.40 (1340295180)|STATEMENT_EXECUTE|[25]
+19:51:39.40 (1340358050)|VARIABLE_ASSIGNMENT|[25]|this.Assign_to_Sales_Cadence__c|true|0x7cdfe9ba
+19:51:39.40 (1340361068)|STATEMENT_EXECUTE|[26]
+19:51:39.40 (1340385582)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1340389650)|STATEMENT_EXECUTE|[27]
+19:51:39.40 (1340427747)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1340436185)|HEAP_ALLOCATE|[22]|Bytes:5
+19:51:39.40 (1340441922)|VARIABLE_ASSIGNMENT|[22]|objLead|null|
+19:51:39.40 (1340457335)|STATEMENT_EXECUTE|[29]
+19:51:39.40 (1340458341)|STATEMENT_EXECUTE|[30]
+19:51:39.40 (1343839859)|HEAP_ALLOCATE|[30]|Bytes:14
+19:51:39.40 (1343853357)|HEAP_ALLOCATE|[30]|Bytes:24
+19:51:39.40 (1343875303)|METHOD_ENTRY|[1]|01pO100000CYPeb|GenericMatchGroupAssignmentHandler.GenericMatchGroupAssignmentHandler()
+19:51:39.40 (1343880515)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1343888049)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1343893476)|METHOD_EXIT|[1]|GenericMatchGroupAssignmentHandler
+19:51:39.40 (1343921933)|METHOD_ENTRY|[30]|01pO100000CYPeb|GenericMatchGroupAssignmentHandler.assignMatchGroup(List<SObject>, String)
+19:51:39.40 (1343940971)|VARIABLE_SCOPE_BEGIN|[2]|SObjectList|List<SObject>|true|false
+19:51:39.40 (1344050463)|VARIABLE_ASSIGNMENT|[2]|SObjectList|[{"VIP_Offer_Date__c":"2026-03-05T00:00:00.000Z","Id":"00QO100000SHrEHMA1","leadassist__Use_Round_Robin__c":"FALSE","Assign_to_Sales_Cadence__c":true}]|0x7408caa3
+19:51:39.40 (1344056296)|VARIABLE_SCOPE_BEGIN|[2]|matchGroupName|String|false|false
+19:51:39.40 (1344062853)|VARIABLE_ASSIGNMENT|[2]|matchGroupName|"TourGen-Vacation VIP (14 more) ..."
+19:51:39.40 (1344073527)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1344074603)|STATEMENT_EXECUTE|[3]
+19:51:39.40 (1344077974)|HEAP_ALLOCATE|[3]|Bytes:9
+19:51:39.40 (1344252028)|VARIABLE_SCOPE_BEGIN|[3]|srrLogic|Apex_Trigger_On_Off__c|true|false
+19:51:39.40 (1344258693)|VARIABLE_ASSIGNMENT|[3]|srrLogic|null|
+19:51:39.40 (1344261672)|STATEMENT_EXECUTE|[4]
+19:51:39.40 (1344262593)|STATEMENT_EXECUTE|[4]
+19:51:39.40 (1344265986)|STATEMENT_EXECUTE|[5]
+19:51:39.40 (1344266993)|STATEMENT_EXECUTE|[17]
+19:51:39.40 (1344271189)|METHOD_EXIT|[30]|01pO100000CYPeb|GenericMatchGroupAssignmentHandler.assignMatchGroup(List<SObject>, String)
+19:51:39.40 (1344312774)|VARIABLE_ASSIGNMENT|[30]|updateLead|[{"VIP_Offer_Date__c":"2026-03-05T00:00:00.000Z","Id":"00QO100000SHrEHMA1","leadassist__Use_Round_Robin__c":"FALSE","Assign_to_Sales_Cadence__c":true}]|0x7408caa3
+19:51:39.40 (1344316827)|STATEMENT_EXECUTE|[31]
+19:51:39.40 (1344377838)|DML_BEGIN|[31]|Op:Update|Type:Lead|Rows:1
+19:51:39.40 (1344404955)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1363108675)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:Lead
+19:51:39.40 (1364097978)|CODE_UNIT_FINISHED|Flow:Lead
+19:51:39.40 (1364792483)|CODE_UNIT_STARTED|[EXTERNAL]|01q3t000000iJmO|leadTriggerOM on Lead trigger event BeforeUpdate|__sfdc_trigger/leadTriggerOM
+19:51:39.40 (1364864374)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1364944966)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1365020645)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1365034515)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:39.40 (1365078589)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x685f7fd2
+19:51:39.40 (1365128350)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1365135545)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:39.40 (1365145676)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x685f7fd2
+19:51:39.40 (1365154305)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1365157316)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1365408503)|VARIABLE_ASSIGNMENT|[2]|this.leadTrigger|null|0x685f7fd2
+19:51:39.40 (1365426373)|STATEMENT_EXECUTE|[4]
+19:51:39.365 (1365433010)|CUMULATIVE_LIMIT_USAGE
+19:51:39.365 (1365433010)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.365 (1365433010)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1365577523)|CODE_UNIT_FINISHED|leadTriggerOM on Lead trigger event BeforeUpdate|__sfdc_trigger/leadTriggerOM
+19:51:39.366 (1366246627)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.366 (1366829623)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Trigger_Active__c FROM leadassist__SRR_Object__mdt WHERE MasterLabel = 'Lead'
+19:51:39.366 (1369448205)|SOQL_EXECUTE_END|[3]|Rows:1
+19:51:39.366 (1369836570)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.366 (1370077133)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.371 (1371874397)|CUMULATIVE_LIMIT_USAGE
+19:51:39.371 (1371874397)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 12 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.371 (1371874397)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.371 (1371874397)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1375508333)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Lead:00QO100000SHrEH
+19:51:39.40 (1375523059)|VALIDATION_RULE|03d4z000000bxCs|Block_Lead_Changes_Before_Cadence_Assign
+19:51:39.40 (1376020207)|VALIDATION_FORMULA|NOT(Is_Duplicate__c) &&
+(CreatedBy.Email = 'zappier@nerdsoft.com' &#124;&#124; CreatedBy.Email = 'zappier@nerdsoft.com.invalid' &#124;&#124; CreatedBy.Email = 'dev@nerdsoft.com' &#124;&#124; CreatedBy.Email = 'dev@nerdsoft.com.hsi.full') && 
+RecordType.DeveloperName = 'Carefree_Destinations' &&
+CONTAINS(TEXT(LeadSource),'CFD')
+&&
+ISCHANGED(Status) 
+&&
+ISPICKVAL(PRIORVALUE(Status),'New') 
+&&
+(
+				ISNULL(First_Action_Cadence_Id__c) &#124;&#124;
+				ISBLANK(First_Action_Cadence_Id__c) &#124;&#124;
+				First_Action_Cadence_Id__c = ''
+) 
+&&
+(ISPICKVAL(leadassist__Use_Round_Robin__c,'ASSIGNED') &#124;&#124; 
+	ISPICKVAL(leadassist__Use_Round_Robin__c,'QUEUED')
+)
+&&
+$Profile.Name <> 'System Administrator'|Status=New , First_Action_Cadence_Id__c=null , leadassist__Use_Round_Robin__c=FALSE , $Profile.Name=System Administrator , RecordType.DeveloperName=Public_Reservation_Inquiry , LeadSource=Vacation VIP DB Transition , CreatedBy.Email=dev@nerdsoft.com , Is_Duplicate__c=0
+19:51:39.40 (1376032743)|VALIDATION_PASS
+19:51:39.40 (1376034297)|VALIDATION_RULE|03d3t000000AU3q|Cant_Select_Qualified_for_Now
+19:51:39.40 (1376090520)|VALIDATION_FORMULA|IF(ISPICKVAL(Status, 'Qualified'), true, false)|Status=New
+19:51:39.40 (1376093553)|VALIDATION_PASS
+19:51:39.40 (1376094561)|VALIDATION_RULE|03d4z000000bwpB|First_Name_Validation_for_Lead_convert
+19:51:39.40 (1376286330)|VALIDATION_FORMULA|AND(OR(FirstName = Null, FirstName = ''), 
+				IsConverted = true, 
+				ISCHANGED(IsConverted),
+			 !CONTAINS($User.Username,'dev@nerdsoft.com.hsi.1'),
+				!CONTAINS($User.Username,'zappier@nerdsoft.com')
+			)|FirstName=null , IsConverted=0 , $User.Username=dev@nerdsoft.com.hsi.full
+19:51:39.40 (1376291375)|VALIDATION_PASS
+19:51:39.40 (1376292530)|VALIDATION_RULE|03d4z000000sYxE|Validate_Email
+19:51:39.40 (1376330582)|VALIDATION_FORMULA|ISBLANK(Email)|Email=test@gmail.com
+19:51:39.40 (1376333173)|VALIDATION_PASS
+19:51:39.40 (1376334051)|VALIDATION_RULE|03d4z000000sYxF|Validate_Phone
+19:51:39.40 (1376363108)|VALIDATION_FORMULA|ISBLANK(Phone)|Phone=9874563
+19:51:39.40 (1376365540)|VALIDATION_PASS
+19:51:39.40 (1376366519)|VALIDATION_RULE|03d3t000000cMgl|Address_Validation_for_Lead_convert
+19:51:39.40 (1376530795)|VALIDATION_FORMULA|AND(NOT(ISPICKVAL(LeadSource,'SMTN Open Lead - 1 year')),RecordType.DeveloperName != 'Public_Reservation_Inquiry',OR(Street = Null, City = Null,State = Null, PostalCode = Null, Country = Null ), IsConverted = true)|LeadSource=Vacation VIP DB Transition , RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , Country=null , City=null
+19:51:39.40 (1376535233)|VALIDATION_PASS
+19:51:39.40 (1376536268)|VALIDATION_RULE|03d3t000000cKhX|CFD_Address_Data_Required
+19:51:39.40 (1376660707)|VALIDATION_FORMULA|AND(RecordType.DeveloperName = 'Carefree_Destinations',OR(Street = Null, City = Null,State = Null,  PostalCode = Null, Country = Null ),  IsConverted = true)|RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , Country=null , City=null
+19:51:39.40 (1376664138)|VALIDATION_PASS
+19:51:39.40 (1376665159)|VALIDATION_RULE|03d3t000000h6UP|CFD_Think_Direct_Address_Data_Required
+19:51:39.40 (1376809264)|VALIDATION_FORMULA|AND(
+OR(RecordType.DeveloperName = 'Carefree_Destinations',RecordType.DeveloperName = 'Think_Direct'),OR(Street = Null, City = Null,State = Null,  PostalCode = Null, Country = Null ),  IsConverted = true)|RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , Country=null , City=null
+19:51:39.40 (1376813883)|VALIDATION_PASS
+19:51:39.40 (1376814926)|VALIDATION_RULE|03d7d000000cXBN|Disable_Changing_Enable_Sync
+19:51:39.40 (1376910416)|VALIDATION_FORMULA|AND(
+ISCHANGED(silverpop__Sync_to_Silverpop_Chk__c ), silverpop__Sync_to_Silverpop_Chk__c=false)|silverpop__Sync_to_Silverpop_Chk__c=1
+19:51:39.40 (1376913554)|VALIDATION_PASS
+19:51:39.40 (1376914496)|VALIDATION_RULE|03dO1000002MEw1|My_Park_Tickets_Manual_Enforce
+19:51:39.40 (1376980885)|VALIDATION_FORMULA|ISPICKVAL(LeadSource,'My Park Tickets')
+&&
+(
+Company != 'Club Venture - Guest' 
+&#124;&#124;
+Lead_Original_Source__c != 'Day Drive'
+)|Company=Test Company , Lead_Original_Source__c=null , LeadSource=Vacation VIP DB Transition
+19:51:39.40 (1376984444)|VALIDATION_PASS
+19:51:39.40 (1376985425)|VALIDATION_RULE|03d4z000000bx4E|Restrict_Change_Lead_Owner
+19:51:39.40 (1377123361)|VALIDATION_FORMULA|AND(
+  ISCHANGED(OwnerId),
+  NOT(ISPICKVAL(Status, "New")),
+  $Profile.Name <> 'System Administrator',
+  NOT(CONTAINS($Profile.Name, 'Manager')),
+		CONTAINS($Profile.Name,"Tour Generation")
+)|Status=New , OwnerId=00G3t000003oSJ1 , $Profile.Name=System Administrator
+19:51:39.40 (1377128400)|VALIDATION_PASS
+19:51:39.40 (1377129380)|VALIDATION_RULE|03dO1000002i7EL|Restrict_Change_Lead_Owner_Ad_Sales
+19:51:39.40 (1377178810)|VALIDATION_FORMULA|AND(
+  ISCHANGED(OwnerId),
+  $Profile.Name = 'Social Ad Sales'
+)|OwnerId=00G3t000003oSJ1 , $Profile.Name=System Administrator
+19:51:39.40 (1377181393)|VALIDATION_PASS
+19:51:39.40 (1377182582)|VALIDATION_RULE|03d3t000000szHg|SMTN_Mexico_Data_Required
+19:51:39.40 (1377369099)|VALIDATION_FORMULA|AND(RecordType.DeveloperName = 'SMTN_Mexico',OR(Street = Null, City = Null,State = Null,  PostalCode = Null ),TEXT(Status) <> 'Sold Voucher',IsConverted == True)|Status=New , RecordType.DeveloperName=Public_Reservation_Inquiry , State=null , IsConverted=0 , Street=null , PostalCode=null , City=null
+19:51:39.40 (1377373760)|VALIDATION_PASS
+19:51:39.40 (1377374827)|VALIDATION_RULE|03d4z000000kBTN|Validation_name
+19:51:39.40 (1377501917)|VALIDATION_FORMULA|((FirstName  = 'Tony' && LastName = 'Avitia') && (Email = 'tonyavitia63@gmail.com' &#124;&#124; Phone = '7025818035'))|Email=test@gmail.com , FirstName=null , Phone=9874563 , LastName=Test Lead
+19:51:39.40 (1377505930)|VALIDATION_PASS
+19:51:39.40 (1377510548)|CODE_UNIT_FINISHED|Validation:Lead:00QO100000SHrEH
+19:51:39.40 (1377578627)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+19:51:39.40 (1377582860)|DUPLICATE_DETECTION_BEGIN
+19:51:39.40 (1377636179)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002jsMs|DuplicateRuleName:SRR_Check_Existing_Records|DmlType:UPDATE
+19:51:39.40 (1377687842)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002dGUT|DuplicateRuleName:Duplicated Leads By Phone And Email|DmlType:UPDATE
+19:51:39.40 (1377734990)|DUPLICATE_DETECTION_END
+19:51:39.40 (1377737797)|CODE_UNIT_FINISHED|DuplicateDetector
+19:51:39.40 (1400591179)|CODE_UNIT_STARTED|[EXTERNAL]|01q3t000000iJmO|leadTriggerOM on Lead trigger event AfterUpdate|__sfdc_trigger/leadTriggerOM
+19:51:39.40 (1400664952)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1400745968)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1400844631)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1400857828)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:39.40 (1400900969)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3df28430
+19:51:39.40 (1400935338)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1400940348)|VARIABLE_SCOPE_BEGIN|[1]|this|leadTriggerOM|true|false
+19:51:39.40 (1400946239)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3df28430
+19:51:39.40 (1400953359)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1400955966)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1401089589)|VARIABLE_ASSIGNMENT|[2]|this.leadTrigger|null|0x3df28430
+19:51:39.40 (1401101719)|STATEMENT_EXECUTE|[4]
+19:51:39.401 (1401105117)|CUMULATIVE_LIMIT_USAGE
+19:51:39.401 (1401105117)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 12 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.401 (1401105117)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.401 (1401105117)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1401225279)|CODE_UNIT_FINISHED|leadTriggerOM on Lead trigger event AfterUpdate|__sfdc_trigger/leadTriggerOM
+19:51:39.401 (1401827078)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.401 (1402321763)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Trigger_Active__c FROM leadassist__SRR_Object__mdt WHERE MasterLabel = 'Lead'
+19:51:39.401 (1405048665)|SOQL_EXECUTE_END|[3]|Rows:1
+19:51:39.401 (1405414728)|ENTERING_MANAGED_PKG|leadassist
+19:51:39.405 (1405665168)|CUMULATIVE_LIMIT_USAGE
+19:51:39.405 (1405665168)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 12 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.405 (1405665168)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.405 (1405665168)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.406 (1406400224)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1406850553)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1408319728)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1408815020)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1408834076)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1409169622)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1409179502)|ENTERING_MANAGED_PKG|NVMContactWorld
+19:51:39.406 (1409922756)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT Who__c, What__c FROM InteractionEvent__c WHERE (Who__c = :tmpVar1 AND CreatedDate > :tmpVar2) ORDER BY CreatedDate DESC NULLS FIRST
+19:51:39.406 (1413960353)|SOQL_EXECUTE_END|[16]|Rows:0
+19:51:39.414 (1414291235)|CUMULATIVE_LIMIT_USAGE
+19:51:39.414 (1414291235)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 12 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.414 (1414291235)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.414 (1414291235)|LIMIT_USAGE_FOR_NS|NVMContactWorld|
+  Number of SOQL queries: 1 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.414 (1414291235)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.415 (1415090251)|ENTERING_MANAGED_PKG|mercury
+19:51:39.415 (1415161592)|CUMULATIVE_LIMIT_USAGE
+19:51:39.415 (1415161592)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 12 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.415 (1415161592)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.415 (1415161592)|LIMIT_USAGE_FOR_NS|NVMContactWorld|
+  Number of SOQL queries: 1 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.415 (1415161592)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1415383834)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Lead
+19:51:39.40 (1420767348)|WF_RULE_EVAL_BEGIN|Assignment
+19:51:39.40 (1420779663)|WF_SPOOL_ACTION_BEGIN|Assignment
+19:51:39.40 (1420798719)|WF_ACTION|.
+19:51:39.40 (1420801732)|WF_RULE_EVAL_END
+19:51:39.40 (1420805177)|WF_RULE_EVAL_BEGIN|Workflow
+19:51:39.40 (1420854443)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Lead_Create_and_Update3014z000000kTFv|01Q4z000000lke9|ON_ALL_CHANGES|0
+19:51:39.40 (1420919090)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+19:51:39.40 (1420924637)|WF_CRITERIA_END|true
+19:51:39.40 (1420940227)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Send New CFD FB Lead|01Q3t000000hgyd|ON_CREATE_ONLY|0
+19:51:39.40 (1420944816)|WF_RULE_NOT_EVALUATED
+19:51:39.40 (1420949587)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Set Lead Use Round Robin|01Q3t000000m8X5|ON_CREATE_OR_TRIGGERING_UPDATE|0
+19:51:39.40 (1421452039)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISPICKVAL({!ID:Status}, 'New') && 
+ISPICKVAL({!ID:00N3t00000GDjK9}, 'FALSE') && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vacation VIP Retraveler')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'CFD Google Mexico')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'CFD MX Checkout')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vidanta Affiliate Marketing')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Marival Affiliate Marketing')) && 
+NOT(ISPICKVAL({!ID:LeadSource}, 'Vidanta MX Affiliate Marketing')) && 
+(ISNULL({!ID:00N4z000003Wex0}) &#124;&#124; ISBLANK({!ID:00N4z000003Wex0})) && 
+( 
+({!ID:RecordType.DeveloperName} = 'Carefree_Destinations' && ({!ID:CreatedBy.Email} = 'zappier@nerdsoft.com' &#124;&#124; {!ID:CreatedBy.Email} = 'zappier@nerdsoft.com.invalid')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'Public_Reservation_Inquiry' && ISPICKVAL({!ID:LeadSource}, 'SMTN Rental Offer')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'TS_Nation' && ISPICKVAL({!ID:LeadSource}, 'Timeshare Nation TCS')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'VI Referral')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'VIN Open Survey')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'SMTN Open Survey')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'SMTN Open Lead - 1 year')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'Vacation VIP - Web')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'GBT - FBLA - RMKT')) &#124;&#124; 
+(ISPICKVAL({!ID:LeadSource}, 'CV - GBT')) &#124;&#124; 
+({!ID:RecordType.DeveloperName} = 'Carefree_Destinations' && (ISPICKVAL({!ID:LeadSource}, 'VVIP Westgate Las Vegas') &#124;&#124; ISPICKVAL({!ID:LeadSource}, 'VVIP Westgate Orlando')))
+)|Values:Status=New, leadassist__Use_Round_Robin__c=FALSE, LeadSource=Vacation VIP DB Transition, RecordType.DeveloperName=Public_Reservation_Inquiry, CreatedBy.Email=dev@nerdsoft.com, Lead_Form_External_Id__c=null
+19:51:39.40 (1421467956)|WF_CRITERIA_END|false
+19:51:39.40 (1421481097)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Populate Email|01Q3t000000hgg8|ON_CREATE_OR_TRIGGERING_UPDATE|0
+19:51:39.40 (1421498148)|WF_RULE_NOT_EVALUATED
+19:51:39.40 (1421502896)|WF_CRITERIA_BEGIN|[Lead: Test Lead 00QO100000SHrEH]|Assign to SMTN Hawaii Get Away Queue|01Q3t000000ZtzG|ON_CREATE_ONLY|0
+19:51:39.40 (1421507188)|WF_RULE_NOT_EVALUATED
+19:51:39.40 (1421510561)|WF_SPOOL_ACTION_BEGIN|Workflow
+19:51:39.40 (1421542476)|WF_ACTION| Flow Trigger: 1;
+19:51:39.40 (1421544740)|WF_RULE_EVAL_END
+19:51:39.421 (1421681125)|FLOW_CREATE_INTERVIEW_BEGIN|00D7d000009anXe|3003t000000chbr|3014z000000kTFv
+19:51:39.421 (1422237164)|FLOW_CREATE_INTERVIEW_END|884937151a0b0eb428f53d0891ed19cc092f934-3750|Lead Create and Update
+19:51:39.40 (1422257926)|WF_FLOW_ACTION_BEGIN|09L4z000000kD2g
+19:51:39.40 (1422277882)|WF_FLOW_ACTION_DETAIL|09L4z000000kD2g|[Lead: Test Lead 00QO100000SHrEH]|Id=09L4z000000kD2g|CurrentRule:Lead_Create_and_Update3014z000000kTFv (Id=01Q4z000000lke9)
+19:51:39.40 (1422702159)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Lead, id: 00QO100000SHrEHMA1}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Lead, id: 00QO100000SHrEHMA1}
+19:51:39.422 (1422867754)|FLOW_START_INTERVIEWS_BEGIN|1
+19:51:39.422 (1422892120)|FLOW_START_INTERVIEW_BEGIN|884937151a0b0eb428f53d0891ed19cc092f934-3750|Lead Create and Update
+19:51:39.422 (1422939194)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL queries: 0 out of 200
+19:51:39.422 (1422944515)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:39.422 (1422948530)|FLOW_START_INTERVIEW_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:39.422 (1422952759)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:39.422 (1422956153)|FLOW_START_INTERVIEW_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:39.422 (1422959689)|FLOW_START_INTERVIEW_LIMIT_USAGE|CPU time in ms: 33 out of 65000
+19:51:39.422 (1423042880)|FLOW_START_INTERVIEW_LIMIT_USAGE|Heap size in bytes: 3593 out of 12000000
+19:51:39.422 (1423047020)|FLOW_START_INTERVIEW_LIMIT_USAGE|Callouts: 0 out of 0
+19:51:39.422 (1423050331)|FLOW_START_INTERVIEW_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:39.422 (1423053823)|FLOW_START_INTERVIEW_LIMIT_USAGE|Future calls: 0 out of 0
+19:51:39.422 (1423057117)|FLOW_START_INTERVIEW_LIMIT_USAGE|Jobs in queue: 0 out of 1
+19:51:39.422 (1423060377)|FLOW_START_INTERVIEW_LIMIT_USAGE|Push notifications: 0 out of 10
+19:51:39.422 (1427084175)|FLOW_VALUE_ASSIGNMENT|884937151a0b0eb428f53d0891ed19cc092f934-3750|myVariable_old|{Id=00QO100000SHrEHMA1, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=00G3t000003oSJ1EAM, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=true, CreatedDate=2026-03-06 00:51:39, CreatedById=0053t000006rP8lAAE, LastModifiedDate=2026-03-06 00:51:39, LastModifiedById=0053t000006rP8lAAE, SystemModstamp=2026-03-06 00:51:39, LastActivityDate=null, DoNotCall=false, CreatedByID=0053t000006rP8lAAE, LastModifiedByID=0053t000006rP8lAAE, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=2026-03-06 00:51:39, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=test@gmail.com, First_Name_Mapping__c=null, Last_Name_Mapping__c=Test Lead, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=false, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=0.0227, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=true, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=00QO100000SHrEHMA1, Form_CreatedById__c=0053t000006rP8lAAE, Form_CreatedDate__c=2026-03-06 00:51:39, Form_IsConverted__c=false, Form_LastModifiedDate__c=2026-03-06 00:51:39, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=00G3t000003oSJ1EAM, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=0.00, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:39.422 (1429886919)|FLOW_VALUE_ASSIGNMENT|884937151a0b0eb428f53d0891ed19cc092f934-3750|myVariable_current|{Id=00QO100000SHrEHMA1, IsDeleted=false, MasterRecordId=null, Salutation=null, FirstName=null, LastName=Test Lead, MiddleName=null, Suffix=null, RecordTypeId=0123t000000GBATAA4, Title=null, Company=Test Company, Street=null, City=null, State=null, PostalCode=null, Country=null, Latitude=null, Longitude=null, GeocodeAccuracy=null, Phone=9874563, MobilePhone=null, Fax=null, Email=test@gmail.com, Website=null, PhotoUrl=null, Description=null, LeadSource=Vacation VIP DB Transition, Status=New, Industry=null, Rating=null, AnnualRevenue=null, NumberOfEmployees=null, OwnerId=00G3t000003oSJ1EAM, HasOptedOutOfEmail=false, IsConverted=false, ConvertedDate=null, ConvertedAccountId=null, ConvertedContactId=null, ConvertedOpportunityId=null, IsUnreadByOwner=true, CreatedDate=2026-03-06 00:51:39, CreatedById=0053t000006rP8lAAE, LastModifiedDate=2026-03-06 00:51:40, LastModifiedById=0053t000006rP8lAAE, SystemModstamp=2026-03-06 00:51:40, LastActivityDate=null, DoNotCall=false, CreatedByID=0053t000006rP8lAAE, LastModifiedByID=0053t000006rP8lAAE, HasOptedOutOfFax=false, LastViewedDate=null, LastReferencedDate=null, LastTransferDate=2026-03-06 00:51:39, Jigsaw=null, JigsawContactId=null, EmailBouncedReason=null, EmailBouncedDate=null, IndividualId=null, Pronouns=null, GenderIdentity=null, ActionCadenceId=null, ActionCadenceAssigneeId=null, ActionCadenceState=null, ScheduledResumeDateTime=null, ActiveTrackerCount=null, FirstCallDateTime=null, FirstEmailDateTime=null, ActivityMetricId=null, IsPriorityRecord=false, et4ae5__HasOptedOutOfMobile__c=false, et4ae5__Mobile_Country_Code__c=US, Lead_Stage__c=null, Product__c=null, Timezone__c=null, Company_Main_Description__c=null, BBB_Member_Since__c=null, BBB_Rating__c=null, Legal_Entity_Name__c=null, Legal_Entity_Address__c=null, Contract_Signer_Name__c=null, Contract_Signer_Title__c=null, Contract_Signer_Phone__c=null, Logo__c=null, Agreement_Term__c=null, EIN__c=null, Business_License_Number__c=null, BL_Issuing_City__c=null, BL_Issuing_County__c=null, BL_Issuing_State__c=null, Description__c=null, Fax__c=null, Comments__c=null, CFD_Affiliate_Name__c=null, Email_2__c=test@gmail.com, First_Name_Mapping__c=null, Last_Name_Mapping__c=Test Lead, CFD_Affiliate_Id__c=0, Affiliate_Id__c=0, Affiliate_Name__c=null, Referred_By__c=null, Lead_Origin__c=null, Offer_Id__c=null, Owner_Id_Custom__c=null, Is_Duplicate__c=false, Parent_Lead__c=null, Offer_Date__c=null, Moved_to_Open_date__c=null, Coast_Formula__c=West Coast, leadassist__Round_Robin_Info__c=null, leadassist__SRRIndex__c=null, leadassist__Use_Round_Robin__c=FALSE, Created_By_Zappier__c=FALSE, CFD_FB_Match_Group_Use_Round_Robin__c=FALSE, CFD_FB_MX_Match_Group_Use_Round_Robin__c=FALSE, Match_Affiliate_Id__c=null, Calendly__CalendlyCreated__c=false, Assign_to_Sales_Cadence__c=true, FB_Outbound_Group__c=null, SMTN_match_group__c=null, Match_Affiliate_Name__c=null, Match_Group_Name__c=null, Sales_Cadence_Assignment_Attempt__c=0, First_Action_Cadence_Id__c=null, Opportunity_Rec_Type_Developer_Name__c=null, CFD_Checkout_Email__c=null, Lead_Form_External_Id__c=null, PG_Id__c=null, Created_How_Long_Ago__c=0.0227, First_Agent__c=null, Marriage_Status__c=null, Name_of_Deceased__c=null, Referral_Agent__c=null, Referral_Notes__c=null, Source__c=null, Vendor__c=null, Work_Phone__c=null, GCLID__c=null, SMTNLeadtracker__c=null, SMTN_Owner_Id__c=null, Certificate_Number__c=null, Qualified_Offer__c=null, Prospect_Id__c=null, heymarket__Heymarket_ID__c=null, heymarket__Is_Duplicate__c=false, heymarket__E164_Phone__c=null, E164_Phone__c=9874563, Activation_Code__c=null, Order_id__c=null, Accountid_Dup_Lead__c=null, Preferred_Language__c=null, MKT_Ad__c=null, Lead_VIP_External_Id__c=null, MKT_Offer__c=null, Marketing_Consent__c=false, VIPRetraveler__c=false, Lead_Original_Source__c=null, VIP_Offer_Date__c=2026-03-05 00:00:00, FileTracker_File_Number__c=null, Resort_ID__c=null, Resort_Name__c=null, TRP_Eligible__c=null, Target_Reservation_Year__c=null, FBCLID__c=null, silverpop__CRMI_Modified_Date__c=null, silverpop__Last_Sync_Date__c=null, silverpop__Last_Sync_Id__c=null, silverpop__Lead_Rank__c=null, silverpop__Lead_Score__c=null, silverpop__Silverpop_Behavior_Score__c=null, silverpop__Silverpop_Lead_Rank__c=null, silverpop__Silverpop_Lead_Score__c=null, silverpop__Silverpop_RecipientID__c=null, silverpop__Sync_to_Silverpop_Chk__c=true, silverpop__Sync_to_Silverpop__c=null, Marketing_Email_opt_out__c=false, Form_ConvertedAccountId__c=null, Form_ConvertedContactId__c=null, Form_ConvertedDate__c=null, Form_ConvertedOpportunityId__c=null, Form_Lead_Id__c=00QO100000SHrEHMA1, Form_CreatedById__c=0053t000006rP8lAAE, Form_CreatedDate__c=2026-03-06 00:51:39, Form_IsConverted__c=false, Form_LastModifiedDate__c=2026-03-06 00:51:40, Form_Name__c= Test Lead, Form_NumberOfEmployees__c=0, Form_OwnerId__c=00G3t000003oSJ1EAM, Form_Parent_Lead_Id__c=null, Partner_Id__c=null, NVMConnect__NextContactTime__c=null, Lead_Source_Formula__c=Vacation VIP DB Transition, Dialer_Cadence_Status__c=null, Dialer_Call_Count__c=null, Restrict_Information__c=null, Gift__c=null, Vendor_Agent__c=null, CGE_Product__c=null, CGE_Product_Amount__c=null, Location__c=null, Vendor_Agent_2__c=null, Vendor_Agent_3__c=null, Age__c=null, Vendor_OPC_Agent__c=null, Destination__c=null, First_Name1__c=null, Last_Name1__c=null, Cellphone1__c=null, Email1__c=null, Additional_Guest_Age__c=null, Vendor_Agent_4__c=null, Vendor_Agent_5__c=null, Tour_Date__c=null, Tour_Time__c=null, Test_Time_To_String__c=null, Wave__c=null, Property__c=null, Reservation_Status__c=Pending, Supplier__c=null, Check_in__c=null, Reservation_Notes__c=null, Room_Configuration__c=null, SMS_Campaign_Processed__c=false, SMS_Campaign_Number__c=null, Name1__c=null, SMS_Campaign_Last_Sequence__c=null, SMS_Campaign_Last_Sent__c=null, SMS_2h_Campaign_Last_Sent__c=null, NumericPhone__c=9874563, Dial_List_Priority_Date_Time__c=null, Next_Message_Date_Time__c=null, Converted_Account__c=null, CV_Product__c=null, CV_Deposit_Paid__c=false, CV_Price__c=null, CV_Payment_Confirmation__c=null, Product_Number_Id__c=null, Raise_Away_Product__c=null, Week_Season__c=null, mercury__CurrentGenerators__c=null, mercury__Mobile_Phone_Short__c=null, mercury__NumberofLocations__c=null, mercury__Owner_Mobile_Phone__c=null, mercury__Primary__c=null, mercury__ProductInterest__c=null, mercury__SICCode__c=null, mercury__SMS_Code__c=null, mercury__SMS_Opt_Out__c=false, Contract_Number_Lead__c=null, Hashed_Email__c=null, Hashed_Phone__c=null, Hashed_FirstName__c=null, Hashed_LastName__c=null, Hashed_Leadid__c=null, Accountid_Dup_Raise_Lead__c=null, External_Contract_Number__c=null, Number_of_Nights__c=null, Product_Price__c=null, ONE_Lead_Id__c=null, UTM_Source__c=null, UTM_Term__c=null, Adset_Id__c=null, Ad_Id__c=null, ONE_Dot_Session_Id__c=null, Check_out__c=null, Adults__c=null, Children__c=null, SMS_Campaign_Name__c=null, Caller_id__c=null, Scheduled_Call__c=null, Last_Updated_Date__c=null, VIN_URL__c=null, VIN_Owner_Id__c=null, Days_From_CreatedDate__c=0.00, Skill__c=null, Group__c=null, Formatted_Phone_Number__c=+19874563, First_Agent_Percentage__c=null, Lead_Appointment_Date__c=null, Lead_First_Agent__c=null, Lead_Referral_Agent__c=null, Lead_Second_Agent__c=null, Record_Type_Name__c=Public Reservation Inquiry, Second_Agent_Percentage__c=null, Tee_Up_Date__c=null, Second_Agent__c=null, Closing_Agent__c=null, Tee_Up_Agent__c=null, Closing_Agent_Id__c=null, Closing_Agent_Division__c=null, Closing_Agent_Division_Id__c=null}
+19:51:39.422 (1430546417)|FLOW_ELEMENT_BEGIN|884937151a0b0eb428f53d0891ed19cc092f934-3750|FlowDecision|isChangedDecision2_myRule_1_IsConverted
+19:51:39.422 (1430968293)|FLOW_RULE_DETAIL|884937151a0b0eb428f53d0891ed19cc092f934-3750|isChangedRule_2_myRule_1_IsConverted|false|false
+19:51:39.422 (1430995568)|FLOW_VALUE_ASSIGNMENT|884937151a0b0eb428f53d0891ed19cc092f934-3750|isChangedRule_2_myRule_1_IsConverted|false
+19:51:39.422 (1431046612)|FLOW_ELEMENT_LIMIT_USAGE|7 ms CPU time, total 40 out of 65000
+19:51:39.422 (1431081273)|FLOW_ELEMENT_END|884937151a0b0eb428f53d0891ed19cc092f934-3750|FlowDecision|isChangedDecision2_myRule_1_IsConverted
+19:51:39.422 (1431093526)|FLOW_ELEMENT_BEGIN|884937151a0b0eb428f53d0891ed19cc092f934-3750|FlowDecision|myDecision
+19:51:39.422 (1431181407)|FLOW_RULE_DETAIL|884937151a0b0eb428f53d0891ed19cc092f934-3750|myRule_1|false|false
+19:51:39.422 (1431191577)|FLOW_VALUE_ASSIGNMENT|884937151a0b0eb428f53d0891ed19cc092f934-3750|myRule_1|false
+19:51:39.422 (1431212902)|FLOW_ELEMENT_END|884937151a0b0eb428f53d0891ed19cc092f934-3750|FlowDecision|myDecision
+19:51:39.422 (1431355836)|FLOW_START_INTERVIEW_END|884937151a0b0eb428f53d0891ed19cc092f934-3750|Lead Create and Update
+19:51:39.422 (1431366956)|FLOW_START_INTERVIEWS_END|1
+19:51:39.422 (1431391007)|FLOW_INTERVIEW_FINISHED|884937151a0b0eb428f53d0891ed19cc092f934-3750|Lead Create and Update
+19:51:39.422 (1431414602)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL queries: 0 out of 200
+19:51:39.422 (1431419278)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOQL query rows: 0 out of 50000
+19:51:39.422 (1431475933)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|SOSL queries: 0 out of 20
+19:51:39.422 (1431479904)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML statements: 1 out of 150
+19:51:39.422 (1431483131)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|DML rows: 1 out of 10000
+19:51:39.422 (1431486657)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|CPU time in ms: 40 out of 65000
+19:51:39.422 (1431504017)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Heap size in bytes: 3593 out of 12000000
+19:51:39.422 (1431507439)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Callouts: 0 out of 0
+19:51:39.422 (1431510523)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Email invocations: 0 out of 10
+19:51:39.422 (1431513451)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Future calls: 0 out of 0
+19:51:39.422 (1431516318)|FLOW_INTERVIEW_FINISHED_LIMIT_USAGE|Jobs in queue: 0 out of 1
+19:51:39.40 (1432972587)|WF_FLOW_ACTION_END|09L4z000000kD2g
+19:51:39.40 (1433124034)|WF_ACTIONS_END| Flow Trigger: 1;
+19:51:39.40 (1433136268)|CODE_UNIT_FINISHED|Workflow:Lead
+19:51:39.40 (1433243195)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:Lead
+19:51:39.40 (1433589175)|CODE_UNIT_FINISHED|Flow:Lead
+19:51:39.40 (1434188430)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:Lead
+19:51:39.40 (1435983986)|CODE_UNIT_FINISHED|Flow:Lead
+19:51:39.40 (1439805491)|DML_END|[31]
+19:51:39.40 (1440216889)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1440304228)|STATEMENT_EXECUTE|[33]
+19:51:39.40 (1440305745)|STATEMENT_EXECUTE|[34]
+19:51:39.40 (1444256984)|HEAP_ALLOCATE|[34]|Bytes:6
+19:51:39.40 (1444272046)|HEAP_ALLOCATE|[34]|Bytes:8
+19:51:39.40 (1444299083)|METHOD_ENTRY|[1]|01p4z000000dAXf|GenericAssignToSalesCadence.GenericAssignToSalesCadence()
+19:51:39.40 (1444304693)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1444312159)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1444318789)|METHOD_EXIT|[1]|GenericAssignToSalesCadence
+19:51:39.40 (1444339221)|HEAP_ALLOCATE|[34]|Bytes:12
+19:51:39.40 (1444392509)|CONSTRUCTOR_ENTRY|[34]|01p4z000000dAXf|<init>(Set<Id>,String)|GenericAssignToSalesCadence
+19:51:39.40 (1444421280)|VARIABLE_SCOPE_BEGIN|[4]|this|GenericAssignToSalesCadence|true|false
+19:51:39.40 (1444471660)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x759bb80e
+19:51:39.40 (1444479000)|VARIABLE_SCOPE_BEGIN|[4]|recordIds|Set<Id>|true|false
+19:51:39.40 (1444496243)|VARIABLE_ASSIGNMENT|[4]|recordIds|["00QO100000SHrEHMA1"]|0x749cdd03
+19:51:39.40 (1444499320)|VARIABLE_SCOPE_BEGIN|[4]|salesCadenceName|String|false|false
+19:51:39.40 (1444506492)|VARIABLE_ASSIGNMENT|[4]|salesCadenceName|"TourGen-Vacation VIP (14 more) ..."
+19:51:39.40 (1444512170)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1444513102)|STATEMENT_EXECUTE|[2]
+19:51:39.40 (1444514305)|STATEMENT_EXECUTE|[3]
+19:51:39.40 (1444531935)|STATEMENT_EXECUTE|[4]
+19:51:39.40 (1444532802)|STATEMENT_EXECUTE|[5]
+19:51:39.40 (1444542260)|VARIABLE_ASSIGNMENT|[5]|this.recordIds|["00QO100000SHrEHMA1"]|0x759bb80e
+19:51:39.40 (1444545050)|STATEMENT_EXECUTE|[6]
+19:51:39.40 (1444548384)|VARIABLE_ASSIGNMENT|[6]|this.salesCadenceName|"TourGen-Vacation VIP (14 more) ..."|0x759bb80e
+19:51:39.40 (1444557088)|CONSTRUCTOR_EXIT|[34]|01p4z000000dAXf|<init>(Set<Id>,String)|GenericAssignToSalesCadence
+19:51:39.40 (1455127757)|CODE_UNIT_FINISHED|TourGenVacationVIPDBTranBatchController
+19:51:39.484 (1484628121)|CUMULATIVE_LIMIT_USAGE
+19:51:39.484 (1484628121)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.484 (1484628121)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1484677985)|CODE_UNIT_FINISHED|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1494627911)|CODE_UNIT_STARTED|[EXTERNAL]|01p4z000000dAXf|GenericAssignToSalesCadence
+19:51:39.40 (1494741251)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1494752916)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1494761063)|VARIABLE_SCOPE_BEGIN|[21]|this|System.QueueableContextImpl|true|false
+19:51:39.40 (1494813841)|VARIABLE_ASSIGNMENT|[21]|this|{}|0x725496cf
+19:51:39.40 (1494818025)|VARIABLE_SCOPE_BEGIN|[21]|jobId|Id|false|false
+19:51:39.40 (1494867847)|VARIABLE_ASSIGNMENT|[21]|jobId|"707O1000024WGLqIAO"
+19:51:39.40 (1496770736)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1496790810)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:51:39.40 (1496800759)|VARIABLE_SCOPE_BEGIN|[8]|this|GenericAssignToSalesCadence|true|false
+19:51:39.40 (1496841514)|VARIABLE_ASSIGNMENT|[8]|this|{"recordIds":"0x63ef7498","salesCadenceName":"TourGen-Vacation VIP (14 more) ..."}|0x355b74c4
+19:51:39.40 (1496846332)|VARIABLE_SCOPE_BEGIN|[8]|context|System.QueueableContext|true|false
+19:51:39.40 (1496913239)|VARIABLE_ASSIGNMENT|[8]|context|{"jobId":"707O1000024WGLqIAO"}|0x725496cf
+19:51:39.40 (1496935117)|STATEMENT_EXECUTE|[8]
+19:51:39.40 (1496955018)|HEAP_ALLOCATE|[9]|Bytes:4
+19:51:39.40 (1497021577)|HEAP_ALLOCATE|[9]|Bytes:4
+19:51:39.40 (1497059032)|HEAP_ALLOCATE|[9]|Bytes:5
+19:51:39.40 (1497102278)|HEAP_ALLOCATE|[9]|Bytes:4
+19:51:39.40 (1497106426)|VARIABLE_SCOPE_BEGIN|[9]|conId|Id|false|false
+19:51:39.40 (1497124829)|VARIABLE_ASSIGNMENT|[9]|conId|"00QO100000SHrEHMA1"
+19:51:39.40 (1497128780)|STATEMENT_EXECUTE|[9]
+19:51:39.40 (1497129890)|STATEMENT_EXECUTE|[10]
+19:51:39.40 (1497144575)|HEAP_ALLOCATE|[10]|Bytes:18
+19:51:39.40 (1497167573)|METHOD_ENTRY|[10]|01p4z000000dAXf|GenericAssignToSalesCadence.sendRequest(String, String)
+19:51:39.40 (1497184438)|VARIABLE_SCOPE_BEGIN|[14]|targetId|String|false|false
+19:51:39.40 (1497189484)|VARIABLE_ASSIGNMENT|[14]|targetId|"00QO100000SHrEHMA1"
+19:51:39.40 (1497191576)|VARIABLE_SCOPE_BEGIN|[14]|salesCadenceNameOrId|String|false|false
+19:51:39.40 (1497196634)|VARIABLE_ASSIGNMENT|[14]|salesCadenceNameOrId|"TourGen-Vacation VIP (14 more) ..."
+19:51:39.40 (1497202079)|STATEMENT_EXECUTE|[14]
+19:51:39.40 (1497203185)|STATEMENT_EXECUTE|[15]
+19:51:39.40 (1497264883)|HEAP_ALLOCATE|[15]|Bytes:67
+19:51:39.40 (1497277891)|SYSTEM_METHOD_ENTRY|[1]|Url.Url()
+19:51:39.40 (1497279871)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1497286595)|SYSTEM_METHOD_EXIT|[1]|Url
+19:51:39.40 (1497291870)|METHOD_ENTRY|[15]||System.Url.getSalesforceBaseUrl()
+19:51:39.40 (1498301104)|METHOD_EXIT|[15]||System.Url.getSalesforceBaseUrl()
+19:51:39.40 (1498319844)|METHOD_ENTRY|[15]||System.Url.toExternalForm()
+19:51:39.40 (1498361265)|METHOD_EXIT|[15]||System.Url.toExternalForm()
+19:51:39.40 (1498365269)|VARIABLE_SCOPE_BEGIN|[15]|sfdcURL|String|false|false
+19:51:39.40 (1498380399)|VARIABLE_ASSIGNMENT|[15]|sfdcURL|"https://holidaysyste (34 more) ..."
+19:51:39.40 (1498385398)|STATEMENT_EXECUTE|[16]
+19:51:39.40 (1498389863)|HEAP_ALLOCATE|[16]|Bytes:28
+19:51:39.40 (1498399536)|HEAP_ALLOCATE|[16]|Bytes:82
+19:51:39.40 (1498402232)|VARIABLE_SCOPE_BEGIN|[16]|actionsRestURL|String|false|false
+19:51:39.40 (1498407354)|VARIABLE_ASSIGNMENT|[16]|actionsRestURL|"https://holidaysyste (62 more) ..."
+19:51:39.40 (1498409605)|STATEMENT_EXECUTE|[17]
+19:51:39.40 (1498410930)|HEAP_ALLOCATE|[17]|Bytes:36
+19:51:39.40 (1498413253)|HEAP_ALLOCATE|[17]|Bytes:118
+19:51:39.40 (1498415210)|VARIABLE_SCOPE_BEGIN|[17]|assignTargetRESTUrl|String|false|false
+19:51:39.40 (1498419644)|VARIABLE_ASSIGNMENT|[17]|assignTargetRESTUrl|"https://holidaysyste (98 more) ..."
+19:51:39.40 (1498421746)|STATEMENT_EXECUTE|[19]
+19:51:39.40 (1498444251)|VARIABLE_SCOPE_BEGIN|[19]|httpReq|System.HttpRequest|true|false
+19:51:39.40 (1498483076)|VARIABLE_ASSIGNMENT|[19]|httpReq|"System.HttpRequest[Endpoint=null, Method=null]"|0x477c0972
+19:51:39.40 (1498486248)|STATEMENT_EXECUTE|[20]
+19:51:39.40 (1498487671)|HEAP_ALLOCATE|[20]|Bytes:4
+19:51:39.40 (1498527786)|STATEMENT_EXECUTE|[21]
+19:51:39.40 (1498529393)|HEAP_ALLOCATE|[21]|Bytes:13
+19:51:39.40 (1498531839)|HEAP_ALLOCATE|[21]|Bytes:6
+19:51:39.40 (1498573219)|HEAP_ALLOCATE|[21]|Bytes:105
+19:51:39.40 (1498580971)|SYSTEM_METHOD_ENTRY|[1]|UserInfo.UserInfo()
+19:51:39.40 (1498582748)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1498586834)|SYSTEM_METHOD_EXIT|[1]|UserInfo
+19:51:39.40 (1498592502)|METHOD_ENTRY|[21]||System.UserInfo.getSessionId()
+19:51:39.40 (1498625179)|METHOD_EXIT|[21]||System.UserInfo.getSessionId()
+19:51:39.40 (1498628269)|HEAP_ALLOCATE|[21]|Bytes:37
+19:51:39.40 (1498644309)|STATEMENT_EXECUTE|[22]
+19:51:39.40 (1498646025)|HEAP_ALLOCATE|[22]|Bytes:7
+19:51:39.40 (1498649268)|METHOD_ENTRY|[22]||System.UserInfo.getSessionId()
+19:51:39.40 (1498657549)|METHOD_EXIT|[22]||System.UserInfo.getSessionId()
+19:51:39.40 (1498659609)|HEAP_ALLOCATE|[22]|Bytes:38
+19:51:39.40 (1498666724)|STATEMENT_EXECUTE|[23]
+19:51:39.40 (1498678243)|STATEMENT_EXECUTE|[24]
+19:51:39.40 (1498679703)|HEAP_ALLOCATE|[24]|Bytes:12
+19:51:39.40 (1498681989)|HEAP_ALLOCATE|[24]|Bytes:16
+19:51:39.40 (1498689239)|STATEMENT_EXECUTE|[25]
+19:51:39.40 (1498690518)|HEAP_ALLOCATE|[25]|Bytes:40
+19:51:39.40 (1498692827)|HEAP_ALLOCATE|[25]|Bytes:17
+19:51:39.40 (1498694534)|HEAP_ALLOCATE|[25]|Bytes:4
+19:51:39.40 (1498703415)|HEAP_ALLOCATE|[25]|Bytes:113
+19:51:39.40 (1498737348)|STATEMENT_EXECUTE|[27]
+19:51:39.40 (1498739697)|VARIABLE_SCOPE_BEGIN|[27]|response|String|false|false
+19:51:39.40 (1498745715)|VARIABLE_ASSIGNMENT|[27]|response|""
+19:51:39.40 (1498748278)|STATEMENT_EXECUTE|[28]
+19:51:39.40 (1498749225)|STATEMENT_EXECUTE|[28]
+19:51:39.40 (1498750244)|STATEMENT_EXECUTE|[29]
+19:51:39.40 (1498758345)|VARIABLE_SCOPE_BEGIN|[29]|http|System.Http|true|false
+19:51:39.40 (1498785725)|VARIABLE_ASSIGNMENT|[29]|http|"System.Http[]"|0x6c435c17
+19:51:39.40 (1498788498)|STATEMENT_EXECUTE|[30]
+19:51:39.40 (1498863065)|CALLOUT_REQUEST|[30]|System.HttpRequest[Endpoint=https://holidaysystems--full.sandbox.my.salesforce.com/services/data/v45.0/actions/standard/assignTargetToSalesCadence, Method=POST]
+19:51:39.40 (1498942740)|HEAP_ALLOCATE|[30]|Bytes:4
+19:51:39.40 (1498953638)|HEAP_ALLOCATE|[30]|Bytes:118
+19:51:39.40 (1498958469)|VARIABLE_SCOPE_BEGIN|[4]|this|AssignContactInOverflowCadenceTestMock|true|false
+19:51:39.40 (1498972245)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x25e13e46
+19:51:39.40 (1498975457)|VARIABLE_SCOPE_BEGIN|[4]|req|System.HttpRequest|true|false
+19:51:39.40 (1499001277)|VARIABLE_ASSIGNMENT|[4]|req|"System.HttpRequest[Endpoint=https://holidaysystems--full.sandbox.my.salesforce.com/services/data/v45.0/actions/standard/assignTargetToSalesCadence, Method=POST]"|0x477c0972
+19:51:39.40 (1499022373)|STATEMENT_EXECUTE|[4]
+19:51:39.40 (1499023621)|STATEMENT_EXECUTE|[10]
+19:51:39.40 (1499030475)|VARIABLE_SCOPE_BEGIN|[10]|res|System.HttpResponse|true|false
+19:51:39.40 (1499047113)|VARIABLE_ASSIGNMENT|[10]|res|"System.HttpResponse[Status=null, StatusCode=0]"|0x722d8d55
+19:51:39.40 (1499050184)|STATEMENT_EXECUTE|[11]
+19:51:39.40 (1499083847)|STATEMENT_EXECUTE|[12]
+19:51:39.40 (1499085464)|HEAP_ALLOCATE|[12]|Bytes:100
+19:51:39.40 (1499118885)|STATEMENT_EXECUTE|[13]
+19:51:39.40 (1499137451)|STATEMENT_EXECUTE|[14]
+19:51:39.40 (1499143597)|CALLOUT_RESPONSE|[30]|System.HttpResponse[Status=null, StatusCode=200]
+19:51:39.40 (1499149850)|HEAP_ALLOCATE|[30]|Bytes:104
+19:51:39.40 (1499153546)|VARIABLE_SCOPE_BEGIN|[30]|httpResponse|System.HttpResponse|true|false
+19:51:39.40 (1499164990)|VARIABLE_ASSIGNMENT|[30]|httpResponse|"System.HttpResponse[Status=null, StatusCode=200]"|0x722d8d55
+19:51:39.40 (1499178761)|STATEMENT_EXECUTE|[31]
+19:51:39.40 (1499179634)|STATEMENT_EXECUTE|[32]
+19:51:39.40 (1499193814)|HEAP_ALLOCATE|[32]|Bytes:100
+19:51:39.40 (1499231604)|HEAP_ALLOCATE|[32]|Bytes:24
+19:51:39.40 (1499239034)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+19:51:39.40 (1499241362)|STATEMENT_EXECUTE|[1]
+19:51:39.40 (1499294262)|SYSTEM_METHOD_EXIT|[1]|JSON
+19:51:39.40 (1499303297)|METHOD_ENTRY|[32]||System.JSON.deserializeUntyped(String)
+19:51:39.40 (1499646038)|METHOD_EXIT|[32]||System.JSON.deserializeUntyped(String)
+19:51:39.40 (1499652891)|METHOD_ENTRY|[32]||System.JSON.serializePretty(Object)
+19:51:39.40 (1500013703)|METHOD_EXIT|[32]||System.JSON.serializePretty(Object)
+19:51:39.40 (1500025240)|VARIABLE_ASSIGNMENT|[32]|response|"{\n  \"inputs\" : [ {\n  (98 more) ..."
+19:51:39.40 (1500031244)|STATEMENT_EXECUTE|[42]
+19:51:39.40 (1500033696)|HEAP_ALLOCATE|[42]|Bytes:10
+19:51:39.40 (1500041933)|HEAP_ALLOCATE|[42]|Bytes:128
+19:51:39.40 (1500066437)|USER_DEBUG|[42]|DEBUG|response: {
+  "inputs" : [ {
+    "targetId" : "0035j00000Hw5q3AAB",
+    "salesCadenceNameOrId" : "HCMU-Booking-Overflow"
+  } ]
+}
+19:51:39.40 (1500072748)|METHOD_EXIT|[10]|01p4z000000dAXf|GenericAssignToSalesCadence.sendRequest(String, String)
+19:51:39.40 (1500082281)|HEAP_ALLOCATE|[9]|Bytes:5
+19:51:39.40 (1500091843)|VARIABLE_ASSIGNMENT|[9]|conId|null
+19:51:39.40 (1500105881)|CODE_UNIT_FINISHED|GenericAssignToSalesCadence
+19:51:39.40 (1509298458)|CODE_UNIT_STARTED|[EXTERNAL]|01p4z000000YmVG|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1510283049)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1510708807)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1510718238)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1510724719)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+19:51:39.40 (1510762110)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x57ea12e6
+19:51:39.40 (1510766189)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+19:51:39.40 (1510793660)|VARIABLE_ASSIGNMENT|[31]|jobId|"707O1000024WGLoIAO"
+19:51:39.40 (1510796761)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+19:51:39.40 (1510801887)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+19:51:39.40 (1516372770)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:51:39.40 (1516384873)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+19:51:39.40 (1516393199)|VARIABLE_SCOPE_BEGIN|[37]|this|TourGenVacationVIPDBTranBatchController|true|false
+19:51:39.40 (1516417127)|VARIABLE_ASSIGNMENT|[37]|this|{}|0x40ed83d9
+19:51:39.40 (1516421265)|VARIABLE_SCOPE_BEGIN|[37]|BC|Database.BatchableContext|true|false
+19:51:39.40 (1516493423)|VARIABLE_ASSIGNMENT|[37]|BC|{"jobId":"707O1000024WGLoIAO"}|0x57ea12e6
+19:51:39.40 (1516509693)|STATEMENT_EXECUTE|[37]
+19:51:39.525 (1525767548)|CUMULATIVE_LIMIT_USAGE
+19:51:39.525 (1525767548)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.525 (1525767548)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1525812906)|CODE_UNIT_FINISHED|TourGenVacationVIPDBTranBatchController
+19:51:39.40 (1525919376)|METHOD_EXIT|[26]||System.Test.stopTest()
+19:51:39.525 (1525930923)|CUMULATIVE_LIMIT_USAGE
+19:51:39.525 (1525930923)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 169 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.525 (1525930923)|LIMIT_USAGE_FOR_NS|leadassist|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 1 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.525 (1525930923)|LIMIT_USAGE_FOR_NS|NVMContactWorld|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.525 (1525930923)|TESTING_LIMITS
+19:51:39.525 (1525930923)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:51:39.525 (1525930923)|CUMULATIVE_LIMIT_USAGE_END
+
+19:51:39.40 (1525969782)|CODE_UNIT_FINISHED|TourGenVacationVIPDBTranTest.testBatchJob()
+19:51:39.40 (1525973435)|EXECUTION_FINISHED
+19:51:39.615 (1615874978)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:39.615 (1615903764)|EXECUTION_STARTED
+19:51:39.615 (1615915618)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+19:51:39.615 (1615924362)|DUPLICATE_DETECTION_BEGIN
+19:51:39.615 (1616005733)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002jsMs|DuplicateRuleName:SRR_Check_Existing_Records|DmlType:UPDATE
+19:51:39.615 (1638143333)|DUPLICATE_RULE_FILTER|[Lead : Use Plauti Assign equals TRUE]
+19:51:39.615 (1638205553)|DUPLICATE_RULE_FILTER_VALUE|2
+19:51:39.615 (1638216415)|DUPLICATE_RULE_FILTER_RESULT|false
+19:51:39.615 (1638347363)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002dGUT|DuplicateRuleName:Duplicated Leads By Phone And Email|DmlType:UPDATE
+19:51:39.615 (1638430879)|DUPLICATE_RULE_FILTER|[User : Username not equal to dev@nerdsoft.com.hsi] 
+AND [User : Username not equal to dev@nerdsoft.com.hsi.1] 
+AND [User : Username not equal to zappier@nerdsoft.com]
+19:51:39.615 (1638458378)|DUPLICATE_RULE_FILTER_VALUE|dev@nerdsoft.com.hsi.full
+19:51:39.615 (1638472567)|DUPLICATE_RULE_FILTER_VALUE|dev@nerdsoft.com.hsi.full
+19:51:39.615 (1638477471)|DUPLICATE_RULE_FILTER_VALUE|dev@nerdsoft.com.hsi.full
+19:51:39.615 (1638481683)|DUPLICATE_RULE_FILTER_RESULT|true
+19:51:39.615 (1725913588)|DUPLICATE_DETECTION_MATCH_INVOCATION_DETAILS|EntityType:Lead|ActionTaken:Allow_[Report]|DuplicateRecordIds:
+19:51:39.615 (1725941402)|DUPLICATE_DETECTION_MATCH_INVOCATION_SUMMARY|EntityType:Lead|NumRecordsToBeSaved:1|NumRecordsToBeSavedWithDuplicates:0|NumDuplicateRecordsFound:0
+19:51:39.615 (1725948059)|DUPLICATE_DETECTION_MATCH_INVOCATION_DETAILS|EntityType:Lead|ActionTaken:Allow_[Report]|DuplicateRecordIds:
+19:51:39.615 (1725951067)|DUPLICATE_DETECTION_MATCH_INVOCATION_SUMMARY|EntityType:Lead|NumRecordsToBeSaved:1|NumRecordsToBeSavedWithDuplicates:0|NumDuplicateRecordsFound:0
+19:51:39.615 (1726133656)|DUPLICATE_DETECTION_END
+19:51:39.615 (1726145721)|CODE_UNIT_FINISHED|DuplicateDetector
+19:51:39.615 (1726154753)|EXECUTION_FINISHED
+19:51:39.727 (1727047996)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:51:39.727 (1727065087)|EXECUTION_STARTED
+19:51:39.727 (1727072662)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector
+19:51:39.727 (1727078364)|DUPLICATE_DETECTION_BEGIN
+19:51:39.727 (1727120181)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002jsMs|DuplicateRuleName:SRR_Check_Existing_Records|DmlType:INSERT
+19:51:39.727 (1746620986)|DUPLICATE_RULE_FILTER|[Lead : Use Plauti Assign equals TRUE]
+19:51:39.727 (1746665508)|DUPLICATE_RULE_FILTER_VALUE|2
+19:51:39.727 (1746673716)|DUPLICATE_RULE_FILTER_RESULT|false
+19:51:39.727 (1746739513)|DUPLICATE_DETECTION_RULE_INVOCATION|DuplicateRuleId:0Bm3t000002dGUT|DuplicateRuleName:Duplicated Leads By Phone And Email|DmlType:INSERT
+19:51:39.727 (1746788779)|DUPLICATE_RULE_FILTER|[User : Username not equal to dev@nerdsoft.com.hsi] 
+AND [User : Username not equal to dev@nerdsoft.com.hsi.1] 
+AND [User : Username not equal to zappier@nerdsoft.com]
+19:51:39.727 (1746811259)|DUPLICATE_RULE_FILTER_VALUE|dev@nerdsoft.com.hsi.full
+19:51:39.727 (1746822374)|DUPLICATE_RULE_FILTER_VALUE|dev@nerdsoft.com.hsi.full
+19:51:39.727 (1746825398)|DUPLICATE_RULE_FILTER_VALUE|dev@nerdsoft.com.hsi.full
+19:51:39.727 (1746827374)|DUPLICATE_RULE_FILTER_RESULT|true
+19:51:39.727 (1751240674)|DUPLICATE_DETECTION_MATCH_INVOCATION_DETAILS|EntityType:Lead|ActionTaken:Allow_[Report]|DuplicateRecordIds:
+19:51:39.727 (1751295421)|DUPLICATE_DETECTION_MATCH_INVOCATION_SUMMARY|EntityType:Lead|NumRecordsToBeSaved:1|NumRecordsToBeSavedWithDuplicates:0|NumDuplicateRecordsFound:0
+19:51:39.727 (1751302324)|DUPLICATE_DETECTION_MATCH_INVOCATION_DETAILS|EntityType:Lead|ActionTaken:Allow_[Report]|DuplicateRecordIds:
+19:51:39.727 (1751305096)|DUPLICATE_DETECTION_MATCH_INVOCATION_SUMMARY|EntityType:Lead|NumRecordsToBeSaved:1|NumRecordsToBeSavedWithDuplicates:0|NumDuplicateRecordsFound:0
+19:51:39.727 (1751423623)|DUPLICATE_DETECTION_END
+19:51:39.727 (1751434365)|CODE_UNIT_FINISHED|DuplicateDetector
+19:51:39.727 (1751442654)|EXECUTION_FINISHED

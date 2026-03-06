@@ -1,0 +1,226 @@
+<apex:page id="pg1" standardController="Opportunity" extensions="ReservationCtrl" lightningStyleSheets="true" sidebar="false" docType="html-5.0" >  
+    
+    <head>
+        <apex:slds />
+    </head>
+    
+    <style>
+        th{
+        border-bottom: 1px solid rgb(221, 219, 218);
+        }
+        td{
+        border-bottom: 1px solid rgb(221, 219, 218);
+        }      
+        .slds-scope hr {
+        display: block;
+        margin: 0 10px 0 -85px; 
+        border-top: 1px solid rgb(221, 219, 218);
+        height: 1px;
+        clear: both;
+        }
+        .customPopup {
+        background-color: white;
+        border-style: solid;
+        border-width: 2px;
+        left: 20%;
+        padding: 10px;
+        position: absolute;
+        z-index: 9999;
+        font-size: 15px;
+        width: 500px;
+        top: 35%;
+        }
+        
+        
+        .closeButton {
+        float: right;
+        }
+        
+        .popupBackground{
+        background-color:black;
+        opacity: 0.20;
+        filter: alpha(opacity = 20);
+        position: absolute;
+        width: 100%;
+        height: 115%;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+        }
+        
+    </style>
+    <apex:slds />
+    <apex:outputPanel id="myJS">
+    <script>
+    
+    
+    function doNavigate(id, reservationStatus,confimeNumber,confimedDate) {
+        var stringvalue='{!isEdit}';
+        
+        if(reservationStatus != 'Cancel' && stringvalue != 'true'){
+       
+            if(reservationStatus == 'Confirmed' && confimeNumber != null && confimeNumber != '' && confimedDate != null && confimedDate != ''){
+                window.top.location.href = '/' + id;
+             }
+            if(reservationStatus != 'Cancel' && reservationStatus != 'Confirmed'){
+                 window.top.location.href = '/' + id;
+              }
+        }
+    }
+    
+    function RefreshPrimaryTab(id,reservationStatus){
+        window.top.location.href = '/' + id;
+    }
+        
+    function focusAndSave(OpportunityId) {
+        document.getElementById('focusMe').click();
+        saveFields();
+        window.top.location.href = '/' + OpportunityId;
+    }
+    </script>
+    </apex:outputPanel>
+    <apex:form id="form1">
+        
+        <apex:actionStatus id="spinnerStatus">
+            <apex:facet name="start">
+                <apex:outputPanel >
+                    <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>                                                  
+                </apex:outputPanel>
+            </apex:facet>
+        </apex:actionStatus>
+        
+        <input type="text" id="focusMe" style="display:none" />
+        <apex:actionFunction action="{!savebutton}" name="saveFields"  />
+        <apex:pageBlock rendered="{!!isEdit}">
+            <div style="text-align:center;">
+                
+                <apex:commandButton id="editBtntop" value="Edit" action="{!enableEditMode}" styleClass="slds-button slds-button_brand"/>                               
+            </div>   
+            
+            <apex:pageBlockSection title="Reservation">
+                <apex:outputField value="{!oppObj.Destination__c}" />
+                <apex:outputField value="{!oppObj.Property__c}" />
+                <apex:outputField value="{!oppObj.Site_Name__c}" />
+                <apex:outputField value="{!oppObj.Room_Type__c}" />
+                <apex:outputField value="{!oppObj.Rooms__c}" />
+                <apex:outputField value="{!oppObj.Check_in__c}" />
+                <apex:outputField value="{!oppObj.Check_Out__c}" />
+                <apex:outputField value="{!oppObj.Capacity__c}" />
+                <apex:outputField value="{!oppObj.Program__c}" />
+                <apex:outputField value="{!oppObj.Supplier__c}" />
+                <apex:pageBlockSectionItem rendered="{!hidedField}">
+                <apex:outputLabel value="Adults(+13)" rendered="{!hidedField}"/>
+                <apex:outputField value="{!oppObj.Adults__c}" rendered="{!hidedField}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Children (0-12)" rendered="{!hidedField}"/>
+                <apex:outputField value="{!oppObj.Children_0_17__c}" rendered="{!hidedField}"/>                
+</apex:pageBlockSectionItem>
+
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Confirmation">
+                <apex:outputField value="{!oppObj.Reservation_Status__c}" />
+                <apex:outputField value="{!oppObj.Confirmation_Number__c}" />
+                <apex:outputField value="{!oppObj.Confirmed_Date__c}" />
+                <apex:outputField value="{!oppObj.No_Show__c}" />
+                
+            </apex:pageBlockSection>
+            <div style="text-align:center;">
+                <apex:commandButton id="editBtntop1" value="Edit" action="{!enableEditMode}" styleClass="slds-button slds-button_brand"/>
+            </div>   
+        </apex:pageBlock>    
+        <apex:pageBlock id="pginp" rendered="{!isEdit}">
+            
+            <!-- Other prodct -->
+            <apex:pageBlockSection title="Reservation" id="pageBlockList" rendered="{!!isEditBookUS}">
+                <apex:outputField value="{!oppObj.Destination__c}"  />
+                <apex:outputField value="{!oppObj.Property__c}" />
+                <apex:outputField value="{!oppObj.Site_Name__c}" />
+                <apex:outputField value="{!oppObj.Rooms__c}" /> 
+                <apex:outputField value="{!oppObj.Check_in__c}" />
+                <apex:outputField value="{!oppObj.Check_Out__c}" id="checkoutId" />
+                <apex:outputField value="{!oppObj.Capacity__c}" />
+                <apex:outputField value="{!oppObj.Program__c}" /> 
+                <apex:outputField value="{!oppObj.Supplier__c}" />
+                <apex:pageBlockSectionItem rendered="{!hidedField}">
+                <apex:outputLabel value="Adults(+13)" rendered="{!hidedField}"/>
+                <apex:inputField value="{!oppObj.Adults__c}" rendered="{!hidedField}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Children (0-12)" rendered="{!hidedField}"/>
+                <apex:inputField value="{!oppObj.Children_0_17__c}" rendered="{!hidedField}"/>                
+</apex:pageBlockSectionItem>
+               
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Reservation" id="pageBlockListv1" rendered="{!isEditBookUS}">
+                <apex:inputField value="{!oppObj.Destination__c}"  />
+                <apex:inputField value="{!oppObj.Property__c}" />
+                <apex:inputField value="{!oppObj.Site_Name__c}" />
+                <apex:inputField value="{!oppObj.Rooms__c}" /> 
+                <apex:inputField value="{!oppObj.Check_in__c}" />
+               <!-- <apex:inputField value="{!oppObj.Check_Out__c}" id="checkoutIdv1" />
+                <apex:inputField value="{!oppObj.Capacity__c}" />
+                <apex:inputField value="{!oppObj.Program__c}" />   -->              
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="pageBlockList2" title="Confirmation">
+                <apex:inputField value="{!oppObj.Reservation_Status__c}"></apex:inputField>
+                <apex:inputField value="{!oppObj.Confirmation_Number__c}"></apex:inputField>
+                <apex:inputField value="{!oppObj.Confirmed_Date__c}"></apex:inputField>
+                <apex:outputPanel rendered="{!isNoShowVisible}">
+                    <apex:outputLabel >No Show</apex:outputLabel>
+                    <apex:inputField value="{!oppObj.No_Show__c}"></apex:inputField>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            
+            <apex:pageMessages id="msgId"/>
+            
+            <div style="text-align:center;">
+                <apex:commandButton id="saveBtn1" status="spinnerStatus" value="Save" oncomplete="doNavigate('{!oppObj.Id}','{!oppObj.Reservation_Status__c}','{!oppObj.Confirmation_Number__c}','{!oppObj.Confirmed_Date__c}')" action="{!showPopup}" rerender="myJS,popup,msgId"  styleClass="slds-button slds-button_brand"/>                
+                <apex:commandButton id="cancelBtn1" value="Cancel" action="{!cancel}" immediate="true" html-formnovalidate="formnovalidate" styleClass="slds-button slds-button_outline-brand" />                
+            </div>         
+            
+            <apex:outputPanel id="popup">
+                
+                <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopup}"/>
+                <apex:outputPanel id="popInnerOutputPnl" styleClass="customPopup" layout="block" rendered="{!displayPopup}">
+                    <apex:commandButton value="X" title="Close the popup" action="{!closePopup}" styleClass="closeButton" rerender="popup"/>
+                    
+                    <apex:pageblockSection columns="1" >                         
+                        
+                        <apex:pageblockSectionItem >
+                            Are you sure you want to cancel this reservation? 
+                        </apex:pageblockSectionItem>
+                    </apex:pageblockSection>
+                    <apex:commandButton value="Yes" status="spinnerStatus" onclick="focusAndSave('{!oppObj.Id}')" styleClass="closeButton slds-button slds-button_outline-brand" rerender="popup"/>
+                    <apex:commandButton value="No"  action="{!closePopup}" styleClass="closeButton" rerender="popup"/>
+                </apex:outputPanel>
+                
+                <!-- Confirmed message -->
+                <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!ConfirmedstatusError}"/>
+                <apex:outputPanel id="confm" styleClass="customPopup" layout="block" rendered="{!ConfirmedstatusError}">
+                    <apex:commandButton value="X" title="Close the popup" action="{!closePopup}" styleClass="closeButton" rerender="popup"/>
+                    
+                    <apex:pageblockSection columns="1" >                         
+                        
+                        <apex:pageblockSectionItem >
+                            Please enter Confirmed date and Confirmation Number
+                        </apex:pageblockSectionItem>
+                    </apex:pageblockSection>
+                    <!-- <apex:commandButton value="Yes" status="spinnerStatus" oncomplete="RefreshPrimaryTab('{!oppObj.Id}','{!oppObj.Reservation_Status__c}');"  onclick="focusAndSave();" styleClass="closeButton slds-button slds-button_outline-brand" rerender="popup"/> -->
+                    <apex:commandButton value="Cancel"  action="{!closePopup}" styleClass="closeButton" rerender="popup"/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+        </apex:pageBlock> 
+        
+        
+        
+    </apex:form>
+    
+    
+    
+</apex:page>

@@ -1,0 +1,13 @@
+<aura:component controller="PastDueMUDowngradeViewerCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="opportunities" type="Opportunity[]"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:datatable
+                         keyField="Id"
+                         data="{!v.opportunities}"
+                         columns="{!v.columns}"
+                         hideCheckboxColumn="true"
+                         />    
+</aura:component>

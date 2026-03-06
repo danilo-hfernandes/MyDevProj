@@ -1,0 +1,70 @@
+:host {
+  display: block;
+}
+
+/* Keep the row compact */
+.vc-rowHeader {
+  gap: 0.5rem;
+}
+
+.vc-created {
+  margin-left: 0.5rem;
+}
+
+.vc-headerActions {
+  gap: 0.5rem;
+}
+
+/* Tighten gutters and vertical spacing */
+.vc-gridTight {
+  row-gap: 0.35rem;
+}
+
+/* Basics: keep everything on one line on medium+ */
+.vc-basicsRow .slds-col {
+  min-width: 0;
+}
+
+/* Conditions grid: 2 per line on medium+ */
+.vc-condGrid {
+  row-gap: 0.35rem;
+}
+
+.vc-condCol {
+  min-width: 0;
+}
+
+/* Slightly reduce bottom spacing inside condition rows */
+.vc-condRow {
+  margin-bottom: 0.25rem;
+}
+
+/* Make remove button align nicer without taking a whole new “line” */
+.vc-condRemove {
+  padding-top: 0.25rem;
+}
+
+/* Optional: keep child boxes visually grouped but compact */
+.vc-childBox {
+  padding: 0.75rem;
+}
+
+.vc-saving-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 10000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: all;
+}
+
+.vc-saving-text {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #444;
+}

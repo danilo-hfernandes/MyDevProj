@@ -1,0 +1,47 @@
+64.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+17:00:13.52 (52331707)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:13.52 (54714311)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:13.52 (54848214)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:13.52 (54887229)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:13.52 (58556269)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:13.52 (58726130)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:13.52 (90589753)|SOQL_EXECUTE_BEGIN|[33]|Aggregations:0|SELECT Id FROM Attachment WHERE (ParentId = :tmpVar1 AND CreatedDate < :tmpVar2) LIMIT 3000
+17:00:13.52 (139963237)|SOQL_EXECUTE_END|[33]|Rows:0
+17:00:13.52 (147754554)|SOQL_EXECUTE_BEGIN|[46]|Aggregations:0|SELECT Id FROM Report_Sender_Log__c WHERE (Report_Schedule__c = :tmpVar1 AND CreatedDate < :tmpVar2) LIMIT 3000
+17:00:13.52 (177007764)|SOQL_EXECUTE_END|[46]|Rows:1
+17:00:13.52 (177488884)|DML_BEGIN|[55]|Op:Delete|Type:analyticsengine__Report_Sender_Log__c|Rows:1
+17:00:14.471 (1471411314)|DML_END|[55]
+17:00:14.471 (1481024799)|SOQL_EXECUTE_BEGIN|[59]|Aggregations:0|SELECT Id, ContentDocumentId FROM ContentDocumentLink WHERE (LinkedEntityId = :tmpVar1 AND ContentDocument.CreatedDate < :tmpVar2) LIMIT 3000
+17:00:14.471 (1530065908)|SOQL_EXECUTE_END|[59]|Rows:0
+17:00:14.471 (1531316717)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1542673040)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1542850724)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1542948779)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1543022193)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1543113095)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1543161511)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1545683506)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1545728560)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1563892535)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1563943132)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1571220987)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1571278381)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.471 (1578620995)|ENTERING_MANAGED_PKG|analyticsengine
+17:00:14.629 (1629949522)|CUMULATIVE_LIMIT_USAGE
+17:00:14.629 (1629949522)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:00:14.629 (1629949522)|CUMULATIVE_LIMIT_USAGE_END
+

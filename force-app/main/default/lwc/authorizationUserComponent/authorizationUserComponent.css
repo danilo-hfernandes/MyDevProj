@@ -1,0 +1,26 @@
+/* Improved spacing and styling */
+.slds-card {
+    margin-bottom: 20px; /* Adds space between card and table */
+}
+
+/* Add some space around the Add Row button */
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px; /* Added margin to give space */
+}
+
+/* Table Styling */
+.custom-table .slds-table {
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.slds-table thead th {
+    background-color: #f4f6f9;
+    padding: 12px;
+}
+
+/* Add padding to table rows */

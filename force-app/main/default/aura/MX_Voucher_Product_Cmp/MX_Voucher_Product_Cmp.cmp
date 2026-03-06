@@ -1,0 +1,173 @@
+<aura:component implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+                access="global" 
+                controller="MXVoucherProductController">
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        
+        .slds-modal__container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 90rem;
+        min-width: 20rem;  
+        
+        }
+        .slds-form–stacked{
+        width: 96%;
+        }
+        .slds-box{
+        border : none;
+        }
+        .slds-form-element__label{
+        Text-align       
+        }
+        .slds-form-element__label{
+        width: 100%;
+        text-align: left;
+        }
+        .slds-form-element__control{
+        text-align: left;
+        }
+    </aura:html>
+    <aura:attribute name="isReadOnly" type="Boolean" default="false"/>
+    <aura:attribute name="MXVoucherAvailabilityList" type="object" />
+    <aura:attribute name="buttonClick" type="Boolean" default="true"/>
+    <aura:attribute name="productOption" type="Object[]"/>
+    <aura:attribute name="selectedProductName" type="String"/>
+    <aura:attribute name="LocationOption" type="Object[]"/>
+    <aura:attribute name="selectLocation" type="String"/>
+    <aura:attribute name="selectSection" type="String"/>
+    <aura:attribute name="SectionOptions" type="Set"/>
+    <aura:attribute name="selectRoomSize" type="String"/>
+    <aura:attribute name="roomSizeOptionList" type="Set"/>
+    <aura:attribute name="MXvoucherobject" type="String" default="null"/>
+    <aura:attribute name="inputvalue" type="decimal" default="null"/>
+    <aura:attribute name="isSaved" type="Boolean" default="false" />
+	<aura:attribute name="MessageNote" type="String"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.isRefreshed}" />
+    
+    <!--tabindex="-1"  -->
+    <aura:if isTrue="{!v.buttonClick}">
+        <lightning:button class="slds-button slds-button_brand" iconPosition="left" type="submit" label="Create MX Product"  onclick="{!c.buttonClickCall}"/>        
+        
+      <aura:set attribute="else">
+         <section style="padding-top: 150px;" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+             <div style="width: 90%;margin: 0 auto;" class="modal-header slds-modal__header slds-size_1-of-1">
+                <h4 class="title slds-text-heading–medium">MX Voucher Product</h4>
+             </div> 
+                <div class="slds-modal__content2 slds-p-around–x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative">
+                    <form class="slds-form–stacked">
+                        <div class=" slds-grid slds-wrap">
+                            
+                            <div class="slds-size_1-of-4">
+                                <div style="overflow: visible" class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                    <lightning:combobox disabled="{!v.isReadOnly}" name="Product" label="Product" value="{!v.selectedProductName}" options="{!v.productOption}" onchange="{!c.productList}"/>
+								</div>
+                            </div>
+                            <div class="slds-size_1-of-4">
+                                <div style="overflow: visible" class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                    <lightning:combobox disabled="{!v.isReadOnly}" name="Location" label="Location" value="{!v.selectLocation}" options="{!v.LocationOption}" onchange="{! c.LocationList }"/>
+								</div>
+                            </div>
+                            <div class="slds-size_1-of-4">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                    <lightning:combobox name="Section Name" label="Section Name" value="{!v.selectSection}" options="{! v.SectionOptions}" disabled="{!v.showSelect}" onchange="{!c.allSectionName}"/>
+
+                                </div>
+                            </div>
+                            <div class="slds-size_1-of-4">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                                    <lightning:combobox disabled="{!v.isReadOnly}" name="Room Size" label="Room Size" value="{!v.selectRoomSize}" options="{! v.roomSizeOptionList}" onchange="{!c.roomSizeOptions}"/>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="overflow-y:scroll; height:260px;" class="slds-grid slds-wrap slds-m-bottom_small transactions-select-form">
+                            
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Select">Select?</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Location">Location</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Section Name">Section Name</div>
+                                        </th>
+                                        <th style="width: 15%;" class="" scope="col">
+                                            <div class="slds-truncate" title="Room Size">Room Size</div>
+                                        </th>
+                                        <th style="width: 15%;" class="" scope="col">
+                                            <div class="slds-truncate" title="Suggested Price">Suggested Price</div>
+                                        </th>
+                                         <th class="" scope="col">
+                                            <div class="slds-truncate" title="Minimum Price">Minimum Price</div>
+                                        </th>
+                                        <th style="width: 15%;" class="" scope="col">
+                                            <div class="slds-truncate"  title="Input Price">Sell Price</div>
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.MXVoucherAvailabilityList}" var="invAv" indexVar="indx"> 
+                                        <tr class="slds-hint-parent">
+                                            <td data-label="Select" class="slds-truncate">
+                                                <div onclick="{!c.selectedMXVoucherAvailability}" class="slds-truncate" data-value="{!invAv.Id}" title="{!invAv.Selected__c}">
+                                                    <ui:inputRadio  name="others" value="{!invAv.Selected__c}"/>
+                                                </div>
+                                                <aura:set attribute="else">
+                                                    <div onclick="{!c.selectedMXVoucherAvailability}" class="slds-truncate" data-value="{!invAv.Id}" title="{!invAv.Selected__c}">
+                                                        <ui:inputRadio  name="others" value="{!invAv.Selected__c}" disabled="true"/>
+                                                    </div>
+                                                </aura:set>
+                                            </td>
+                                            <td data-label="Location" class="slds-truncate">
+                                                <div class="slds-truncate" title="Location">{!invAv.Location__c}</div>
+                                            </td>
+                                            <td data-label="Section Name" class="slds-truncate">
+                                                <div class="slds-truncate" title="Section Name">{!invAv.Section_Name__c}</div>
+                                            </td>
+                                            <td data-label="Room Size" class="slds-truncate">
+                                                <div class="slds-truncate" title="Room Size">{!invAv.Room_Size__c}</div>
+                                            </td>
+                                            <td data-label="Suggested Price" class="slds-truncate">
+                                                <div class="slds-truncate" aura:id="suggestedPriceid" title="Suggested Price"> ${!invAv.Suggested_Price__c}</div>
+                                             </td>
+                                            <td data-label="Minimal Price" class="slds-truncate">
+                                                <div class="slds-truncate" title="Minimal Price"> ${!invAv.Minimal_Price__c}</div>
+                                            </td>
+                                            <td onkeyup="{!c.inputvaluechanged}" data-value="{!invAv.Input_Price__c}" data-label="{!invAv.Minimal_Price__c}" class="slds-truncate" >                                                
+                                                <aura:if isTrue="{!and(v.isSaved,(v.MXvoucherobject==invAv.Id))}">
+												<lightning:input aura:id="inputPrice"  type="number" value="{!invAv.Input_Price__c}" min="{!invAv.Minimal_Price__c}" messageWhenRangeUnderflow="Input Price should be higher than Minimum price" placeholder="{!invAv.Suggested_Price__c}"/>
+                                                </aura:if>
+                                                </td>
+                                            
+                                            
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <footer style="width: 90%;margin: 0 auto;" class="slds-modal__footer">
+                      <span><center style=" font-size: 18px;font-weight: bold;color: #0862b0;">{!v.MessageNote}</center></span>
+
+                    <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.CloseMXVoucherProduct}"/> 
+                    <lightning:button aura:id="inputCmp" class="slds-button slds-button_brand" type="submit" label="Save"  onclick="{!c.CreateOppProduct}"  />
+                    
+                </footer>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:set>
+    </aura:if>
+</aura:component>

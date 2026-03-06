@@ -1,0 +1,6 @@
+<aura:component>
+    <div class="popup">
+        <!-- Popup content goes here -->
+        Popup Content
+    </div>
+</aura:component>

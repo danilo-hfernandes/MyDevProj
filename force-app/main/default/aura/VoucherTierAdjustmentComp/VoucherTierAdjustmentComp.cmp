@@ -1,0 +1,62 @@
+<aura:component controller="VoucherTierAdjustmentCompController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+     <aura:attribute name="opportunityData" type="List"/>
+    <aura:attribute name="opportunityList" type="List"/>
+    <aura:attribute name="isButtonDisabled" type="Boolean" default="true" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.initComponent}"/>
+
+    <lightning:card title="Last Month (MM-YYYY)">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="header-row">
+                    <th>Product Name</th>
+                    <th>Products Sold</th>
+                    <th>Tier Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.opportunityData}" var="item">
+                    <tr class="data-row">
+                        <td>{!item.productName}</td>
+                        <td>{!item.soldCount}</td>
+                        <td>{!item.tierAdjustment}</td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </lightning:card>
+    
+    <lightning:card title="Last Month Opportunities without LuxGive Tier Adjustment Product">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="header-row">
+                    <th>Opportunity ID</th>
+                    <th>Products</th>
+                    <th>Payment Details</th>
+                    <th>Tier Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.opportunityList}" var="opp">
+                    <tr class="data-row">
+                        <td>{!opp.oppId}</td>
+                        <td>
+                            <aura:iteration items="{!opp.productNames}" var="product">
+                                <lightning:formattedText value="{!product}"/><br/>
+                            </aura:iteration>
+                        </td>
+                        <td>
+                            <aura:iteration items="{!opp.payments}" var="payment">
+                                <lightning:formattedText value="{!'Product: ' + payment.productName + ' - Paid On: ' + payment.paidOn}"/><br/>
+                            </aura:iteration>
+                        </td>
+                        <td>{!opp.tierAdjustment}</td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </lightning:card>
+    
+    <lightning:button disabled="{!v.isButtonDisabled}" label="Add Tier Adjustment to All Opportunities" onclick="{!c.handleAddTierAdjustment}" />
+
+</aura:component>

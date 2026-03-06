@@ -1,0 +1,34 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:appHostable,force:lightningQuickAction" controller ="GetDuplicatedAccountListController" access="global" >
+    <aura:attribute name="lstAccount" type="Account[]" />
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="ShowComponent" type="Boolean" default="false"/>
+    <aura:attribute name="ShowComponent2" type="Boolean" default="false"/>
+    <aura:attribute name="record" type="Lead" />    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!--  <lightning:card variant="Narrow" title="Potential Duplicated Accounts" iconName="standard:merge">
+        <aura:if isTrue="{!v.ShowComponent}">
+            <div class="slds">
+                <lightning:datatable data="{! v.lstAccount }" 
+                                     columns="{! v.mycolumns }" 
+                                     keyField="Id"
+                                     hideCheckboxColumn="true"/>
+                
+            </div>
+            <aura:set attribute="else">
+                <div style = "margin-left:5%"> <b>    We found no potential duplicated accounts of this Lead.</b> </div>
+            </aura:set>
+        </aura:if>
+    </lightning:card> -->
+    
+    <aura:if isTrue="{!v.ShowComponent2}">
+        
+        <lightning:card variant="Narrow" title="Lead Source is not associated with any Affiliate" iconName="standard:first_non_empty">            
+                <div class="slds">
+                    <div style = "margin-left:5%"> <b>Please ask an admin to create the Lead Source Settings and associate it with an Affiliate Id before converting the Lead.</b> </div>
+                </div>                
+        </lightning:card>        
+    </aura:if>
+    
+</aura:component>

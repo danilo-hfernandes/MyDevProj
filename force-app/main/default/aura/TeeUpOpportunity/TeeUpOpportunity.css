@@ -1,0 +1,28 @@
+.THIS .userList{
+    width : 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+.THIS .inputdate{
+    width : 80%;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.THIS .buttons{
+    padding-left: 50px;
+}
+.THIS .divClass{
+    margin-top: 25px;
+}
+.THIS .ownerclass{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: -webkit-center;
+}
+/*.THIS .slds-modal__container {
+    margin: 0 auto;
+    width: 47% !important;
+    max-width: 90rem;
+    min-width: 20rem;
+}*/

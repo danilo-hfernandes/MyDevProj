@@ -1,0 +1,1200 @@
+63.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+19:50:51.3 (3037600)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:51.3 (6766535)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (7274248)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (32927287)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (33131733)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (33436792)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (46220745)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (600947941)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (601029920)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (601357947)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (645453210)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (645595294)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (645617921)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (646602474)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (646683839)|ENTERING_MANAGED_PKG|rh2
+19:50:51.3 (646702720)|ENTERING_MANAGED_PKG|rh2
+19:50:51.680 (680305391)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:51.680 (680333019)|ENTERING_MANAGED_PKG|rh2
+19:50:51.680 (680539989)|ENTERING_MANAGED_PKG|rh2
+19:50:51.680 (680819568)|ENTERING_MANAGED_PKG|rh2
+19:50:51.680 (680916118)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1114224760)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:52.114 (1114256779)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1114546816)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1114856162)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1114971710)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1116995073)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1117299830)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1117333668)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1117457923)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139097042)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139165430)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139341301)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139465200)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139490108)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139524695)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139587343)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139617175)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139628309)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1139644290)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1170413778)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1170597202)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1177476767)|SOQL_EXECUTE_BEGIN|[43]|Aggregations:0|SELECT NamespacePrefix FROM Organization LIMIT 1
+19:50:52.114 (1183266208)|SOQL_EXECUTE_END|[43]|Rows:1
+19:50:52.114 (1183673723)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1184139200)|ENTERING_MANAGED_PKG|rh2
+19:50:52.114 (1184950619)|ENTERING_MANAGED_PKG|rh2
+19:50:52.214 (1214955874)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:52.214 (1214986088)|ENTERING_MANAGED_PKG|rh2
+19:50:52.214 (1215243037)|ENTERING_MANAGED_PKG|rh2
+19:50:52.214 (1215689756)|ENTERING_MANAGED_PKG|rh2
+19:50:52.214 (1215779882)|ENTERING_MANAGED_PKG|rh2
+19:50:52.271 (1271754084)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.271 (1271823415)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.271 (1271921489)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+19:50:52.271 (1271948540)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.271 (1271960119)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.271 (1272046040)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4b9537b0
+19:50:52.271 (1272083213)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.271 (1272087577)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.271 (1272093509)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4b9537b0
+19:50:52.271 (1272102712)|STATEMENT_EXECUTE|[1]
+19:50:52.271 (1272104017)|STATEMENT_EXECUTE|[3]
+19:50:52.271 (1272107018)|HEAP_ALLOCATE|[3]|Bytes:27
+19:50:52.271 (1272168421)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.271 (1272419942)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.271 (1272451902)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.271 (1272458667)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.271 (1291314385)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"0","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x62d19817
+19:50:52.271 (1291347488)|STATEMENT_EXECUTE|[6]
+19:50:52.271 (1291349588)|STATEMENT_EXECUTE|[7]
+19:50:52.271 (1291357506)|HEAP_ALLOCATE|[7]|Bytes:30
+19:50:52.271 (1291444931)|HEAP_ALLOCATE|[7]|Bytes:24
+19:50:52.271 (1291465733)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+19:50:52.271 (1291469816)|STATEMENT_EXECUTE|[1]
+19:50:52.271 (1291482994)|SYSTEM_METHOD_EXIT|[1]|JSON
+19:50:52.271 (1291505988)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.271 (1293567967)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.271 (1293593832)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:52.271 (1293617223)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"0","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T006M7LleW6Qyi47-F78-MZkw@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:52.271 (1293650425)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.271 (1293669595)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.293 (1293687921)|CUMULATIVE_LIMIT_USAGE
+19:50:52.293 (1293687921)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.293 (1293687921)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.293 (1293687921)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.271 (1293841355)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.363 (1363397798)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.363 (1363486028)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.363 (1363628209)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.363 (1363646298)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.363 (1363711822)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3f9709e1
+19:50:52.363 (1363746933)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.363 (1363753605)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.363 (1363762121)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3f9709e1
+19:50:52.363 (1363771659)|STATEMENT_EXECUTE|[1]
+19:50:52.363 (1363773445)|STATEMENT_EXECUTE|[3]
+19:50:52.363 (1363799959)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.363 (1363896535)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.363 (1363926423)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.363 (1364283472)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"0","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbZIAV","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x27f2e06d
+19:50:52.363 (1364295502)|STATEMENT_EXECUTE|[6]
+19:50:52.363 (1364296787)|STATEMENT_EXECUTE|[7]
+19:50:52.363 (1364305845)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.363 (1364748521)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.363 (1364759699)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:52.363 (1364767471)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbZIAV"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T006M7LleW6Qyi47-F78-MZkw@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"0","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T006M7LleW6Qyi47-F78-MZkw@sfdc.net>","Id":"02sO100000J8VbZIAV","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:52.363 (1364786708)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.363 (1364795978)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.364 (1364803551)|CUMULATIVE_LIMIT_USAGE
+19:50:52.364 (1364803551)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.364 (1364803551)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.364 (1364803551)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.363 (1364912242)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.214 (1566575517)|ENTERING_MANAGED_PKG|rh2
+19:50:52.594 (1594897387)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.594 (1594975889)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.594 (1595030340)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.594 (1595043813)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.594 (1595102908)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x14cf6d76
+19:50:52.594 (1595139128)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.594 (1595144494)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.594 (1595150014)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x14cf6d76
+19:50:52.594 (1595158078)|STATEMENT_EXECUTE|[1]
+19:50:52.594 (1595159669)|STATEMENT_EXECUTE|[3]
+19:50:52.594 (1595181620)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.594 (1595259044)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.594 (1595277936)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.594 (1595287627)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.594 (1595641981)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"1","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x5f971994
+19:50:52.594 (1595650424)|STATEMENT_EXECUTE|[6]
+19:50:52.594 (1595651558)|STATEMENT_EXECUTE|[7]
+19:50:52.594 (1595661414)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.594 (1595906778)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.594 (1595917413)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:52.594 (1595924110)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"1","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00juMNV_BgQsqn9DarPEsvJA@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:52.594 (1595940715)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.594 (1595949042)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.595 (1595957262)|CUMULATIVE_LIMIT_USAGE
+19:50:52.595 (1595957262)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.595 (1595957262)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 2 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.595 (1595957262)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.594 (1596071061)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.639 (1639907392)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.639 (1639976417)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.639 (1640080542)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.639 (1640091616)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.639 (1640140497)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4e64dbed
+19:50:52.639 (1640167848)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.639 (1640173252)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.639 (1640178475)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4e64dbed
+19:50:52.639 (1640185699)|STATEMENT_EXECUTE|[1]
+19:50:52.639 (1640187087)|STATEMENT_EXECUTE|[3]
+19:50:52.639 (1640206438)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.639 (1640275501)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.639 (1640299809)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.639 (1640617345)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"1","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbaIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x2de62b45
+19:50:52.639 (1640627532)|STATEMENT_EXECUTE|[6]
+19:50:52.639 (1640628613)|STATEMENT_EXECUTE|[7]
+19:50:52.639 (1640637944)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.639 (1640916704)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.639 (1640925905)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:52.639 (1640932615)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbaIAF"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00juMNV_BgQsqn9DarPEsvJA@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"1","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00juMNV_BgQsqn9DarPEsvJA@sfdc.net>","Id":"02sO100000J8VbaIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:52.639 (1640949089)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.639 (1640958489)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.640 (1640965707)|CUMULATIVE_LIMIT_USAGE
+19:50:52.640 (1640965707)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.640 (1640965707)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 2 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.640 (1640965707)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.639 (1641074818)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.214 (1811171611)|ENTERING_MANAGED_PKG|rh2
+19:50:52.841 (1841685066)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.841 (1841769305)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.841 (1841824630)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.841 (1841836514)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.841 (1841891117)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x38791631
+19:50:52.841 (1841925256)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.841 (1841930217)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.841 (1841935673)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x38791631
+19:50:52.841 (1841943282)|STATEMENT_EXECUTE|[1]
+19:50:52.841 (1841944828)|STATEMENT_EXECUTE|[3]
+19:50:52.841 (1841967123)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.841 (1842041316)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.841 (1842062393)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.841 (1842073511)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.841 (1842415337)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"2","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0xd3ac9f8
+19:50:52.841 (1842422902)|STATEMENT_EXECUTE|[6]
+19:50:52.841 (1842424043)|STATEMENT_EXECUTE|[7]
+19:50:52.841 (1842465723)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.841 (1842717695)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.841 (1842729059)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:52.841 (1842735143)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"2","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00ZPFRqkaTSLeJpe7rDrFafg@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:52.841 (1842750215)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.841 (1842758075)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.842 (1842765717)|CUMULATIVE_LIMIT_USAGE
+19:50:52.842 (1842765717)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.842 (1842765717)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 3 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.842 (1842765717)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.841 (1842881248)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.885 (1885301868)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.885 (1885383083)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.885 (1885504216)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.885 (1885516853)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.885 (1885573377)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2ca86a89
+19:50:52.885 (1885605015)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.885 (1885610333)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.885 (1885615409)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2ca86a89
+19:50:52.885 (1885623287)|STATEMENT_EXECUTE|[1]
+19:50:52.885 (1885624794)|STATEMENT_EXECUTE|[3]
+19:50:52.885 (1885647535)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.885 (1885721383)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.885 (1885748043)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.885 (1886068297)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"2","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbbIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x8594976
+19:50:52.885 (1886078333)|STATEMENT_EXECUTE|[6]
+19:50:52.885 (1886079438)|STATEMENT_EXECUTE|[7]
+19:50:52.885 (1886089187)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.885 (1886369891)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.885 (1886380910)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:52.885 (1886387562)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbbIAF"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00ZPFRqkaTSLeJpe7rDrFafg@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"2","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00ZPFRqkaTSLeJpe7rDrFafg@sfdc.net>","Id":"02sO100000J8VbbIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:52.885 (1886404211)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.885 (1886413321)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.886 (1886425068)|CUMULATIVE_LIMIT_USAGE
+19:50:52.886 (1886425068)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.886 (1886425068)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 3 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.886 (1886425068)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.885 (1886570021)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.214 (2070922944)|ENTERING_MANAGED_PKG|rh2
+19:50:53.101 (2101664605)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.101 (2101766452)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.101 (2101835396)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.101 (2101849775)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.101 (2101918910)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7b43970a
+19:50:53.101 (2101959581)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.101 (2101966835)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.101 (2101975519)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7b43970a
+19:50:53.101 (2101985996)|STATEMENT_EXECUTE|[1]
+19:50:53.101 (2101987620)|STATEMENT_EXECUTE|[3]
+19:50:53.101 (2102015275)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.101 (2102115736)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.101 (2102142429)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:53.101 (2102156120)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.101 (2102575400)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"3","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x392879ab
+19:50:53.101 (2102586841)|STATEMENT_EXECUTE|[6]
+19:50:53.101 (2102588131)|STATEMENT_EXECUTE|[7]
+19:50:53.101 (2102601341)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.101 (2102860769)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.101 (2102872750)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:53.101 (2102882016)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"3","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T005mNvOfLRQzumyhGiHveR4A@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:53.101 (2102902080)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.101 (2102913222)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.102 (2102922189)|CUMULATIVE_LIMIT_USAGE
+19:50:53.102 (2102922189)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.102 (2102922189)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 4 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.102 (2102922189)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.101 (2103062189)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.147 (2147465276)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.147 (2147569481)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.147 (2147713032)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.147 (2147728134)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.147 (2147792980)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x29ce30fa
+19:50:53.147 (2147830977)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.147 (2147837649)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.147 (2147846280)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x29ce30fa
+19:50:53.147 (2147856516)|STATEMENT_EXECUTE|[1]
+19:50:53.147 (2147858430)|STATEMENT_EXECUTE|[3]
+19:50:53.147 (2147884575)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.147 (2147973320)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.147 (2148009047)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.147 (2148334323)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"3","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbcIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x6be68eb5
+19:50:53.147 (2148344428)|STATEMENT_EXECUTE|[6]
+19:50:53.147 (2148345553)|STATEMENT_EXECUTE|[7]
+19:50:53.147 (2148356446)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.147 (2148646394)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.147 (2148657097)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:53.147 (2148664051)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbcIAF"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T005mNvOfLRQzumyhGiHveR4A@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"3","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T005mNvOfLRQzumyhGiHveR4A@sfdc.net>","Id":"02sO100000J8VbcIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:53.147 (2148682539)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.147 (2148691390)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.148 (2148698545)|CUMULATIVE_LIMIT_USAGE
+19:50:53.148 (2148698545)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 156 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.148 (2148698545)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 4 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.148 (2148698545)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.147 (2148818900)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.323 (2323235251)|ENTERING_MANAGED_PKG|rh2
+19:50:53.354 (2354698276)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.354 (2354778544)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.354 (2354841190)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.354 (2354855062)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.354 (2354917537)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x37d5dc6c
+19:50:53.354 (2354950291)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.354 (2354956079)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.354 (2354964310)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x37d5dc6c
+19:50:53.354 (2354974279)|STATEMENT_EXECUTE|[1]
+19:50:53.354 (2354976328)|STATEMENT_EXECUTE|[3]
+19:50:53.354 (2354998563)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.354 (2355064939)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.354 (2355087020)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:53.354 (2355096973)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.354 (2355575101)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"4","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x1e7ee30e
+19:50:53.354 (2355595184)|STATEMENT_EXECUTE|[6]
+19:50:53.354 (2355596916)|STATEMENT_EXECUTE|[7]
+19:50:53.354 (2355613615)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.354 (2356014382)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.354 (2356030466)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:53.354 (2356045239)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"4","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T007hXAhTv4QfqwnWsm2w9QmA@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:53.354 (2356075839)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.354 (2356092349)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.356 (2356103660)|CUMULATIVE_LIMIT_USAGE
+19:50:53.356 (2356103660)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 156 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.356 (2356103660)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 5 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.356 (2356103660)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.354 (2356257377)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.398 (2398173495)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.398 (2398253649)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.398 (2398362028)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.398 (2398374338)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.398 (2398459917)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x19775455
+19:50:53.398 (2398500703)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.398 (2398507678)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.398 (2398517141)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x19775455
+19:50:53.398 (2398527575)|STATEMENT_EXECUTE|[1]
+19:50:53.398 (2398529716)|STATEMENT_EXECUTE|[3]
+19:50:53.398 (2398553950)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.398 (2398633691)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.398 (2398661097)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.398 (2398984791)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:54.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:54.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:54.000Z","TextBody":"4","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:54.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbdIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x1957f93e
+19:50:53.398 (2398996018)|STATEMENT_EXECUTE|[6]
+19:50:53.398 (2398997152)|STATEMENT_EXECUTE|[7]
+19:50:53.398 (2399007724)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.398 (2399300450)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.398 (2399311475)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:53.398 (2399317693)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbdIAF"},"LastModifiedDate":"2026-03-06T00:50:54.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T007hXAhTv4QfqwnWsm2w9QmA@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:54.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:54.000+0000","TextBody":"4","CreatedDate":"2026-03-06T00:50:54.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T007hXAhTv4QfqwnWsm2w9QmA@sfdc.net>","Id":"02sO100000J8VbdIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:53.398 (2399335320)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.398 (2399344695)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.399 (2399352867)|CUMULATIVE_LIMIT_USAGE
+19:50:53.399 (2399352867)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 156 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.399 (2399352867)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 5 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.399 (2399352867)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.398 (2399471904)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.323 (2591130557)|ENTERING_MANAGED_PKG|rh2
+19:50:53.621 (2621990950)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.621 (2622073952)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.621 (2622129418)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.621 (2622141132)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.621 (2622190812)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3e3aec8a
+19:50:53.621 (2622221035)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.621 (2622225700)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.621 (2622232385)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3e3aec8a
+19:50:53.621 (2622241265)|STATEMENT_EXECUTE|[1]
+19:50:53.621 (2622242887)|STATEMENT_EXECUTE|[3]
+19:50:53.621 (2622270851)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.621 (2622354256)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.621 (2622375115)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:53.621 (2622384297)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.621 (2622780689)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"5","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x631d34
+19:50:53.621 (2622790207)|STATEMENT_EXECUTE|[6]
+19:50:53.621 (2622791272)|STATEMENT_EXECUTE|[7]
+19:50:53.621 (2622803236)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.621 (2623054871)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.621 (2623066521)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:53.621 (2623079289)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"5","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T008Tkb__DHSDqWDbNavpzs_A@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:53.621 (2623094898)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.621 (2623105579)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.623 (2623113685)|CUMULATIVE_LIMIT_USAGE
+19:50:53.623 (2623113685)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 156 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.623 (2623113685)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 6 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.623 (2623113685)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.621 (2623236965)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.668 (2668758516)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.668 (2668836221)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.668 (2668947485)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.668 (2668960253)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.668 (2669012877)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4c5685b2
+19:50:53.668 (2669044683)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.668 (2669049124)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.668 (2669054378)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4c5685b2
+19:50:53.668 (2669062129)|STATEMENT_EXECUTE|[1]
+19:50:53.668 (2669063185)|STATEMENT_EXECUTE|[3]
+19:50:53.668 (2669084789)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.668 (2669156199)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.668 (2669181484)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.668 (2669507560)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:54.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:54.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:54.000Z","TextBody":"5","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:54.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbeIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x1401d1d
+19:50:53.668 (2669517550)|STATEMENT_EXECUTE|[6]
+19:50:53.668 (2669518608)|STATEMENT_EXECUTE|[7]
+19:50:53.668 (2669528706)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.668 (2669822556)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.668 (2669833032)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:53.668 (2669839331)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbeIAF"},"LastModifiedDate":"2026-03-06T00:50:54.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T008Tkb__DHSDqWDbNavpzs_A@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:54.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:54.000+0000","TextBody":"5","CreatedDate":"2026-03-06T00:50:54.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T008Tkb__DHSDqWDbNavpzs_A@sfdc.net>","Id":"02sO100000J8VbeIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:53.668 (2669870004)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.668 (2669878703)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.669 (2669886337)|CUMULATIVE_LIMIT_USAGE
+19:50:53.669 (2669886337)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 236 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.669 (2669886337)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 6 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.669 (2669886337)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.668 (2669999805)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.323 (2857663996)|ENTERING_MANAGED_PKG|rh2
+19:50:53.890 (2890411809)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.890 (2890559620)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.890 (2890642294)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.890 (2890657308)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.890 (2890724999)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x587ebb0b
+19:50:53.890 (2890773537)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.890 (2890780993)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.890 (2890791627)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x587ebb0b
+19:50:53.890 (2890802738)|STATEMENT_EXECUTE|[1]
+19:50:53.890 (2890804760)|STATEMENT_EXECUTE|[3]
+19:50:53.890 (2890832079)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.890 (2890927649)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.890 (2890953633)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:53.890 (2890991888)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.890 (2891543913)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"6","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x746c754b
+19:50:53.890 (2891567641)|STATEMENT_EXECUTE|[6]
+19:50:53.890 (2891569736)|STATEMENT_EXECUTE|[7]
+19:50:53.890 (2891585909)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.890 (2892042943)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.890 (2892064757)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:53.890 (2892078884)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"6","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00PqIHWN-6QSeCwCzSjew4xw@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:53.890 (2892134408)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.890 (2892152772)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.892 (2892163775)|CUMULATIVE_LIMIT_USAGE
+19:50:53.892 (2892163775)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 236 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.892 (2892163775)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 7 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.892 (2892163775)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.890 (2892311945)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.936 (2936832632)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.936 (2936912598)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:53.936 (2937016265)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.936 (2937028831)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.936 (2937085604)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x18fa07ae
+19:50:53.936 (2937116383)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:53.936 (2937121157)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:53.936 (2937126252)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x18fa07ae
+19:50:53.936 (2937133991)|STATEMENT_EXECUTE|[1]
+19:50:53.936 (2937135372)|STATEMENT_EXECUTE|[3]
+19:50:53.936 (2937160165)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:53.936 (2937234993)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.936 (2937260761)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:53.936 (2937575814)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:54.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:54.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:54.000Z","TextBody":"6","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:54.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbfIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x5766b68d
+19:50:53.936 (2937586244)|STATEMENT_EXECUTE|[6]
+19:50:53.936 (2937587354)|STATEMENT_EXECUTE|[7]
+19:50:53.936 (2937597502)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:53.936 (2937885360)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:53.936 (2937898389)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:53.936 (2937906246)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbfIAF"},"LastModifiedDate":"2026-03-06T00:50:54.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00PqIHWN-6QSeCwCzSjew4xw@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:54.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:54.000+0000","TextBody":"6","CreatedDate":"2026-03-06T00:50:54.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00PqIHWN-6QSeCwCzSjew4xw@sfdc.net>","Id":"02sO100000J8VbfIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:53.936 (2937930520)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:53.936 (2937941672)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:53.937 (2937950152)|CUMULATIVE_LIMIT_USAGE
+19:50:53.937 (2937950152)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 236 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.937 (2937950152)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 7 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:53.937 (2937950152)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:53.936 (2938061057)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:53.323 (3114408566)|ENTERING_MANAGED_PKG|rh2
+19:50:54.144 (3144445494)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.144 (3144523910)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:54.144 (3144569065)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.144 (3144580837)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.144 (3144633514)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6d8b2cd8
+19:50:54.144 (3144667837)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.144 (3144672671)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.144 (3144677804)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6d8b2cd8
+19:50:54.144 (3144685807)|STATEMENT_EXECUTE|[1]
+19:50:54.144 (3144687407)|STATEMENT_EXECUTE|[3]
+19:50:54.144 (3144709307)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:54.144 (3144782981)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.144 (3144804269)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:54.144 (3144815007)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:54.144 (3145193423)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"7","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x63977863
+19:50:54.144 (3145202751)|STATEMENT_EXECUTE|[6]
+19:50:54.144 (3145203926)|STATEMENT_EXECUTE|[7]
+19:50:54.144 (3145213643)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:54.144 (3145464337)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:54.144 (3145475709)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:54.144 (3145482311)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"7","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00zsHGD6QXTwCT9bK6eDJ9Yw@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:54.144 (3145497272)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.144 (3145505461)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:54.145 (3145513006)|CUMULATIVE_LIMIT_USAGE
+19:50:54.145 (3145513006)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 236 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.145 (3145513006)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 8 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.145 (3145513006)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:54.144 (3145630843)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.189 (3189436121)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.189 (3189523388)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:54.189 (3189643362)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.189 (3189656763)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.189 (3189718711)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5ba9ed72
+19:50:54.189 (3189753197)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.189 (3189759104)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.189 (3189764512)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5ba9ed72
+19:50:54.189 (3189772722)|STATEMENT_EXECUTE|[1]
+19:50:54.189 (3189773787)|STATEMENT_EXECUTE|[3]
+19:50:54.189 (3189797660)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:54.189 (3189877175)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.189 (3189904322)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:54.189 (3190254241)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:55.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:55.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:55.000Z","TextBody":"7","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:55.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbgIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x44b46220
+19:50:54.189 (3190265853)|STATEMENT_EXECUTE|[6]
+19:50:54.189 (3190266986)|STATEMENT_EXECUTE|[7]
+19:50:54.189 (3190278564)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:54.189 (3190615754)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:54.189 (3190627066)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:54.189 (3190635247)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbgIAF"},"LastModifiedDate":"2026-03-06T00:50:55.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00zsHGD6QXTwCT9bK6eDJ9Yw@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:55.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:55.000+0000","TextBody":"7","CreatedDate":"2026-03-06T00:50:55.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00zsHGD6QXTwCT9bK6eDJ9Yw@sfdc.net>","Id":"02sO100000J8VbgIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:54.189 (3190657299)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.189 (3190667221)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:54.190 (3190676000)|CUMULATIVE_LIMIT_USAGE
+19:50:54.190 (3190676000)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 236 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.190 (3190676000)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 8 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.190 (3190676000)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:54.189 (3190816361)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.377 (3377194607)|ENTERING_MANAGED_PKG|rh2
+19:50:54.408 (3408930260)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.408 (3409015806)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:54.408 (3409060384)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.408 (3409071767)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.408 (3409132235)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6620ce6c
+19:50:54.408 (3409166642)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.408 (3409171729)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.408 (3409177321)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6620ce6c
+19:50:54.408 (3409184961)|STATEMENT_EXECUTE|[1]
+19:50:54.408 (3409186429)|STATEMENT_EXECUTE|[3]
+19:50:54.408 (3409207144)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:54.408 (3409307844)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.408 (3409330526)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:54.408 (3409340756)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:54.408 (3409702399)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"8","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0xf74b229
+19:50:54.408 (3409710691)|STATEMENT_EXECUTE|[6]
+19:50:54.408 (3409711836)|STATEMENT_EXECUTE|[7]
+19:50:54.408 (3409723338)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:54.408 (3409965630)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:54.408 (3409976652)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:54.408 (3409983249)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"8","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00EX6Ps_frQoShtT5CdaOHzw@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:54.408 (3409999936)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.408 (3410009191)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:54.410 (3410024142)|CUMULATIVE_LIMIT_USAGE
+19:50:54.410 (3410024142)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 348 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.410 (3410024142)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 9 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.410 (3410024142)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:54.408 (3410145677)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.456 (3456267308)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.456 (3456355637)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:54.456 (3456484839)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.456 (3456498931)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.456 (3456563030)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3ddd1695
+19:50:54.456 (3456593985)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.456 (3456599050)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.456 (3456603969)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3ddd1695
+19:50:54.456 (3456612880)|STATEMENT_EXECUTE|[1]
+19:50:54.456 (3456614019)|STATEMENT_EXECUTE|[3]
+19:50:54.456 (3456638535)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:54.456 (3456714670)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.456 (3456742273)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:54.456 (3457067693)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:55.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:55.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:55.000Z","TextBody":"8","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:55.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbhIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x25909c0d
+19:50:54.456 (3457078400)|STATEMENT_EXECUTE|[6]
+19:50:54.456 (3457079600)|STATEMENT_EXECUTE|[7]
+19:50:54.456 (3457090775)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:54.456 (3457408961)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:54.456 (3457418592)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:54.456 (3457424997)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbhIAF"},"LastModifiedDate":"2026-03-06T00:50:55.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00EX6Ps_frQoShtT5CdaOHzw@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:55.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:55.000+0000","TextBody":"8","CreatedDate":"2026-03-06T00:50:55.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00EX6Ps_frQoShtT5CdaOHzw@sfdc.net>","Id":"02sO100000J8VbhIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:54.456 (3457445567)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.456 (3457455941)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:54.457 (3457463490)|CUMULATIVE_LIMIT_USAGE
+19:50:54.457 (3457463490)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 348 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.457 (3457463490)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 9 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.457 (3457463490)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:54.456 (3457580065)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.377 (3656330779)|ENTERING_MANAGED_PKG|rh2
+19:50:54.687 (3687679484)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.687 (3687757595)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:54.687 (3687803833)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.687 (3687815781)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.687 (3687875076)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x36a22803
+19:50:54.687 (3687909451)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.687 (3687914457)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.687 (3687919627)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x36a22803
+19:50:54.687 (3687927356)|STATEMENT_EXECUTE|[1]
+19:50:54.687 (3687928821)|STATEMENT_EXECUTE|[3]
+19:50:54.687 (3687950757)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:54.687 (3688026888)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.687 (3688048338)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:54.687 (3688058736)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:54.687 (3688414810)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","TextBody":"9","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","ToAddress":"developers@passagete (6 more) ..."}|0x1b528b36
+19:50:54.687 (3688422725)|STATEMENT_EXECUTE|[6]
+19:50:54.687 (3688423969)|STATEMENT_EXECUTE|[7]
+19:50:54.687 (3688435201)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:54.687 (3688686972)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:54.687 (3688698680)|HEAP_ALLOCATE|[7]|Bytes:620
+19:50:54.687 (3688704441)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification: Holiday systems international","TextBody":"9","FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00ubgWJTEXRxS1xqfZnnka0g@sfdc.net>","ToAddress":"developers@passagetech.com"}
+19:50:54.687 (3688719750)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.687 (3688727647)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:54.688 (3688734800)|CUMULATIVE_LIMIT_USAGE
+19:50:54.688 (3688734800)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 348 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.688 (3688734800)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 10 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.688 (3688734800)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:54.687 (3688851117)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.733 (3733200812)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.733 (3733277521)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:54.733 (3733389010)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.733 (3733401396)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.733 (3733456301)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x62d5cd2a
+19:50:54.733 (3733486399)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:54.733 (3733491083)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:54.733 (3733496318)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x62d5cd2a
+19:50:54.733 (3733504247)|STATEMENT_EXECUTE|[1]
+19:50:54.733 (3733506245)|STATEMENT_EXECUTE|[3]
+19:50:54.733 (3733531280)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:54.733 (3733604343)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.733 (3733630394)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:54.733 (3733964694)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:55.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:55.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HRNDa00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Package Notification (31 more) ...","SystemModstamp":"2026-03-06T00:50:55.000Z","TextBody":"9","FromName":"Passage Technology S (6 more) ...","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:55.000Z","MessageIdentifier":"<HRNDa00000000000000 (71 more) ...","Id":"02sO100000J8VbiIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagete (6 more) ..."}|0x338a17aa
+19:50:54.733 (3733974910)|STATEMENT_EXECUTE|[6]
+19:50:54.733 (3733975951)|STATEMENT_EXECUTE|[7]
+19:50:54.733 (3733985509)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:54.733 (3734273715)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:54.733 (3734285495)|HEAP_ALLOCATE|[7]|Bytes:1092
+19:50:54.733 (3734292230)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VbiIAF"},"LastModifiedDate":"2026-03-06T00:50:55.000+0000","IsTracked":false,"ThreadIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00ubgWJTEXRxS1xqfZnnka0g@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Passage Technology Support","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:55.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Package Notification: Holiday systems international","SystemModstamp":"2026-03-06T00:50:55.000+0000","TextBody":"9","CreatedDate":"2026-03-06T00:50:55.000+0000","MessageIdentifier":"<HRNDa000000000000000000000000000000000000000000000TBGD0T00ubgWJTEXRxS1xqfZnnka0g@sfdc.net>","Id":"02sO100000J8VbiIAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"developers@passagetech.com"}
+19:50:54.733 (3734309832)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:54.733 (3734318253)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:54.734 (3734325795)|CUMULATIVE_LIMIT_USAGE
+19:50:54.734 (3734325795)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 348 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.734 (3734325795)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 10 out of 10 ******* CLOSE TO LIMIT
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:54.734 (3734325795)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:54.733 (3734481748)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:54.377 (3916558886)|ENTERING_MANAGED_PKG|rh2

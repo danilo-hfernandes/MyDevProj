@@ -1,0 +1,129 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+    <aura:attribute name="isEdit" type="boolean" default="false"/>
+    
+    <div class="slds-card__header slds-grid" style="width:100%">
+        <lightning:card title="Traveler Info" class="slds-text-heading_small slds-card_boundary customWidth">
+            <aura:if isTrue="{!v.isEdit}">
+                <lightning:recordEditForm aura:id="myform" 
+                                          recordId="{!v.recordId}" 
+                                          objectApiName="Opportunity" 
+                                          onsubmit="{!c.onRecordSubmit}"
+                                          onsuccess="{!c.handleOnSuccess}"
+                                          onerror="{!c.handleOnError}">
+                    
+                    
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerName" fieldName="Traveler_Name__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerPhone" fieldName="Traveler_Phone__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerEmail" fieldName="Traveler_Email__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerPhone2" fieldName="Traveler_Phone_2__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerCountry" fieldName="Traveler_Country__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerAddress" fieldName="Traveler_Address__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerCity" fieldName="Traveler_City__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerState" fieldName="Traveler_State__c" />
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <span>
+                                <lightning:inputField aura:id="TravelerZip" fieldName="Traveler_Zip__c" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="slds-form-element buttons slds-text-align_center" style="padding-top: 8px;">
+                        <lightning:button variant="brand" label="Save" type="submit" />
+                    </div>
+                    
+                </lightning:recordEditForm>
+            </aura:if>
+            
+            <aura:if isTrue="{!!v.isEdit}">
+                
+                <div class="slds-p-bottom_large slds-p-left_large" style="width:100%">
+                    <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Opportunity">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Name__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Phone__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Email__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Phone_2__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Country__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Address__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_City__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_State__c" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <span>
+                                    <lightning:outputField fieldName="Traveler_Zip__c" />
+                                </span>
+                            </div>
+                        </div>
+                    </lightning:recordViewForm>
+                </div>
+                <div class="slds-form-element buttons slds-text-align_center" style="padding-top: 8px;">
+                    <lightning:button variant="brand" label="Edit" title="Edit" onclick="{! c.handleEdit }" />
+                </div>
+            </aura:if>
+        </lightning:card>
+    </div>
+    
+</aura:component>

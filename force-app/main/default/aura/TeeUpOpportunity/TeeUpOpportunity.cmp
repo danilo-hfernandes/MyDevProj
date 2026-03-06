@@ -1,0 +1,60 @@
+<aura:component controller="TeeUpOpportunityController" 
+                implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global">
+    
+    <aura:attribute name="opp" type="Opportunity" default="{sobjectType:'Opportunity'}"/>
+    <aura:attribute name="hideField" type="Boolean" />
+    <aura:attribute name="Opportunity" type="String" default="Opportunity"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="selectedUser" type="String" />
+    <aura:attribute name="OldOpportunityOwner" type="String" />
+    <aura:attribute name="NewOpportunityOwner" type="String" />
+    <aura:attribute name="appointmentDate" type="Date"/> 
+    <aura:attribute name="userOption" type="user[]" />
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+    <aura:attribute name="showAppointmentDate" type="Boolean" default="false"/>    
+    <aura:attribute name="oldOpp" type="String" />
+    <aura:attribute name="CurrentUser" type="Object"/>
+    <force:recordData recordId="{!$SObjectType.CurrentUser.Id}" fields="Profile.Name" targetFields="{!v.CurrentUser}" recordUpdated="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:html tag="style">
+        .slds-modal__container {
+        margin: 0 auto;
+        width: 47% !important;
+        max-width: 90rem;
+        min-width: 20rem;
+        }
+    </aura:html>
+    <div class ="divClass">
+        <p class="ownerclass">Old Opportunity Owner :  <lightning:formattedText value="{!v.OldOpportunityOwner}" /></p>
+        <p class="ownerclass">New Opportunity Owner :  <lightning:formattedText value="{!v.NewOpportunityOwner}" /></p>
+        <lightning:select name="Users" 
+                          class="slds-combobox_container slds-size_small userList"  
+                          label="Closing Agent" 
+                          aura:id="con" value="{!v.selectedUser}" onchange="{!c.changeAction}" >
+            <option value="">Choose one...</option>
+            {!v.userOption}
+            <aura:iteration items="{!v.userOption}" var="opt">
+                {!opt.Name}
+                <option value="{!opt.Id}">{!opt.Name}</option>
+            </aura:iteration>
+        </lightning:select>
+        
+        <aura:if isTrue="{!v.showAppointmentDate}">
+        	<lightning:input class="inputdate" type="date" name="input1" label="Appointment Date" value="{!v.appointmentDate}"></lightning:input>
+        </aura:if>
+    </div>
+    <br/>
+    <aura:if isTrue="{!v.flag}">
+            <p style="color: red;text-align: center;padding-bottom: 10px;">Tee Up can't be performed as Opportunity Assignment fields are already populated </p>
+  		</aura:if> 
+    <div class="slds-align_absolute-center buttons">
+        <lightning:button class="slds-button_brand" variant="Submit" label="Submit" title="Base action" onclick="{!c.saveOpportunity}" disabled="{!v.flag}"/>
+        <lightning:button class="slds-button slds-button_destructive slds-button_neutral" variant="Neutral" 
+                          label="Cancel" 
+                          title="Cancel" 
+                          onclick="{!c.cancelOpportunity}"/>
+    </div>
+    
+</aura:component>

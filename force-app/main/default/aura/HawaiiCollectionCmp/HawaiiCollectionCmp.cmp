@@ -1,0 +1,78 @@
+<aura:component controller="HawaiiCollectionCtrl" implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,lightning:availableForFlowScreens" 
+                access="global">
+    
+    
+    <aura:attribute name="productList" type="list"/> 
+    <aura:attribute name="addProductView" type="boolean" default="false" />
+    <aura:attribute name="selectedProduct" type="String" default="null"/>
+    <aura:attribute name="isLoaded" type="Boolean" description="used to show loader" default="true"/>
+    <ltng:require styles="{!$Resource.ModelCSS}"/>
+    <aura:if isTrue="{!!v.isLoaded}">
+        <c:Loader/>
+    </aura:if>
+    
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:handler name="init" value="{!this}" action="{!c.addProductToTimeshare}"/>
+    
+    <div>
+        <aura:if isTrue="{!!v.isLoaded}">
+            <c:Loader/>
+        </aura:if>
+        <header class="slds-modal__header">
+            
+            <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Select Product</h2>
+        </header>
+        <div  class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <div  style="background-color:white;">
+                
+                <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+                    <tr  class="slds-text-title_caps">
+                        <th style="padding :8px;" scope="col" width="2%">
+                            <div width="10%" class="slds-truncate" title="Name">#</div>
+                        </th>
+                        <th scope="col" width="14%">
+                            <div  class="slds-truncate" title="Mortgage">Name</div>
+                        </th>
+                        <th scope="col" width="14%">
+                            <div  class="slds-truncate" title="Mortgage">Product Description</div>
+                        </th>
+                        <th scope="col" width="10%">
+                            <div  class="slds-truncate" title="Mortgage">Retail Price</div>
+                            
+                        </th>
+                    </tr>
+                    <aura:iteration items="{!v.productList}" var="prodObj">
+                        <tr >
+                            <th scope="row" >
+                                <div onclick="{!c.seletedProduct}" class="slds-truncate" data-value="{!prodObj.prd.Id}" title="{!prodObj.selected}">
+                                    <ui:inputRadio  name="others" value="{!prodObj.selected}"/>
+                                </div>
+                            </th>                   
+                            <th scope="row" >
+                                <div class="slds-truncate" title="{!prodObj.prd.Name}">
+                                    <a target="_blank" href="{!'/'+prodObj.prd.Id}">{!prodObj.prd.Name}</a>  
+                                </div>
+                            </th> 
+                            <th scope="row" >
+                                <div class="slds-truncate" title="{!prodObj.prd.Description}">
+                                    <a target="_blank" href="{!'/'+prodObj.prd.Description}">{!prodObj.prd.Description}</a>  
+                                </div>
+                            </th> 
+                            
+                            <th scope="row" >
+                                <div style="margin-bottom: 10px;" class="slds-truncate" title="RETAIL PRICE" >
+                                    <lightning:input style="width:80%" type="number" formatter="currency" value="{!prodObj.unitprice}"/>
+                                </div>
+                            </th>
+                            
+                        </tr>
+                    </aura:iteration>
+                </table>
+                <footer class="slds-modal__footer">
+                    <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.hideproductView}" />
+                    <lightning:button class="slds-button slds-button_brand" type="submit" label="Save"  onclick="{!c.saveproductLine}"/>
+                </footer>
+            </div>
+        </div>
+    </div>    
+</aura:component>

@@ -1,0 +1,89 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2020-12-23T16:23:11.000Z",
+      "fileName": "connectedApps/SMTNAuthApp.connectedApp",
+      "fullName": "SMTNAuthApp",
+      "id": "09H3t0000009SafEAE",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2020-12-23T16:23:11.000Z",
+      "type": "ConnectedApp"
+    },
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2022-08-02T15:34:24.000Z",
+      "fileName": "connectedApps/SalesforceToNetIntegration.connectedApp",
+      "fullName": "SalesforceToNetIntegration",
+      "id": "09H4z000000k9rdEAA",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2022-08-02T15:34:24.000Z",
+      "type": "ConnectedApp"
+    },
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2023-11-14T19:19:35.000Z",
+      "fileName": "connectedApps/Monster_API.connectedApp",
+      "fullName": "Monster_API",
+      "id": "09H4z000000bmzEEAQ",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2023-11-14T19:19:35.000Z",
+      "type": "ConnectedApp"
+    },
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2024-12-19T18:22:24.000Z",
+      "fileName": "connectedApps/Inspira_Resort_Weeks_dev.connectedApp",
+      "fullName": "Inspira_Resort_Weeks_dev",
+      "id": "09HO1000000TYpVMAW",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2024-12-19T18:22:24.000Z",
+      "type": "ConnectedApp"
+    },
+    {
+      "createdById": "0053t000006rZcSAAU",
+      "createdByName": "Salesforce",
+      "createdDate": "2021-11-11T21:47:03.000Z",
+      "fileName": "connectedApps/oberholtzerMediaWebServices.connectedApp",
+      "fullName": "oberholtzerMediaWebServices",
+      "id": "09H3t000000kvA6EAI",
+      "lastModifiedById": "0053t000006rZcSAAU",
+      "lastModifiedByName": "Salesforce",
+      "lastModifiedDate": "2021-11-11T21:47:03.000Z",
+      "type": "ConnectedApp"
+    },
+    {
+      "createdById": "0053t000006rP8lAAE",
+      "createdByName": "Dev Account",
+      "createdDate": "2025-01-25T21:30:27.000Z",
+      "fileName": "connectedApps/TripPilot_Integration.connectedApp",
+      "fullName": "TripPilot_Integration",
+      "id": "09HO1000000V92DMAS",
+      "lastModifiedById": "0053t000006rP8lAAE",
+      "lastModifiedByName": "Dev Account",
+      "lastModifiedDate": "2025-01-25T21:47:31.000Z",
+      "type": "ConnectedApp"
+    },
+    {
+      "createdById": "0053t000006y5LkAAI",
+      "createdByName": "Platform Integration User",
+      "createdDate": "2020-07-15T15:33:17.000Z",
+      "fileName": "connectedApps/CPQIntegrationUserApp.connectedApp",
+      "fullName": "CPQIntegrationUserApp",
+      "id": "09H3t0000008aSXEAY",
+      "lastModifiedById": "0053t000006y5LkAAI",
+      "lastModifiedByName": "Platform Integration User",
+      "lastModifiedDate": "2020-07-15T15:33:17.000Z",
+      "type": "ConnectedApp"
+    }
+  ]
+}

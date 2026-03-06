@@ -1,0 +1,609 @@
+<aura:component controller="TimeshareDetailsWithProduct" 
+                implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" 
+                access="global">
+    <!-- call doInit method on component load -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- aura attributes for data/values --> 
+    <aura:attribute name="listOfAllTimeshare" type="list"/> 
+    <aura:attribute name="productList" type="list"/> 
+    
+    <aura:attribute name="productListMTRC" type="list"/> 
+    
+    <aura:attribute name="bNoRecordsFound" type="boolean"/>
+    <aura:attribute name="Timeshare__c" type="Object"/>   
+    <aura:attribute name="addExistingTimeshare" type="Timeshare__c"/>   
+    <aura:attribute name="selectedTimeshare" type="string" />
+    <aura:attribute name="timeshareObjectEdit" type="Timeshare__c" />
+    <aura:attribute name="timeshareId" type="string" />
+    <aura:attribute name="timeshareName" type="string" />
+    <aura:attribute name="timeshareNumber" type="string" />
+    <aura:attribute name="TimeshareRecord10" type="boolean" />
+    <aura:attribute name="accountId" type="String" />
+    <aura:attribute name="selectedProduct" type="String" default="null"/>
+    <aura:attribute name="selectedProductForDropDown" type="String" default="null"/>
+    <!-- <aura:attribute name="productMFMultiplier" type="Integer"/> -->
+    <aura:attribute name="newTimeshareOpen" type="boolean" default="false" />
+    <aura:attribute name="addProductView" type="boolean" default="false" />
+    
+    <aura:attribute name="MTRCProductPopupId" type="boolean" default="false" />
+    <aura:attribute name="isMTRCProductExist" type="boolean" default="false" />
+   
+    
+    
+    <aura:attribute name="fields" type="String[]" default="['Name', 'Resort__c','Points_Anniversary_Effective_Date__c','Annual_Allocation__c','Ownership__c','Fees_Billing_Period__c','Bathrooms__c','Renewal_Month__c']"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:attribute name="isLoaded" type="Boolean" description="used to show loader" default="true"/>
+    
+    
+    
+    <aura:if isTrue="{!!v.isLoaded}">
+        <c:Loader/>
+    </aura:if>
+    
+    <div class="slds-section slds-is-open" aura:id="fruitsSection">
+        <!--section header-->
+        <h3 class="slds-section__title">
+            <button aria-controls="fruitsList" class="slds-button slds-section__title-action">
+                <span onclick="{!c.toggleSection}" data-auraId="fruitsSection">
+                    <lightning:icon iconName="utility:switch"
+                                    size="x-small"
+                                    class="slds-section__title-action-icon slds-button__icon_left"
+                                    alternativeText="button icon" 
+                                    />
+                </span>
+                <span class="slds-truncate" title="Fruits">Timeshare Information</span>
+            </button>
+        </h3>
+        <div class="slds-section__content" id="fruitsList">
+           <!-- comment
+              <aura:if isTrue="{!!v.isMTRCProductExist}"> 
+            	<lightning:button   class="slds-button_brand slds-float-left buttonPadding" iconPosition="left"  label="Membership Upgrade " onclick="{!c.showMTRC}" />
+		</aura:if>  
+             -->
+            <lightning:button   class="slds-button_brand slds-float--right buttonPadding" iconPosition="right"  label="Create New Timeshare" onclick="{!c.show}" />
+             		<!-- data table start--> 
+                    
+                    <div style="padding-top :50px; padding-bottom:50px;">
+                        <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+                            <thead >
+                                <tr class="slds-text-title_caps" >
+                                    <!-- <th style="padding :8px;" scope="col" width="10%">
+                                <div width="10%" class="slds-truncate" title="Name">#</div>
+                            </th> -->
+                                    <th style="padding:10px;" scope="col" width="30%">
+                                        <div class="slds-truncate" title="Name">Name</div>
+                                    </th>
+                                    <th scope="col" width="15%">
+                                        <div class="slds-truncate" title="PreferredCompany">Preferred Company</div>
+                                    </th>
+                                    <th scope="col" width="10%">
+                                        <div class="slds-truncate" title="Mortgage">Mortgage</div>
+                                    </th>
+                                    <th scope="col" width="23%">
+                                        <div class="slds-truncate" title="Mortgage">Add Product</div>
+                                    </th>
+                                    <!-- <th scope="col" width="23%">
+                                        <div class="slds-truncate" title="MF Multiplier">Multiplier</div>
+                                    </th> -->
+                                    <th scope="col" width="11%">
+                                        <div  class="slds-truncate" title="Mortgage">Edit</div>
+                                    </th>
+                                    <th scope="col" width="11%">
+                                        <div  class="slds-truncate" title="Mortgage">Delete</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.listOfAllTimeshare}" var="obj">
+                                    <aura:if isTrue="{!!obj.isAddExisting}">
+                                        <aura:if isTrue="{!(!obj.isMTRCProductExist)}">
+                                        <tr width="80%">
+                                            <!-- <th scope="row" >
+                                        <div class="slds-truncate" title="{!obj.timeshareNumber}">
+                                            {!obj.timeshareNumber}
+                                        </div>
+                                    </th>  -->
+                                            <th scope="row" >
+                                                <div class="slds-truncate" title="{!obj.timeshareName}">
+                                                    <a target="_blank" href="{!'/'+obj.timeshareId}">{!obj.timeshareName}</a>  
+                                                </div>
+                                            </th> 
+                                            <th scope="row" >
+                                                <div class="slds-truncate" title="{!obj.PreferredCompany}">
+                                                    {!obj.PreferredCompany}
+                                                </div>
+                                            </th> 
+                                            <th scope="row" >
+                                                <div class="slds-truncate" title="{!obj.Mortgage}">
+                                                    {!obj.Mortgage}
+                                                </div>
+                                            </th> 
+                                            <th scope="row" >
+                                                 <div class="slds-truncate" >
+                                                    <aura:if isTrue="{!obj.productaddedId != null}">
+                                                        <div class="slds-truncate" title="{!obj.productaddedId}">
+                                                            <a target="_blank" href="{!'/'+obj.productaddedId}">{!obj.productaddedName}</a>   
+                                                        </div>
+                                                    </aura:if>
+                                                    <aura:if isTrue="{!obj.productaddedId == null}">
+                                                        <div onclick="{!c.addProductToTimeshare}" data-Id="{!obj.timeshareId}" data-label="{!obj.timeshareName}"
+                                                             data-timesharenumber="{!obj.timeshareNumber}">
+                                                            <!--  HMR-664 -->
+                                                            <lightning:button iconName="utility:add"  variant="bare" disabled="{!obj.disableAddButton}" value="{!obj.timeshareId}">Add Product </lightning:button>
+                                                        </div>
+                                                    </aura:if>
+                                                </div>
+                                            </th>
+                                            <!-- <th scope="row" >
+                                                <div class="slds-truncate" title="{!obj.timeshareMultiplier}">
+                                                    {!obj.timeshareMultiplier}
+                                                </div>
+                                            </th> -->
+                                            <th scope="row" >
+                                                <div onclick="{!c.handleEdit}" data-value="{!obj.timeshareId}">
+                                                    <lightning:button iconName="utility:edit" variant="bare" iconPosition="right"  value="{!obj.timeshareId}"/>
+                                                </div>
+                                            </th> 
+                                            <th scope="row">
+                                                <div onclick="{!c.deletetimeshareConfimation}" data-value="{!obj.timeshareId}"
+                                                     data-timeshareid="{!obj.timeshareId}" 
+                                                     data-productaddedid="{!obj.productaddedId}"
+                                                     data-timesharenumber="{!obj.timeshareNumber}"
+                                                     >
+                                                   <!--  HMR-664 --> 
+                                                    <lightning:button iconName="utility:delete" variant="bare" iconPosition="right"  value="{!obj.timeshareId}"/>
+                                                    
+                                                    
+                                                </div>
+                                            </th> `
+                                        </tr>
+                                        </aura:if>
+                                    </aura:if>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Delete timeshare confirmation -->
+                    <div class="deletetimeshare" style="display : none">
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <aura:if isTrue="{!!v.isLoaded}">
+                                <c:Loader/>
+                            </aura:if>
+                            <div class="slds-modal__container">
+                                <header class="slds-modal__header">
+                                    <button onclick="{!c.deletetimeshareConfimationclose}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                        X<span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Delete Timeshare</h2>
+                                </header>
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <div  style="background-color:white;">
+                                        <Center><div class="slds-truncate" >
+                                            Are you sure you want to delete this Timeshare?
+                                            </div></Center><br/>
+                                        <footer class="slds-modal__footer">
+                                            <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.deletetimeshareConfimationclose}" />
+                                            <lightning:button class="slds-button slds-button_brand" type="submit" label="Save"  onclick="{!c.handleDelete}" />
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                    </div>
+                    <!-- Delete timeshare confirmation End End -->
+                    
+                    <!-- Add Product -->
+                    <div class="addProductView" >
+                        <aura:if isTrue="{!v.addProductView}">
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div  class="slds-modal__container2" >
+                                <aura:if isTrue="{!!v.isLoaded}">
+                                    <c:Loader/>
+                                </aura:if>
+                                <header class="slds-modal__header">
+                                    <button onclick="{!c.hideproductView}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                        X<span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Add Product</h2>
+                                </header>
+                                <div  class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <div  style="background-color:white;">
+                                        <Center><div class="slds-truncate" title="{!v.timeshareName}">
+                                            Selected Timeshare : <a target="_blank" href="{!'/'+v.timeshareId}">{!v.timeshareName}</a>  
+                                            </div></Center><br/>
+                                        <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+                                            <tr  class="slds-text-title_caps">
+                                                <th style="padding :8px;" scope="col" width="2%">
+                                                    <div width="10%" class="slds-truncate" title="Name">#</div>
+                                                </th>
+                                                <th scope="col" width="2%">
+                                                    <div  class="slds-truncate" title="Multiplier">Multiplier</div>
+                                                </th>
+                                                <th scope="col" width="10%">
+                                                    <div  class="slds-truncate" title="Mortgage">Name</div>
+                                                </th>
+                                                
+                                                <!-- <th scope="col" width="10%">
+                                                    
+                                                    <aura:if isTrue="{!!v.isMTRCProductExist}">
+                                                    	<div  class="slds-truncate" title="Mortgage">Retail Price</div>
+                                                    </aura:if>
+                                                    <aura:if isTrue="{!v.isMTRCProductExist}">
+                                                    	<div  class="slds-truncate" title="Equity Value">Equity Value</div>
+                                                    </aura:if>
+                                                </th>
+                                                <th scope="col" width="10%">
+                                                    <aura:if isTrue="{!!v.isMTRCProductExist}">
+                                                    	<div  class="slds-truncate" title="Mortgage">Vendor Discount</div>
+                                                    </aura:if>
+                                                </th>
+                                                <th scope="col" width="20%">
+                                                    <aura:if isTrue="{!!v.isMTRCProductExist}">
+                                                    	<div  class="slds-truncate" title="Mortgage">Reason to Sell</div>
+                                                    </aura:if>
+                                                </th> -->
+                                            </tr>
+                                            <aura:iteration items="{!v.productList}" var="prodObj">
+                                                <tr >
+                                                    <th scope="row" >
+                                                        <div onclick="{!c.seletedProduct}" class="slds-truncate" data-value="{!prodObj.prd.Id}" title="{!prodObj.selected}">
+                                                            <ui:inputRadio  name="others" value="{!prodObj.selected}"/>
+                                                        </div>
+                                                    </th>   
+                                                    <th scope="row" style="padding-right :10px;"> 
+                                                        <!-- logic added B-09353 - Enable MFP Multiplier default to 2 for MTRC Retail, MTRC, Hawaii collection, and SFX -->
+                                                        <!-- <aura:if isTrue="{!OR(prodObj.prd.Name == 'Maintenance Fee Protection',prodObj.prd.Name == 'MTRC Vida MFP Add On with Credits')}"> -->
+                                                        <!-- HMR-601    <aura:if isTrue="{!prodObj.prd.Name == 'Maintenance Fee Protection'}">-->
+                                                        <!-- SAS-2 Added Ad Sales products ">-->
+                                                        <aura:if isTrue="{!(prodObj.prd.Name == 'Sapphire Usage Match' || prodObj.prd.Name == 'Maintenance Fee Protection' || prodObj.prd.Name == 'Vida Reserve Week Rebate' || prodObj.prd.Name == 'HC Vida Collection Weeks Usage Fee TC Rebate'
+                                                                          || prodObj.prd.Name == '$1498 Resale Subscription - ( NO Title Fee Credit ) Balance Paid by Seller at Closing' || prodObj.prd.Name == '$1998 Resale Subscription - Title Fee Credit/Balance Paid by Seller at Closing' || prodObj.prd.Name == 'Maintenance Fee Protection - Travel Cash' || prodObj.prd.Name == 'SMTN Complimentary Ad - Without Closing Credit' )}">
+                                                            <div class="slds-truncate">
+                                                                <ui:inputNumber class="slds-input" aura:id="MFMultiplier" value="{!prodObj.productMFMultiplier}" format="0.##" disabled="false"/>                                                            
+                                                            </div>
+                                                            <aura:set attribute="else">
+                                                                <div class="slds-truncate">
+                                                                    <ui:inputNumber class="slds-input" aura:id="MFMultiplier" value="{!prodObj.productMFMultiplier}" format="0.##" disabled="true"/>
+                                                                </div>
+                                                            </aura:set>
+                                                        </aura:if>
+                                                        
+                                                        
+                                                    </th>
+                                                    
+                                                    <th scope="row" >
+                                                        <div class="slds-truncate" title="{!prodObj.prd.Name}">
+                                                            <a target="_blank" href="{!'/'+prodObj.prd.Id}">{!prodObj.prd.Name}</a>  
+                                                        </div>
+                                                    </th> 
+                                                     
+                                                  <!--  
+                                                    <th scope="row" >
+                                                        <div style="margin-bottom: 10px;" class="slds-truncate" title="RETAIL PRICE" >
+                                                             <lightning:input style="width:80%" type="number" formatter="currency" value="{!prodObj.unitprice}"/>
+                                                        </div>
+                                                    </th>
+                                                    <th scope="row" >
+                                                        <aura:if isTrue="{!!v.isMTRCProductExist}">
+                                                            <div style="margin-bottom: 10px;" class="slds-truncate" title="VENDOR DISCOUNT" >
+                                                                 <lightning:input style="width:80%" type="number" formatter="currency" value="{!prodObj.vendorDiscount}"/>
+
+                                                        </aura:if>
+                                                    </th>
+                                                    <th scope="row" >
+                                                        <aura:if isTrue="{!!v.isMTRCProductExist}">
+                                                            <div style="margin-bottom: 10px;" onchange="{!c.ReasontoSellPickselectedValuejs}" class="slds-truncate" data-value="{!prodObj.prd.Id}" title="{!prodObj.selected}">
+                                                                <lightning:select variant="label-hidden" value="{!prodObj.ReasontoSellPickselectedValue}"
+                                                                                  onchange="{!c.ReasontoSellPickselectedValuejs}"  >
+                                                                    <option value="" text="-None-" />
+                                                                    <aura:iteration items="{!prodObj.ReasontoSellPicklist}" var="item1">
+                                                                        <option text="{!item1.label}" value="{!item1.value}" selected="{!if(prodObj.ReasontoSellPicklist == item1.value,true,false)}" />
+                                                                    </aura:iteration>
+                                                                </lightning:select>
+                                                            </div>
+                                                        </aura:if>
+                                                    </th>
+                                                    -->
+                                                      
+                                                </tr>
+                                            </aura:iteration>
+                                        </table>
+                                        <footer class="slds-modal__footer">
+                                            <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.hideproductView}" />
+                                            <lightning:button class="slds-button slds-button_brand" type="submit" label="Save"  onclick="{!c.saveproductLine}"/>
+                                            
+                                            <!--  HMR-664 --> 
+                                                
+                                            
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                        </aura:if>
+                    </div>
+                    <!-- Add Product End End -->
+                    
+            		<!-- MTRC product start-->
+            		<div class="MTRCProductPopupId">
+                        <aura:if isTrue="{!v.MTRCProductPopupId}">
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div  class="slds-modal__container2" >
+                                <aura:if isTrue="{!!v.isLoaded}">
+                                    <c:Loader/>
+                                </aura:if>
+                                <header class="slds-modal__header">
+                                    <button onclick="{!c.showMTRCClose}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                        X<span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Add Product</h2>
+                                </header>
+                                <div  class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <div  style="background-color:white;">
+                                        <Center><div class="slds-truncate" title="{!v.timeshareName}">
+                                            Selected Timeshare : <a target="_blank" href="{!'/'+v.timeshareId}">{!v.timeshareName}</a>  
+                                            </div></Center><br/>
+                                        <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+                                            <tr  class="slds-text-title_caps">
+                                                <th style="padding :8px;" scope="col" width="2%">
+                                                    <div width="10%" class="slds-truncate" title="Name">#</div>
+                                                </th>
+                                                <th scope="col" width="10%">
+                                                    <div  class="slds-truncate" title="Mortgage">Name</div>
+                                                </th>
+                                                <th scope="col" width="10%">
+                                                    <div  class="slds-truncate" title="Mortgage">Retail Price</div>
+                                                </th>
+                                                <th scope="col" width="10%">
+                                                    <div  class="slds-truncate" title="Mortgage">Vendor Discount</div>
+                                                </th>
+                                                <th scope="col" width="20%">
+                                                    <div  class="slds-truncate" title="Mortgage">Reason to Sell</div>
+                                                </th>
+                                            </tr>
+                                            <aura:iteration items="{!v.productListMTRC}" var="prodObj">
+                                                <tr >
+                                                    <th scope="row" >
+                                                        <div onclick="{!c.seletedProduct}" class="slds-truncate" data-value="{!prodObj.prd.Id}" title="{!prodObj.selected}">
+                                                            <ui:inputRadio  name="others" value="{!prodObj.selected}"/>
+                                                        </div>
+                                                    </th>                   
+                                                    <th scope="row" >
+                                                        <div class="slds-truncate" title="{!prodObj.prd.Name}">
+                                                            <a target="_blank" href="{!'/'+prodObj.prd.Id}">{!prodObj.prd.Name}</a>  
+                                                        </div>
+                                                    </th> 
+                                                    <th scope="row" >
+                                                        <div style="margin-bottom: 10px;" class="slds-truncate" title="RETAIL PRICE" >
+                                                             <lightning:input style="width:80%" type="number" formatter="currency" value="{!prodObj.unitprice}"/>
+                                                        </div>
+                                                    </th>
+                                                    <th scope="row" >
+                                                        <div style="margin-bottom: 10px;" class="slds-truncate" title="VENDOR DISCOUNT" >
+                                                             <lightning:input style="width:80%" type="number" formatter="currency" value="{!prodObj.vendorDiscount}"/>
+                                                         </div>
+                                                    </th>
+                                                    <th scope="row" >
+                                                        <div style="margin-bottom: 10px;" onchange="{!c.ReasontoSellPickselectedValuejs}" class="slds-truncate" data-value="{!prodObj.prd.Id}" title="{!prodObj.selected}">
+                                                            <lightning:select variant="label-hidden" value="{!prodObj.ReasontoSellPickselectedValue}"
+                                                                              onchange="{!c.ReasontoSellPickselectedValuejs}"  >
+                                                                <option value="" text="--None--" />
+                                                                <aura:iteration items="{!prodObj.ReasontoSellPicklist}" var="item1">
+                                                                    <option text="{!item1.label}" value="{!item1.value}" selected="{!if(prodObj.ReasontoSellPicklist == item1.value,true,false)}" />
+                                                                </aura:iteration>
+                                                            </lightning:select>
+                                                        </div>
+                                                    </th>
+                                                    
+                                                </tr>
+                                            </aura:iteration>
+                                        </table>
+                                        <footer class="slds-modal__footer">
+                                            <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.showMTRCClose}" />
+                                            <lightning:button class="slds-button slds-button_brand" type="submit" label="Save"  onclick="{!c.saveproductLineforMTRC}"/>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                        </aura:if>
+                    </div>
+            		<!-- MTRC product end -->
+            
+                    <!-- New timeshre creation Start -->
+                    <div class="timeshareDiv">
+                        <aura:if isTrue="{!v.newTimeshareOpen}">
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <aura:if isTrue="{!!v.isLoaded}">
+                                <c:Loader/>
+                            </aura:if>
+                            <div class="slds-modal__container">
+                                <aura:if isTrue="{!!v.isLoaded}">
+                                    <c:Loader/>
+                                </aura:if>
+                                <header class="slds-modal__header">
+                                    <button onclick="{!c.hide}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                        X<span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Timeshare</h2>
+                                </header>
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <div  style="background-color:white;">
+                                        <lightning:recordEditForm aura:id="leadCreateForm" 
+                                                                  objectApiName="Timeshare__c" 
+                                                                  onsuccess="{!c.handleOnSuccess}"
+                                                                  recordId="{!v.timeshareId}"
+                                                                  >
+                                            <!--recordTypeId = "0126g0000006Ke3AAE"-->
+                                            <lightning:messages />
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Resort__c" aura:id="Resort" required="true"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Points_Anniversary_Effective_Date__c" aura:id="Points_Anniversary_Effective_Date"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Unit_Size__c"   value="" aura:id="Unit_Size" required="true"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Annual_Allocation__c" aura:id="Annual_Allocation" ></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Ownership__c"  value="" aura:id="Ownership" required="true" ></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Fees_Billing_Period__c" value="" aura:id="Fees_Billing_Period" required="true"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Bathrooms__c"  value="" aura:id="Bathrooms" ></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Renewal_Month__c"   value="" aura:id="Renewal_Month"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Usage__c" value="" aura:id="Usage" required="true"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="MF_Paid_Until_Month__c" aura:id="MF_Paid_Until_Month" required="true"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Occupancy__c"  value="" aura:id="Occupancy"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="MF_Paid_Until_Year__c" aura:id="MF_Paid_Until_Year" required="true"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Week_Type__c" value="" aura:id="Week_Type" required="true"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="MF_Amount__c" aura:id="MF_Amount" required="true"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                </div>        
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Multiplier__c" aura:id="Multiplier" ></lightning:inputField>
+                                                </div>                   
+                                            </div> -->
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Unit_Number__c" aura:id="Unit_Number" ></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Past_Due_MF__c" aura:id="Past_Due_MF"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Week__c" aura:id="Week" required="true"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Special_Assessment__c" aura:id="Special_Assessment"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="View__c"  value="" aura:id="ViewId"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Mortgage__c"   value="" aura:id="MortgageId" ></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Season__c" value="" aura:id="Season"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Mortgage_Balance__c" aura:id="Mortgage_Balance"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Points_Program__c" value="" aura:id="Points_Program"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Mortgage_Monthly_Payment__c" aura:id="Mortgage_Monthly_Payment"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Contract__c" value="" aura:id="Contract" ></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Number_of_past_due_mortgage_payments__c" value="" aura:id="Number_of_past_due_mortgage_payments"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Year_Purchased__c" aura:id="Year_Purchased"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Mortgage_Interest_Rate__c" aura:id="Mortgage_Interest_Rate"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="RTU_Year__c" aura:id="RTU_Year"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="First_Year_Use__c" aura:id="First_Year_Use" required="true"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="SMTN_OwnerId__c" aura:id="SMTN_OwnerId"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Timeshare_Owner__c" aura:id="Timeshare_Owner" value="{!v.accountId}" disabled="true" required="true"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Listing_type__c" aura:id="Listing type" ></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Amount_of_Points__c" aura:id="Amount of Points"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid">
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Listing_Price__c" aura:id="Listing Price"></lightning:inputField>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 slds-p-around_xxx-small">
+                                                    <lightning:inputField fieldName="Trade_In_Value__c" aura:id="Trade In Value"></lightning:inputField>
+                                                </div>
+                                            </div>
+                                            <footer class="slds-modal__footer">
+                                                <lightning:button class="slds-button slds-button_neutral" label="Cancel"  onclick="{!c.hide}" />
+                                                <lightning:button class="slds-button slds-button_brand" type="submit" label="Save"  />
+                                            </footer>
+                                        </lightning:recordEditForm>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                        </aura:if>
+                    </div>
+                    <!-- New timeshare creation End -->
+                
+                    </div>
+    </div>
+</aura:component>

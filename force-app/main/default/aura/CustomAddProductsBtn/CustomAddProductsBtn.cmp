@@ -1,0 +1,176 @@
+<aura:component controller="CustomAddProductsController" implements="force:appHostable,force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global">
+    <aura:attribute name="priceBookEntries" type="List" />
+    <aura:attribute name="oppLineItems" type="List" />
+    <aura:attribute name="selectedEntries" type="List" />
+    <aura:attribute name="selectedEntryBoolean" type="Map" />
+    <aura:attribute name="showPBEModal" type="Boolean" default="false" />
+    <aura:attribute name="showOLIModal" type="Boolean" default="false" />
+    <aura:attribute name="showSpin" type="Boolean" default="false"/>
+    <aura:attribute name="blockMainBtn" type="Boolean" default="true"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:button disabled="{!v.blockMainBtn}" variant="brand" aura:id="createOppLineItemBtn" label="Add Products" onclick="{!c.openModal}" />
+    
+    <aura:if isTrue="{!v.showPBEModal}">
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <section role="dialog" tabindex="-1" aria-labelledby="header-title" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="header-title" class="slds-text-heading_medium">Price Book: Standard Price Book</h2>                    
+                </header>
+                <div class="slds-modal__content">
+                    <lightning:card title="">
+                        
+                        <aura:if isTrue="{!v.showSpin}">
+                            <div class="demo-only" style="height:8rem;position:relative">
+                                <div class="slds-spinner_container">
+                                    <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                                        <span class="slds-assistive-text">Loading...</span>
+                                        <div class="slds-spinner__dot-a"></div>
+                                        <div class="slds-spinner__dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:if>
+                        
+                        <div style="overflow-x: auto; max-height: 600px;">
+                            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                <thead>
+                                    <tr>
+                                    <th class="column-header">Select</th>
+                                    <th class="column-header">Name</th>
+                                    <th class="column-header">Product Code</th>
+                                    <th class="column-header">Unit Price</th>
+                                    <th class="column-header">Description</th>
+                                    <th class="column-header">Family</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    <aura:iteration items="{!v.priceBookEntries}" var="entry">
+                                        <tr>
+                                            <td>
+                                                <lightning:input disabled="{!v.showSpin}" name="{!entry.Id}" type="checkbox" aura:id="selectRow"/>
+                                            </td>
+                                            <td class="CellWithDescription"><a href="{!'/' + entry.Id}" target="_blank" >{!entry.Name}</a>
+                                                <aura:if isTrue="{! !empty(entry.Product2.Qualifications__c) }">
+                                                    <span class="CellDescription">{!entry.Product2.Qualifications__c}</span>
+                                                </aura:if>                                              
+                                            </td>
+                                            <td>{!entry.ProductCode}</td>
+                                            <td>
+                                                <lightning:formattedNumber value="{!entry.UnitPrice}" style="currency" currencyCode="USD" />
+                                            </td>
+                                            <td>{!entry.Product2.Description}</td>
+                                            <td>{!entry.Product2.Family}</td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <aura:if isTrue="{!v.showPopup}">
+                            
+                            <c:PopUpProductDescriptionCmp />
+                        </aura:if> -->
+                        <footer class="slds-card__footer slds-grid slds-grid_align-end">
+                            <lightning:button label="Next" onclick="{!c.prepareOpportunityProducts}" disabled="{!v.showSpin}" class="slds-button slds-button_brand"/>
+                            <lightning:button label="Cancel" onclick="{!c.closeModal}"/>
+                        </footer>
+                    </lightning:card>
+                </div>
+            </div>
+        </section>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showOLIModal}">
+        
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="header-title" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="header-title" class="slds-text-heading_medium">Price Book: Standard Price Book</h2>                    
+                </header>
+                <div class="slds-modal__content">                    
+                    <lightning:card title="">
+                        <aura:if isTrue="{!v.showSpin}">
+                            <div class="demo-only" style="height:8rem;position:relative">
+                                <div class="slds-spinner_container">
+                                    <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                                        <span class="slds-assistive-text">Loading...</span>
+                                        <div class="slds-spinner__dot-a"></div>
+                                        <div class="slds-spinner__dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <div style="overflow-x: auto; max-height: 600px;">
+                            <lightning:recordEditForm objectApiName="OpportunityLineItem">
+                            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                <thead>
+                                    <tr>
+                                    <th class="column-header">Product</th>
+                                    <th class="column-header">Affiliate Product</th>
+                                    <th class="column-header">Line Description</th>
+                                    <th class="column-header">Group MX Voucher</th>
+                                    <th class="column-header">Retail Price</th>
+                                    <th class="column-header">Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.oppLineItems}" var="item">
+                                        <tr>
+                                            <!-- <td>
+                                                <td><a href="{!'/' + item.Product2Id}" target="_blank">{!item.Price_Book_Entry_Name__c}</a></td>                                                
+                                            </td>
+                                            <td>
+                                                <lightning:input value="{!item.Affiliate_Product__c}" />
+                                            </td>
+                                            <td>
+                                                <lightning:input value="{!item.Description}" />
+                                            </td>
+                                            <td>
+                                                <lightning:input value="{!item.Group_MX_Voucher_Product__c}" />
+                                            </td>
+                                            <td>
+                                                <lightning:input value="{!item.Retail_Price__c}" />
+                                            </td>
+                                            <td>
+                                                <lightning:input value="{!item.Quantity}" required="true" />
+                                            </td> -->
+                                            <td>
+                                                <lightning:inputField variant="label-hidden" fieldName="Product2Id" value="{!item.Product2Id}" disabled="true" />
+                                            </td>
+                                            <td>
+                                                <lightning:inputField variant="label-hidden" fieldName="Affiliate_Product__c" value="{!item.Affiliate_Product__c}" disabled="{!v.showSpin}"/>
+                                            </td>
+                                            <td>
+                                                <lightning:inputField variant="label-hidden" fieldName="Description" value="{!item.Description}" disabled="{!v.showSpin}"/>
+                                            </td>
+                                            <td>
+                                                <lightning:inputField variant="label-hidden" fieldName="Group_MX_Voucher_Product__c" value="{!item.Group_MX_Voucher_Product__c}" disabled="{!v.showSpin}"/>
+                                            </td>
+                                            <td>
+                                                <lightning:inputField variant="label-hidden" fieldName="Retail_Price__c" value="{!item.Retail_Price__c}" disabled="{!v.showSpin}"/>
+                                            </td>
+                                            <td>
+                                                <lightning:inputField variant="label-hidden" fieldName="Quantity" value="{!item.Quantity}" required="true" disabled="{!v.showSpin}"/>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                            </lightning:recordEditForm>
+                        </div>
+                        <footer class="slds-card__footer slds-grid slds-grid_align-end">
+                            <lightning:button label="Save" onclick="{!c.saveOpportunityProducts}" disabled="{!v.showSpin}" class="slds-button slds-button_brand"/>
+                            <lightning:button label="Cancel" onclick="{!c.closeOLIModal}" disabled="{!v.showSpin}"/>
+                        </footer>
+                    </lightning:card>
+                </div>
+            </div>
+        </section>
+        
+    </aura:if>
+    
+</aura:component>

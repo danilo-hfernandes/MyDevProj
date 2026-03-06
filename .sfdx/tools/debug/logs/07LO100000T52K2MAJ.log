@@ -1,0 +1,33 @@
+66.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+19:49:50.0 (602922)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:49:50.0 (633417)|EXECUTION_STARTED
+19:49:50.0 (643097)|CODE_UNIT_STARTED|[EXTERNAL]|VF: /apextemplate/apexremote
+19:49:50.0 (931565943)|HEAP_ALLOCATE|[95]|Bytes:3
+19:49:50.0 (931666420)|HEAP_ALLOCATE|[100]|Bytes:152
+19:49:50.0 (931681441)|HEAP_ALLOCATE|[417]|Bytes:408
+19:49:50.0 (931693007)|HEAP_ALLOCATE|[430]|Bytes:408
+19:49:50.0 (931713182)|HEAP_ALLOCATE|[317]|Bytes:6
+19:49:50.0 (931869769)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:304
+19:49:50.0 (931874256)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:32
+19:49:50.0 (931937136)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:128
+19:49:50.0 (931940078)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:49:50.933 (933058852)|CUMULATIVE_LIMIT_USAGE
+19:49:50.933 (933058852)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:49:50.933 (933058852)|CUMULATIVE_LIMIT_USAGE_END
+
+19:49:50.0 (933108685)|CODE_UNIT_FINISHED|VF: /apextemplate/apexremote
+19:49:50.0 (933119030)|EXECUTION_FINISHED

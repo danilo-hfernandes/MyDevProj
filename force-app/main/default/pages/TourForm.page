@@ -1,0 +1,30 @@
+<apex:page standardController="Opportunity" extensions="TourController" lightningStyleSheets="true" sidebar="false" docType="html-5.0">
+    <head>
+        <apex:slds />
+    </head>
+    <apex:form >
+        <apex:pageBlock title="Tour and Transportation Confirmation">
+            
+            <apex:pageBlockSection title="Tour Info" columns="1">
+                <apex:inputField value="{!tour.Transportation__c}" label="Transportation"/>
+                <apex:inputField value="{!tour.Location__c}" label="Location"/>
+                <apex:outputLabel value="Tour Date & Time"/>
+                <apex:inputField value="{!tour.Date__c}" label="Date"/>
+                <apex:inputField value="{!tour.Tour_Time__c}" label="Time"/>
+                <apex:inputField value="{!tour.Tour_Status__c}" label="Tour Status"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Arrival Info" columns="1">
+                <apex:inputCheckbox value="{!tour.Transportation_Check_in__c}" label="Transportation Check-in"/>
+                <apex:inputCheckbox value="{!tour.Transportation_Pickup__c}" label="Transportation Pickup"/>
+                <apex:outputLabel value="Pickup Date Time"/>
+                <apex:inputField value="{!tour.Pickup_Date_Time__c}" label="Date & Time"/>
+                <apex:inputCheckbox value="{!tour.No_Show__c}" label="No Show"/>
+            </apex:pageBlockSection>
+            
+            <div style="text-align:center;">
+                <apex:commandButton value="Save" action="{!saveTour}" styleClass="slds-button slds-button_brand"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

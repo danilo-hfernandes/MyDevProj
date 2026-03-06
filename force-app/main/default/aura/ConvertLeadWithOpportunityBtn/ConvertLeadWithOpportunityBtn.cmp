@@ -1,0 +1,42 @@
+<aura:component controller="ConvertLeadWithOpportunityController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="accountLink" type="String" default=""/>
+    <aura:attribute name="contactLink" type="String" default=""/>
+    <aura:attribute name="opportunityLink" type="String" default=""/>
+    <aura:attribute name="showConvertedRecords" type="Boolean" default="false"/>
+    <aura:attribute name="showSpin" type="Boolean" default="true"/>
+    
+    <!-- <div class="exampleHolder">
+        <lightning:spinner aura:id="mySpinner" />
+    </div> -->
+    
+    <aura:if isTrue="{!v.showSpin}">
+        <div class="demo-only" style="height:6rem;position:relative">
+            <div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                    <span class="slds-assistive-text">Converting</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showConvertedRecords}">
+        <lightning:card title="">
+            <div aura:id="container" style="font-size:large; text-align:center !important">
+                <p><b>Lead Successfully Converted</b></p>
+                <br>___________________________</br>
+                <br> </br>
+                <p><lightning:formattedUrl value="{!v.accountLink}" label="Account" tooltip="Go to Account's record" /></p>
+                <br> </br>
+                <p><lightning:formattedUrl value="{!v.contactLink}" label="Contact" tooltip="Go to Contact's record" /></p>
+                <br> </br>
+                <p><lightning:formattedUrl value="{!v.opportunityLink}" label="Opportunity" tooltip="Go to Opportunity's record" /></p>
+            </div>
+        </lightning:card>
+    </aura:if>
+    
+</aura:component>

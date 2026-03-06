@@ -1,0 +1,11 @@
+<aura:component access="global">
+    <aura:attribute name="audioUrl" type="String"/>
+
+    <div class="slds-p-top_small">
+        <!-- Note: controls="true" instead of just controls -->
+        <audio controls="true" style="width: 50%;">
+            <source src="{!v.audioUrl}" type="audio/mpeg"/>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</aura:component>

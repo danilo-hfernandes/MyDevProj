@@ -1,0 +1,900 @@
+63.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DATA_ACCESS,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,INFO;WORKFLOW,FINER
+19:50:51.1 (1939431)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:51.1 (4413148)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (4787523)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (7939120)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (10430221)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (10639493)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (10710475)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (10754230)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (10798596)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (10824181)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (13379615)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (17014084)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (388021803)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (388094037)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (390248787)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (400197919)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404189765)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404527228)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404598470)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404640021)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404653300)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404668370)|ENTERING_MANAGED_PKG|rh2
+19:50:51.1 (404694499)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (484791294)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:51.484 (484822516)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (485050143)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (485166850)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (486901762)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (486993167)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (487012496)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (487031338)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (487054812)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (487085046)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (488840762)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (488963050)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (509739045)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (509806576)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (509981006)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (518214140)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (518298955)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (518431086)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (518745230)|ENTERING_MANAGED_PKG|rh2
+19:50:51.484 (519065377)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|"common.apex.runtime.impl.ExecutionException"|0x30e9f66d
+19:50:51.484 (519079689)|VARIABLE_ASSIGNMENT|[EXTERNAL]|message|"Error:  Your consent (40 more) ..."
+19:50:51.484 (519086911)|HEAP_ALLOCATE|[67]|Bytes:11
+19:50:51.484 (519098786)|HEAP_ALLOCATE|[67]|Bytes:33
+19:50:51.484 (519100850)|HEAP_ALLOCATE|[67]|Bytes:30
+19:50:51.484 (519102485)|HEAP_ALLOCATE|[67]|Bytes:12
+19:50:51.484 (519168957)|SYSTEM_METHOD_ENTRY|[EXTERNAL]|Collections.Collections()
+19:50:51.484 (519172663)|STATEMENT_EXECUTE|[EXTERNAL]
+19:50:51.484 (519175471)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519184201)|HEAP_ALLOCATE|[4623]|Bytes:4
+19:50:51.484 (519193065)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519204400)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519211215)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519228520)|HEAP_ALLOCATE|[4749]|Bytes:8
+19:50:51.484 (519233320)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519238424)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519244482)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519259550)|HEAP_ALLOCATE|[4853]|Bytes:12
+19:50:51.484 (519263482)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519269321)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519277577)|SYSTEM_METHOD_EXIT|[EXTERNAL]|Collections
+19:50:51.484 (519284450)|ENTERING_MANAGED_PKG|java__util
+19:50:51.484 (519338501)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519341725)|HEAP_ALLOCATE|[820]|Bytes:16
+19:50:51.484 (519343727)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519351610)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519353457)|HEAP_ALLOCATE|[820]|Bytes:16
+19:50:51.484 (519355017)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519357528)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519359319)|HEAP_ALLOCATE|[820]|Bytes:6
+19:50:51.484 (519360898)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519363103)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519364746)|HEAP_ALLOCATE|[820]|Bytes:6
+19:50:51.484 (519366340)|HEAP_ALLOCATE|[820]|Bytes:19
+19:50:51.484 (519368752)|HEAP_ALLOCATE|[820]|Bytes:24
+19:50:51.484 (519370489)|HEAP_ALLOCATE|[820]|Bytes:6
+19:50:51.484 (519372099)|HEAP_ALLOCATE|[820]|Bytes:24
+19:50:51.484 (519374402)|HEAP_ALLOCATE|[820]|Bytes:40
+19:50:51.484 (519376012)|HEAP_ALLOCATE|[820]|Bytes:6
+19:50:51.484 (519377562)|HEAP_ALLOCATE|[820]|Bytes:40
+19:50:51.484 (519379872)|HEAP_ALLOCATE|[820]|Bytes:25
+19:50:51.484 (519381496)|HEAP_ALLOCATE|[820]|Bytes:12
+19:50:51.484 (519383046)|HEAP_ALLOCATE|[820]|Bytes:25
+19:50:51.484 (519385284)|HEAP_ALLOCATE|[820]|Bytes:30
+19:50:51.484 (519387154)|HEAP_ALLOCATE|[820]|Bytes:4
+19:50:51.484 (519388815)|HEAP_ALLOCATE|[820]|Bytes:30
+19:50:51.484 (519391501)|HEAP_ALLOCATE|[820]|Bytes:29
+19:50:51.484 (519393308)|HEAP_ALLOCATE|[820]|Bytes:36
+19:50:51.484 (519394881)|HEAP_ALLOCATE|[820]|Bytes:29
+19:50:51.610 (610644223)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:51.610 (610674372)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (610931831)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (611115318)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (634218928)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (634290708)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (634507646)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (636731503)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (636824195)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (636852367)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (636871624)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (636894679)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (636920183)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (638962070)|ENTERING_MANAGED_PKG|rh2
+19:50:51.610 (639029038)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (718450866)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:51.718 (718483926)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (718716285)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (718848285)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (720751322)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (720861085)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (720882491)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (720901930)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (720926330)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (720951540)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (722453043)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (722554151)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (747978556)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (748044913)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (748211652)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756469518)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756559713)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756687336)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756722313)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756732461)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756740416)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756750635)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (756767543)|ENTERING_MANAGED_PKG|rh2
+19:50:51.797 (797537309)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:51.797 (797637226)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:51.797 (797768911)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+19:50:51.797 (797799846)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:51.797 (797817244)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:51.797 (797913001)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7071473e
+19:50:51.797 (797956754)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:51.797 (797961694)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:51.797 (797969559)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7071473e
+19:50:51.797 (797977946)|STATEMENT_EXECUTE|[1]
+19:50:51.797 (797979276)|STATEMENT_EXECUTE|[3]
+19:50:51.797 (797983656)|HEAP_ALLOCATE|[3]|Bytes:27
+19:50:51.797 (798050119)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:51.797 (798329424)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:51.797 (798362589)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:51.797 (798380653)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:51.797 (886149742)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchan (11 more) ...","TextBody":"Just wanted to let y (177 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","ToAddress":"katelyn.mcgovern@pas (12 more) ..."}|0x627ef0db
+19:50:51.797 (886178133)|STATEMENT_EXECUTE|[6]
+19:50:51.797 (886179912)|STATEMENT_EXECUTE|[7]
+19:50:51.797 (886190063)|HEAP_ALLOCATE|[7]|Bytes:30
+19:50:51.797 (886382296)|HEAP_ALLOCATE|[7]|Bytes:24
+19:50:51.797 (886407934)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+19:50:51.797 (886414179)|STATEMENT_EXECUTE|[1]
+19:50:51.797 (886431142)|SYSTEM_METHOD_EXIT|[1]|JSON
+19:50:51.797 (886454174)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:51.797 (889290234)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:51.797 (889324409)|HEAP_ALLOCATE|[7]|Bytes:787
+19:50:51.797 (889347372)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchange app out!","TextBody":"Just wanted to let you know about this cool app that I have been using, Rollup Helper. http://goo.gl/tOJ8Gt. It is immensely helpful to easily create rollups in Salesforce with clicks and not code.","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00LTh2h2SzRTCSR4InbcT_hw@sfdc.net>","ToAddress":"katelyn.mcgovern@passagetech.com"}
+19:50:51.797 (889383642)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:51.797 (889416502)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:51.889 (889430885)|CUMULATIVE_LIMIT_USAGE
+19:50:51.889 (889430885)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:51.889 (889430885)|TESTING_LIMITS
+19:50:51.889 (889430885)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:51.889 (889430885)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:51.889 (889430885)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:51.797 (889598762)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:51.939 (939160367)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:51.939 (939238474)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:51.939 (939343429)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:51.939 (939355992)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:51.939 (939422905)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x308e9ae5
+19:50:51.939 (939449752)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:51.939 (939453232)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:51.939 (939459354)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x308e9ae5
+19:50:51.939 (939466047)|STATEMENT_EXECUTE|[1]
+19:50:51.939 (939467920)|STATEMENT_EXECUTE|[3]
+19:50:51.939 (939487864)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:51.939 (939562321)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:51.939 (939588722)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:51.939 (939908028)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:52.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:52.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HKU-b00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchan (11 more) ...","SystemModstamp":"2026-03-06T00:50:52.000Z","TextBody":"Just wanted to let y (177 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:52.000Z","MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","Id":"02sO100000J8VZxIAN","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"katelyn.mcgovern@pas (12 more) ..."}|0x270e106b
+19:50:51.939 (939918258)|STATEMENT_EXECUTE|[6]
+19:50:51.939 (939919303)|STATEMENT_EXECUTE|[7]
+19:50:51.939 (939928694)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:51.939 (940344328)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:51.939 (940356867)|HEAP_ALLOCATE|[7]|Bytes:1259
+19:50:51.939 (940364146)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VZxIAN"},"LastModifiedDate":"2026-03-06T00:50:52.000+0000","IsTracked":false,"ThreadIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00LTh2h2SzRTCSR4InbcT_hw@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:52.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Check this AppExchange app out!","SystemModstamp":"2026-03-06T00:50:52.000+0000","TextBody":"Just wanted to let you know about this cool app that I have been using, Rollup Helper. http://goo.gl/tOJ8Gt. It is immensely helpful to easily create rollups in Salesforce with clicks and not code.","CreatedDate":"2026-03-06T00:50:52.000+0000","MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00LTh2h2SzRTCSR4InbcT_hw@sfdc.net>","Id":"02sO100000J8VZxIAN","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"katelyn.mcgovern@passagetech.com"}
+19:50:51.939 (940385198)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:51.939 (940396895)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:51.940 (940404329)|CUMULATIVE_LIMIT_USAGE
+19:50:51.940 (940404329)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:51.940 (940404329)|TESTING_LIMITS
+19:50:51.940 (940404329)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:51.940 (940404329)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:51.940 (940404329)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:51.939 (940515066)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:51.718 (1087120689)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (1087209265)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (1087562527)|ENTERING_MANAGED_PKG|rh2
+19:50:51.718 (1087587581)|ENTERING_MANAGED_PKG|rh2
+19:50:52.105 (1105724234)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.105 (1105795563)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.105 (1105838491)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.105 (1105850459)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.105 (1105916206)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x28566ff5
+19:50:52.105 (1105944191)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.105 (1105947264)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.105 (1105953683)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x28566ff5
+19:50:52.105 (1105960655)|STATEMENT_EXECUTE|[1]
+19:50:52.105 (1105962516)|STATEMENT_EXECUTE|[3]
+19:50:52.105 (1105981438)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.105 (1106052706)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.105 (1106074127)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.105 (1106085323)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.105 (1106422267)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"A user of Rollup Hel (31 more) ...","TextBody":"A Rollup Helper user (114 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","ToAddress":"sales@passagetech.co (1 more) ..."}|0x74da990d
+19:50:52.105 (1106430000)|STATEMENT_EXECUTE|[6]
+19:50:52.105 (1106431211)|STATEMENT_EXECUTE|[7]
+19:50:52.105 (1106440727)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.105 (1106685237)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.105 (1106695718)|HEAP_ALLOCATE|[7]|Bytes:734
+19:50:52.105 (1106702717)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"A user of Rollup Helper just sent a referral email!","TextBody":"A Rollup Helper user, dev@nerdsoft.com, just sent a referral email to the following email addresses: \nkatelyn.mcgovern@passagetech.com","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00_0HmIUTYR3WUjIMuGTqafA@sfdc.net>","ToAddress":"sales@passagetech.com"}
+19:50:52.105 (1106718213)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.105 (1106727528)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.106 (1106734286)|CUMULATIVE_LIMIT_USAGE
+19:50:52.106 (1106734286)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.106 (1106734286)|TESTING_LIMITS
+19:50:52.106 (1106734286)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.106 (1106734286)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 2 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.106 (1106734286)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.105 (1106846292)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.133 (1133870447)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.133 (1133948214)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.133 (1134054438)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.133 (1134067325)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.133 (1134135552)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3923a91
+19:50:52.133 (1134162859)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.133 (1134166786)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.133 (1134172946)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3923a91
+19:50:52.133 (1134179736)|STATEMENT_EXECUTE|[1]
+19:50:52.133 (1134181426)|STATEMENT_EXECUTE|[3]
+19:50:52.133 (1134201439)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.133 (1134280493)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.133 (1134307924)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.133 (1134650271)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:52.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:52.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HKU-b00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"A user of Rollup Hel (31 more) ...","SystemModstamp":"2026-03-06T00:50:52.000Z","TextBody":"A Rollup Helper user (114 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:52.000Z","MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","Id":"02sO100000J8VZyIAN","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"sales@passagetech.co (1 more) ..."}|0x5082b310
+19:50:52.133 (1134660576)|STATEMENT_EXECUTE|[6]
+19:50:52.133 (1134661697)|STATEMENT_EXECUTE|[7]
+19:50:52.133 (1134671940)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.133 (1134996947)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.133 (1135009114)|HEAP_ALLOCATE|[7]|Bytes:1206
+19:50:52.133 (1135017906)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VZyIAN"},"LastModifiedDate":"2026-03-06T00:50:52.000+0000","IsTracked":false,"ThreadIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00_0HmIUTYR3WUjIMuGTqafA@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:52.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"A user of Rollup Helper just sent a referral email!","SystemModstamp":"2026-03-06T00:50:52.000+0000","TextBody":"A Rollup Helper user, dev@nerdsoft.com, just sent a referral email to the following email addresses: \nkatelyn.mcgovern@passagetech.com","CreatedDate":"2026-03-06T00:50:52.000+0000","MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00_0HmIUTYR3WUjIMuGTqafA@sfdc.net>","Id":"02sO100000J8VZyIAN","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"sales@passagetech.com"}
+19:50:52.133 (1135038257)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.133 (1135050662)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.135 (1135059329)|CUMULATIVE_LIMIT_USAGE
+19:50:52.135 (1135059329)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.135 (1135059329)|TESTING_LIMITS
+19:50:52.135 (1135059329)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.135 (1135059329)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 2 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.135 (1135059329)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.133 (1135175873)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.325 (1325887994)|USER_INFO|[EXTERNAL]|0053t000006rP8l|dev@nerdsoft.com.hsi.full|(GMT-05:00) Eastern Standard Time (America/New_York)|GMT-05:00
+19:50:52.325 (1325925434)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1326232876)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1326395714)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1328470495)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1328577637)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1328599801)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1328618922)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1328642526)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1328666525)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1330426907)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1330584614)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1356610889)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1356681082)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1356846675)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365077942)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365161602)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365276102)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365302827)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365311712)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365319251)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365327644)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1365343629)|ENTERING_MANAGED_PKG|rh2
+19:50:52.384 (1384071530)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.384 (1384145852)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.384 (1384207410)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+19:50:52.384 (1384220517)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.384 (1384227970)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.384 (1384293388)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x41643b94
+19:50:52.384 (1384321351)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.384 (1384324429)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.384 (1384330276)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x41643b94
+19:50:52.384 (1384337737)|STATEMENT_EXECUTE|[1]
+19:50:52.384 (1384339747)|STATEMENT_EXECUTE|[3]
+19:50:52.384 (1384342658)|HEAP_ALLOCATE|[3]|Bytes:27
+19:50:52.384 (1384375883)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.384 (1384461698)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.384 (1384502125)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.384 (1384511740)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.384 (1384827314)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchan (11 more) ...","TextBody":"Just wanted to let y (177 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","ToAddress":"katelyn.mcgovern@pas (12 more) ..."}|0x2c661533
+19:50:52.384 (1384834894)|STATEMENT_EXECUTE|[6]
+19:50:52.384 (1384836303)|STATEMENT_EXECUTE|[7]
+19:50:52.384 (1384838097)|HEAP_ALLOCATE|[7]|Bytes:30
+19:50:52.384 (1384849163)|HEAP_ALLOCATE|[7]|Bytes:24
+19:50:52.384 (1384859773)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+19:50:52.384 (1384861957)|STATEMENT_EXECUTE|[1]
+19:50:52.384 (1384869142)|SYSTEM_METHOD_EXIT|[1]|JSON
+19:50:52.384 (1384876530)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.384 (1385118482)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.384 (1385134210)|HEAP_ALLOCATE|[7]|Bytes:787
+19:50:52.384 (1385140896)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchange app out!","TextBody":"Just wanted to let you know about this cool app that I have been using, Rollup Helper. http://goo.gl/tOJ8Gt. It is immensely helpful to easily create rollups in Salesforce with clicks and not code.","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00IIJbK8eRQYS7149HJpVdkg@sfdc.net>","ToAddress":"katelyn.mcgovern@passagetech.com"}
+19:50:52.384 (1385156865)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.384 (1385166698)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.385 (1385173492)|CUMULATIVE_LIMIT_USAGE
+19:50:52.385 (1385173492)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.385 (1385173492)|TESTING_LIMITS
+19:50:52.385 (1385173492)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.385 (1385173492)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.385 (1385173492)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.384 (1385287049)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.413 (1413447865)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.413 (1413524515)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.413 (1413627115)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.413 (1413639586)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.413 (1413707978)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4d4b2d80
+19:50:52.413 (1413736103)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.413 (1413740003)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.413 (1413746261)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4d4b2d80
+19:50:52.413 (1413753522)|STATEMENT_EXECUTE|[1]
+19:50:52.413 (1413755503)|STATEMENT_EXECUTE|[3]
+19:50:52.413 (1413775627)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.413 (1413851161)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.413 (1413877809)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.413 (1414206060)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HKU-b00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchan (11 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"Just wanted to let y (177 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","Id":"02sO100000J8VZzIAN","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"katelyn.mcgovern@pas (12 more) ..."}|0x5f04cca5
+19:50:52.413 (1414217005)|STATEMENT_EXECUTE|[6]
+19:50:52.413 (1414218221)|STATEMENT_EXECUTE|[7]
+19:50:52.413 (1414227599)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.413 (1414519906)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.413 (1414530542)|HEAP_ALLOCATE|[7]|Bytes:1259
+19:50:52.413 (1414537650)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8VZzIAN"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00IIJbK8eRQYS7149HJpVdkg@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Check this AppExchange app out!","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"Just wanted to let you know about this cool app that I have been using, Rollup Helper. http://goo.gl/tOJ8Gt. It is immensely helpful to easily create rollups in Salesforce with clicks and not code.","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00IIJbK8eRQYS7149HJpVdkg@sfdc.net>","Id":"02sO100000J8VZzIAN","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"katelyn.mcgovern@passagetech.com"}
+19:50:52.413 (1414556496)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.413 (1414567829)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.414 (1414574574)|CUMULATIVE_LIMIT_USAGE
+19:50:52.414 (1414574574)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.414 (1414574574)|TESTING_LIMITS
+19:50:52.414 (1414574574)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.414 (1414574574)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.414 (1414574574)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.413 (1414680676)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.556 (1556705950)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.556 (1556785312)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.556 (1556934034)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.556 (1556946307)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.556 (1557040509)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x77e55082
+19:50:52.556 (1557074911)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.556 (1557098352)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.556 (1557111297)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x77e55082
+19:50:52.556 (1557120567)|STATEMENT_EXECUTE|[1]
+19:50:52.556 (1557122580)|STATEMENT_EXECUTE|[3]
+19:50:52.556 (1557146037)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.556 (1557262608)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.556 (1557289807)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.556 (1557303544)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.556 (1557811090)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchan (11 more) ...","TextBody":"Just wanted to let y (177 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","ToAddress":"mcgovern.katelyn@gma (6 more) ..."}|0x36a18a6c
+19:50:52.556 (1557830102)|STATEMENT_EXECUTE|[6]
+19:50:52.556 (1557832007)|STATEMENT_EXECUTE|[7]
+19:50:52.556 (1557848467)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.556 (1558308447)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.556 (1558330323)|HEAP_ALLOCATE|[7]|Bytes:781
+19:50:52.556 (1558345058)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchange app out!","TextBody":"Just wanted to let you know about this cool app that I have been using, Rollup Helper. http://goo.gl/tOJ8Gt. It is immensely helpful to easily create rollups in Salesforce with clicks and not code.","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00Nyzfar_OS-6DHhx9XTlLEg@sfdc.net>","ToAddress":"mcgovern.katelyn@gmail.com"}
+19:50:52.556 (1558417277)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.556 (1558441643)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.558 (1558453524)|CUMULATIVE_LIMIT_USAGE
+19:50:52.558 (1558453524)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.558 (1558453524)|TESTING_LIMITS
+19:50:52.558 (1558453524)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.558 (1558453524)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 2 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.558 (1558453524)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.556 (1558629246)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.586 (1586768723)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.586 (1586858605)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.586 (1587021641)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.586 (1587039175)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.586 (1587120887)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7ed3957c
+19:50:52.586 (1587156635)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.586 (1587163530)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.586 (1587174672)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7ed3957c
+19:50:52.586 (1587183295)|STATEMENT_EXECUTE|[1]
+19:50:52.586 (1587185263)|STATEMENT_EXECUTE|[3]
+19:50:52.586 (1587209660)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.586 (1587311325)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.586 (1587346310)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.586 (1587801908)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HKU-b00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"Check this AppExchan (11 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"Just wanted to let y (177 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","Id":"02sO100000J8Va0IAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"mcgovern.katelyn@gma (6 more) ..."}|0x19d1e7e3
+19:50:52.586 (1587822926)|STATEMENT_EXECUTE|[6]
+19:50:52.586 (1587824509)|STATEMENT_EXECUTE|[7]
+19:50:52.586 (1587839562)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.586 (1588308617)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.586 (1588329144)|HEAP_ALLOCATE|[7]|Bytes:1253
+19:50:52.586 (1588343333)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8Va0IAF"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00Nyzfar_OS-6DHhx9XTlLEg@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"Check this AppExchange app out!","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"Just wanted to let you know about this cool app that I have been using, Rollup Helper. http://goo.gl/tOJ8Gt. It is immensely helpful to easily create rollups in Salesforce with clicks and not code.","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00Nyzfar_OS-6DHhx9XTlLEg@sfdc.net>","Id":"02sO100000J8Va0IAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"mcgovern.katelyn@gmail.com"}
+19:50:52.586 (1588377776)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.586 (1588401107)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.588 (1588413058)|CUMULATIVE_LIMIT_USAGE
+19:50:52.588 (1588413058)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.588 (1588413058)|TESTING_LIMITS
+19:50:52.588 (1588413058)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.588 (1588413058)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 2 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.588 (1588413058)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.586 (1588554716)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.325 (1711449966)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1711486810)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1711755768)|ENTERING_MANAGED_PKG|rh2
+19:50:52.325 (1711770169)|ENTERING_MANAGED_PKG|rh2
+19:50:52.729 (1729341998)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.729 (1729412898)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.729 (1729462589)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.729 (1729478227)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.729 (1729554305)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7c35c2d2
+19:50:52.729 (1729588361)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.729 (1729594025)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.729 (1729605186)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7c35c2d2
+19:50:52.729 (1729613905)|STATEMENT_EXECUTE|[1]
+19:50:52.729 (1729615060)|STATEMENT_EXECUTE|[3]
+19:50:52.729 (1729635515)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.729 (1729711925)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.729 (1729733061)|HEAP_ALLOCATE|[5]|Bytes:4
+19:50:52.729 (1729743610)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.729 (1730060290)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"A user of Rollup Hel (31 more) ...","TextBody":"A Rollup Helper user (141 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsOpened":false,"MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","ToAddress":"sales@passagetech.co (1 more) ..."}|0x35f19a5b
+19:50:52.729 (1730068174)|STATEMENT_EXECUTE|[6]
+19:50:52.729 (1730069294)|STATEMENT_EXECUTE|[7]
+19:50:52.729 (1730079104)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.729 (1730318891)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.729 (1730329253)|HEAP_ALLOCATE|[7]|Bytes:762
+19:50:52.729 (1730336717)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage"},"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"Incoming":false,"IsTracked":false,"IsBounced":false,"IsLinkTracked":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"A user of Rollup Helper just sent a referral email!","TextBody":"A Rollup Helper user, dev@nerdsoft.com, just sent a referral email to the following email addresses: \nkatelyn.mcgovern@passagetech.com\nmcgovern.katelyn@gmail.com","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","IsLinkClicked":false,"IsOpened":false,"MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00Q8nmkQf_RVmMbjX9LmzbEQ@sfdc.net>","ToAddress":"sales@passagetech.com"}
+19:50:52.729 (1730357061)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.729 (1730381677)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.730 (1730391055)|CUMULATIVE_LIMIT_USAGE
+19:50:52.730 (1730391055)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.730 (1730391055)|TESTING_LIMITS
+19:50:52.730 (1730391055)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.730 (1730391055)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 3 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.730 (1730391055)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.729 (1730511295)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event BeforeInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.757 (1757398056)|CODE_UNIT_STARTED|[EXTERNAL]|01q7d000000i5mB|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger
+19:50:52.757 (1757472706)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+19:50:52.757 (1757569265)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.757 (1757580742)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.757 (1757642931)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x79580b73
+19:50:52.757 (1757669341)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+19:50:52.757 (1757672992)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMessageTrigger|true|false
+19:50:52.757 (1757679161)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x79580b73
+19:50:52.757 (1757686476)|STATEMENT_EXECUTE|[1]
+19:50:52.757 (1757688321)|STATEMENT_EXECUTE|[3]
+19:50:52.757 (1757708373)|USER_DEBUG|[3]|DEBUG|EmailMessageTrigger STARTED
+19:50:52.757 (1757784463)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.757 (1757809910)|VARIABLE_SCOPE_BEGIN|[5]|em|EmailMessage|true|false
+19:50:52.757 (1758113901)|VARIABLE_ASSIGNMENT|[5]|em|{"Status":"3","SynchedFromSQL__c":false,"LastModifiedDate":"2026-03-06T00:50:53.000Z","IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000Z","Incoming":false,"IsTracked":false,"ThreadIdentifier":"<HKU-b00000000000000 (71 more) ...","IsBounced":false,"IsExternallyVisible":false,"IsClientManaged":false,"Subject":"A user of Rollup Hel (31 more) ...","SystemModstamp":"2026-03-06T00:50:53.000Z","TextBody":"A Rollup Helper user (141 more) ...","FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsOpened":false,"CreatedDate":"2026-03-06T00:50:53.000Z","MessageIdentifier":"<HKU-b00000000000000 (71 more) ...","Id":"02sO100000J8Va1IAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"sales@passagetech.co (1 more) ..."}|0x18d45a39
+19:50:52.757 (1758123860)|STATEMENT_EXECUTE|[6]
+19:50:52.757 (1758124995)|STATEMENT_EXECUTE|[7]
+19:50:52.757 (1758134316)|METHOD_ENTRY|[7]||System.JSON.serialize(Object)
+19:50:52.757 (1758466031)|METHOD_EXIT|[7]||System.JSON.serialize(Object)
+19:50:52.757 (1758477851)|HEAP_ALLOCATE|[7]|Bytes:1234
+19:50:52.757 (1758486291)|USER_DEBUG|[7]|DEBUG|EmailMessageTrigger em json = {"attributes":{"type":"EmailMessage","url":"/services/data/v66.0/sobjects/EmailMessage/02sO100000J8Va1IAF"},"LastModifiedDate":"2026-03-06T00:50:53.000+0000","IsTracked":false,"ThreadIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00Q8nmkQf_RVmMbjX9LmzbEQ@sfdc.net>","IsExternallyVisible":false,"IsClientManaged":false,"FromName":"Dev Account","HasAttachment":false,"FromAddress":"dev@nerdsoft.com","CreatedById":"0053t000006rP8lAAE","IsLinkClicked":false,"IsOpened":false,"Status":"3","SynchedFromSQL__c":false,"IsDeleted":false,"MessageDate":"2026-03-06T00:50:53.000+0000","Incoming":false,"IsBounced":false,"IsLinkTracked":false,"Subject":"A user of Rollup Helper just sent a referral email!","SystemModstamp":"2026-03-06T00:50:53.000+0000","TextBody":"A Rollup Helper user, dev@nerdsoft.com, just sent a referral email to the following email addresses: \nkatelyn.mcgovern@passagetech.com\nmcgovern.katelyn@gmail.com","CreatedDate":"2026-03-06T00:50:53.000+0000","MessageIdentifier":"<HKU-b000000000000000000000000000000000000000000000TBGD0S00Q8nmkQf_RVmMbjX9LmzbEQ@sfdc.net>","Id":"02sO100000J8Va1IAF","LastModifiedById":"0053t000006rP8lAAE","ToAddress":"sales@passagetech.com"}
+19:50:52.757 (1758508490)|HEAP_ALLOCATE|[5]|Bytes:5
+19:50:52.757 (1758521537)|VARIABLE_ASSIGNMENT|[5]|em|null|
+19:50:52.758 (1758529356)|CUMULATIVE_LIMIT_USAGE
+19:50:52.758 (1758529356)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.758 (1758529356)|TESTING_LIMITS
+19:50:52.758 (1758529356)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.758 (1758529356)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 3 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+19:50:52.758 (1758529356)|CUMULATIVE_LIMIT_USAGE_END
+
+19:50:52.757 (1758639381)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert|__sfdc_trigger/EmailMessageTrigger

@@ -1,0 +1,87 @@
+<aura:component controller="TeeUpLeadController"
+    implements="lightning:isUrlAddressable,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+    access="global">
+
+    <aura:attribute name="recordId" type="String"/>
+
+    <!-- Block if already tee'd up -->
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+
+    <!-- Division + Agent -->
+    <aura:attribute name="divisions" type="Object[]"/>
+    <aura:attribute name="agents" type="Object[]"/>
+    <aura:attribute name="selectedDivision" type="String"/>
+    <aura:attribute name="selectedDivisionName" type="String"/>
+
+    <!-- store BOTH: agent name + agent id (payload Value) -->
+    <aura:attribute name="selectedAgentName" type="String"/>
+    <aura:attribute name="selectedAgentExternalId" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:html tag="style">
+        .slds-modal__container {
+            margin: 0 auto;
+            width: 47% !important;
+            max-width: 90rem;
+            min-width: 20rem;
+        }
+    </aura:html>
+
+    <div class="divClass">
+
+        <!-- Division -->
+        <lightning:select
+            class="slds-combobox_container slds-size_small userList"
+            label="Division"
+            value="{!v.selectedDivision}"
+            onchange="{!c.onDivisionChange}"
+            disabled="{!v.flag}">
+
+            <aura:iteration items="{!v.divisions}" var="div">
+                <option value="{!div.Value}">{!div.Text}</option>
+            </aura:iteration>
+
+        </lightning:select>
+
+        <!-- Agent -->
+        <lightning:select
+            class="slds-combobox_container slds-size_small userList"
+            label="Closing Agent"
+            value="{!v.selectedAgentExternalId}"
+            disabled="{!or(empty(v.selectedDivision), v.flag)}"
+            onchange="{!c.onAgentChange}">
+
+            <option value="">Choose One...</option>
+
+            <aura:iteration items="{!v.agents}" var="agent">
+                <!-- value = external agent id -->
+                <option value="{!agent.Value}">{!agent.Text}</option>
+            </aura:iteration>
+
+        </lightning:select>
+
+    </div>
+
+    <br/>
+
+    <aura:if isTrue="{!v.flag}">
+        <p style="color:red;text-align:center;padding-bottom:10px;">
+            Tee Up can't be performed because this Lead was already Tee’d Up.
+        </p>
+    </aura:if>
+
+    <div class="slds-align_absolute-center buttons">
+        <lightning:button
+            class="slds-button_brand"
+            label="Submit"
+            onclick="{!c.saveLead}"
+            disabled="{!or(v.flag, empty(v.selectedDivision), empty(v.selectedAgentExternalId))}"/>
+
+        <lightning:button
+            class="slds-button slds-button_destructive slds-button_neutral"
+            label="Cancel"
+            onclick="{!c.cancelLead}"/>
+    </div>
+
+</aura:component>

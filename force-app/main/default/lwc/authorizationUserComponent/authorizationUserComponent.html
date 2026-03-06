@@ -1,0 +1,100 @@
+<template>
+     <lightning-card title="Authorized Users Records" class="slds-m-around_medium">
+        <!-- Toolbar -->
+        <div class="slds-m-bottom_medium slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+            <div class="slds-text-body_small slds-text-color_weak">
+                Before adding a row, make sure you hit the **Sync** button.<br/>
+                The maximum number of Authorized Users can be  4.
+            </div>
+            <div>
+                <lightning-button
+                    label="Sync"
+                    variant="neutral"
+                    class="slds-m-right_small"
+                    onclick={handleSync}
+                ></lightning-button>
+                 <lightning-button
+                    label="Add Row"
+                    variant="brand"
+                    onclick={handleAddRowClick}
+                    disabled={disableAddRow}
+                ></lightning-button>
+            </div>
+        </div>
+
+        <!-- Data Table -->
+        <lightning-datatable
+            key-field="Id"
+            data={data}
+            columns={columns}
+            hide-checkbox-column
+            class="custom-table"
+            onrowaction={handleRowAction}
+        ></lightning-datatable>
+    </lightning-card>
+
+    <!-- Popup Modal (Add/Edit Row) -->
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading" aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading" class="slds-text-heading_medium">{modalTitle}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <!-- Input Fields -->
+                    <lightning-input
+                        label="First Name"
+                        value={firstName}
+                        onchange={handleInputChange}
+                        data-field="firstName" disabled={isEditMode}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Last Name"
+                        value={lastName}
+                        onchange={handleInputChange}
+                        data-field="lastName" disabled={isEditMode}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Email"
+                        type="email"
+                        value={email}
+                        onchange={handleInputChange}
+                        data-field="email" disabled={isEditMode}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Email Confirmation"
+                        type="email"
+                        value={emailConfirmation}
+                        onchange={handleInputChange}
+                        data-field="emailConfirmation" disabled={isEditMode}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Phone"
+                        type="tel"
+                        value={phone}
+                        onchange={handleInputChange}
+                        data-field="phone" disabled={isEditMode}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Country"
+                        value={country}
+                        onchange={handleInputChange}
+                        data-field="country" disabled={isEditMode}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Is Enabled"
+                        type="checkbox"
+                        checked={isEnabled}
+                        onchange={handleInputChange}
+                        data-field="isEnabled">
+                    </lightning-input>
+                </div>
+                <footer class="slds-modal__footer slds-p-around_small">
+                    <lightning-button label="Cancel" onclick={closeModal} class ="slds-p-around_small"></lightning-button>
+                    <lightning-button variant="brand" label="Save" onclick={handleSave} class="slds-p-around_small"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

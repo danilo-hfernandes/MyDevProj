@@ -1,0 +1,627 @@
+<template>
+    <lightning-card title="Vonage Campaign Configuration">
+        <template if:true={isSaving}>
+    <div class="vc-saving-overlay">
+        <lightning-spinner
+            alternative-text="Saving configuration"
+            size="medium">
+        </lightning-spinner>
+
+        <div class="vc-saving-text">
+            Saving configuration…
+        </div>
+    </div>
+</template>
+        <div class="slds-p-around_small">
+
+                        <div class="slds-m-bottom_medium">
+                <lightning-button label="+ Add Configuration" onclick={addBlankRow}></lightning-button>
+            </div>
+
+            <template if:true={errorMsg}>
+                <div class="slds-text-color_error slds-m-bottom_small">{errorMsg}</div>
+            </template>
+
+            <template if:true={rows}>
+                <div class="slds-grid slds-grid_vertical slds-m-bottom_small">
+                    <template for:each={rows} for:item="row" for:index="idx">
+                        <div key={row._key} class="slds-box slds-m-bottom_small vc-row">
+
+                            <!-- Row header (compact) -->
+                            <div class="slds-grid slds-wrap slds-grid_align-spread slds-m-bottom_x-small vc-rowHeader">
+                                <div class="slds-truncate">
+                                    <span class="slds-text-title_bold">{row.name}</span>
+                                    <span class="slds-text-body_small slds-text-color_weak vc-created">
+                                        Created: {row._createdDateLabel}
+                                    </span>
+                                </div>
+
+                                <div class="slds-grid slds-grid_vertical-align-center vc-headerActions">
+                                    <div class="vc-active">
+                                        <lightning-input type="checkbox"
+                                                         label="Active"
+                                                         checked={row.active}
+                                                         data-idx={idx}
+                                                         data-field="active"
+                                                         onchange={onFieldChange}>
+                                        </lightning-input>
+                                    </div>
+
+                                    <lightning-button label="Save"
+                                                      variant="brand"
+                                                      disabled={row._saveDisabled}
+                                                      data-idx={idx}
+                                                      onclick={saveRow}>
+                                    </lightning-button>
+                                </div>
+                            </div>
+
+                            <!-- Collapsible sections (keeps all fields, just organized) -->
+                            <lightning-accordion allow-multiple-sections-open active-section-name={row._openSections} class="vc-acc">
+
+                                <!-- BASICS -->
+                                <lightning-accordion-section name="basics" label="Basics">
+                                    <!-- 5 fields in one line (Run Frequency appears only for Scheduled) -->
+                                    <div class="slds-grid slds-wrap slds-gutters_x-small vc-gridTight vc-basicsRow">
+
+                                        <!-- Configuration Name (more space) -->
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                                            <lightning-input label="Configuration Name"
+                                                             value={row.name}
+                                                             required
+                                                             data-idx={idx}
+                                                             data-field="name"
+                                                             onchange={onFieldChange}>
+                                            </lightning-input>
+                                        </div>
+
+                                        <!-- Configuration Type -->
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                                            <lightning-combobox label="Configuration Type"
+                                                                value={row.configurationType}
+                                                                options={configurationTypeOptions}
+                                                                data-idx={idx}
+                                                                onchange={onConfigTypeChange}>
+                                            </lightning-combobox>
+                                        </div>
+
+                                        <!-- Campaign (more space) -->
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                                            <lightning-combobox label="Select Campaign"
+                                                                value={row.campaignId}
+                                                                options={campaignOptions}
+                                                                data-idx={idx}
+                                                                onchange={onCampaignChange}>
+                                            </lightning-combobox>
+                                        </div>
+
+                                        <!-- Campaign Name -->
+                                        <!-- <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                                            <lightning-input label="Campaign Name"
+                                                             value={row.campaignName}
+                                                             disabled>
+                                            </lightning-input>
+                                        </div> -->
+                                        <!-- Campaign -->
+<div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+    <label class="slds-form-element__label">View Campaign</label>
+    <div class="slds-form-element__control">
+        <lightning-formatted-url
+            value={row._campaignUrl}
+            label={row.campaignName}
+            target="_blank">
+        </lightning-formatted-url>
+    </div>
+</div>
+
+
+                                        <!-- Run Frequency (Scheduled only) -->
+                                        <template if:true={row._isScheduled}>
+                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-12">
+                                                <lightning-combobox label="Run Frequency"
+                                                                    value={row.runFrequency}
+                                                                    options={runFrequencyOptions}
+                                                                    data-idx={idx}
+                                                                    data-field="runFrequency"
+                                                                    onchange={onFieldChange}>
+                                                </lightning-combobox>
+                                            </div>
+                                        </template>
+
+                                    </div>
+                                </lightning-accordion-section>
+
+                                <!-- PARENT FILTER -->
+                                <template if:true={row._usesFilterBuilder}>
+                                    <lightning-accordion-section name="parentFilter" label="Parent Filter">
+                                        <div class="slds-grid slds-wrap slds-gutters_x-small vc-gridTight">
+                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                                                <lightning-combobox label="Parent Object"
+                                                                    value={row._triggerSObject}
+                                                                    options={triggerObjectOptions}
+                                                                    data-idx={idx}
+                                                                    onchange={onTriggerObjectChange}>
+                                                </lightning-combobox>
+                                            </div>
+                                        </div>
+
+                                        <div class="slds-m-top_small">
+                                            <div class="slds-text-title_bold slds-m-bottom_x-small">Conditions</div>
+
+                                            <!-- 2 conditions per line -->
+                                            <div class="slds-grid slds-wrap slds-gutters_x-small vc-condGrid">
+                                                <template for:each={row._conditions} for:item="cond" for:index="cidx">
+                                                    <div key={cond._key} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 vc-condCol">
+                                                        <div class="slds-grid slds-wrap slds-gutters_x-small slds-m-bottom_x-small vc-condRow">
+
+                                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-12">
+                                                                <lightning-input label="#"
+                                                                                 value={cond.logicNumber}
+                                                                                 disabled>
+                                                                </lightning-input>
+                                                            </div>
+
+                                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                                                                <lightning-combobox label="Field"
+                                                                                    value={cond.fieldAPI}
+                                                                                    options={row._fieldOptions}
+                                                                                    data-idx={idx}
+                                                                                    data-cidx={cidx}
+                                                                                    onchange={onConditionFieldChange}>
+                                                                </lightning-combobox>
+                                                            </div>
+
+                                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                                                                <lightning-combobox label="Operator"
+                                                                                    value={cond.fieldOperator}
+                                                                                    options={cond._operatorOptions}
+                                                                                    data-idx={idx}
+                                                                                    data-cidx={cidx}
+                                                                                    onchange={onConditionOperatorChange}>
+                                                                </lightning-combobox>
+                                                            </div>
+
+                                                            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                                                                <template if:false={cond._hideValue}>
+
+                                                                    <!-- BOOLEAN -->
+                                                                    <template if:true={cond._isBoolean}>
+                                                                        <lightning-input type="checkbox"
+                                                                                         label="Value"
+                                                                                         checked={cond._boolValue}
+                                                                                         data-idx={idx}
+                                                                                         data-cidx={cidx}
+                                                                                         onchange={onConditionBooleanChange}>
+                                                                        </lightning-input>
+                                                                    </template>
+
+                                                                    <!-- PICKLIST -->
+                                                                    <template if:true={cond._isPicklist}>
+                                                                        <lightning-combobox label="Value"
+                                                                                            value={cond.fieldValue}
+                                                                                            options={cond._picklistOptions}
+                                                                                            data-idx={idx}
+                                                                                            data-cidx={cidx}
+                                                                                            onchange={onConditionValueChange}>
+                                                                        </lightning-combobox>
+                                                                    </template>
+
+                                                                    <!-- MULTIPICKLIST -->
+                                                                    <template if:true={cond._isMultiPicklist}>
+                                                                        <lightning-dual-listbox label="Value"
+                                                                                                source-label="Available"
+                                                                                                selected-label="Selected"
+                                                                                                options={cond._picklistOptions}
+                                                                                                value={cond._multiValues}
+                                                                                                data-idx={idx}
+                                                                                                data-cidx={cidx}
+                                                                                                onchange={onConditionMultiPicklistChange}>
+                                                                        </lightning-dual-listbox>
+                                                                    </template>
+
+                                                                    <!-- DATE -->
+                                                                    <template if:true={cond._isDate}>
+                                                                        <lightning-input type="date"
+                                                                                         label="Value"
+                                                                                         value={cond.fieldValue}
+                                                                                         data-idx={idx}
+                                                                                         data-cidx={cidx}
+                                                                                         onchange={onConditionValueChange}>
+                                                                        </lightning-input>
+                                                                    </template>
+
+                                                                    <!-- DATETIME (Date + Time, GMT-5 enforced) -->
+                                                                    <template if:true={cond._isDateTime}>
+                                                                        <div class="slds-grid slds-gutters_x-small">
+                                                                            <div class="slds-col slds-size_2-of-3">
+                                                                                <lightning-input type="date"
+                                                                                                 label="Date"
+                                                                                                 value={cond._dateValue}
+                                                                                                 data-idx={idx}
+                                                                                                 data-cidx={cidx}
+                                                                                                 onchange={onConditionDateChange}>
+                                                                                </lightning-input>
+                                                                            </div>
+
+                                                                            <div class="slds-col slds-size_1-of-3">
+                                                                                <lightning-input type="text"
+                                                                                                 label="Time (GMT-5)"
+                                                                                                 placeholder="HH:mm"
+                                                                                                 value={cond._timeValue}
+                                                                                                 pattern="^([01]\\d|2[0-3]):[0-5]\\d$"
+                                                                                                 message-when-pattern-mismatch="Use HH:mm format (00:00 to 23:59)"
+                                                                                                 data-idx={idx}
+                                                                                                 data-cidx={cidx}
+                                                                                                 onchange={onConditionTimeChange}>
+                                                                                </lightning-input>
+                                                                            </div>
+                                                                        </div>
+                                                                    </template>
+
+                                                                    <!-- NUMBER -->
+                                                                    <template if:true={cond._isNumber}>
+                                                                        <lightning-input type="number"
+                                                                                         label="Value"
+                                                                                         value={cond.fieldValue}
+                                                                                         data-idx={idx}
+                                                                                         data-cidx={cidx}
+                                                                                         onchange={onConditionValueChange}>
+                                                                        </lightning-input>
+                                                                    </template>
+
+                                                                    <!-- DEFAULT TEXT -->
+                                                                    <template if:true={cond._isText}>
+                                                                        <lightning-input type="text"
+                                                                                         label="Value"
+                                                                                         value={cond.fieldValue}
+                                                                                         data-idx={idx}
+                                                                                         data-cidx={cidx}
+                                                                                         onchange={onConditionValueChange}>
+                                                                        </lightning-input>
+                                                                    </template>
+
+                                                                    <!-- REFERENCE -->
+                                                                    <!-- <template if:true={cond._isReference}>
+                                                                        <lightning-record-picker label="Value"
+                                                                                                 object-api-name={cond._referenceTo}
+                                                                                                 value={cond.fieldValue}
+                                                                                                 data-idx={idx}
+                                                                                                 data-cidx={cidx}
+                                                                                                 onchange={onConditionValueChange}>
+                                                                        </lightning-record-picker>
+                                                                    </template> -->
+                                                                    <template if:true={cond._isReference}>
+    <lightning-input
+        type="text"
+        label="Value (Record Id)"
+        value={cond.fieldValue}
+        pattern="^[a-zA-Z0-9]{15}([a-zA-Z0-9]{3})?$"
+        message-when-pattern-mismatch="Enter a valid 15 or 18 character Salesforce Id"
+        data-idx={idx}
+        data-cidx={cidx}
+        onchange={onConditionValueChange}>
+    </lightning-input>
+</template>
+
+
+                                                                </template>
+                                                            </div>
+
+                                                            <div class="slds-col slds-size_1-of-1 vc-condRemove">
+                                                                <lightning-button variant="destructive-text"
+                                                                                  label="Remove"
+                                                                                  title="Remove condition"
+                                                                                  data-idx={idx}
+                                                                                  data-cidx={cidx}
+                                                                                  onclick={removeCondition}>
+                                                                </lightning-button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                            </div>
+
+                                            <lightning-button label="Add Condition"
+                                                              data-idx={idx}
+                                                              onclick={addCondition}>
+                                            </lightning-button>
+                                        </div>
+
+                                        <div class="slds-m-top_small">
+                                            <lightning-textarea label="Logic"
+                                                                value={row._logic}
+                                                                data-idx={idx}
+                                                                onchange={onLogicChange}
+                                                                placeholder="Example: 1 AND (NOT(2 OR 3)) AND 4">
+                                            </lightning-textarea>
+                                            <div class="slds-text-body_small slds-text-color_weak slds-m-top_xx-small">
+                                                Allowed: numbers, AND, OR, NOT, parentheses.
+                                            </div>
+                                        </div>
+                                    </lightning-accordion-section>
+                                </template>
+
+                                <!-- CHILDREN -->
+                                <lightning-accordion-section name="children" label="Child Filters">
+                                    <template if:true={row._children}>
+                                        <template for:each={row._children} for:item="child" for:index="childIdx">
+                                            <div key={child._key} class="slds-box slds-m-bottom_small vc-childBox">
+                                                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_x-small">
+                                                    <div class="slds-text-title_bold">Child Object {child.index}</div>
+
+                                                    <lightning-button-icon icon-name="utility:delete"
+                                                                           alternative-text="Remove Child"
+                                                                           title="Remove Child"
+                                                                           variant="border-filled"
+                                                                           data-idx={idx}
+                                                                           data-child-idx={childIdx}
+                                                                           onclick={removeChildObject}>
+                                                    </lightning-button-icon>
+                                                </div>
+
+                                                <div class="slds-grid slds-wrap slds-gutters_x-small vc-gridTight slds-m-bottom_small">
+                                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                        <lightning-combobox label="Child Object"
+                                                                            value={child.sObject}
+                                                                            options={row._childObjectOptions}
+                                                                            data-idx={idx}
+                                                                            data-child-idx={childIdx}
+                                                                            onchange={onChildObjectChange}>
+                                                        </lightning-combobox>
+                                                    </div>
+
+                                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                        <lightning-combobox label="Parent - Child Condition"
+                                                                            value={child.relationshipCondition}
+                                                                            options={parentChildConditionOptions}
+                                                                            data-idx={idx}
+                                                                            data-child-idx={childIdx}
+                                                                            onchange={onParentChildConditionChange}>
+                                                        </lightning-combobox>
+                                                    </div>
+                                                </div>
+
+                                                <div class="slds-text-title_bold slds-m-bottom_x-small">Conditions</div>
+
+                                                <!-- 2 child conditions per line -->
+                                                <div class="slds-grid slds-wrap slds-gutters_x-small vc-condGrid">
+                                                    <template for:each={child._conditions} for:item="cond" for:index="cidx">
+                                                        <div key={cond._key} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 vc-condCol">
+                                                            <div class="slds-grid slds-wrap slds-gutters_x-small slds-m-bottom_x-small vc-condRow">
+
+                                                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-12">
+                                                                    <lightning-input label="#"
+                                                                                     value={cond.logicNumber}
+                                                                                     disabled>
+                                                                    </lightning-input>
+                                                                </div>
+
+                                                                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                                                                    <lightning-combobox label="Field"
+                                                                                        value={cond.fieldAPI}
+                                                                                        options={child._fieldOptions}
+                                                                                        data-idx={idx}
+                                                                                        data-child-idx={childIdx}
+                                                                                        data-cidx={cidx}
+                                                                                        onchange={onChildConditionFieldChange}>
+                                                                    </lightning-combobox>
+                                                                </div>
+
+                                                                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                                                                    <lightning-combobox label="Operator"
+                                                                                        value={cond.fieldOperator}
+                                                                                        options={cond._operatorOptions}
+                                                                                        data-idx={idx}
+                                                                                        data-child-idx={childIdx}
+                                                                                        data-cidx={cidx}
+                                                                                        onchange={onChildConditionOperatorChange}>
+                                                                    </lightning-combobox>
+                                                                </div>
+
+                                                                <!-- <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                                                                    <template if:false={cond._hideValue}>
+                                                                        <lightning-input label="Value"
+                                                                                         value={cond.fieldValue}
+                                                                                         data-idx={idx}
+                                                                                         data-child-idx={childIdx}
+                                                                                         data-cidx={cidx}
+                                                                                         onchange={onChildConditionValueChange}>
+                                                                        </lightning-input>
+                                                                    </template>
+                                                                </div> -->
+
+                                                                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+    <template if:false={cond._hideValue}>
+
+        <!-- BOOLEAN -->
+        <template if:true={cond._isBoolean}>
+            <lightning-input type="checkbox"
+                             label="Value"
+                             checked={cond._boolValue}
+                             data-idx={idx}
+                             data-child-idx={childIdx}
+                             data-cidx={cidx}
+                             onchange={onChildConditionBooleanChange}>
+            </lightning-input>
+        </template>
+
+        <!-- PICKLIST -->
+        <template if:true={cond._isPicklist}>
+            <lightning-combobox label="Value"
+                                value={cond.fieldValue}
+                                options={cond._picklistOptions}
+                                data-idx={idx}
+                                data-child-idx={childIdx}
+                                data-cidx={cidx}
+                                onchange={onChildConditionValueChange}>
+            </lightning-combobox>
+        </template>
+
+        <!-- MULTIPICKLIST -->
+        <template if:true={cond._isMultiPicklist}>
+            <lightning-dual-listbox label="Value"
+                                    source-label="Available"
+                                    selected-label="Selected"
+                                    options={cond._picklistOptions}
+                                    value={cond._multiValues}
+                                    data-idx={idx}
+                                    data-child-idx={childIdx}
+                                    data-cidx={cidx}
+                                    onchange={onChildConditionMultiPicklistChange}>
+            </lightning-dual-listbox>
+        </template>
+
+        <!-- DATE -->
+        <template if:true={cond._isDate}>
+            <lightning-input type="date"
+                             label="Value"
+                             value={cond.fieldValue}
+                             data-idx={idx}
+                             data-child-idx={childIdx}
+                             data-cidx={cidx}
+                             onchange={onChildConditionValueChange}>
+            </lightning-input>
+        </template>
+
+        <!-- DATETIME (Date + Time, GMT-5 enforced) -->
+        <template if:true={cond._isDateTime}>
+            <div class="slds-grid slds-gutters_x-small">
+                <div class="slds-col slds-size_2-of-3">
+                    <lightning-input type="date"
+                                     label="Date"
+                                     value={cond._dateValue}
+                                     data-idx={idx}
+                                     data-child-idx={childIdx}
+                                     data-cidx={cidx}
+                                     onchange={onChildConditionDateChange}>
+                    </lightning-input>
+                </div>
+
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input type="text"
+                                     label="Time (GMT-5)"
+                                     placeholder="HH:mm"
+                                     value={cond._timeValue}
+                                     pattern="^([01]\\d|2[0-3]):[0-5]\\d$"
+                                     message-when-pattern-mismatch="Use HH:mm format (00:00 to 23:59)"
+                                     data-idx={idx}
+                                     data-child-idx={childIdx}
+                                     data-cidx={cidx}
+                                     onchange={onChildConditionTimeChange}>
+                    </lightning-input>
+                </div>
+            </div>
+        </template>
+
+        <!-- NUMBER -->
+        <template if:true={cond._isNumber}>
+            <lightning-input type="number"
+                             label="Value"
+                             value={cond.fieldValue}
+                             data-idx={idx}
+                             data-child-idx={childIdx}
+                             data-cidx={cidx}
+                             onchange={onChildConditionValueChange}>
+            </lightning-input>
+        </template>
+
+        <!-- DEFAULT TEXT -->
+        <template if:true={cond._isText}>
+            <lightning-input type="text"
+                             label="Value"
+                             value={cond.fieldValue}
+                             data-idx={idx}
+                             data-child-idx={childIdx}
+                             data-cidx={cidx}
+                             onchange={onChildConditionValueChange}>
+            </lightning-input>
+        </template>
+
+        <!-- REFERENCE -->
+        <!-- <template if:true={cond._isReference}>
+            <lightning-record-picker label="Value"
+                                     object-api-name={cond._referenceTo}
+                                     value={cond.fieldValue}
+                                     data-idx={idx}
+                                     data-child-idx={childIdx}
+                                     data-cidx={cidx}
+                                     onchange={onChildConditionValueChange}>
+            </lightning-record-picker>
+        </template> -->
+        <template if:true={cond._isReference}>
+    <lightning-input
+        type="text"
+        label="Value (Record Id)"
+        value={cond.fieldValue}
+        pattern="^[a-zA-Z0-9]{15}([a-zA-Z0-9]{3})?$"
+        message-when-pattern-mismatch="Enter a valid 15 or 18 character Salesforce Id"
+        data-idx={idx}
+        data-child-idx={childIdx}
+        data-cidx={cidx}
+        onchange={onChildConditionValueChange}>
+    </lightning-input>
+</template>
+
+
+    </template>
+</div>
+
+
+                                                                <div class="slds-col slds-size_1-of-1 vc-condRemove">
+                                                                    <lightning-button variant="destructive-text"
+                                                                                      label="Remove"
+                                                                                      title="Remove condition"
+                                                                                      data-idx={idx}
+                                                                                      data-cidx={cidx}
+                                                                                      data-child-idx={childIdx}
+                                                                                      onclick={removeChildCondition}>
+                                                                    </lightning-button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                </div>
+
+                                                <lightning-button label="Add Condition"
+                                                                  data-idx={idx}
+                                                                  data-child-idx={childIdx}
+                                                                  onclick={addChildCondition}>
+                                                </lightning-button>
+
+                                                <div class="slds-m-top_small">
+                                                    <lightning-textarea label="Logic"
+                                                                        value={child._logic}
+                                                                        data-idx={idx}
+                                                                        data-child-idx={childIdx}
+                                                                        onchange={onChildLogicChange}>
+                                                    </lightning-textarea>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </template>
+
+                                    <template if:true={row._showAddChild}>
+                                        <div class="slds-m-top_small">
+                                            <lightning-button label="+ Add Child Object"
+                                                              data-idx={idx}
+                                                              onclick={addChildObject}>
+                                            </lightning-button>
+                                        </div>
+                                    </template>
+                                </lightning-accordion-section>
+
+                            </lightning-accordion>
+
+                            <template if:true={row._rowMsg}>
+                                <div class={row._rowMsgClass}>{row._rowMsg}</div>
+                            </template>
+
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+
+        </div>
+    </lightning-card>
+</template>
